@@ -11,7 +11,7 @@
 <!-- Logo: replace with your own -->
 <img src="assets/logo.png" alt="Project Logo" width="140"/>
 
-# 🚀 [PROJECT NAME]
+# SME Finance Copilot: [NAME]
 
 ### *[One-line tagline that sells your idea in under 10 words]*
 
@@ -35,7 +35,7 @@
 
 </div>
 
-## 🎯 The Problem
+##  The Problem
 
 > **TODO:** Open with a striking fact or a relatable story.
 
@@ -311,11 +311,11 @@ docker-compose up --build
 ### 🏷️ Team **NoCoders.AI**
 *[Short team motto or story]*
 
-| | | | | |
-|:---:|:---:|:----:|:---:|:---:|
-| <img src="https://avatars.githubusercontent.com/u/143344060?v=4" width="100" style="border-radius:50%"/><br/>**Nurali Zhan**<br/>🧠 *AI / ML / Backend*<br/>[![GitHub](https://img.shields.io/badge/-GitHub-181717?logo=github)](https://github.com/ururu9339) [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?logo=linkedin&logoColor=white)](#) | <img src="https://github.com/USERNAME2.png" width="100"/><br/>**[Askaruly Ali]**<br/>⚙️ *Backend Developer*<br/>[![GitHub](https://img.shields.io/badge/-GitHub-181717?logo=github)](https://github.com/USERNAME2) [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?logo=linkedin&logoColor=white)](#) | <img src="https://github.com/USERNAME3.png" width="100"/><br/>**[Rahim Akanov]**<br/>*empty*<br/>[![GitHub](https://img.shields.io/badge/-GitHub-181717?logo=github)](https://github.com/USERNAME3) [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?logo=linkedin&logoColor=white)](#) | <img src="https://github.com/USERNAME4.png" width="100"/><br/>**[Dossymov Amirkhan]**<br/>📊 *Data Analyst / Pitch*<br/>[![GitHub](https://img.shields.io/badge/-GitHub-181717?logo=github)](https://github.com/USERNAME4) [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?logo=linkedin&logoColor=white)](#) | <img src="https://github.com/USERNAME4.png" width="100"/><br/>**[Name 5]**<br/>📊 *Data Analyst / Pitch*<br/>[![GitHub](https://img.shields.io/badge/-GitHub-181717?logo=github)](https://github.com/USERNAME4) [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?logo=linkedin&logoColor=white)](#) |
+| | | | |
+|:---:|:---:|:----:|:---:|
+| <img src="https://avatars.githubusercontent.com/u/143344060?v=4" width="100" style="border-radius:50%"/><br/>**Nurali Zhan**<br/>🧠 *AI / Backend*<br/>[![GitHub](https://img.shields.io/badge/-GitHub-181717?logo=github)](https://github.com/ururu9339) [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?logo=linkedin&logoColor=white)](#) | <img src="https://github.com/USERNAME2.png" width="100"/><br/>**[Askaruly Ali]**<br/>⚙️ *Backend Developer*<br/>[![GitHub](https://img.shields.io/badge/-GitHub-181717?logo=github)](https://github.com/USERNAME2) [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?logo=linkedin&logoColor=white)](#) | <img src="https://github.com/USERNAME3.png" width="100"/><br/>**[Shahzod Bakiev]**<br/>*empty*<br/>[![GitHub](https://img.shields.io/badge/-GitHub-181717?logo=github)](https://github.com/USERNAME3) [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?logo=linkedin&logoColor=white)](#) | <img src="https://github.com/USERNAME4.png" width="100"/><br/>**[Dossymov Amirkhan]**<br/>📊 *Data Analyst / Pitch*<br/>[![GitHub](https://img.shields.io/badge/-GitHub-181717?logo=github)](https://github.com/USERNAME4) [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?logo=linkedin&logoColor=white)](#) | 
 
-🎓 **University:** [Xiamen University Malaysia] &nbsp;|&nbsp; 🌏 **Country:** [Malaysia] &nbsp;|&nbsp; 📧 **Contact:** [nocoders.ai@gmail.com]
+**University:** [Xiamen University Malaysia] &nbsp;|&nbsp;   **Country:** [Malaysia] &nbsp;|&nbsp;  **Contact:** [nocoders.ai@gmail.com]
 
 </div>
 
