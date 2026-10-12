@@ -1,0 +1,28 @@
+:root { color-scheme: dark; --bg: #0e1513; --card: #16221e; --muted: #9eb1a8; --accent: #b8f36b; --line: #2a3a33; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: #f2f7f3; font-family: Arial, sans-serif; }
+main { max-width: 1180px; margin: auto; padding: 48px 24px; }
+header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 42px; }
+h1 { font-size: clamp(2.2rem, 5vw, 4.5rem); letter-spacing: -0.06em; margin: 12px 0; }
+h2 { font-size: 1.35rem; margin: 10px 0; }
+p { color: var(--muted); line-height: 1.5; }
+.eyebrow { color: var(--accent); font-size: .72rem; letter-spacing: .16em; font-weight: bold; }
+.status { color: var(--accent); font-size: .8rem; }
+.grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 18px; margin-bottom: 18px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 26px; }
+.hero { min-height: 330px; }
+.chart { height: 150px; display: flex; align-items: end; gap: 10px; padding-top: 25px; }
+.bar-wrap { height: 100%; flex: 1; display: flex; flex-direction: column; justify-content: end; align-items: center; gap: 8px; color: var(--muted); }
+.bar { width: 100%; background: var(--accent); border-radius: 5px 5px 2px 2px; min-height: 10px; }
+.bar.negative { background: #ff896b; }
+.row { display: flex; justify-content: space-between; margin-top: 22px; color: var(--muted); }
+.row strong { color: #fff; }
+.progress { background: #26352f; border-radius: 99px; height: 7px; margin-top: 9px; overflow: hidden; }
+.progress i { display: block; height: 100%; background: var(--accent); border-radius: inherit; }
+.bubble { border: 1px solid var(--line); border-radius: 12px; padding: 14px; min-height: 58px; color: #fff; }
+input { width: 100%; padding: 13px; border: 1px solid var(--line); border-radius: 8px; background: #0f1815; color: #fff; margin: 8px 0; }
+button { padding: 12px 16px; border: 0; border-radius: 8px; background: var(--accent); color: #101810; font-weight: bold; cursor: pointer; }
+.approval { display: flex; gap: 14px; align-items: center; border-bottom: 1px solid var(--line); padding: 18px 0; }
+.approval span { color: var(--accent); font-size: 1.5rem; }
+.approval p { margin: 5px 0 0; font-size: .9rem; }
+@media (max-width: 760px) { header, .grid { display: block; } .card { margin-bottom: 18px; } .status { display: block; margin-top: 20px; } }

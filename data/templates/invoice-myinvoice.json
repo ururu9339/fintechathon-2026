@@ -1,0 +1,7 @@
+{
+  "invoiceNumber": "INV-DEMO-001",
+  "supplier": "MyInvois Demo Supplier",
+  "currency": "MYR",
+  "total": 1800.00,
+  "status": "validated"
+}
