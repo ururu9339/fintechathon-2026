@@ -3,6 +3,6 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
-RUN npm run build
+RUN npm run build:web
 EXPOSE 3000
-CMD ["npm", "start"]
+CMD ["npx", "--yes", "serve", "dist", "-l", "3000"]

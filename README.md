@@ -301,10 +301,10 @@ cd frontend && npm install && cd ..
 docker-compose up --build
 # or manually:
 # uvicorn app.main:app --reload
-# npm run dev --prefix frontend
+# npm run web --prefix frontend
 ```
 
-🌐 Open **http://localhost:3000** and enjoy!
+🌐 Open **http://localhost:8081** for the Expo development server, or run `npm run build:web --prefix frontend` for a browser export.
 
 <div align="center">
 

@@ -1,0 +1,15 @@
+{
+  "expo": {
+    "name": "AmanahPay Treasurer",
+    "slug": "amanahpay-treasurer",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "plugins": [
+      "expo-asset"
+    ]
+  }
+}
