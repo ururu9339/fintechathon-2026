@@ -1,13 +1,13 @@
 from fastapi import APIRouter
 
-from ..db import treasurer
-
 router = APIRouter(prefix="/api", tags=["forecast"])
 
 
 @router.get("/forecast")
 def get_forecast():
-    return {"points": treasurer.forecast(), "currency": "MYR"}
+    from ..db import get_treasurer
+
+    return {"points": get_treasurer().forecast(), "currency": "MYR"}
 
 
 @router.get("/envelopes")
@@ -23,4 +23,6 @@ def get_envelopes():
 
 @router.get("/financing")
 def get_financing():
-    return {"recommendations": treasurer.financing()}
+    from ..db import get_treasurer
+
+    return {"recommendations": get_treasurer().financing()}

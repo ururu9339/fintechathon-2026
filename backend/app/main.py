@@ -1,20 +1,24 @@
-import os
-from decimal import Decimal
-import traceback
-from urllib import response
-from openai import OpenAI
+from functools import lru_cache
+from typing import TYPE_CHECKING
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from backend.app.models import PaymentRequest
-
 from .api import forecast, invoices, mandates
-from .db import treasurer
-from dotenv import load_dotenv
 
-load_dotenv()  # Load environment variables from .env file
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+if TYPE_CHECKING:
+    from openai import OpenAI
+
+
+@lru_cache(maxsize=1)
+def get_openai_client() -> "OpenAI":
+    import os
+
+    from dotenv import load_dotenv
+    from openai import OpenAI
+
+    load_dotenv()
+    return OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 app = FastAPI(title="AmanahPay Treasurer API", version="0.1.0")
 app.add_middleware(
@@ -34,19 +38,14 @@ app.include_router(mandates.router)
 def health() -> dict[str, str]:
     return {"status": "ok"}
 
-@app.get("/agent")
-def agent_test() -> str:
-     try:
-        print("Calling the agent")
-        agent_response = treasurer.agent()
-        return agent_response
-     except Exception as e:
-        traceback.print_exc()
-        return {"error": str(e)}
-
 @app.get("/testing_post")
 def payment_request() -> dict[str, str]:
         try:
+            import traceback
+
+            from .db import get_treasurer
+            from .models import PaymentRequest
+
             print("Calling treasurer.pay()...")
             payment_request = PaymentRequest(
                 mandate_id="mandate-demo",
@@ -55,10 +54,10 @@ def payment_request() -> dict[str, str]:
                 purpose="supplier invoice",
                 invoice_id="invoice-123",
             )
-            result = treasurer.pay(payment_request)
+            result = get_treasurer().pay(payment_request)
             print("Treasurer.pay() returned:", result)
             print("Calling your Treasurer AI Agent ...")
-            response = client.chat.completions.create(
+            response = get_openai_client().chat.completions.create(
                 model="gpt-4o-mini",
                 messages = [ {"role": "system", "content": "You are a financial assistent."},
                             {"role": "user", "content": f"Payment summary"}],
@@ -79,8 +78,10 @@ def payment_request() -> dict[str, str]:
 @app.get("/api/test-ai")
 def test_ai() -> dict[str, str]:
     try:
+        import traceback
+
         print("Calling OpenAI API...")
-        response = client.chat.completions.create(
+        response = get_openai_client().chat.completions.create(
             model="gpt-4o-mini",
             messages=[{"role": "user", "content": "Reply with a 1"}],
             max_completion_tokens=1
