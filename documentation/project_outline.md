@@ -20,6 +20,7 @@
 
 ## AI / ML Strategy
 
+
 | Model Type | Purpose & Scope | Notes |
 | :--- | :--- | :--- |
 | **Fine-Tuned Small LLM** | User query processing & conversational financial advice | Handles natural language interaction and domain-specific guidance |
