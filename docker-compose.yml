@@ -1,23 +1,14 @@
 services:
-  db:
-    image: postgres:16-alpine
-    environment:
-      POSTGRES_DB: amanahpay
-      POSTGRES_USER: amanah
-      POSTGRES_PASSWORD: amanah
-    ports:
-      - "5432:5432"
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-
   api:
     build: ./backend
+    env_file:
+      - .env
     environment:
       DATABASE_URL: postgresql+psycopg://amanah:amanah@db:5432/amanahpay
     ports:
       - "8000:8000"
-    depends_on:
-      - db
+    volumes:
+      - ./backend/data:/app/data
 
   web:
     build: ./frontend
@@ -27,6 +18,3 @@ services:
       - "3000:3000"
     depends_on:
       - api
-
-volumes:
-  postgres_data:
