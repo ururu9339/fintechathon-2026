@@ -6,11 +6,13 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from .api import forecast, invoices, mandates
 
+from .db import init_db
+
 if TYPE_CHECKING:
     from openai import OpenAI
 
 
-@lru_cache(maxsize=1)
+@lru_cache(maxsize=1) #Check if the OpenAI client is already created and cached, if not create a new one
 def get_openai_client() -> "OpenAI":
     import os
 
@@ -18,9 +20,11 @@ def get_openai_client() -> "OpenAI":
     from openai import OpenAI
 
     load_dotenv()
-    return OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+    key = os.getenv("OPENAI_API_KEY") #if no api key is found, return None
+    return OpenAI(api_key=key) if key else None 
 
 app = FastAPI(title="AmanahPay Treasurer API", version="0.1.0")
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:3000", "http://localhost:8081"],
@@ -33,6 +37,13 @@ app.include_router(forecast.router)
 app.include_router(invoices.router)
 app.include_router(mandates.router)
 
+
+@app.on_event("startup")
+def create_database() -> None:
+    init_db()
+
+if __name__ == "__main__":
+    init_db()
 
 @app.get("/health")
 def health() -> dict[str, str]:
