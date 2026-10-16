@@ -375,7 +375,7 @@ class Treasurer:
         event = self.audit.append(
             "payment.blocked",
             {"request": request.model_dump(mode="json"), "reason": reason},
-        )
+        )                                                           
         session.add(event)
         session.commit()
         return PaymentResult(status="blocked", reason=reason, audit_hash=event.event_hash)
@@ -407,7 +407,7 @@ class Treasurer:
     # Agent
     # ------------------------------------------------------------------
 
-    def agent(self, message: str) -> AgentResponse:
+    def agent(self, message: str, session: Session) -> AgentResponse:
         """Read a message and decide what to do with it.
 
         Order of checks:
@@ -445,9 +445,9 @@ class Treasurer:
             purpose=extracted.purpose,
             invoice_id=extracted.invoice_id,
         )
-        result = self.pay(request)
+        result = self.pay(request, session) 
         return self._payment_to_reply(request, result)
-
+    
     def _payment_to_reply(self, request: PaymentRequest, result: PaymentResult) -> AgentResponse:
         if result.status == "approved":
             return AgentResponse(

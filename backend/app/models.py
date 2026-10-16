@@ -6,6 +6,48 @@ from uuid import uuid7
 from pydantic import BaseModel, Field as Pyfield
 from sqlmodel import SQLModel , Field, JSON
 
+# ==========================================
+# 1. AUTHENTICATION & USER MODELS (add at last stage)
+# ==========================================
+
+# class User(SQLModel, tablename="users", table=True):
+#     __tablename__ = "users"
+
+#     id: str | None = Field(default_factory=lambda: uuid7().hex, primary_key=True)
+#     email: str = Field(unique=True, index=True, nullable=False)
+#     hashed_password: str = Field(nullable=False)
+#     is_active: bool = Field(default=True)
+#     created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+
+# class UserCreate(BaseModel):
+#     """Schema for user registration requests."""
+#     email: EmailStr
+#     password: str
+
+
+# class UserRead(BaseModel):
+#     """Schema for returning user info safely (excluding password)."""
+#     id: str
+#     email: str
+#     is_active: bool
+#     created_at: datetime
+
+
+# class Token(BaseModel):
+#     """Schema returned upon successful login."""
+#     access_token: str
+#     token_type: str = "bearer"
+
+
+# class TokenData(BaseModel):
+#     """Payload decoded from JWT tokens."""
+#     email: str | None = None
+
+# ==========================================
+# 2. AUTHENTICATION & USER MODELS
+# ==========================================
+
 class AuditEvent(SQLModel, tablename = "audit_events", table = True):
     __tablename__ = "audit_events"
     id : str | None = Field(default_factory=lambda: uuid7().hex, primary_key=True)
