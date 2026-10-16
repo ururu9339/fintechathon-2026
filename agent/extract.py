@@ -1,12 +1,99 @@
+import base64
 import re
-from decimal import Decimal
+from decimal import Decimal, InvalidOperation
+
+from backend.app.core.llm import get_openai_client
+from backend.app.models import ExtractedInvoiceSchema, ExtractionResult
+
+from .document_parser import extract_text_from_docx, parse_pdf, validate_upload_file
 
 
 def extract_invoice(text: str) -> dict[str, str | Decimal | None]:
-    """Extract the small, explicit invoice surface needed by the demo."""
     amount = re.search(r"(?:MYR|RM)\s*([\d,]+(?:\.\d{1,2})?)", text, re.IGNORECASE)
     invoice = re.search(r"\b(?:INV|INVOICE)[-\s#]?([A-Z0-9-]+)", text, re.IGNORECASE)
     return {
         "invoice_id": invoice.group(1) if invoice else None,
         "amount": Decimal(amount.group(1).replace(",", "")) if amount else None,
     }
+
+
+def reconcile_totals(inv: ExtractedInvoiceSchema) -> tuple[bool, list[str]]:
+    reasons: list[str] = []
+    try:
+        subtotal = Decimal(inv.subtotal)
+        tax = Decimal(inv.tax_amount)
+        total = Decimal(inv.total_amount)
+    except (InvalidOperation, ValueError):
+        return False, ["Invalid non-numeric monetary format extracted."]
+
+    if abs(subtotal + tax - total) > Decimal("0.05"):
+        reasons.append("Subtotal plus tax does not equal total.")
+    if inv.line_items:
+        try:
+            line_sum = sum((Decimal(item.total_amount) for item in inv.line_items), Decimal("0"))
+        except (InvalidOperation, ValueError):
+            reasons.append("A line item contains a non-numeric amount.")
+        else:
+            if abs(line_sum - total) > Decimal("0.05"):
+                reasons.append("Line item sum does not equal total.")
+    return not reasons, reasons
+
+
+def llm_multimodal_extractor(filename: str, file_bytes: bytes) -> ExtractionResult:
+    error = validate_upload_file(file_bytes, filename)
+    if error:
+        return ExtractionResult(status="failed", error_message=error)
+
+    client = get_openai_client()
+    if not client:
+        return ExtractionResult(status="failed", error_message="OpenAI client is not configured.")
+
+    ext = filename.lower().rsplit(".", 1)[-1]
+    raw_text = ""
+    content: list[dict] = []
+    model = "gpt-4o-mini"
+    if ext == "docx":
+        raw_text = extract_text_from_docx(file_bytes)
+        content.append({"type": "text", "text": raw_text})
+    elif ext == "pdf":
+        status, raw_text = parse_pdf(file_bytes)
+        if status == "scanned_pdf_detected":
+            return ExtractionResult(status="needs_review", error_message="Scanned PDF detected.")
+        if status == "failed":
+            return ExtractionResult(status="failed", error_message=raw_text)
+        content.append({"type": "text", "text": raw_text})
+    else:
+        model = "gpt-4o"
+        mime = "image/jpeg" if ext in {"jpg", "jpeg"} else "image/png"
+        encoded = base64.b64encode(file_bytes).decode()
+        content.append({"type": "image_url", "image_url": {"url": f"data:{mime};base64,{encoded}"}})
+
+    try:
+        response = client.beta.chat.completions.parse(
+            model=model,
+            messages=[
+                {"role": "system", "content": "Extract invoice fields without guessing missing values."},
+                {"role": "user", "content": content},
+            ],
+            response_format=ExtractedInvoiceSchema,
+            max_tokens=1500,
+        )
+        invoice = response.choices[0].message.parsed
+    except Exception as exc:
+        return ExtractionResult(status="failed", error_message=f"OpenAI extraction failed: {exc}")
+    if invoice is None:
+        return ExtractionResult(status="failed", error_message="OpenAI returned no invoice.")
+
+    reconciled, reasons = reconcile_totals(invoice)
+    if not invoice.source_snippet:
+        reasons.append("Source snippet is missing.")
+    elif raw_text and invoice.source_snippet.lower() not in raw_text.lower():
+        reasons.append("Source snippet could not be verified.")
+    elif not raw_text:
+        reasons.append("Image source snippet requires OCR verification.")
+    return ExtractionResult(
+        status="ok" if reconciled and not reasons else "needs_review",
+        invoice=invoice,
+        reconciliation_ok=reconciled and not reasons,
+        review_reasons=reasons,
+    )

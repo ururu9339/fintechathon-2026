@@ -1,27 +1,9 @@
-from functools import lru_cache
-from typing import TYPE_CHECKING
-
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from .api import forecast, invoices, mandates
-
+from .api import agent, forecast, invoices, mandates
+from .core.llm import get_openai_client
 from .db import init_db
-
-if TYPE_CHECKING:
-    from openai import OpenAI
-
-
-@lru_cache(maxsize=1) #Check if the OpenAI client is already created and cached, if not create a new one
-def get_openai_client() -> "OpenAI":
-    import os
-
-    from dotenv import load_dotenv
-    from openai import OpenAI
-
-    load_dotenv()
-    key = os.getenv("OPENAI_API_KEY") #if no api key is found, return None
-    return OpenAI(api_key=key) if key else None 
 
 app = FastAPI(title="AmanahPay Treasurer API", version="0.1.0")
 
@@ -36,6 +18,7 @@ app.add_middleware(
 app.include_router(forecast.router)
 app.include_router(invoices.router)
 app.include_router(mandates.router)
+app.include_router(agent.router)
 
 
 @app.on_event("startup")

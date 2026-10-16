@@ -24,7 +24,7 @@ from datetime import date, datetime, timedelta, timezone
 from decimal import Decimal, InvalidOperation
 from typing import Callable
 from sqlmodel import Session
-from uuid import uuid7
+from uuid import uuid4
 
 from .models import (
     AgentResponse,
@@ -347,37 +347,46 @@ class Treasurer:
     # Payments
     # ------------------------------------------------------------------
 
-    def pay(self, request: PaymentRequest, session: Session) -> PaymentResult:
+    def pay(self, request: PaymentRequest, session: Session | None = None) -> PaymentResult:
         """Approve or block a payment request. Every outcome is written to the audit chain."""
+        request.supplier = request.supplier or request.supplier_name or ""
+        request.invoice_id = request.invoice_id or request.invoice_number or ""
         mandate = self.mandates.get(request.mandate_id)
         if mandate is None:
-            return self._blocked(request, "Mandate not found")
+            return self._blocked(request, session, "Mandate not found")
 
         spent_today = self.daily_spend.get(mandate.id, Decimal("0"))
 
         # Run each rule in order. The first failing rule blocks the payment.
         for rule in self.payment_rules:
             if not rule.check(mandate, request, spent_today):
-                return self._blocked(request, rule.reason)
+                return self._blocked(request, session, rule.reason)
 
         self.daily_spend[mandate.id] = spent_today + request.amount
         event = self.audit.append("payment.approved", request.model_dump(mode="json"))
-        session.add(event)
-        session.commit()
+        if session is not None:
+            session.add(event)
+            session.commit()
         return PaymentResult(
             status="approved",
             reason="Payment approved by owner mandate",
-            payment_id=f"pay_{uuid7().hex[:10]}",
+            payment_id=f"pay_{uuid4().hex[:10]}",
             audit_hash=event.event_hash,
         )
 
-    def _blocked(self, request: PaymentRequest, session: Session, reason: str) -> PaymentResult:
+    def _blocked(
+        self,
+        request: PaymentRequest,
+        session: Session | None,
+        reason: str,
+    ) -> PaymentResult:
         event = self.audit.append(
             "payment.blocked",
             {"request": request.model_dump(mode="json"), "reason": reason},
         )                                                           
-        session.add(event)
-        session.commit()
+        if session is not None:
+            session.add(event)
+            session.commit()
         return PaymentResult(status="blocked", reason=reason, audit_hash=event.event_hash)
 
     # ------------------------------------------------------------------
@@ -407,7 +416,7 @@ class Treasurer:
     # Agent
     # ------------------------------------------------------------------
 
-    def agent(self, message: str, session: Session) -> AgentResponse:
+    def agent(self, message: str, session: Session | None = None) -> AgentResponse:
         """Read a message and decide what to do with it.
 
         Order of checks:
