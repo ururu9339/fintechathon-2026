@@ -1,11 +1,47 @@
 import base64
+import io
 import re
 from decimal import Decimal, InvalidOperation
+
+from PIL import Image
 
 from backend.app.core.llm import get_openai_client
 from backend.app.models import ExtractedInvoiceSchema, ExtractionResult
 
 from .document_parser import extract_text_from_docx, parse_pdf, validate_upload_file
+
+MAX_DOCUMENT_CHARS = 12_000
+
+
+def reduce_document_text(text: str) -> str:
+    lines = []
+    for line in text.splitlines():
+        line = re.sub(r"\s+", " ", line).strip()
+        if line:
+            lines.append(line)
+
+    compact: list[str] = []
+    for line in lines:
+        if not compact or compact[-1] != line:
+            compact.append(line)
+
+    text = "\n".join(compact)
+    if len(text) <= MAX_DOCUMENT_CHARS:
+        return text
+
+    head_size = MAX_DOCUMENT_CHARS * 2 // 3
+    tail_size = MAX_DOCUMENT_CHARS - head_size
+    return text[:head_size] + "\n[document text truncated]\n" + text[-tail_size:]
+
+
+def downscale_image(file_bytes: bytes) -> tuple[bytes, str]:
+    with Image.open(io.BytesIO(file_bytes)) as image:
+        image.thumbnail((640, 480), Image.Resampling.LANCZOS)
+        if image.mode not in ("RGB", "L"):
+            image = image.convert("RGB")
+        output = io.BytesIO()
+        image.save(output, format="JPEG", quality=80, optimize=True)
+        return output.getvalue(), "image/jpeg"
 
 
 def extract_invoice(text: str) -> dict[str, str | Decimal | None]:
@@ -53,7 +89,7 @@ def llm_multimodal_extractor(filename: str, file_bytes: bytes) -> ExtractionResu
     content: list[dict] = []
     model = "gpt-4o-mini"
     if ext == "docx":
-        raw_text = extract_text_from_docx(file_bytes)
+        raw_text = reduce_document_text(extract_text_from_docx(file_bytes))
         content.append({"type": "text", "text": raw_text})
     elif ext == "pdf":
         status, raw_text = parse_pdf(file_bytes)
@@ -61,12 +97,21 @@ def llm_multimodal_extractor(filename: str, file_bytes: bytes) -> ExtractionResu
             return ExtractionResult(status="needs_review", error_message="Scanned PDF detected.")
         if status == "failed":
             return ExtractionResult(status="failed", error_message=raw_text)
+        raw_text = reduce_document_text(raw_text)
         content.append({"type": "text", "text": raw_text})
     else:
         model = "gpt-4o"
-        mime = "image/jpeg" if ext in {"jpg", "jpeg"} else "image/png"
-        encoded = base64.b64encode(file_bytes).decode()
-        content.append({"type": "image_url", "image_url": {"url": f"data:{mime};base64,{encoded}"}})
+        resized_bytes, mime = downscale_image(file_bytes)
+        encoded = base64.b64encode(resized_bytes).decode()
+        content.append(
+            {
+                "type": "image_url",
+                "image_url": {
+                    "url": f"data:{mime};base64,{encoded}",
+                    "detail": "low",
+                },
+            }
+        )
 
     try:
         response = client.beta.chat.completions.parse(
