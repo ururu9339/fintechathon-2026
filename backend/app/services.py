@@ -23,7 +23,8 @@ from dataclasses import dataclass
 from datetime import date, datetime, timedelta, timezone
 from decimal import Decimal, InvalidOperation
 from typing import Callable
-from uuid import uuid4
+from sqlmodel import Session
+from uuid import uuid7
 
 from .models import (
     AgentResponse,
@@ -346,7 +347,7 @@ class Treasurer:
     # Payments
     # ------------------------------------------------------------------
 
-    def pay(self, request: PaymentRequest) -> PaymentResult:
+    def pay(self, request: PaymentRequest, session: Session) -> PaymentResult:
         """Approve or block a payment request. Every outcome is written to the audit chain."""
         mandate = self.mandates.get(request.mandate_id)
         if mandate is None:
@@ -361,18 +362,22 @@ class Treasurer:
 
         self.daily_spend[mandate.id] = spent_today + request.amount
         event = self.audit.append("payment.approved", request.model_dump(mode="json"))
+        session.add(event)
+        session.commit()
         return PaymentResult(
             status="approved",
             reason="Payment approved by owner mandate",
-            payment_id=f"pay_{uuid4().hex[:10]}",
+            payment_id=f"pay_{uuid7().hex[:10]}",
             audit_hash=event.event_hash,
         )
 
-    def _blocked(self, request: PaymentRequest, reason: str) -> PaymentResult:
+    def _blocked(self, request: PaymentRequest, session: Session, reason: str) -> PaymentResult:
         event = self.audit.append(
             "payment.blocked",
             {"request": request.model_dump(mode="json"), "reason": reason},
         )
+        session.add(event)
+        session.commit()
         return PaymentResult(status="blocked", reason=reason, audit_hash=event.event_hash)
 
     # ------------------------------------------------------------------

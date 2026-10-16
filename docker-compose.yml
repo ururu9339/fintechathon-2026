@@ -18,3 +18,19 @@ services:
       - "3000:3000"
     depends_on:
       - api
+
+  db:
+    image: postgres:16-alpine
+    environment:
+        POSTGRES_USER: amanah
+        POSTGRES_PASSWORD: amanah
+        POSTGRES_DB: amanahpay  
+    ports:
+        - "5432:5432"
+    volumes:
+        - postgres_data:/var/lib/postgresql/data
+volumes:
+  postgres_data:
+
+
+

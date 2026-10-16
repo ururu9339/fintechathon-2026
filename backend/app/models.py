@@ -1,14 +1,14 @@
 from datetime import date, datetime
 from decimal import Decimal
 from typing import Literal
-from uuid import uuid4
+from uuid import uuid7
 
 from pydantic import BaseModel, Field as Pyfield
 from sqlmodel import SQLModel , Field, JSON
 
 class AuditEvent(SQLModel, tablename = "audit_events", table = True):
     __tablename__ = "audit_events"
-    id : str | None = Field(default=None, primary_key=True)
+    id : str | None = Field(default_factory=lambda: uuid7().hex, primary_key=True)
     event_type: str
     payload: dict[str, str] = Field(default = {}, sa_type = JSON)
     created_at: datetime
@@ -46,7 +46,7 @@ class Envelope(BaseModel):
 
 class PaymentRequest(SQLModel, tablename="payment_requests", table = True):
     __tablename__ = "payment_requests"
-    id: str | None = Field(default_factory=lambda: uuid4().hex, primary_key=True)
+    id: str | None = Field(default_factory=lambda: uuid7().hex, primary_key=True)
     supplier: str
     amount: Decimal = Field(gt=0)
     purpose: str

@@ -14,11 +14,10 @@ def create_payment(
 ):
     from ..db import get_treasurer
 
-    result = get_treasurer().pay(request)
+    result = get_treasurer().pay(request, session)
     session.add(request)
     session.commit()
     return result
-
 
 @router.get("/payments", response_model=list[PaymentRequest])
 def list_payments(session: Session = Depends(get_session)):
