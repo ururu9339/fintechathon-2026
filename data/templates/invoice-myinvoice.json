@@ -1,7 +1,65 @@
 {
-  "invoiceNumber": "INV-DEMO-001",
-  "supplier": "MyInvois Demo Supplier",
-  "currency": "MYR",
-  "total": 1800.00,
-  "status": "validated"
+	"_D": "urn:oasis:names:specification:ubl:schema:xsd:Invoice-2",
+	"_A": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+	"_B": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+	"Invoice": [
+		{
+			"ID": [{"_": ""}],
+			"IssueDate": [{"_": ""}],
+			"InvoicePeriod": [
+				{
+					"StartDate": [{"_": ""}],
+					"EndDate": [{"_": ""}],
+					"Description": [{"_": ""}]
+				}
+			],
+			"AccountingSupplierParty": [
+				{
+					"Party": [
+						{
+							"PartyLegalEntity": [
+								{"RegistrationName": [{"_": ""}]}
+							]
+						}
+					]
+				}
+			],
+			"AccountingCustomerParty": [
+				{
+					"Party": [
+						{
+							"PartyLegalEntity": [
+								{"RegistrationName": [{"_": ""}]}
+							]
+						}
+					]
+				}
+			],
+			"PaymentTerms": [{"Note": [{"_": ""}]}],
+			"PaymentMeans": [
+				{
+					"PayeeFinancialAccount": [
+						{"ID": [{"_": ""}]}
+					]
+				}
+			],
+			"LegalMonetaryTotal": [
+				{
+					"LineExtensionAmount": [{"_": 0}],
+					"TaxExclusiveAmount": [{"_": 0}],
+					"TaxInclusiveAmount": [{"_": 0}],
+					"PayableAmount": [{"_": 0}]
+				}
+			],
+			"InvoiceLine": [
+				{
+					"ID": [{"_": ""}],
+					"LineExtensionAmount": [{"_": 0}],
+					"Price": [{"PriceAmount": [{"_": 0}]}],
+					"ItemPriceExtension": [{"Amount": [{"_": 0}]}],
+					"Item": [{"Description": [{"_": ""}]}]
+				}
+			]
+		}
+	]
 }
