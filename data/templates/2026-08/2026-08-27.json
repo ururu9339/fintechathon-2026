@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0098"
+          "_": "TN-0130"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2026-09-01"
+              "_": "2026-08-30"
             }
           ],
           "Description": [
             {
-              "_": "Supplier (Accepted)"
+              "_": "EPF (Accepted)"
             }
           ]
         }
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "CV Rahayu Tbk"
+                      "_": "UD Mustofa Mulyani Tbk"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 631.29
+              "_": 1387.6
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 631.29
+              "_": 1387.6
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 631.29
+              "_": 1387.6
             }
           ],
           "PayableAmount": [
             {
-              "_": 631.29
+              "_": 1387.6
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0098"
+              "_": "TN-0130"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 631.29
+              "_": 1387.6
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 631.29
+                  "_": 1387.6
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 631.29
+                  "_": 1387.6
                 }
               ]
             }
@@ -147,7 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "Supplier payment - CV Rahayu Tbk (TN-0098)"
+                  "_": "EPF payment - UD Mustofa Mulyani Tbk (TN-0130)"
                 }
               ]
             }

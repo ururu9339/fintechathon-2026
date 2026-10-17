@@ -1,0 +1,159 @@
+{
+  "_D": "urn:oasis:names:specification:ubl:schema:xsd:Invoice-2",
+  "_A": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+  "_B": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+  "Invoice": [
+    {
+      "ID": [
+        {
+          "_": "TN-0038"
+        }
+      ],
+      "IssueDate": [
+        {
+          "_": "2025-10-23"
+        }
+      ],
+      "InvoicePeriod": [
+        {
+          "StartDate": [
+            {
+              "_": "2025-10-23"
+            }
+          ],
+          "EndDate": [
+            {
+              "_": "2025-10-24"
+            }
+          ],
+          "Description": [
+            {
+              "_": "SST (Accepted)"
+            }
+          ]
+        }
+      ],
+      "AccountingSupplierParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "UD Pradipta Hastuti"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "AccountingCustomerParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Mak Cik Aminah Catering"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "PaymentTerms": [
+        {
+          "Note": [
+            {
+              "_": "Status: Accepted"
+            }
+          ]
+        }
+      ],
+      "PaymentMeans": [
+        {
+          "PayeeFinancialAccount": [
+            {
+              "ID": [
+                {
+                  "_": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "LegalMonetaryTotal": [
+        {
+          "LineExtensionAmount": [
+            {
+              "_": 1360.41
+            }
+          ],
+          "TaxExclusiveAmount": [
+            {
+              "_": 1360.41
+            }
+          ],
+          "TaxInclusiveAmount": [
+            {
+              "_": 1360.41
+            }
+          ],
+          "PayableAmount": [
+            {
+              "_": 1360.41
+            }
+          ]
+        }
+      ],
+      "InvoiceLine": [
+        {
+          "ID": [
+            {
+              "_": "TN-0038"
+            }
+          ],
+          "LineExtensionAmount": [
+            {
+              "_": 1360.41
+            }
+          ],
+          "Price": [
+            {
+              "PriceAmount": [
+                {
+                  "_": 1360.41
+                }
+              ]
+            }
+          ],
+          "ItemPriceExtension": [
+            {
+              "Amount": [
+                {
+                  "_": 1360.41
+                }
+              ]
+            }
+          ],
+          "Item": [
+            {
+              "Description": [
+                {
+                  "_": "SST payment - UD Pradipta Hastuti (TN-0038)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0044"
+          "_": "TN-0204"
         }
       ],
       "IssueDate": [
@@ -23,7 +23,7 @@
           ],
           "EndDate": [
             {
-              "_": "2025-12-27"
+              "_": "2025-12-28"
             }
           ],
           "Description": [
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Perum Aryani"
+                      "_": "CV Hutagalung Rajasa Tbk"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 600.28
+              "_": 1292.29
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 600.28
+              "_": 1292.29
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 600.28
+              "_": 1292.29
             }
           ],
           "PayableAmount": [
             {
-              "_": 600.28
+              "_": 1292.29
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0044"
+              "_": "TN-0204"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 600.28
+              "_": 1292.29
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 600.28
+                  "_": 1292.29
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 600.28
+                  "_": 1292.29
                 }
               ]
             }
@@ -147,7 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "EPF payment - Perum Aryani (TN-0044)"
+                  "_": "EPF payment - CV Hutagalung Rajasa Tbk (TN-0204)"
                 }
               ]
             }

@@ -1,0 +1,311 @@
+{
+  "_D": "urn:oasis:names:specification:ubl:schema:xsd:Invoice-2",
+  "_A": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+  "_B": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+  "Invoice": [
+    {
+      "ID": [
+        {
+          "_": "TN-0206"
+        }
+      ],
+      "IssueDate": [
+        {
+          "_": "2026-10-05"
+        }
+      ],
+      "InvoicePeriod": [
+        {
+          "StartDate": [
+            {
+              "_": "2026-10-05"
+            }
+          ],
+          "EndDate": [
+            {
+              "_": "2026-10-06"
+            }
+          ],
+          "Description": [
+            {
+              "_": "EPF (Accepted)"
+            }
+          ]
+        }
+      ],
+      "AccountingSupplierParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "UD Mansur (Persero) Tbk"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "AccountingCustomerParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Mak Cik Aminah Catering"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "PaymentTerms": [
+        {
+          "Note": [
+            {
+              "_": "Status: Accepted"
+            }
+          ]
+        }
+      ],
+      "PaymentMeans": [
+        {
+          "PayeeFinancialAccount": [
+            {
+              "ID": [
+                {
+                  "_": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "LegalMonetaryTotal": [
+        {
+          "LineExtensionAmount": [
+            {
+              "_": 622.38
+            }
+          ],
+          "TaxExclusiveAmount": [
+            {
+              "_": 622.38
+            }
+          ],
+          "TaxInclusiveAmount": [
+            {
+              "_": 622.38
+            }
+          ],
+          "PayableAmount": [
+            {
+              "_": 622.38
+            }
+          ]
+        }
+      ],
+      "InvoiceLine": [
+        {
+          "ID": [
+            {
+              "_": "TN-0206"
+            }
+          ],
+          "LineExtensionAmount": [
+            {
+              "_": 622.38
+            }
+          ],
+          "Price": [
+            {
+              "PriceAmount": [
+                {
+                  "_": 622.38
+                }
+              ]
+            }
+          ],
+          "ItemPriceExtension": [
+            {
+              "Amount": [
+                {
+                  "_": 622.38
+                }
+              ]
+            }
+          ],
+          "Item": [
+            {
+              "Description": [
+                {
+                  "_": "EPF payment - UD Mansur (Persero) Tbk (TN-0206)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ID": [
+        {
+          "_": "TN-0190"
+        }
+      ],
+      "IssueDate": [
+        {
+          "_": "2026-10-05"
+        }
+      ],
+      "InvoicePeriod": [
+        {
+          "StartDate": [
+            {
+              "_": "2026-10-05"
+            }
+          ],
+          "EndDate": [
+            {
+              "_": "2026-10-08"
+            }
+          ],
+          "Description": [
+            {
+              "_": "EPF (Accepted)"
+            }
+          ]
+        }
+      ],
+      "AccountingSupplierParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "PD Pratiwi Putra Tbk"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "AccountingCustomerParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Mak Cik Aminah Catering"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "PaymentTerms": [
+        {
+          "Note": [
+            {
+              "_": "Status: Accepted"
+            }
+          ]
+        }
+      ],
+      "PaymentMeans": [
+        {
+          "PayeeFinancialAccount": [
+            {
+              "ID": [
+                {
+                  "_": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "LegalMonetaryTotal": [
+        {
+          "LineExtensionAmount": [
+            {
+              "_": 1361.52
+            }
+          ],
+          "TaxExclusiveAmount": [
+            {
+              "_": 1361.52
+            }
+          ],
+          "TaxInclusiveAmount": [
+            {
+              "_": 1361.52
+            }
+          ],
+          "PayableAmount": [
+            {
+              "_": 1361.52
+            }
+          ]
+        }
+      ],
+      "InvoiceLine": [
+        {
+          "ID": [
+            {
+              "_": "TN-0190"
+            }
+          ],
+          "LineExtensionAmount": [
+            {
+              "_": 1361.52
+            }
+          ],
+          "Price": [
+            {
+              "PriceAmount": [
+                {
+                  "_": 1361.52
+                }
+              ]
+            }
+          ],
+          "ItemPriceExtension": [
+            {
+              "Amount": [
+                {
+                  "_": 1361.52
+                }
+              ]
+            }
+          ],
+          "Item": [
+            {
+              "Description": [
+                {
+                  "_": "EPF payment - PD Pratiwi Putra Tbk (TN-0190)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

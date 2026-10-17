@@ -1,0 +1,311 @@
+{
+  "_D": "urn:oasis:names:specification:ubl:schema:xsd:Invoice-2",
+  "_A": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+  "_B": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+  "Invoice": [
+    {
+      "ID": [
+        {
+          "_": "TN-0243"
+        }
+      ],
+      "IssueDate": [
+        {
+          "_": "2026-07-06"
+        }
+      ],
+      "InvoicePeriod": [
+        {
+          "StartDate": [
+            {
+              "_": "2026-07-06"
+            }
+          ],
+          "EndDate": [
+            {
+              "_": "2026-07-11"
+            }
+          ],
+          "Description": [
+            {
+              "_": "EPF (Accepted)"
+            }
+          ]
+        }
+      ],
+      "AccountingSupplierParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Perum Lestari Tamba Tbk"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "AccountingCustomerParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Mak Cik Aminah Catering"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "PaymentTerms": [
+        {
+          "Note": [
+            {
+              "_": "Status: Accepted"
+            }
+          ]
+        }
+      ],
+      "PaymentMeans": [
+        {
+          "PayeeFinancialAccount": [
+            {
+              "ID": [
+                {
+                  "_": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "LegalMonetaryTotal": [
+        {
+          "LineExtensionAmount": [
+            {
+              "_": 761.76
+            }
+          ],
+          "TaxExclusiveAmount": [
+            {
+              "_": 761.76
+            }
+          ],
+          "TaxInclusiveAmount": [
+            {
+              "_": 761.76
+            }
+          ],
+          "PayableAmount": [
+            {
+              "_": 761.76
+            }
+          ]
+        }
+      ],
+      "InvoiceLine": [
+        {
+          "ID": [
+            {
+              "_": "TN-0243"
+            }
+          ],
+          "LineExtensionAmount": [
+            {
+              "_": 761.76
+            }
+          ],
+          "Price": [
+            {
+              "PriceAmount": [
+                {
+                  "_": 761.76
+                }
+              ]
+            }
+          ],
+          "ItemPriceExtension": [
+            {
+              "Amount": [
+                {
+                  "_": 761.76
+                }
+              ]
+            }
+          ],
+          "Item": [
+            {
+              "Description": [
+                {
+                  "_": "EPF payment - Perum Lestari Tamba Tbk (TN-0243)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ID": [
+        {
+          "_": "TN-0251"
+        }
+      ],
+      "IssueDate": [
+        {
+          "_": "2026-07-06"
+        }
+      ],
+      "InvoicePeriod": [
+        {
+          "StartDate": [
+            {
+              "_": "2026-07-06"
+            }
+          ],
+          "EndDate": [
+            {
+              "_": "2026-07-09"
+            }
+          ],
+          "Description": [
+            {
+              "_": "SST (Accepted)"
+            }
+          ]
+        }
+      ],
+      "AccountingSupplierParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "CV Gunawan (Persero) Tbk"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "AccountingCustomerParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Mak Cik Aminah Catering"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "PaymentTerms": [
+        {
+          "Note": [
+            {
+              "_": "Status: Accepted"
+            }
+          ]
+        }
+      ],
+      "PaymentMeans": [
+        {
+          "PayeeFinancialAccount": [
+            {
+              "ID": [
+                {
+                  "_": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "LegalMonetaryTotal": [
+        {
+          "LineExtensionAmount": [
+            {
+              "_": 1023.74
+            }
+          ],
+          "TaxExclusiveAmount": [
+            {
+              "_": 1023.74
+            }
+          ],
+          "TaxInclusiveAmount": [
+            {
+              "_": 1023.74
+            }
+          ],
+          "PayableAmount": [
+            {
+              "_": 1023.74
+            }
+          ]
+        }
+      ],
+      "InvoiceLine": [
+        {
+          "ID": [
+            {
+              "_": "TN-0251"
+            }
+          ],
+          "LineExtensionAmount": [
+            {
+              "_": 1023.74
+            }
+          ],
+          "Price": [
+            {
+              "PriceAmount": [
+                {
+                  "_": 1023.74
+                }
+              ]
+            }
+          ],
+          "ItemPriceExtension": [
+            {
+              "Amount": [
+                {
+                  "_": 1023.74
+                }
+              ]
+            }
+          ],
+          "Item": [
+            {
+              "Description": [
+                {
+                  "_": "SST payment - CV Gunawan (Persero) Tbk (TN-0251)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

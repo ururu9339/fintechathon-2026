@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0048"
+          "_": "TN-0185"
         }
       ],
       "IssueDate": [
@@ -23,7 +23,7 @@
           ],
           "EndDate": [
             {
-              "_": "2026-01-09"
+              "_": "2026-01-08"
             }
           ],
           "Description": [
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "UD Palastri Tbk"
+                      "_": "CV Lestari Kuswoyo Tbk"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 665.75
+              "_": 220.87
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 665.75
+              "_": 220.87
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 665.75
+              "_": 220.87
             }
           ],
           "PayableAmount": [
             {
-              "_": 665.75
+              "_": 220.87
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0048"
+              "_": "TN-0185"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 665.75
+              "_": 220.87
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 665.75
+                  "_": 220.87
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 665.75
+                  "_": 220.87
                 }
               ]
             }
@@ -147,7 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "Supplier payment - UD Palastri Tbk (TN-0048)"
+                  "_": "Supplier payment - CV Lestari Kuswoyo Tbk (TN-0185)"
                 }
               ]
             }

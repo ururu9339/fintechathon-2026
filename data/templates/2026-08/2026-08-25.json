@@ -1,0 +1,311 @@
+{
+  "_D": "urn:oasis:names:specification:ubl:schema:xsd:Invoice-2",
+  "_A": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+  "_B": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+  "Invoice": [
+    {
+      "ID": [
+        {
+          "_": "TN-0293"
+        }
+      ],
+      "IssueDate": [
+        {
+          "_": "2026-08-25"
+        }
+      ],
+      "InvoicePeriod": [
+        {
+          "StartDate": [
+            {
+              "_": "2026-08-25"
+            }
+          ],
+          "EndDate": [
+            {
+              "_": "2026-08-30"
+            }
+          ],
+          "Description": [
+            {
+              "_": "Supplier (Accepted)"
+            }
+          ]
+        }
+      ],
+      "AccountingSupplierParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "CV Prasetyo Puspita"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "AccountingCustomerParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Mak Cik Aminah Catering"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "PaymentTerms": [
+        {
+          "Note": [
+            {
+              "_": "Status: Accepted"
+            }
+          ]
+        }
+      ],
+      "PaymentMeans": [
+        {
+          "PayeeFinancialAccount": [
+            {
+              "ID": [
+                {
+                  "_": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "LegalMonetaryTotal": [
+        {
+          "LineExtensionAmount": [
+            {
+              "_": 1107.46
+            }
+          ],
+          "TaxExclusiveAmount": [
+            {
+              "_": 1107.46
+            }
+          ],
+          "TaxInclusiveAmount": [
+            {
+              "_": 1107.46
+            }
+          ],
+          "PayableAmount": [
+            {
+              "_": 1107.46
+            }
+          ]
+        }
+      ],
+      "InvoiceLine": [
+        {
+          "ID": [
+            {
+              "_": "TN-0293"
+            }
+          ],
+          "LineExtensionAmount": [
+            {
+              "_": 1107.46
+            }
+          ],
+          "Price": [
+            {
+              "PriceAmount": [
+                {
+                  "_": 1107.46
+                }
+              ]
+            }
+          ],
+          "ItemPriceExtension": [
+            {
+              "Amount": [
+                {
+                  "_": 1107.46
+                }
+              ]
+            }
+          ],
+          "Item": [
+            {
+              "Description": [
+                {
+                  "_": "Supplier payment - CV Prasetyo Puspita (TN-0293)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ID": [
+        {
+          "_": "TN-0068"
+        }
+      ],
+      "IssueDate": [
+        {
+          "_": "2026-08-25"
+        }
+      ],
+      "InvoicePeriod": [
+        {
+          "StartDate": [
+            {
+              "_": "2026-08-25"
+            }
+          ],
+          "EndDate": [
+            {
+              "_": "2026-08-30"
+            }
+          ],
+          "Description": [
+            {
+              "_": "SST (Accepted)"
+            }
+          ]
+        }
+      ],
+      "AccountingSupplierParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "UD Marpaung"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "AccountingCustomerParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Mak Cik Aminah Catering"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "PaymentTerms": [
+        {
+          "Note": [
+            {
+              "_": "Status: Accepted"
+            }
+          ]
+        }
+      ],
+      "PaymentMeans": [
+        {
+          "PayeeFinancialAccount": [
+            {
+              "ID": [
+                {
+                  "_": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "LegalMonetaryTotal": [
+        {
+          "LineExtensionAmount": [
+            {
+              "_": 1304.54
+            }
+          ],
+          "TaxExclusiveAmount": [
+            {
+              "_": 1304.54
+            }
+          ],
+          "TaxInclusiveAmount": [
+            {
+              "_": 1304.54
+            }
+          ],
+          "PayableAmount": [
+            {
+              "_": 1304.54
+            }
+          ]
+        }
+      ],
+      "InvoiceLine": [
+        {
+          "ID": [
+            {
+              "_": "TN-0068"
+            }
+          ],
+          "LineExtensionAmount": [
+            {
+              "_": 1304.54
+            }
+          ],
+          "Price": [
+            {
+              "PriceAmount": [
+                {
+                  "_": 1304.54
+                }
+              ]
+            }
+          ],
+          "ItemPriceExtension": [
+            {
+              "Amount": [
+                {
+                  "_": 1304.54
+                }
+              ]
+            }
+          ],
+          "Item": [
+            {
+              "Description": [
+                {
+                  "_": "SST payment - UD Marpaung (TN-0068)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

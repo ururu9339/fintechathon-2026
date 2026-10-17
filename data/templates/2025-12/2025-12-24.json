@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0018"
+          "_": "TN-0085"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2025-12-25"
+              "_": "2026-02-27"
             }
           ],
           "Description": [
             {
-              "_": "SST (Accepted)"
+              "_": "B2B_Sales (Accepted)"
             }
           ]
         }
@@ -41,7 +41,159 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "PT Rahmawati Widiastuti Tbk"
+                      "_": "Mak Cik Aminah Catering"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "AccountingCustomerParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "PT Agustina Hasanah"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "PaymentTerms": [
+        {
+          "Note": [
+            {
+              "_": "Status: Accepted"
+            }
+          ]
+        }
+      ],
+      "PaymentMeans": [
+        {
+          "PayeeFinancialAccount": [
+            {
+              "ID": [
+                {
+                  "_": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "LegalMonetaryTotal": [
+        {
+          "LineExtensionAmount": [
+            {
+              "_": 1168.54
+            }
+          ],
+          "TaxExclusiveAmount": [
+            {
+              "_": 1168.54
+            }
+          ],
+          "TaxInclusiveAmount": [
+            {
+              "_": 1168.54
+            }
+          ],
+          "PayableAmount": [
+            {
+              "_": 1168.54
+            }
+          ]
+        }
+      ],
+      "InvoiceLine": [
+        {
+          "ID": [
+            {
+              "_": "TN-0085"
+            }
+          ],
+          "LineExtensionAmount": [
+            {
+              "_": 1168.54
+            }
+          ],
+          "Price": [
+            {
+              "PriceAmount": [
+                {
+                  "_": 1168.54
+                }
+              ]
+            }
+          ],
+          "ItemPriceExtension": [
+            {
+              "Amount": [
+                {
+                  "_": 1168.54
+                }
+              ]
+            }
+          ],
+          "Item": [
+            {
+              "Description": [
+                {
+                  "_": "Catering services - B2B_Sales (TN-0085)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ID": [
+        {
+          "_": "TN-0224"
+        }
+      ],
+      "IssueDate": [
+        {
+          "_": "2025-12-24"
+        }
+      ],
+      "InvoicePeriod": [
+        {
+          "StartDate": [
+            {
+              "_": "2025-12-24"
+            }
+          ],
+          "EndDate": [
+            {
+              "_": "2025-12-28"
+            }
+          ],
+          "Description": [
+            {
+              "_": "EPF (Accepted)"
+            }
+          ]
+        }
+      ],
+      "AccountingSupplierParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "UD Waluyo (Persero) Tbk"
                     }
                   ]
                 }
@@ -93,22 +245,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 429.74
+              "_": 375.34
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 429.74
+              "_": 375.34
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 429.74
+              "_": 375.34
             }
           ],
           "PayableAmount": [
             {
-              "_": 429.74
+              "_": 375.34
             }
           ]
         }
@@ -117,19 +269,19 @@
         {
           "ID": [
             {
-              "_": "TN-0018"
+              "_": "TN-0224"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 429.74
+              "_": 375.34
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 429.74
+                  "_": 375.34
                 }
               ]
             }
@@ -138,7 +290,7 @@
             {
               "Amount": [
                 {
-                  "_": 429.74
+                  "_": 375.34
                 }
               ]
             }
@@ -147,7 +299,7 @@
             {
               "Description": [
                 {
-                  "_": "SST payment - PT Rahmawati Widiastuti Tbk (TN-0018)"
+                  "_": "EPF payment - UD Waluyo (Persero) Tbk (TN-0224)"
                 }
               ]
             }

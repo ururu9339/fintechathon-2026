@@ -6,7 +6,159 @@
     {
       "ID": [
         {
-          "_": "TN-0272"
+          "_": "TN-0084"
+        }
+      ],
+      "IssueDate": [
+        {
+          "_": "2025-11-01"
+        }
+      ],
+      "InvoicePeriod": [
+        {
+          "StartDate": [
+            {
+              "_": "2025-11-01"
+            }
+          ],
+          "EndDate": [
+            {
+              "_": "2025-11-02"
+            }
+          ],
+          "Description": [
+            {
+              "_": "Supplier (Accepted)"
+            }
+          ]
+        }
+      ],
+      "AccountingSupplierParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Perum Situmorang"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "AccountingCustomerParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Mak Cik Aminah Catering"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "PaymentTerms": [
+        {
+          "Note": [
+            {
+              "_": "Status: Accepted"
+            }
+          ]
+        }
+      ],
+      "PaymentMeans": [
+        {
+          "PayeeFinancialAccount": [
+            {
+              "ID": [
+                {
+                  "_": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "LegalMonetaryTotal": [
+        {
+          "LineExtensionAmount": [
+            {
+              "_": 557.5
+            }
+          ],
+          "TaxExclusiveAmount": [
+            {
+              "_": 557.5
+            }
+          ],
+          "TaxInclusiveAmount": [
+            {
+              "_": 557.5
+            }
+          ],
+          "PayableAmount": [
+            {
+              "_": 557.5
+            }
+          ]
+        }
+      ],
+      "InvoiceLine": [
+        {
+          "ID": [
+            {
+              "_": "TN-0084"
+            }
+          ],
+          "LineExtensionAmount": [
+            {
+              "_": 557.5
+            }
+          ],
+          "Price": [
+            {
+              "PriceAmount": [
+                {
+                  "_": 557.5
+                }
+              ]
+            }
+          ],
+          "ItemPriceExtension": [
+            {
+              "Amount": [
+                {
+                  "_": 557.5
+                }
+              ]
+            }
+          ],
+          "Item": [
+            {
+              "Description": [
+                {
+                  "_": "Supplier payment - Perum Situmorang (TN-0084)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ID": [
+        {
+          "_": "TN-0193"
         }
       ],
       "IssueDate": [
@@ -28,158 +180,6 @@
           ],
           "Description": [
             {
-              "_": "EPF (Accepted)"
-            }
-          ]
-        }
-      ],
-      "AccountingSupplierParty": [
-        {
-          "Party": [
-            {
-              "PartyLegalEntity": [
-                {
-                  "RegistrationName": [
-                    {
-                      "_": "Perum Maryadi Tbk"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "AccountingCustomerParty": [
-        {
-          "Party": [
-            {
-              "PartyLegalEntity": [
-                {
-                  "RegistrationName": [
-                    {
-                      "_": "Mak Cik Aminah Catering"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "PaymentTerms": [
-        {
-          "Note": [
-            {
-              "_": "Status: Accepted"
-            }
-          ]
-        }
-      ],
-      "PaymentMeans": [
-        {
-          "PayeeFinancialAccount": [
-            {
-              "ID": [
-                {
-                  "_": ""
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "LegalMonetaryTotal": [
-        {
-          "LineExtensionAmount": [
-            {
-              "_": 362.93
-            }
-          ],
-          "TaxExclusiveAmount": [
-            {
-              "_": 362.93
-            }
-          ],
-          "TaxInclusiveAmount": [
-            {
-              "_": 362.93
-            }
-          ],
-          "PayableAmount": [
-            {
-              "_": 362.93
-            }
-          ]
-        }
-      ],
-      "InvoiceLine": [
-        {
-          "ID": [
-            {
-              "_": "TN-0272"
-            }
-          ],
-          "LineExtensionAmount": [
-            {
-              "_": 362.93
-            }
-          ],
-          "Price": [
-            {
-              "PriceAmount": [
-                {
-                  "_": 362.93
-                }
-              ]
-            }
-          ],
-          "ItemPriceExtension": [
-            {
-              "Amount": [
-                {
-                  "_": 362.93
-                }
-              ]
-            }
-          ],
-          "Item": [
-            {
-              "Description": [
-                {
-                  "_": "EPF payment - Perum Maryadi Tbk (TN-0272)"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "ID": [
-        {
-          "_": "TN-0124"
-        }
-      ],
-      "IssueDate": [
-        {
-          "_": "2025-11-01"
-        }
-      ],
-      "InvoicePeriod": [
-        {
-          "StartDate": [
-            {
-              "_": "2025-11-01"
-            }
-          ],
-          "EndDate": [
-            {
-              "_": "2025-11-03"
-            }
-          ],
-          "Description": [
-            {
               "_": "SST (Accepted)"
             }
           ]
@@ -193,7 +193,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "PD Natsir Tbk"
+                      "_": "PT Zulaika Mangunsong"
                     }
                   ]
                 }
@@ -245,22 +245,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 369.71
+              "_": 1385.39
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 369.71
+              "_": 1385.39
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 369.71
+              "_": 1385.39
             }
           ],
           "PayableAmount": [
             {
-              "_": 369.71
+              "_": 1385.39
             }
           ]
         }
@@ -269,19 +269,19 @@
         {
           "ID": [
             {
-              "_": "TN-0124"
+              "_": "TN-0193"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 369.71
+              "_": 1385.39
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 369.71
+                  "_": 1385.39
                 }
               ]
             }
@@ -290,7 +290,7 @@
             {
               "Amount": [
                 {
-                  "_": 369.71
+                  "_": 1385.39
                 }
               ]
             }
@@ -299,7 +299,7 @@
             {
               "Description": [
                 {
-                  "_": "SST payment - PD Natsir Tbk (TN-0124)"
+                  "_": "SST payment - PT Zulaika Mangunsong (TN-0193)"
                 }
               ]
             }

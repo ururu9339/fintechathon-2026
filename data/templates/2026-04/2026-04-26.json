@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0173"
+          "_": "TN-0198"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2026-05-01"
+              "_": "2026-06-30"
             }
           ],
           "Description": [
             {
-              "_": "SST (Accepted)"
+              "_": "B2B_Sales (Accepted)"
             }
           ]
         }
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "PT Nuraini (Persero) Tbk"
+                      "_": "Mak Cik Aminah Catering"
                     }
                   ]
                 }
@@ -58,7 +58,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Mak Cik Aminah Catering"
+                      "_": "CV Mansur (Persero) Tbk"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 615.77
+              "_": 4012.5
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 615.77
+              "_": 4012.5
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 615.77
+              "_": 4012.5
             }
           ],
           "PayableAmount": [
             {
-              "_": 615.77
+              "_": 4012.5
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0173"
+              "_": "TN-0198"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 615.77
+              "_": 4012.5
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 615.77
+                  "_": 4012.5
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 615.77
+                  "_": 4012.5
                 }
               ]
             }
@@ -147,7 +147,159 @@
             {
               "Description": [
                 {
-                  "_": "SST payment - PT Nuraini (Persero) Tbk (TN-0173)"
+                  "_": "Catering services - B2B_Sales (TN-0198)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ID": [
+        {
+          "_": "TN-0143"
+        }
+      ],
+      "IssueDate": [
+        {
+          "_": "2026-04-26"
+        }
+      ],
+      "InvoicePeriod": [
+        {
+          "StartDate": [
+            {
+              "_": "2026-04-26"
+            }
+          ],
+          "EndDate": [
+            {
+              "_": "2026-06-30"
+            }
+          ],
+          "Description": [
+            {
+              "_": "B2B_Sales (Accepted)"
+            }
+          ]
+        }
+      ],
+      "AccountingSupplierParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Mak Cik Aminah Catering"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "AccountingCustomerParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "UD Sitompul Hutasoit"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "PaymentTerms": [
+        {
+          "Note": [
+            {
+              "_": "Status: Accepted"
+            }
+          ]
+        }
+      ],
+      "PaymentMeans": [
+        {
+          "PayeeFinancialAccount": [
+            {
+              "ID": [
+                {
+                  "_": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "LegalMonetaryTotal": [
+        {
+          "LineExtensionAmount": [
+            {
+              "_": 3685.33
+            }
+          ],
+          "TaxExclusiveAmount": [
+            {
+              "_": 3685.33
+            }
+          ],
+          "TaxInclusiveAmount": [
+            {
+              "_": 3685.33
+            }
+          ],
+          "PayableAmount": [
+            {
+              "_": 3685.33
+            }
+          ]
+        }
+      ],
+      "InvoiceLine": [
+        {
+          "ID": [
+            {
+              "_": "TN-0143"
+            }
+          ],
+          "LineExtensionAmount": [
+            {
+              "_": 3685.33
+            }
+          ],
+          "Price": [
+            {
+              "PriceAmount": [
+                {
+                  "_": 3685.33
+                }
+              ]
+            }
+          ],
+          "ItemPriceExtension": [
+            {
+              "Amount": [
+                {
+                  "_": 3685.33
+                }
+              ]
+            }
+          ],
+          "Item": [
+            {
+              "Description": [
+                {
+                  "_": "Catering services - B2B_Sales (TN-0143)"
                 }
               ]
             }

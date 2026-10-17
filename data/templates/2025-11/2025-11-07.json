@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0126"
+          "_": "TN-0165"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2025-11-08"
+              "_": "2026-01-11"
             }
           ],
           "Description": [
             {
-              "_": "EPF (Accepted)"
+              "_": "B2B_Sales (Accepted)"
             }
           ]
         }
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "CV Sinaga"
+                      "_": "Mak Cik Aminah Catering"
                     }
                   ]
                 }
@@ -58,7 +58,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Mak Cik Aminah Catering"
+                      "_": "Perum Gunawan Maheswara"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 678.23
+              "_": 3475.88
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 678.23
+              "_": 3475.88
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 678.23
+              "_": 3475.88
             }
           ],
           "PayableAmount": [
             {
-              "_": 678.23
+              "_": 3475.88
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0126"
+              "_": "TN-0165"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 678.23
+              "_": 3475.88
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 678.23
+                  "_": 3475.88
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 678.23
+                  "_": 3475.88
                 }
               ]
             }
@@ -147,159 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "EPF payment - CV Sinaga (TN-0126)"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "ID": [
-        {
-          "_": "TN-0283"
-        }
-      ],
-      "IssueDate": [
-        {
-          "_": "2025-11-07"
-        }
-      ],
-      "InvoicePeriod": [
-        {
-          "StartDate": [
-            {
-              "_": "2025-11-07"
-            }
-          ],
-          "EndDate": [
-            {
-              "_": "2025-11-11"
-            }
-          ],
-          "Description": [
-            {
-              "_": "SST (Accepted)"
-            }
-          ]
-        }
-      ],
-      "AccountingSupplierParty": [
-        {
-          "Party": [
-            {
-              "PartyLegalEntity": [
-                {
-                  "RegistrationName": [
-                    {
-                      "_": "PD Rahmawati"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "AccountingCustomerParty": [
-        {
-          "Party": [
-            {
-              "PartyLegalEntity": [
-                {
-                  "RegistrationName": [
-                    {
-                      "_": "Mak Cik Aminah Catering"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "PaymentTerms": [
-        {
-          "Note": [
-            {
-              "_": "Status: Accepted"
-            }
-          ]
-        }
-      ],
-      "PaymentMeans": [
-        {
-          "PayeeFinancialAccount": [
-            {
-              "ID": [
-                {
-                  "_": ""
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "LegalMonetaryTotal": [
-        {
-          "LineExtensionAmount": [
-            {
-              "_": 290.94
-            }
-          ],
-          "TaxExclusiveAmount": [
-            {
-              "_": 290.94
-            }
-          ],
-          "TaxInclusiveAmount": [
-            {
-              "_": 290.94
-            }
-          ],
-          "PayableAmount": [
-            {
-              "_": 290.94
-            }
-          ]
-        }
-      ],
-      "InvoiceLine": [
-        {
-          "ID": [
-            {
-              "_": "TN-0283"
-            }
-          ],
-          "LineExtensionAmount": [
-            {
-              "_": 290.94
-            }
-          ],
-          "Price": [
-            {
-              "PriceAmount": [
-                {
-                  "_": 290.94
-                }
-              ]
-            }
-          ],
-          "ItemPriceExtension": [
-            {
-              "Amount": [
-                {
-                  "_": 290.94
-                }
-              ]
-            }
-          ],
-          "Item": [
-            {
-              "Description": [
-                {
-                  "_": "SST payment - PD Rahmawati (TN-0283)"
+                  "_": "Catering services - B2B_Sales (TN-0165)"
                 }
               ]
             }

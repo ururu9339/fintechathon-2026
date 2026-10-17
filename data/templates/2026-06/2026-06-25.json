@@ -6,159 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0292"
-        }
-      ],
-      "IssueDate": [
-        {
-          "_": "2026-06-25"
-        }
-      ],
-      "InvoicePeriod": [
-        {
-          "StartDate": [
-            {
-              "_": "2026-06-25"
-            }
-          ],
-          "EndDate": [
-            {
-              "_": "2026-06-30"
-            }
-          ],
-          "Description": [
-            {
-              "_": "SST (Accepted)"
-            }
-          ]
-        }
-      ],
-      "AccountingSupplierParty": [
-        {
-          "Party": [
-            {
-              "PartyLegalEntity": [
-                {
-                  "RegistrationName": [
-                    {
-                      "_": "PD Novitasari Nugroho (Persero) Tbk"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "AccountingCustomerParty": [
-        {
-          "Party": [
-            {
-              "PartyLegalEntity": [
-                {
-                  "RegistrationName": [
-                    {
-                      "_": "Mak Cik Aminah Catering"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "PaymentTerms": [
-        {
-          "Note": [
-            {
-              "_": "Status: Accepted"
-            }
-          ]
-        }
-      ],
-      "PaymentMeans": [
-        {
-          "PayeeFinancialAccount": [
-            {
-              "ID": [
-                {
-                  "_": ""
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "LegalMonetaryTotal": [
-        {
-          "LineExtensionAmount": [
-            {
-              "_": 1222.57
-            }
-          ],
-          "TaxExclusiveAmount": [
-            {
-              "_": 1222.57
-            }
-          ],
-          "TaxInclusiveAmount": [
-            {
-              "_": 1222.57
-            }
-          ],
-          "PayableAmount": [
-            {
-              "_": 1222.57
-            }
-          ]
-        }
-      ],
-      "InvoiceLine": [
-        {
-          "ID": [
-            {
-              "_": "TN-0292"
-            }
-          ],
-          "LineExtensionAmount": [
-            {
-              "_": 1222.57
-            }
-          ],
-          "Price": [
-            {
-              "PriceAmount": [
-                {
-                  "_": 1222.57
-                }
-              ]
-            }
-          ],
-          "ItemPriceExtension": [
-            {
-              "Amount": [
-                {
-                  "_": 1222.57
-                }
-              ]
-            }
-          ],
-          "Item": [
-            {
-              "Description": [
-                {
-                  "_": "SST payment - PD Novitasari Nugroho (Persero) Tbk (TN-0292)"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "ID": [
-        {
-          "_": "TN-0228"
+          "_": "TN-0282"
         }
       ],
       "IssueDate": [
@@ -210,7 +58,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "PT Mayasari"
+                      "_": "PT Astuti"
                     }
                   ]
                 }
@@ -245,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 2909.21
+              "_": 3955.02
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 2909.21
+              "_": 3955.02
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 2909.21
+              "_": 3955.02
             }
           ],
           "PayableAmount": [
             {
-              "_": 2909.21
+              "_": 3955.02
             }
           ]
         }
@@ -269,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0228"
+              "_": "TN-0282"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 2909.21
+              "_": 3955.02
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 2909.21
+                  "_": 3955.02
                 }
               ]
             }
@@ -290,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 2909.21
+                  "_": 3955.02
                 }
               ]
             }
@@ -299,7 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "Catering services - B2B_Sales (TN-0228)"
+                  "_": "Catering services - B2B_Sales (TN-0282)"
                 }
               ]
             }

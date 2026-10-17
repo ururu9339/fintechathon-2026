@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0144"
+          "_": "TN-0254"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2026-08-19"
+              "_": "2026-08-20"
             }
           ],
           "Description": [
             {
-              "_": "B2C_Sales (Accepted)"
+              "_": "EPF (Accepted)"
             }
           ]
         }
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Mak Cik Aminah Catering"
+                      "_": "PT Astuti Purnawati Tbk"
                     }
                   ]
                 }
@@ -58,7 +58,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Walk-in Customer"
+                      "_": "Mak Cik Aminah Catering"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 2006.52
+              "_": 1185.29
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 2006.52
+              "_": 1185.29
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 2006.52
+              "_": 1185.29
             }
           ],
           "PayableAmount": [
             {
-              "_": 2006.52
+              "_": 1185.29
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0144"
+              "_": "TN-0254"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 2006.52
+              "_": 1185.29
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 2006.52
+                  "_": 1185.29
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 2006.52
+                  "_": 1185.29
                 }
               ]
             }
@@ -147,7 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "Catering services - B2C_Sales (TN-0144)"
+                  "_": "EPF payment - PT Astuti Purnawati Tbk (TN-0254)"
                 }
               ]
             }

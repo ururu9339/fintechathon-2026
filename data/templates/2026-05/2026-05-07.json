@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0105"
+          "_": "TN-0090"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2026-05-12"
+              "_": "2026-05-11"
             }
           ],
           "Description": [
             {
-              "_": "EPF (Accepted)"
+              "_": "Supplier (Accepted)"
             }
           ]
         }
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "CV Samosir"
+                      "_": "PD Laksmiwati"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 1122.58
+              "_": 621.68
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 1122.58
+              "_": 621.68
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 1122.58
+              "_": 621.68
             }
           ],
           "PayableAmount": [
             {
-              "_": 1122.58
+              "_": 621.68
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0105"
+              "_": "TN-0090"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 1122.58
+              "_": 621.68
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 1122.58
+                  "_": 621.68
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 1122.58
+                  "_": 621.68
                 }
               ]
             }
@@ -147,7 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "EPF payment - CV Samosir (TN-0105)"
+                  "_": "Supplier payment - PD Laksmiwati (TN-0090)"
                 }
               ]
             }
@@ -158,7 +158,7 @@
     {
       "ID": [
         {
-          "_": "TN-0058"
+          "_": "TN-0142"
         }
       ],
       "IssueDate": [
@@ -180,7 +180,7 @@
           ],
           "Description": [
             {
-              "_": "EPF (Accepted)"
+              "_": "Supplier (Accepted)"
             }
           ]
         }
@@ -193,7 +193,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "PT Puspasari"
+                      "_": "CV Rahmawati"
                     }
                   ]
                 }
@@ -245,22 +245,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 914.61
+              "_": 205.97
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 914.61
+              "_": 205.97
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 914.61
+              "_": 205.97
             }
           ],
           "PayableAmount": [
             {
-              "_": 914.61
+              "_": 205.97
             }
           ]
         }
@@ -269,19 +269,19 @@
         {
           "ID": [
             {
-              "_": "TN-0058"
+              "_": "TN-0142"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 914.61
+              "_": 205.97
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 914.61
+                  "_": 205.97
                 }
               ]
             }
@@ -290,7 +290,7 @@
             {
               "Amount": [
                 {
-                  "_": 914.61
+                  "_": 205.97
                 }
               ]
             }
@@ -299,7 +299,7 @@
             {
               "Description": [
                 {
-                  "_": "EPF payment - PT Puspasari (TN-0058)"
+                  "_": "Supplier payment - CV Rahmawati (TN-0142)"
                 }
               ]
             }

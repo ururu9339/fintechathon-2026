@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0010"
+          "_": "TN-0012"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2025-12-14"
+              "_": "2026-02-16"
             }
           ],
           "Description": [
             {
-              "_": "SST (Accepted)"
+              "_": "B2B_Sales (Accepted)"
             }
           ]
         }
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "PD Rahimah Wulandari"
+                      "_": "Mak Cik Aminah Catering"
                     }
                   ]
                 }
@@ -58,7 +58,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Mak Cik Aminah Catering"
+                      "_": "PT Anggriawan Usada"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 980.68
+              "_": 2665.42
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 980.68
+              "_": 2665.42
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 980.68
+              "_": 2665.42
             }
           ],
           "PayableAmount": [
             {
-              "_": 980.68
+              "_": 2665.42
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0010"
+              "_": "TN-0012"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 980.68
+              "_": 2665.42
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 980.68
+                  "_": 2665.42
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 980.68
+                  "_": 2665.42
                 }
               ]
             }
@@ -147,7 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "SST payment - PD Rahimah Wulandari (TN-0010)"
+                  "_": "Catering services - B2B_Sales (TN-0012)"
                 }
               ]
             }

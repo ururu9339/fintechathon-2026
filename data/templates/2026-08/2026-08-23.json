@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0199"
+          "_": "TN-0279"
         }
       ],
       "IssueDate": [
@@ -23,34 +23,17 @@
           ],
           "EndDate": [
             {
-              "_": "2026-08-27"
+              "_": "2026-10-27"
             }
           ],
           "Description": [
             {
-              "_": "EPF (Accepted)"
+              "_": "B2B_Sales (Pending)"
             }
           ]
         }
       ],
       "AccountingSupplierParty": [
-        {
-          "Party": [
-            {
-              "PartyLegalEntity": [
-                {
-                  "RegistrationName": [
-                    {
-                      "_": "PD Situmorang Maulana"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "AccountingCustomerParty": [
         {
           "Party": [
             {
@@ -67,11 +50,28 @@
           ]
         }
       ],
+      "AccountingCustomerParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "PT Anggraini Prakasa"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
       "PaymentTerms": [
         {
           "Note": [
             {
-              "_": "Status: Accepted"
+              "_": "Status: Pending"
             }
           ]
         }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 1049.7
+              "_": 1022.31
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 1049.7
+              "_": 1022.31
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 1049.7
+              "_": 1022.31
             }
           ],
           "PayableAmount": [
             {
-              "_": 1049.7
+              "_": 1022.31
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0199"
+              "_": "TN-0279"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 1049.7
+              "_": 1022.31
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 1049.7
+                  "_": 1022.31
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 1049.7
+                  "_": 1022.31
                 }
               ]
             }
@@ -147,7 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "EPF payment - PD Situmorang Maulana (TN-0199)"
+                  "_": "Catering services - B2B_Sales (TN-0279)"
                 }
               ]
             }

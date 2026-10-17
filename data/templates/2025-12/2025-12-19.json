@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0104"
+          "_": "TN-0274"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2025-12-22"
+              "_": "2025-12-23"
             }
           ],
           "Description": [
             {
-              "_": "Supplier (Accepted)"
+              "_": "EPF (Accepted)"
             }
           ]
         }
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "PD Hastuti"
+                      "_": "PD Wijayanti"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 282.45
+              "_": 667.9
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 282.45
+              "_": 667.9
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 282.45
+              "_": 667.9
             }
           ],
           "PayableAmount": [
             {
-              "_": 282.45
+              "_": 667.9
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0104"
+              "_": "TN-0274"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 282.45
+              "_": 667.9
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 282.45
+                  "_": 667.9
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 282.45
+                  "_": 667.9
                 }
               ]
             }
@@ -147,7 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "Supplier payment - PD Hastuti (TN-0104)"
+                  "_": "EPF payment - PD Wijayanti (TN-0274)"
                 }
               ]
             }

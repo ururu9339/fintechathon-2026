@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0007"
+          "_": "TN-0168"
         }
       ],
       "IssueDate": [
@@ -23,159 +23,7 @@
           ],
           "EndDate": [
             {
-              "_": "2026-09-20"
-            }
-          ],
-          "Description": [
-            {
-              "_": "B2B_Sales (Accepted)"
-            }
-          ]
-        }
-      ],
-      "AccountingSupplierParty": [
-        {
-          "Party": [
-            {
-              "PartyLegalEntity": [
-                {
-                  "RegistrationName": [
-                    {
-                      "_": "Mak Cik Aminah Catering"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "AccountingCustomerParty": [
-        {
-          "Party": [
-            {
-              "PartyLegalEntity": [
-                {
-                  "RegistrationName": [
-                    {
-                      "_": "PD Damanik Tbk"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "PaymentTerms": [
-        {
-          "Note": [
-            {
-              "_": "Status: Accepted"
-            }
-          ]
-        }
-      ],
-      "PaymentMeans": [
-        {
-          "PayeeFinancialAccount": [
-            {
-              "ID": [
-                {
-                  "_": ""
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "LegalMonetaryTotal": [
-        {
-          "LineExtensionAmount": [
-            {
-              "_": 4000.78
-            }
-          ],
-          "TaxExclusiveAmount": [
-            {
-              "_": 4000.78
-            }
-          ],
-          "TaxInclusiveAmount": [
-            {
-              "_": 4000.78
-            }
-          ],
-          "PayableAmount": [
-            {
-              "_": 4000.78
-            }
-          ]
-        }
-      ],
-      "InvoiceLine": [
-        {
-          "ID": [
-            {
-              "_": "TN-0007"
-            }
-          ],
-          "LineExtensionAmount": [
-            {
-              "_": 4000.78
-            }
-          ],
-          "Price": [
-            {
-              "PriceAmount": [
-                {
-                  "_": 4000.78
-                }
-              ]
-            }
-          ],
-          "ItemPriceExtension": [
-            {
-              "Amount": [
-                {
-                  "_": 4000.78
-                }
-              ]
-            }
-          ],
-          "Item": [
-            {
-              "Description": [
-                {
-                  "_": "Catering services - B2B_Sales (TN-0007)"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "ID": [
-        {
-          "_": "TN-0299"
-        }
-      ],
-      "IssueDate": [
-        {
-          "_": "2026-07-17"
-        }
-      ],
-      "InvoicePeriod": [
-        {
-          "StartDate": [
-            {
-              "_": "2026-07-17"
-            }
-          ],
-          "EndDate": [
-            {
-              "_": "2026-07-18"
+              "_": "2026-07-19"
             }
           ],
           "Description": [
@@ -193,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "CV Pratama"
+                      "_": "UD Kusmawati Prasetyo (Persero) Tbk"
                     }
                   ]
                 }
@@ -245,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 757.49
+              "_": 208.21
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 757.49
+              "_": 208.21
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 757.49
+              "_": 208.21
             }
           ],
           "PayableAmount": [
             {
-              "_": 757.49
+              "_": 208.21
             }
           ]
         }
@@ -269,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0299"
+              "_": "TN-0168"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 757.49
+              "_": 208.21
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 757.49
+                  "_": 208.21
                 }
               ]
             }
@@ -290,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 757.49
+                  "_": 208.21
                 }
               ]
             }
@@ -299,7 +147,159 @@
             {
               "Description": [
                 {
-                  "_": "Supplier payment - CV Pratama (TN-0299)"
+                  "_": "Supplier payment - UD Kusmawati Prasetyo (Persero) Tbk (TN-0168)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ID": [
+        {
+          "_": "TN-0075"
+        }
+      ],
+      "IssueDate": [
+        {
+          "_": "2026-07-17"
+        }
+      ],
+      "InvoicePeriod": [
+        {
+          "StartDate": [
+            {
+              "_": "2026-07-17"
+            }
+          ],
+          "EndDate": [
+            {
+              "_": "2026-07-17"
+            }
+          ],
+          "Description": [
+            {
+              "_": "B2C_Sales (Accepted)"
+            }
+          ]
+        }
+      ],
+      "AccountingSupplierParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Mak Cik Aminah Catering"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "AccountingCustomerParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Walk-in Customer"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "PaymentTerms": [
+        {
+          "Note": [
+            {
+              "_": "Status: Accepted"
+            }
+          ]
+        }
+      ],
+      "PaymentMeans": [
+        {
+          "PayeeFinancialAccount": [
+            {
+              "ID": [
+                {
+                  "_": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "LegalMonetaryTotal": [
+        {
+          "LineExtensionAmount": [
+            {
+              "_": 756.85
+            }
+          ],
+          "TaxExclusiveAmount": [
+            {
+              "_": 756.85
+            }
+          ],
+          "TaxInclusiveAmount": [
+            {
+              "_": 756.85
+            }
+          ],
+          "PayableAmount": [
+            {
+              "_": 756.85
+            }
+          ]
+        }
+      ],
+      "InvoiceLine": [
+        {
+          "ID": [
+            {
+              "_": "TN-0075"
+            }
+          ],
+          "LineExtensionAmount": [
+            {
+              "_": 756.85
+            }
+          ],
+          "Price": [
+            {
+              "PriceAmount": [
+                {
+                  "_": 756.85
+                }
+              ]
+            }
+          ],
+          "ItemPriceExtension": [
+            {
+              "Amount": [
+                {
+                  "_": 756.85
+                }
+              ]
+            }
+          ],
+          "Item": [
+            {
+              "Description": [
+                {
+                  "_": "Catering services - B2C_Sales (TN-0075)"
                 }
               ]
             }

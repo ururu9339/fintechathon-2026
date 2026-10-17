@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0008"
+          "_": "TN-0087"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2026-03-04"
+              "_": "2026-03-03"
             }
           ],
           "Description": [
             {
-              "_": "EPF (Accepted)"
+              "_": "Supplier (Accepted)"
             }
           ]
         }
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "UD Pradipta"
+                      "_": "Perum Rahmawati Permadi"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 408.2
+              "_": 1247.81
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 408.2
+              "_": 1247.81
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 408.2
+              "_": 1247.81
             }
           ],
           "PayableAmount": [
             {
-              "_": 408.2
+              "_": 1247.81
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0008"
+              "_": "TN-0087"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 408.2
+              "_": 1247.81
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 408.2
+                  "_": 1247.81
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 408.2
+                  "_": 1247.81
                 }
               ]
             }
@@ -147,7 +147,159 @@
             {
               "Description": [
                 {
-                  "_": "EPF payment - UD Pradipta (TN-0008)"
+                  "_": "Supplier payment - Perum Rahmawati Permadi (TN-0087)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ID": [
+        {
+          "_": "TN-0294"
+        }
+      ],
+      "IssueDate": [
+        {
+          "_": "2026-03-01"
+        }
+      ],
+      "InvoicePeriod": [
+        {
+          "StartDate": [
+            {
+              "_": "2026-03-01"
+            }
+          ],
+          "EndDate": [
+            {
+              "_": "2026-03-01"
+            }
+          ],
+          "Description": [
+            {
+              "_": "B2C_Sales (Accepted)"
+            }
+          ]
+        }
+      ],
+      "AccountingSupplierParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Mak Cik Aminah Catering"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "AccountingCustomerParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Walk-in Customer"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "PaymentTerms": [
+        {
+          "Note": [
+            {
+              "_": "Status: Accepted"
+            }
+          ]
+        }
+      ],
+      "PaymentMeans": [
+        {
+          "PayeeFinancialAccount": [
+            {
+              "ID": [
+                {
+                  "_": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "LegalMonetaryTotal": [
+        {
+          "LineExtensionAmount": [
+            {
+              "_": 1955.23
+            }
+          ],
+          "TaxExclusiveAmount": [
+            {
+              "_": 1955.23
+            }
+          ],
+          "TaxInclusiveAmount": [
+            {
+              "_": 1955.23
+            }
+          ],
+          "PayableAmount": [
+            {
+              "_": 1955.23
+            }
+          ]
+        }
+      ],
+      "InvoiceLine": [
+        {
+          "ID": [
+            {
+              "_": "TN-0294"
+            }
+          ],
+          "LineExtensionAmount": [
+            {
+              "_": 1955.23
+            }
+          ],
+          "Price": [
+            {
+              "PriceAmount": [
+                {
+                  "_": 1955.23
+                }
+              ]
+            }
+          ],
+          "ItemPriceExtension": [
+            {
+              "Amount": [
+                {
+                  "_": 1955.23
+                }
+              ]
+            }
+          ],
+          "Item": [
+            {
+              "Description": [
+                {
+                  "_": "Catering services - B2C_Sales (TN-0294)"
                 }
               ]
             }

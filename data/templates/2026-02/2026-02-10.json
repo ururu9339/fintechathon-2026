@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0032"
+          "_": "TN-0120"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2026-02-13"
+              "_": "2026-04-16"
             }
           ],
           "Description": [
             {
-              "_": "EPF (Accepted)"
+              "_": "B2B_Sales (Accepted)"
             }
           ]
         }
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "PD Melani (Persero) Tbk"
+                      "_": "Mak Cik Aminah Catering"
                     }
                   ]
                 }
@@ -58,7 +58,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Mak Cik Aminah Catering"
+                      "_": "UD Prakasa"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 885.35
+              "_": 3729.99
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 885.35
+              "_": 3729.99
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 885.35
+              "_": 3729.99
             }
           ],
           "PayableAmount": [
             {
-              "_": 885.35
+              "_": 3729.99
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0032"
+              "_": "TN-0120"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 885.35
+              "_": 3729.99
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 885.35
+                  "_": 3729.99
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 885.35
+                  "_": 3729.99
                 }
               ]
             }
@@ -147,159 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "EPF payment - PD Melani (Persero) Tbk (TN-0032)"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "ID": [
-        {
-          "_": "TN-0050"
-        }
-      ],
-      "IssueDate": [
-        {
-          "_": "2026-02-10"
-        }
-      ],
-      "InvoicePeriod": [
-        {
-          "StartDate": [
-            {
-              "_": "2026-02-10"
-            }
-          ],
-          "EndDate": [
-            {
-              "_": "2026-02-13"
-            }
-          ],
-          "Description": [
-            {
-              "_": "EPF (Accepted)"
-            }
-          ]
-        }
-      ],
-      "AccountingSupplierParty": [
-        {
-          "Party": [
-            {
-              "PartyLegalEntity": [
-                {
-                  "RegistrationName": [
-                    {
-                      "_": "PT Halimah"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "AccountingCustomerParty": [
-        {
-          "Party": [
-            {
-              "PartyLegalEntity": [
-                {
-                  "RegistrationName": [
-                    {
-                      "_": "Mak Cik Aminah Catering"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "PaymentTerms": [
-        {
-          "Note": [
-            {
-              "_": "Status: Accepted"
-            }
-          ]
-        }
-      ],
-      "PaymentMeans": [
-        {
-          "PayeeFinancialAccount": [
-            {
-              "ID": [
-                {
-                  "_": ""
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "LegalMonetaryTotal": [
-        {
-          "LineExtensionAmount": [
-            {
-              "_": 403.54
-            }
-          ],
-          "TaxExclusiveAmount": [
-            {
-              "_": 403.54
-            }
-          ],
-          "TaxInclusiveAmount": [
-            {
-              "_": 403.54
-            }
-          ],
-          "PayableAmount": [
-            {
-              "_": 403.54
-            }
-          ]
-        }
-      ],
-      "InvoiceLine": [
-        {
-          "ID": [
-            {
-              "_": "TN-0050"
-            }
-          ],
-          "LineExtensionAmount": [
-            {
-              "_": 403.54
-            }
-          ],
-          "Price": [
-            {
-              "PriceAmount": [
-                {
-                  "_": 403.54
-                }
-              ]
-            }
-          ],
-          "ItemPriceExtension": [
-            {
-              "Amount": [
-                {
-                  "_": 403.54
-                }
-              ]
-            }
-          ],
-          "Item": [
-            {
-              "Description": [
-                {
-                  "_": "EPF payment - PT Halimah (TN-0050)"
+                  "_": "Catering services - B2B_Sales (TN-0120)"
                 }
               ]
             }

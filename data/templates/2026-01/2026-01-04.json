@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0129"
+          "_": "TN-0128"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2026-03-10"
+              "_": "2026-01-04"
             }
           ],
           "Description": [
             {
-              "_": "B2B_Sales (Accepted)"
+              "_": "B2C_Sales (Accepted)"
             }
           ]
         }
@@ -58,7 +58,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "PT Adriansyah"
+                      "_": "Walk-in Customer"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 1671.24
+              "_": 2271.05
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 1671.24
+              "_": 2271.05
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 1671.24
+              "_": 2271.05
             }
           ],
           "PayableAmount": [
             {
-              "_": 1671.24
+              "_": 2271.05
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0129"
+              "_": "TN-0128"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 1671.24
+              "_": 2271.05
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 1671.24
+                  "_": 2271.05
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 1671.24
+                  "_": 2271.05
                 }
               ]
             }
@@ -147,7 +147,311 @@
             {
               "Description": [
                 {
-                  "_": "Catering services - B2B_Sales (TN-0129)"
+                  "_": "Catering services - B2C_Sales (TN-0128)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ID": [
+        {
+          "_": "TN-0089"
+        }
+      ],
+      "IssueDate": [
+        {
+          "_": "2026-01-04"
+        }
+      ],
+      "InvoicePeriod": [
+        {
+          "StartDate": [
+            {
+              "_": "2026-01-04"
+            }
+          ],
+          "EndDate": [
+            {
+              "_": "2026-01-04"
+            }
+          ],
+          "Description": [
+            {
+              "_": "B2C_Sales (Accepted)"
+            }
+          ]
+        }
+      ],
+      "AccountingSupplierParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Mak Cik Aminah Catering"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "AccountingCustomerParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Walk-in Customer"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "PaymentTerms": [
+        {
+          "Note": [
+            {
+              "_": "Status: Accepted"
+            }
+          ]
+        }
+      ],
+      "PaymentMeans": [
+        {
+          "PayeeFinancialAccount": [
+            {
+              "ID": [
+                {
+                  "_": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "LegalMonetaryTotal": [
+        {
+          "LineExtensionAmount": [
+            {
+              "_": 1698.13
+            }
+          ],
+          "TaxExclusiveAmount": [
+            {
+              "_": 1698.13
+            }
+          ],
+          "TaxInclusiveAmount": [
+            {
+              "_": 1698.13
+            }
+          ],
+          "PayableAmount": [
+            {
+              "_": 1698.13
+            }
+          ]
+        }
+      ],
+      "InvoiceLine": [
+        {
+          "ID": [
+            {
+              "_": "TN-0089"
+            }
+          ],
+          "LineExtensionAmount": [
+            {
+              "_": 1698.13
+            }
+          ],
+          "Price": [
+            {
+              "PriceAmount": [
+                {
+                  "_": 1698.13
+                }
+              ]
+            }
+          ],
+          "ItemPriceExtension": [
+            {
+              "Amount": [
+                {
+                  "_": 1698.13
+                }
+              ]
+            }
+          ],
+          "Item": [
+            {
+              "Description": [
+                {
+                  "_": "Catering services - B2C_Sales (TN-0089)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ID": [
+        {
+          "_": "TN-0154"
+        }
+      ],
+      "IssueDate": [
+        {
+          "_": "2026-01-04"
+        }
+      ],
+      "InvoicePeriod": [
+        {
+          "StartDate": [
+            {
+              "_": "2026-01-04"
+            }
+          ],
+          "EndDate": [
+            {
+              "_": "2026-01-09"
+            }
+          ],
+          "Description": [
+            {
+              "_": "Supplier (Accepted)"
+            }
+          ]
+        }
+      ],
+      "AccountingSupplierParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Perum Saptono Wahyuni"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "AccountingCustomerParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Mak Cik Aminah Catering"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "PaymentTerms": [
+        {
+          "Note": [
+            {
+              "_": "Status: Accepted"
+            }
+          ]
+        }
+      ],
+      "PaymentMeans": [
+        {
+          "PayeeFinancialAccount": [
+            {
+              "ID": [
+                {
+                  "_": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "LegalMonetaryTotal": [
+        {
+          "LineExtensionAmount": [
+            {
+              "_": 521.54
+            }
+          ],
+          "TaxExclusiveAmount": [
+            {
+              "_": 521.54
+            }
+          ],
+          "TaxInclusiveAmount": [
+            {
+              "_": 521.54
+            }
+          ],
+          "PayableAmount": [
+            {
+              "_": 521.54
+            }
+          ]
+        }
+      ],
+      "InvoiceLine": [
+        {
+          "ID": [
+            {
+              "_": "TN-0154"
+            }
+          ],
+          "LineExtensionAmount": [
+            {
+              "_": 521.54
+            }
+          ],
+          "Price": [
+            {
+              "PriceAmount": [
+                {
+                  "_": 521.54
+                }
+              ]
+            }
+          ],
+          "ItemPriceExtension": [
+            {
+              "Amount": [
+                {
+                  "_": 521.54
+                }
+              ]
+            }
+          ],
+          "Item": [
+            {
+              "Description": [
+                {
+                  "_": "Supplier payment - Perum Saptono Wahyuni (TN-0154)"
                 }
               ]
             }

@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0181"
+          "_": "TN-0216"
         }
       ],
       "IssueDate": [
@@ -23,7 +23,7 @@
           ],
           "EndDate": [
             {
-              "_": "2026-04-29"
+              "_": "2026-04-26"
             }
           ],
           "Description": [
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Perum Safitri Mahendra Tbk"
+                      "_": "PD Megantara Tbk"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 683.58
+              "_": 751.94
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 683.58
+              "_": 751.94
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 683.58
+              "_": 751.94
             }
           ],
           "PayableAmount": [
             {
-              "_": 683.58
+              "_": 751.94
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0181"
+              "_": "TN-0216"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 683.58
+              "_": 751.94
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 683.58
+                  "_": 751.94
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 683.58
+                  "_": 751.94
                 }
               ]
             }
@@ -147,7 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "Supplier payment - Perum Safitri Mahendra Tbk (TN-0181)"
+                  "_": "Supplier payment - PD Megantara Tbk (TN-0216)"
                 }
               ]
             }

@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0232"
+          "_": "TN-0188"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2026-06-01"
+              "_": "2026-08-01"
             }
           ],
           "Description": [
             {
-              "_": "Supplier (Accepted)"
+              "_": "B2B_Sales (Accepted)"
             }
           ]
         }
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "PT Sihombing Hastuti"
+                      "_": "Mak Cik Aminah Catering"
                     }
                   ]
                 }
@@ -58,7 +58,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Mak Cik Aminah Catering"
+                      "_": "UD Pudjiastuti Purnawati"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 575.2
+              "_": 4399.02
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 575.2
+              "_": 4399.02
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 575.2
+              "_": 4399.02
             }
           ],
           "PayableAmount": [
             {
-              "_": 575.2
+              "_": 4399.02
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0232"
+              "_": "TN-0188"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 575.2
+              "_": 4399.02
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 575.2
+                  "_": 4399.02
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 575.2
+                  "_": 4399.02
                 }
               ]
             }
@@ -147,7 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "Supplier payment - PT Sihombing Hastuti (TN-0232)"
+                  "_": "Catering services - B2B_Sales (TN-0188)"
                 }
               ]
             }

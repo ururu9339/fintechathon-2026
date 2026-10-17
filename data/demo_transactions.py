@@ -6,14 +6,11 @@ from datetime import timedelta, date
 import random
 import json
 
-randomCustomers = pd.DataFrame(columns = ["Name", "IssuedDate", "ActualDate", "TransactionID", "Category", "CashInflow", "CashOutflow", "Status"])
-
 fake = Faker('id_ID')
 
-statuses = ["Accepted", "Pending"]
 categories = ["B2B_Sales", "B2C_Sales", "Supplier", "SST", "EPF"]
 
-def generate_customers(num_customers, initial_balance = 50000.0):
+def generate_transactions(num_customers, initial_balance = 50000.0):
     records = []
     end_date = date.today()
     start_date = end_date - timedelta(days=365)
@@ -28,7 +25,7 @@ def generate_customers(num_customers, initial_balance = 50000.0):
             cash_in = round(random.uniform(500, 4500), 2)
             if category == "B2B_Sales":
                 actual_date = issued_date + timedelta(days = 65)
-                status = "Pending" if actual_date > date.today() else "Accepted"
+                status = "Pending" if actual_date > end_date else "Accepted"
             else:
                 actual_date = issued_date
                 status = "Accepted"
@@ -60,6 +57,37 @@ def generate_customers(num_customers, initial_balance = 50000.0):
 
     return df
 
+def generate_qr_transactions():
+    records = []
+    columns = [
+        "Name",
+        "IssuedDate",
+        "ActualDate",
+        "TransactionID",
+        "Category",
+        "Inflow",
+        "CashOutflow",
+        "Status",
+    ]
+    end_date = date.today()
+    start_date = end_date - timedelta(days=365)
+
+    for i in range(1, 101):
+        issued_date = fake.date_between(start_date=start_date, end_date=end_date)
+        inflow = random.uniform(45.01, 60.0) if i % 5 == 0 else random.uniform(5.0, 44.99)
+        records.append({
+            "Name": f"QR Customer {i:04d}",
+            "IssuedDate": issued_date,
+            "ActualDate": issued_date,
+            "TransactionID": f"QR-{i:04d}",
+            "Category": "QR Log",
+            "Inflow": round(inflow, 2),
+            "CashOutflow": 0.0,
+            "Status": "Accepted",
+        })
+
+    return pd.DataFrame(records, columns=columns)
+
 DATA_DIR = Path(__file__).resolve().parent
 TEMPLATE_FILE = DATA_DIR / "templates" / "invoice-myinvoice.json"
 TEMPLATES_OUTPUT_DIR = DATA_DIR / "templates"
@@ -71,19 +99,12 @@ def export_daily_transactions_to_json(
     output_base_dir=TEMPLATES_OUTPUT_DIR,
     inject_attack=True
 ):
-    """
-    Groups daily transactions from df_transactions by IssuedDate and writes one 
-    MyInvois UBL JSON file per day inside its corresponding month folder 
-    (e.g., fintechathon-2026/data/templates/YYYY-MM/YYYY-MM-DD.json).
-    """
-    # 1. Load the base LHDN MyInvois template from data/templates/invoice-myinvoice.json
+
     with open(template_path, "r", encoding="utf-8") as f:
         master_template = json.load(f)
 
-    # Extract a single invoice blueprint from the root "Invoice" array
     invoice_blueprint = master_template["Invoice"][0]
 
-    # Remove stale JSON outputs while keeping the source invoice template.
     output_dir = Path(output_base_dir)
     source_template = Path(template_path).resolve()
     for old_file in output_dir.rglob("*.json"):
@@ -102,16 +123,15 @@ def export_daily_transactions_to_json(
 
     attack_tx_id = "TN-0001" if inject_attack else None
 
-    # 2. Group all generated records by IssuedDate to build one JSON file per day
-    for issued_date, daily_group in df.groupby("IssuedDate"):
-        month_folder = issued_date.strftime("%Y-%m")      # e.g., "2026-10"
-        daily_filename = f"{issued_date.strftime('%Y-%m-%d')}.json"  # e.g., "2026-10-15.json"
+    invoice_transactions = df[~df["Category"].isin(["QR Log", "QR Logs"])]
 
-        # Create the specific month directory inside data/templates/
+    for issued_date, daily_group in invoice_transactions.groupby("IssuedDate"):
+        month_folder = issued_date.strftime("%Y-%m")
+        daily_filename = f"{issued_date.strftime('%Y-%m-%d')}.json"
+
         month_dir = Path(output_base_dir) / month_folder
         month_dir.mkdir(parents=True, exist_ok=True)
 
-        # Initialize the daily UBL document container
         daily_json = {
             "_D": master_template.get("_D"),
             "_A": master_template.get("_A"),
@@ -119,7 +139,6 @@ def export_daily_transactions_to_json(
             "Invoice": []
         }
 
-        # 3. Map each transaction on that date into the daily "Invoice" list
         for _, row in daily_group.iterrows():
             inv = copy.deepcopy(invoice_blueprint)
             tx_id = str(row["TransactionID"])
@@ -128,17 +147,14 @@ def export_daily_transactions_to_json(
             date_str = issued_date.strftime("%Y-%m-%d")
             actual_date_str = row["ActualDate"].strftime("%Y-%m-%d")
 
-            # Determine the monetary amount from CashInflow or CashOutflow
             amount = float(row["CashInflow"]) if row["CashInflow"] > 0 else float(row["CashOutflow"])
 
-            # Populate Invoice ID, IssueDate, and InvoicePeriod (IssuedDate -> ActualDate)
             inv["ID"][0]["_"] = tx_id
             inv["IssueDate"][0]["_"] = date_str
             inv["InvoicePeriod"][0]["StartDate"][0]["_"] = date_str
             inv["InvoicePeriod"][0]["EndDate"][0]["_"] = actual_date_str
             inv["InvoicePeriod"][0]["Description"][0]["_"] = f"{category} ({row['Status']})"
 
-            # Populate Supplier and Buyer registration names
             supplier_reg = (
                 inv["AccountingSupplierParty"][0]["Party"][0]
                 ["PartyLegalEntity"][0]["RegistrationName"][0]
@@ -157,7 +173,6 @@ def export_daily_transactions_to_json(
                 buyer_reg["_"] = "Mak Cik Aminah Catering"
                 description = f"{category} payment - {party_name} ({tx_id})"
 
-            # 4. Inject the adversarial prompt injection scenario for the demo
             if tx_id == attack_tx_id:
                 amount = 48000.00
                 description = (
@@ -169,14 +184,12 @@ def export_daily_transactions_to_json(
             else:
                 inv["PaymentTerms"][0]["Note"][0]["_"] = f"Status: {row['Status']}"
 
-            # Populate LegalMonetaryTotal fields
             totals = inv["LegalMonetaryTotal"][0]
             totals["LineExtensionAmount"][0]["_"] = amount
             totals["TaxExclusiveAmount"][0]["_"] = amount
             totals["TaxInclusiveAmount"][0]["_"] = amount
             totals["PayableAmount"][0]["_"] = amount
 
-            # Populate InvoiceLine fields
             line = inv["InvoiceLine"][0]
             line["ID"][0]["_"] = tx_id
             line["LineExtensionAmount"][0]["_"] = amount
@@ -186,7 +199,6 @@ def export_daily_transactions_to_json(
 
             daily_json["Invoice"].append(inv)
 
-        # 5. Save the consolidated daily JSON file inside its monthly folder
         output_file = month_dir / daily_filename
         with open(output_file, "w", encoding="utf-8") as out_f:
             json.dump(daily_json, out_f, indent=2, ensure_ascii=False)
@@ -195,11 +207,25 @@ def export_daily_transactions_to_json(
 
 
 if __name__ == "__main__":
-    df_transactions = generate_customers(300)
-    
-    # Export the master CSV bank statement to fintechathon-2026/data/
-    csv_path = DATA_DIR / "transactions.csv"
+    df_transactions = generate_transactions(300)
+    qr_transactions = generate_qr_transactions().rename(columns={"Inflow": "CashInflow"})
+    df_transactions = pd.concat([df_transactions, qr_transactions], ignore_index=True)
+    df_transactions = df_transactions.sort_values(
+        by="IssuedDate", kind="stable"
+    ).reset_index(drop=True)
+    df_transactions["NetMovement"] = (
+        df_transactions["CashInflow"] - df_transactions["CashOutflow"]
+    )
+    df_transactions["CurrentBankAccount"] = 50000.0
+    accepted = df_transactions["Status"] == "Accepted"
+    df_transactions.loc[accepted, "CurrentBankAccount"] = (
+        50000.0 + df_transactions.loc[accepted, "NetMovement"].cumsum()
+    )
+
+    csv_path = DATA_DIR / "transaction.csv"
     df_transactions.to_csv(csv_path, index=False)
+    legacy_csv_path = DATA_DIR / "transactions.csv"
+    if legacy_csv_path.exists():
+        legacy_csv_path.unlink()
     
-    # Export daily JSON files organized into monthly folders inside data/templates/
     export_daily_transactions_to_json(df_transactions)

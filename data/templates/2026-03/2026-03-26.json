@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0052"
+          "_": "TN-0074"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2026-05-30"
+              "_": "2026-03-31"
             }
           ],
           "Description": [
             {
-              "_": "B2B_Sales (Accepted)"
+              "_": "Supplier (Accepted)"
             }
           ]
         }
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Mak Cik Aminah Catering"
+                      "_": "PD Kusumo (Persero) Tbk"
                     }
                   ]
                 }
@@ -58,7 +58,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Perum Mustofa Hastuti Tbk"
+                      "_": "Mak Cik Aminah Catering"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 4233.4
+              "_": 1174.64
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 4233.4
+              "_": 1174.64
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 4233.4
+              "_": 1174.64
             }
           ],
           "PayableAmount": [
             {
-              "_": 4233.4
+              "_": 1174.64
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0052"
+              "_": "TN-0074"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 4233.4
+              "_": 1174.64
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 4233.4
+                  "_": 1174.64
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 4233.4
+                  "_": 1174.64
                 }
               ]
             }
@@ -147,7 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "Catering services - B2B_Sales (TN-0052)"
+                  "_": "Supplier payment - PD Kusumo (Persero) Tbk (TN-0074)"
                 }
               ]
             }

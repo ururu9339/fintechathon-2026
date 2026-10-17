@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0111"
+          "_": "TN-0032"
         }
       ],
       "IssueDate": [
@@ -28,7 +28,7 @@
           ],
           "Description": [
             {
-              "_": "EPF (Accepted)"
+              "_": "SST (Accepted)"
             }
           ]
         }
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "CV Ramadan Mandasari"
+                      "_": "CV Aryani"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 371.55
+              "_": 1339.81
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 371.55
+              "_": 1339.81
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 371.55
+              "_": 1339.81
             }
           ],
           "PayableAmount": [
             {
-              "_": 371.55
+              "_": 1339.81
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0111"
+              "_": "TN-0032"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 371.55
+              "_": 1339.81
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 371.55
+                  "_": 1339.81
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 371.55
+                  "_": 1339.81
                 }
               ]
             }
@@ -147,7 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "EPF payment - CV Ramadan Mandasari (TN-0111)"
+                  "_": "SST payment - CV Aryani (TN-0032)"
                 }
               ]
             }

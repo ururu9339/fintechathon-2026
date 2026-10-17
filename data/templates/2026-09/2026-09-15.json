@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0238"
+          "_": "TN-0300"
         }
       ],
       "IssueDate": [
@@ -23,7 +23,159 @@
           ],
           "EndDate": [
             {
-              "_": "2026-09-17"
+              "_": "2026-11-19"
+            }
+          ],
+          "Description": [
+            {
+              "_": "B2B_Sales (Pending)"
+            }
+          ]
+        }
+      ],
+      "AccountingSupplierParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Mak Cik Aminah Catering"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "AccountingCustomerParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "PD Maryati"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "PaymentTerms": [
+        {
+          "Note": [
+            {
+              "_": "Status: Pending"
+            }
+          ]
+        }
+      ],
+      "PaymentMeans": [
+        {
+          "PayeeFinancialAccount": [
+            {
+              "ID": [
+                {
+                  "_": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "LegalMonetaryTotal": [
+        {
+          "LineExtensionAmount": [
+            {
+              "_": 2814.14
+            }
+          ],
+          "TaxExclusiveAmount": [
+            {
+              "_": 2814.14
+            }
+          ],
+          "TaxInclusiveAmount": [
+            {
+              "_": 2814.14
+            }
+          ],
+          "PayableAmount": [
+            {
+              "_": 2814.14
+            }
+          ]
+        }
+      ],
+      "InvoiceLine": [
+        {
+          "ID": [
+            {
+              "_": "TN-0300"
+            }
+          ],
+          "LineExtensionAmount": [
+            {
+              "_": 2814.14
+            }
+          ],
+          "Price": [
+            {
+              "PriceAmount": [
+                {
+                  "_": 2814.14
+                }
+              ]
+            }
+          ],
+          "ItemPriceExtension": [
+            {
+              "Amount": [
+                {
+                  "_": 2814.14
+                }
+              ]
+            }
+          ],
+          "Item": [
+            {
+              "Description": [
+                {
+                  "_": "Catering services - B2B_Sales (TN-0300)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ID": [
+        {
+          "_": "TN-0197"
+        }
+      ],
+      "IssueDate": [
+        {
+          "_": "2026-09-15"
+        }
+      ],
+      "InvoicePeriod": [
+        {
+          "StartDate": [
+            {
+              "_": "2026-09-15"
+            }
+          ],
+          "EndDate": [
+            {
+              "_": "2026-09-19"
             }
           ],
           "Description": [
@@ -41,7 +193,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "UD Mustofa"
+                      "_": "CV Rahayu Wijayanti Tbk"
                     }
                   ]
                 }
@@ -93,22 +245,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 1268.59
+              "_": 212.61
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 1268.59
+              "_": 212.61
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 1268.59
+              "_": 212.61
             }
           ],
           "PayableAmount": [
             {
-              "_": 1268.59
+              "_": 212.61
             }
           ]
         }
@@ -117,19 +269,19 @@
         {
           "ID": [
             {
-              "_": "TN-0238"
+              "_": "TN-0197"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 1268.59
+              "_": 212.61
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 1268.59
+                  "_": 212.61
                 }
               ]
             }
@@ -138,7 +290,7 @@
             {
               "Amount": [
                 {
-                  "_": 1268.59
+                  "_": 212.61
                 }
               ]
             }
@@ -147,7 +299,7 @@
             {
               "Description": [
                 {
-                  "_": "EPF payment - UD Mustofa (TN-0238)"
+                  "_": "EPF payment - CV Rahayu Wijayanti Tbk (TN-0197)"
                 }
               ]
             }

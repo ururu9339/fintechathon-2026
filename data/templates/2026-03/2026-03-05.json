@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0011"
+          "_": "TN-0277"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2026-03-10"
+              "_": "2026-03-05"
             }
           ],
           "Description": [
             {
-              "_": "SST (Accepted)"
+              "_": "B2C_Sales (Accepted)"
             }
           ]
         }
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "CV Wulandari"
+                      "_": "Mak Cik Aminah Catering"
                     }
                   ]
                 }
@@ -58,7 +58,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Mak Cik Aminah Catering"
+                      "_": "Walk-in Customer"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 279.49
+              "_": 2259.43
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 279.49
+              "_": 2259.43
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 279.49
+              "_": 2259.43
             }
           ],
           "PayableAmount": [
             {
-              "_": 279.49
+              "_": 2259.43
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0011"
+              "_": "TN-0277"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 279.49
+              "_": 2259.43
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 279.49
+                  "_": 2259.43
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 279.49
+                  "_": 2259.43
                 }
               ]
             }
@@ -147,7 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "SST payment - CV Wulandari (TN-0011)"
+                  "_": "Catering services - B2C_Sales (TN-0277)"
                 }
               ]
             }

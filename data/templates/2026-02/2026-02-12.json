@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0034"
+          "_": "TN-0112"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2026-04-18"
+              "_": "2026-02-13"
             }
           ],
           "Description": [
             {
-              "_": "B2B_Sales (Accepted)"
+              "_": "SST (Accepted)"
             }
           ]
         }
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Mak Cik Aminah Catering"
+                      "_": "Perum Pradana Tbk"
                     }
                   ]
                 }
@@ -58,7 +58,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "PD Yulianti"
+                      "_": "Mak Cik Aminah Catering"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 1887.14
+              "_": 634.71
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 1887.14
+              "_": 634.71
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 1887.14
+              "_": 634.71
             }
           ],
           "PayableAmount": [
             {
-              "_": 1887.14
+              "_": 634.71
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0034"
+              "_": "TN-0112"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 1887.14
+              "_": 634.71
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 1887.14
+                  "_": 634.71
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 1887.14
+                  "_": 634.71
                 }
               ]
             }
@@ -147,7 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "Catering services - B2B_Sales (TN-0034)"
+                  "_": "SST payment - Perum Pradana Tbk (TN-0112)"
                 }
               ]
             }

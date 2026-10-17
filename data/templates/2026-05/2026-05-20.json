@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0234"
+          "_": "TN-0067"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2026-05-25"
+              "_": "2026-05-21"
             }
           ],
           "Description": [
             {
-              "_": "Supplier (Accepted)"
+              "_": "EPF (Accepted)"
             }
           ]
         }
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "PD Hariyah"
+                      "_": "PD Dongoran Tbk"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 932.31
+              "_": 1177.28
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 932.31
+              "_": 1177.28
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 932.31
+              "_": 1177.28
             }
           ],
           "PayableAmount": [
             {
-              "_": 932.31
+              "_": 1177.28
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0234"
+              "_": "TN-0067"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 932.31
+              "_": 1177.28
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 932.31
+                  "_": 1177.28
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 932.31
+                  "_": 1177.28
                 }
               ]
             }
@@ -147,7 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "Supplier payment - PD Hariyah (TN-0234)"
+                  "_": "EPF payment - PD Dongoran Tbk (TN-0067)"
                 }
               ]
             }

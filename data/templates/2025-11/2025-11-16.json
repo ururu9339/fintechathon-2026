@@ -6,7 +6,159 @@
     {
       "ID": [
         {
-          "_": "TN-0236"
+          "_": "TN-0288"
+        }
+      ],
+      "IssueDate": [
+        {
+          "_": "2025-11-16"
+        }
+      ],
+      "InvoicePeriod": [
+        {
+          "StartDate": [
+            {
+              "_": "2025-11-16"
+            }
+          ],
+          "EndDate": [
+            {
+              "_": "2025-11-21"
+            }
+          ],
+          "Description": [
+            {
+              "_": "EPF (Accepted)"
+            }
+          ]
+        }
+      ],
+      "AccountingSupplierParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "PT Sitorus"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "AccountingCustomerParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Mak Cik Aminah Catering"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "PaymentTerms": [
+        {
+          "Note": [
+            {
+              "_": "Status: Accepted"
+            }
+          ]
+        }
+      ],
+      "PaymentMeans": [
+        {
+          "PayeeFinancialAccount": [
+            {
+              "ID": [
+                {
+                  "_": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "LegalMonetaryTotal": [
+        {
+          "LineExtensionAmount": [
+            {
+              "_": 579.77
+            }
+          ],
+          "TaxExclusiveAmount": [
+            {
+              "_": 579.77
+            }
+          ],
+          "TaxInclusiveAmount": [
+            {
+              "_": 579.77
+            }
+          ],
+          "PayableAmount": [
+            {
+              "_": 579.77
+            }
+          ]
+        }
+      ],
+      "InvoiceLine": [
+        {
+          "ID": [
+            {
+              "_": "TN-0288"
+            }
+          ],
+          "LineExtensionAmount": [
+            {
+              "_": 579.77
+            }
+          ],
+          "Price": [
+            {
+              "PriceAmount": [
+                {
+                  "_": 579.77
+                }
+              ]
+            }
+          ],
+          "ItemPriceExtension": [
+            {
+              "Amount": [
+                {
+                  "_": 579.77
+                }
+              ]
+            }
+          ],
+          "Item": [
+            {
+              "Description": [
+                {
+                  "_": "EPF payment - PT Sitorus (TN-0288)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ID": [
+        {
+          "_": "TN-0008"
         }
       ],
       "IssueDate": [
@@ -93,22 +245,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 1903.34
+              "_": 4287.53
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 1903.34
+              "_": 4287.53
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 1903.34
+              "_": 4287.53
             }
           ],
           "PayableAmount": [
             {
-              "_": 1903.34
+              "_": 4287.53
             }
           ]
         }
@@ -117,19 +269,19 @@
         {
           "ID": [
             {
-              "_": "TN-0236"
+              "_": "TN-0008"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 1903.34
+              "_": 4287.53
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 1903.34
+                  "_": 4287.53
                 }
               ]
             }
@@ -138,7 +290,7 @@
             {
               "Amount": [
                 {
-                  "_": 1903.34
+                  "_": 4287.53
                 }
               ]
             }
@@ -147,7 +299,7 @@
             {
               "Description": [
                 {
-                  "_": "Catering services - B2C_Sales (TN-0236)"
+                  "_": "Catering services - B2C_Sales (TN-0008)"
                 }
               ]
             }

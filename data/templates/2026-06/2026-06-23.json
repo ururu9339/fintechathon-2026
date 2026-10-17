@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0294"
+          "_": "TN-0076"
         }
       ],
       "IssueDate": [
@@ -23,7 +23,7 @@
           ],
           "EndDate": [
             {
-              "_": "2026-06-26"
+              "_": "2026-06-24"
             }
           ],
           "Description": [
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "PD Prayoga"
+                      "_": "UD Hidayat"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 736.92
+              "_": 1440.8
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 736.92
+              "_": 1440.8
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 736.92
+              "_": 1440.8
             }
           ],
           "PayableAmount": [
             {
-              "_": 736.92
+              "_": 1440.8
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0294"
+              "_": "TN-0076"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 736.92
+              "_": 1440.8
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 736.92
+                  "_": 1440.8
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 736.92
+                  "_": 1440.8
                 }
               ]
             }
@@ -147,159 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "Supplier payment - PD Prayoga (TN-0294)"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "ID": [
-        {
-          "_": "TN-0060"
-        }
-      ],
-      "IssueDate": [
-        {
-          "_": "2026-06-23"
-        }
-      ],
-      "InvoicePeriod": [
-        {
-          "StartDate": [
-            {
-              "_": "2026-06-23"
-            }
-          ],
-          "EndDate": [
-            {
-              "_": "2026-06-23"
-            }
-          ],
-          "Description": [
-            {
-              "_": "B2C_Sales (Accepted)"
-            }
-          ]
-        }
-      ],
-      "AccountingSupplierParty": [
-        {
-          "Party": [
-            {
-              "PartyLegalEntity": [
-                {
-                  "RegistrationName": [
-                    {
-                      "_": "Mak Cik Aminah Catering"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "AccountingCustomerParty": [
-        {
-          "Party": [
-            {
-              "PartyLegalEntity": [
-                {
-                  "RegistrationName": [
-                    {
-                      "_": "Walk-in Customer"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "PaymentTerms": [
-        {
-          "Note": [
-            {
-              "_": "Status: Accepted"
-            }
-          ]
-        }
-      ],
-      "PaymentMeans": [
-        {
-          "PayeeFinancialAccount": [
-            {
-              "ID": [
-                {
-                  "_": ""
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "LegalMonetaryTotal": [
-        {
-          "LineExtensionAmount": [
-            {
-              "_": 973.74
-            }
-          ],
-          "TaxExclusiveAmount": [
-            {
-              "_": 973.74
-            }
-          ],
-          "TaxInclusiveAmount": [
-            {
-              "_": 973.74
-            }
-          ],
-          "PayableAmount": [
-            {
-              "_": 973.74
-            }
-          ]
-        }
-      ],
-      "InvoiceLine": [
-        {
-          "ID": [
-            {
-              "_": "TN-0060"
-            }
-          ],
-          "LineExtensionAmount": [
-            {
-              "_": 973.74
-            }
-          ],
-          "Price": [
-            {
-              "PriceAmount": [
-                {
-                  "_": 973.74
-                }
-              ]
-            }
-          ],
-          "ItemPriceExtension": [
-            {
-              "Amount": [
-                {
-                  "_": 973.74
-                }
-              ]
-            }
-          ],
-          "Item": [
-            {
-              "Description": [
-                {
-                  "_": "Catering services - B2C_Sales (TN-0060)"
+                  "_": "Supplier payment - UD Hidayat (TN-0076)"
                 }
               ]
             }

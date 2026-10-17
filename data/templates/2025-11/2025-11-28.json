@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0062"
+          "_": "TN-0227"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2025-12-01"
+              "_": "2025-11-29"
             }
           ],
           "Description": [
             {
-              "_": "Supplier (Accepted)"
+              "_": "EPF (Accepted)"
             }
           ]
         }
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "PT Wulandari"
+                      "_": "PD Hasanah Kuswandari Tbk"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 1245.01
+              "_": 1197.45
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 1245.01
+              "_": 1197.45
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 1245.01
+              "_": 1197.45
             }
           ],
           "PayableAmount": [
             {
-              "_": 1245.01
+              "_": 1197.45
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0062"
+              "_": "TN-0227"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 1245.01
+              "_": 1197.45
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 1245.01
+                  "_": 1197.45
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 1245.01
+                  "_": 1197.45
                 }
               ]
             }
@@ -147,7 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "Supplier payment - PT Wulandari (TN-0062)"
+                  "_": "EPF payment - PD Hasanah Kuswandari Tbk (TN-0227)"
                 }
               ]
             }

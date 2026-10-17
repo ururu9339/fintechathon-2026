@@ -6,159 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0096"
-        }
-      ],
-      "IssueDate": [
-        {
-          "_": "2026-03-28"
-        }
-      ],
-      "InvoicePeriod": [
-        {
-          "StartDate": [
-            {
-              "_": "2026-03-28"
-            }
-          ],
-          "EndDate": [
-            {
-              "_": "2026-04-01"
-            }
-          ],
-          "Description": [
-            {
-              "_": "EPF (Accepted)"
-            }
-          ]
-        }
-      ],
-      "AccountingSupplierParty": [
-        {
-          "Party": [
-            {
-              "PartyLegalEntity": [
-                {
-                  "RegistrationName": [
-                    {
-                      "_": "PD Rahayu Sihombing"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "AccountingCustomerParty": [
-        {
-          "Party": [
-            {
-              "PartyLegalEntity": [
-                {
-                  "RegistrationName": [
-                    {
-                      "_": "Mak Cik Aminah Catering"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "PaymentTerms": [
-        {
-          "Note": [
-            {
-              "_": "Status: Accepted"
-            }
-          ]
-        }
-      ],
-      "PaymentMeans": [
-        {
-          "PayeeFinancialAccount": [
-            {
-              "ID": [
-                {
-                  "_": ""
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "LegalMonetaryTotal": [
-        {
-          "LineExtensionAmount": [
-            {
-              "_": 342.67
-            }
-          ],
-          "TaxExclusiveAmount": [
-            {
-              "_": 342.67
-            }
-          ],
-          "TaxInclusiveAmount": [
-            {
-              "_": 342.67
-            }
-          ],
-          "PayableAmount": [
-            {
-              "_": 342.67
-            }
-          ]
-        }
-      ],
-      "InvoiceLine": [
-        {
-          "ID": [
-            {
-              "_": "TN-0096"
-            }
-          ],
-          "LineExtensionAmount": [
-            {
-              "_": 342.67
-            }
-          ],
-          "Price": [
-            {
-              "PriceAmount": [
-                {
-                  "_": 342.67
-                }
-              ]
-            }
-          ],
-          "ItemPriceExtension": [
-            {
-              "Amount": [
-                {
-                  "_": 342.67
-                }
-              ]
-            }
-          ],
-          "Item": [
-            {
-              "Description": [
-                {
-                  "_": "EPF payment - PD Rahayu Sihombing (TN-0096)"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "ID": [
-        {
-          "_": "TN-0005"
+          "_": "TN-0064"
         }
       ],
       "IssueDate": [
@@ -193,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "CV Hidayanto Tbk"
+                      "_": "UD Prakasa Samosir Tbk"
                     }
                   ]
                 }
@@ -245,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 876.99
+              "_": 539.27
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 876.99
+              "_": 539.27
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 876.99
+              "_": 539.27
             }
           ],
           "PayableAmount": [
             {
-              "_": 876.99
+              "_": 539.27
             }
           ]
         }
@@ -269,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0005"
+              "_": "TN-0064"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 876.99
+              "_": 539.27
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 876.99
+                  "_": 539.27
                 }
               ]
             }
@@ -290,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 876.99
+                  "_": 539.27
                 }
               ]
             }
@@ -299,7 +147,159 @@
             {
               "Description": [
                 {
-                  "_": "Supplier payment - CV Hidayanto Tbk (TN-0005)"
+                  "_": "Supplier payment - UD Prakasa Samosir Tbk (TN-0064)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ID": [
+        {
+          "_": "TN-0009"
+        }
+      ],
+      "IssueDate": [
+        {
+          "_": "2026-03-28"
+        }
+      ],
+      "InvoicePeriod": [
+        {
+          "StartDate": [
+            {
+              "_": "2026-03-28"
+            }
+          ],
+          "EndDate": [
+            {
+              "_": "2026-03-28"
+            }
+          ],
+          "Description": [
+            {
+              "_": "B2C_Sales (Accepted)"
+            }
+          ]
+        }
+      ],
+      "AccountingSupplierParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Mak Cik Aminah Catering"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "AccountingCustomerParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Walk-in Customer"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "PaymentTerms": [
+        {
+          "Note": [
+            {
+              "_": "Status: Accepted"
+            }
+          ]
+        }
+      ],
+      "PaymentMeans": [
+        {
+          "PayeeFinancialAccount": [
+            {
+              "ID": [
+                {
+                  "_": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "LegalMonetaryTotal": [
+        {
+          "LineExtensionAmount": [
+            {
+              "_": 1634.14
+            }
+          ],
+          "TaxExclusiveAmount": [
+            {
+              "_": 1634.14
+            }
+          ],
+          "TaxInclusiveAmount": [
+            {
+              "_": 1634.14
+            }
+          ],
+          "PayableAmount": [
+            {
+              "_": 1634.14
+            }
+          ]
+        }
+      ],
+      "InvoiceLine": [
+        {
+          "ID": [
+            {
+              "_": "TN-0009"
+            }
+          ],
+          "LineExtensionAmount": [
+            {
+              "_": 1634.14
+            }
+          ],
+          "Price": [
+            {
+              "PriceAmount": [
+                {
+                  "_": 1634.14
+                }
+              ]
+            }
+          ],
+          "ItemPriceExtension": [
+            {
+              "Amount": [
+                {
+                  "_": 1634.14
+                }
+              ]
+            }
+          ],
+          "Item": [
+            {
+              "Description": [
+                {
+                  "_": "Catering services - B2C_Sales (TN-0009)"
                 }
               ]
             }

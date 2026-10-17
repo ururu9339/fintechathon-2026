@@ -6,159 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0220"
-        }
-      ],
-      "IssueDate": [
-        {
-          "_": "2026-08-29"
-        }
-      ],
-      "InvoicePeriod": [
-        {
-          "StartDate": [
-            {
-              "_": "2026-08-29"
-            }
-          ],
-          "EndDate": [
-            {
-              "_": "2026-09-03"
-            }
-          ],
-          "Description": [
-            {
-              "_": "SST (Accepted)"
-            }
-          ]
-        }
-      ],
-      "AccountingSupplierParty": [
-        {
-          "Party": [
-            {
-              "PartyLegalEntity": [
-                {
-                  "RegistrationName": [
-                    {
-                      "_": "PD Firmansyah Wahyudin"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "AccountingCustomerParty": [
-        {
-          "Party": [
-            {
-              "PartyLegalEntity": [
-                {
-                  "RegistrationName": [
-                    {
-                      "_": "Mak Cik Aminah Catering"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "PaymentTerms": [
-        {
-          "Note": [
-            {
-              "_": "Status: Accepted"
-            }
-          ]
-        }
-      ],
-      "PaymentMeans": [
-        {
-          "PayeeFinancialAccount": [
-            {
-              "ID": [
-                {
-                  "_": ""
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "LegalMonetaryTotal": [
-        {
-          "LineExtensionAmount": [
-            {
-              "_": 726.14
-            }
-          ],
-          "TaxExclusiveAmount": [
-            {
-              "_": 726.14
-            }
-          ],
-          "TaxInclusiveAmount": [
-            {
-              "_": 726.14
-            }
-          ],
-          "PayableAmount": [
-            {
-              "_": 726.14
-            }
-          ]
-        }
-      ],
-      "InvoiceLine": [
-        {
-          "ID": [
-            {
-              "_": "TN-0220"
-            }
-          ],
-          "LineExtensionAmount": [
-            {
-              "_": 726.14
-            }
-          ],
-          "Price": [
-            {
-              "PriceAmount": [
-                {
-                  "_": 726.14
-                }
-              ]
-            }
-          ],
-          "ItemPriceExtension": [
-            {
-              "Amount": [
-                {
-                  "_": 726.14
-                }
-              ]
-            }
-          ],
-          "Item": [
-            {
-              "Description": [
-                {
-                  "_": "SST payment - PD Firmansyah Wahyudin (TN-0220)"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "ID": [
-        {
-          "_": "TN-0069"
+          "_": "TN-0268"
         }
       ],
       "IssueDate": [
@@ -180,7 +28,7 @@
           ],
           "Description": [
             {
-              "_": "Supplier (Accepted)"
+              "_": "EPF (Accepted)"
             }
           ]
         }
@@ -193,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "PT Pratama"
+                      "_": "UD Prastuti Nuraini"
                     }
                   ]
                 }
@@ -245,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 629.57
+              "_": 264.81
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 629.57
+              "_": 264.81
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 629.57
+              "_": 264.81
             }
           ],
           "PayableAmount": [
             {
-              "_": 629.57
+              "_": 264.81
             }
           ]
         }
@@ -269,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0069"
+              "_": "TN-0268"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 629.57
+              "_": 264.81
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 629.57
+                  "_": 264.81
                 }
               ]
             }
@@ -290,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 629.57
+                  "_": 264.81
                 }
               ]
             }
@@ -299,7 +147,311 @@
             {
               "Description": [
                 {
-                  "_": "Supplier payment - PT Pratama (TN-0069)"
+                  "_": "EPF payment - UD Prastuti Nuraini (TN-0268)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ID": [
+        {
+          "_": "TN-0043"
+        }
+      ],
+      "IssueDate": [
+        {
+          "_": "2026-08-29"
+        }
+      ],
+      "InvoicePeriod": [
+        {
+          "StartDate": [
+            {
+              "_": "2026-08-29"
+            }
+          ],
+          "EndDate": [
+            {
+              "_": "2026-08-31"
+            }
+          ],
+          "Description": [
+            {
+              "_": "SST (Accepted)"
+            }
+          ]
+        }
+      ],
+      "AccountingSupplierParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "CV Ramadan Tbk"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "AccountingCustomerParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Mak Cik Aminah Catering"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "PaymentTerms": [
+        {
+          "Note": [
+            {
+              "_": "Status: Accepted"
+            }
+          ]
+        }
+      ],
+      "PaymentMeans": [
+        {
+          "PayeeFinancialAccount": [
+            {
+              "ID": [
+                {
+                  "_": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "LegalMonetaryTotal": [
+        {
+          "LineExtensionAmount": [
+            {
+              "_": 830.83
+            }
+          ],
+          "TaxExclusiveAmount": [
+            {
+              "_": 830.83
+            }
+          ],
+          "TaxInclusiveAmount": [
+            {
+              "_": 830.83
+            }
+          ],
+          "PayableAmount": [
+            {
+              "_": 830.83
+            }
+          ]
+        }
+      ],
+      "InvoiceLine": [
+        {
+          "ID": [
+            {
+              "_": "TN-0043"
+            }
+          ],
+          "LineExtensionAmount": [
+            {
+              "_": 830.83
+            }
+          ],
+          "Price": [
+            {
+              "PriceAmount": [
+                {
+                  "_": 830.83
+                }
+              ]
+            }
+          ],
+          "ItemPriceExtension": [
+            {
+              "Amount": [
+                {
+                  "_": 830.83
+                }
+              ]
+            }
+          ],
+          "Item": [
+            {
+              "Description": [
+                {
+                  "_": "SST payment - CV Ramadan Tbk (TN-0043)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ID": [
+        {
+          "_": "TN-0299"
+        }
+      ],
+      "IssueDate": [
+        {
+          "_": "2026-08-29"
+        }
+      ],
+      "InvoicePeriod": [
+        {
+          "StartDate": [
+            {
+              "_": "2026-08-29"
+            }
+          ],
+          "EndDate": [
+            {
+              "_": "2026-08-31"
+            }
+          ],
+          "Description": [
+            {
+              "_": "Supplier (Accepted)"
+            }
+          ]
+        }
+      ],
+      "AccountingSupplierParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "PT Purwanti"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "AccountingCustomerParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Mak Cik Aminah Catering"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "PaymentTerms": [
+        {
+          "Note": [
+            {
+              "_": "Status: Accepted"
+            }
+          ]
+        }
+      ],
+      "PaymentMeans": [
+        {
+          "PayeeFinancialAccount": [
+            {
+              "ID": [
+                {
+                  "_": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "LegalMonetaryTotal": [
+        {
+          "LineExtensionAmount": [
+            {
+              "_": 802.78
+            }
+          ],
+          "TaxExclusiveAmount": [
+            {
+              "_": 802.78
+            }
+          ],
+          "TaxInclusiveAmount": [
+            {
+              "_": 802.78
+            }
+          ],
+          "PayableAmount": [
+            {
+              "_": 802.78
+            }
+          ]
+        }
+      ],
+      "InvoiceLine": [
+        {
+          "ID": [
+            {
+              "_": "TN-0299"
+            }
+          ],
+          "LineExtensionAmount": [
+            {
+              "_": 802.78
+            }
+          ],
+          "Price": [
+            {
+              "PriceAmount": [
+                {
+                  "_": 802.78
+                }
+              ]
+            }
+          ],
+          "ItemPriceExtension": [
+            {
+              "Amount": [
+                {
+                  "_": 802.78
+                }
+              ]
+            }
+          ],
+          "Item": [
+            {
+              "Description": [
+                {
+                  "_": "Supplier payment - PT Purwanti (TN-0299)"
                 }
               ]
             }

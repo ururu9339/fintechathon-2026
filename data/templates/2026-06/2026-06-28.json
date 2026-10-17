@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0219"
+          "_": "TN-0113"
         }
       ],
       "IssueDate": [
@@ -23,7 +23,7 @@
           ],
           "EndDate": [
             {
-              "_": "2026-06-29"
+              "_": "2026-07-03"
             }
           ],
           "Description": [
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "PD Jailani Ramadan Tbk"
+                      "_": "CV Najmudin Tbk"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 928.21
+              "_": 1384.63
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 928.21
+              "_": 1384.63
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 928.21
+              "_": 1384.63
             }
           ],
           "PayableAmount": [
             {
-              "_": 928.21
+              "_": 1384.63
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0219"
+              "_": "TN-0113"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 928.21
+              "_": 1384.63
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 928.21
+                  "_": 1384.63
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 928.21
+                  "_": 1384.63
                 }
               ]
             }
@@ -147,7 +147,159 @@
             {
               "Description": [
                 {
-                  "_": "Supplier payment - PD Jailani Ramadan Tbk (TN-0219)"
+                  "_": "Supplier payment - CV Najmudin Tbk (TN-0113)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ID": [
+        {
+          "_": "TN-0218"
+        }
+      ],
+      "IssueDate": [
+        {
+          "_": "2026-06-28"
+        }
+      ],
+      "InvoicePeriod": [
+        {
+          "StartDate": [
+            {
+              "_": "2026-06-28"
+            }
+          ],
+          "EndDate": [
+            {
+              "_": "2026-06-28"
+            }
+          ],
+          "Description": [
+            {
+              "_": "B2C_Sales (Accepted)"
+            }
+          ]
+        }
+      ],
+      "AccountingSupplierParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Mak Cik Aminah Catering"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "AccountingCustomerParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Walk-in Customer"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "PaymentTerms": [
+        {
+          "Note": [
+            {
+              "_": "Status: Accepted"
+            }
+          ]
+        }
+      ],
+      "PaymentMeans": [
+        {
+          "PayeeFinancialAccount": [
+            {
+              "ID": [
+                {
+                  "_": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "LegalMonetaryTotal": [
+        {
+          "LineExtensionAmount": [
+            {
+              "_": 2345.27
+            }
+          ],
+          "TaxExclusiveAmount": [
+            {
+              "_": 2345.27
+            }
+          ],
+          "TaxInclusiveAmount": [
+            {
+              "_": 2345.27
+            }
+          ],
+          "PayableAmount": [
+            {
+              "_": 2345.27
+            }
+          ]
+        }
+      ],
+      "InvoiceLine": [
+        {
+          "ID": [
+            {
+              "_": "TN-0218"
+            }
+          ],
+          "LineExtensionAmount": [
+            {
+              "_": 2345.27
+            }
+          ],
+          "Price": [
+            {
+              "PriceAmount": [
+                {
+                  "_": 2345.27
+                }
+              ]
+            }
+          ],
+          "ItemPriceExtension": [
+            {
+              "Amount": [
+                {
+                  "_": 2345.27
+                }
+              ]
+            }
+          ],
+          "Item": [
+            {
+              "Description": [
+                {
+                  "_": "Catering services - B2C_Sales (TN-0218)"
                 }
               ]
             }

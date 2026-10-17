@@ -6,159 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0070"
-        }
-      ],
-      "IssueDate": [
-        {
-          "_": "2026-04-02"
-        }
-      ],
-      "InvoicePeriod": [
-        {
-          "StartDate": [
-            {
-              "_": "2026-04-02"
-            }
-          ],
-          "EndDate": [
-            {
-              "_": "2026-06-06"
-            }
-          ],
-          "Description": [
-            {
-              "_": "B2B_Sales (Accepted)"
-            }
-          ]
-        }
-      ],
-      "AccountingSupplierParty": [
-        {
-          "Party": [
-            {
-              "PartyLegalEntity": [
-                {
-                  "RegistrationName": [
-                    {
-                      "_": "Mak Cik Aminah Catering"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "AccountingCustomerParty": [
-        {
-          "Party": [
-            {
-              "PartyLegalEntity": [
-                {
-                  "RegistrationName": [
-                    {
-                      "_": "PT Yuniar"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "PaymentTerms": [
-        {
-          "Note": [
-            {
-              "_": "Status: Accepted"
-            }
-          ]
-        }
-      ],
-      "PaymentMeans": [
-        {
-          "PayeeFinancialAccount": [
-            {
-              "ID": [
-                {
-                  "_": ""
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "LegalMonetaryTotal": [
-        {
-          "LineExtensionAmount": [
-            {
-              "_": 934.96
-            }
-          ],
-          "TaxExclusiveAmount": [
-            {
-              "_": 934.96
-            }
-          ],
-          "TaxInclusiveAmount": [
-            {
-              "_": 934.96
-            }
-          ],
-          "PayableAmount": [
-            {
-              "_": 934.96
-            }
-          ]
-        }
-      ],
-      "InvoiceLine": [
-        {
-          "ID": [
-            {
-              "_": "TN-0070"
-            }
-          ],
-          "LineExtensionAmount": [
-            {
-              "_": 934.96
-            }
-          ],
-          "Price": [
-            {
-              "PriceAmount": [
-                {
-                  "_": 934.96
-                }
-              ]
-            }
-          ],
-          "ItemPriceExtension": [
-            {
-              "Amount": [
-                {
-                  "_": 934.96
-                }
-              ]
-            }
-          ],
-          "Item": [
-            {
-              "Description": [
-                {
-                  "_": "Catering services - B2B_Sales (TN-0070)"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "ID": [
-        {
-          "_": "TN-0016"
+          "_": "TN-0098"
         }
       ],
       "IssueDate": [
@@ -180,7 +28,7 @@
           ],
           "Description": [
             {
-              "_": "Supplier (Accepted)"
+              "_": "SST (Accepted)"
             }
           ]
         }
@@ -193,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "PD Damanik Mandasari (Persero) Tbk"
+                      "_": "PD Dongoran Wacana"
                     }
                   ]
                 }
@@ -245,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 795.57
+              "_": 1246.41
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 795.57
+              "_": 1246.41
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 795.57
+              "_": 1246.41
             }
           ],
           "PayableAmount": [
             {
-              "_": 795.57
+              "_": 1246.41
             }
           ]
         }
@@ -269,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0016"
+              "_": "TN-0098"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 795.57
+              "_": 1246.41
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 795.57
+                  "_": 1246.41
                 }
               ]
             }
@@ -290,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 795.57
+                  "_": 1246.41
                 }
               ]
             }
@@ -299,7 +147,159 @@
             {
               "Description": [
                 {
-                  "_": "Supplier payment - PD Damanik Mandasari (Persero) Tbk (TN-0016)"
+                  "_": "SST payment - PD Dongoran Wacana (TN-0098)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ID": [
+        {
+          "_": "TN-0196"
+        }
+      ],
+      "IssueDate": [
+        {
+          "_": "2026-04-02"
+        }
+      ],
+      "InvoicePeriod": [
+        {
+          "StartDate": [
+            {
+              "_": "2026-04-02"
+            }
+          ],
+          "EndDate": [
+            {
+              "_": "2026-04-05"
+            }
+          ],
+          "Description": [
+            {
+              "_": "SST (Accepted)"
+            }
+          ]
+        }
+      ],
+      "AccountingSupplierParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "UD Kuswoyo Yuliarti"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "AccountingCustomerParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Mak Cik Aminah Catering"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "PaymentTerms": [
+        {
+          "Note": [
+            {
+              "_": "Status: Accepted"
+            }
+          ]
+        }
+      ],
+      "PaymentMeans": [
+        {
+          "PayeeFinancialAccount": [
+            {
+              "ID": [
+                {
+                  "_": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "LegalMonetaryTotal": [
+        {
+          "LineExtensionAmount": [
+            {
+              "_": 607.79
+            }
+          ],
+          "TaxExclusiveAmount": [
+            {
+              "_": 607.79
+            }
+          ],
+          "TaxInclusiveAmount": [
+            {
+              "_": 607.79
+            }
+          ],
+          "PayableAmount": [
+            {
+              "_": 607.79
+            }
+          ]
+        }
+      ],
+      "InvoiceLine": [
+        {
+          "ID": [
+            {
+              "_": "TN-0196"
+            }
+          ],
+          "LineExtensionAmount": [
+            {
+              "_": 607.79
+            }
+          ],
+          "Price": [
+            {
+              "PriceAmount": [
+                {
+                  "_": 607.79
+                }
+              ]
+            }
+          ],
+          "ItemPriceExtension": [
+            {
+              "Amount": [
+                {
+                  "_": 607.79
+                }
+              ]
+            }
+          ],
+          "Item": [
+            {
+              "Description": [
+                {
+                  "_": "SST payment - UD Kuswoyo Yuliarti (TN-0196)"
                 }
               ]
             }

@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0191"
+          "_": "TN-0295"
         }
       ],
       "IssueDate": [
@@ -28,7 +28,7 @@
           ],
           "Description": [
             {
-              "_": "SST (Accepted)"
+              "_": "Supplier (Accepted)"
             }
           ]
         }
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "PD Rajata"
+                      "_": "UD Pradana Tbk"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 1249.77
+              "_": 462.53
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 1249.77
+              "_": 462.53
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 1249.77
+              "_": 462.53
             }
           ],
           "PayableAmount": [
             {
-              "_": 1249.77
+              "_": 462.53
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0191"
+              "_": "TN-0295"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 1249.77
+              "_": 462.53
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 1249.77
+                  "_": 462.53
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 1249.77
+                  "_": 462.53
                 }
               ]
             }
@@ -147,7 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "SST payment - PD Rajata (TN-0191)"
+                  "_": "Supplier payment - UD Pradana Tbk (TN-0295)"
                 }
               ]
             }
@@ -158,7 +158,7 @@
     {
       "ID": [
         {
-          "_": "TN-0252"
+          "_": "TN-0176"
         }
       ],
       "IssueDate": [
@@ -175,12 +175,12 @@
           ],
           "EndDate": [
             {
-              "_": "2026-01-02"
+              "_": "2026-03-08"
             }
           ],
           "Description": [
             {
-              "_": "B2C_Sales (Accepted)"
+              "_": "B2B_Sales (Accepted)"
             }
           ]
         }
@@ -210,7 +210,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Walk-in Customer"
+                      "_": "Perum Widodo Jailani"
                     }
                   ]
                 }
@@ -245,22 +245,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 4180.78
+              "_": 3971.37
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 4180.78
+              "_": 3971.37
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 4180.78
+              "_": 3971.37
             }
           ],
           "PayableAmount": [
             {
-              "_": 4180.78
+              "_": 3971.37
             }
           ]
         }
@@ -269,19 +269,19 @@
         {
           "ID": [
             {
-              "_": "TN-0252"
+              "_": "TN-0176"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 4180.78
+              "_": 3971.37
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 4180.78
+                  "_": 3971.37
                 }
               ]
             }
@@ -290,7 +290,7 @@
             {
               "Amount": [
                 {
-                  "_": 4180.78
+                  "_": 3971.37
                 }
               ]
             }
@@ -299,159 +299,7 @@
             {
               "Description": [
                 {
-                  "_": "Catering services - B2C_Sales (TN-0252)"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "ID": [
-        {
-          "_": "TN-0077"
-        }
-      ],
-      "IssueDate": [
-        {
-          "_": "2026-01-02"
-        }
-      ],
-      "InvoicePeriod": [
-        {
-          "StartDate": [
-            {
-              "_": "2026-01-02"
-            }
-          ],
-          "EndDate": [
-            {
-              "_": "2026-01-02"
-            }
-          ],
-          "Description": [
-            {
-              "_": "B2C_Sales (Accepted)"
-            }
-          ]
-        }
-      ],
-      "AccountingSupplierParty": [
-        {
-          "Party": [
-            {
-              "PartyLegalEntity": [
-                {
-                  "RegistrationName": [
-                    {
-                      "_": "Mak Cik Aminah Catering"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "AccountingCustomerParty": [
-        {
-          "Party": [
-            {
-              "PartyLegalEntity": [
-                {
-                  "RegistrationName": [
-                    {
-                      "_": "Walk-in Customer"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "PaymentTerms": [
-        {
-          "Note": [
-            {
-              "_": "Status: Accepted"
-            }
-          ]
-        }
-      ],
-      "PaymentMeans": [
-        {
-          "PayeeFinancialAccount": [
-            {
-              "ID": [
-                {
-                  "_": ""
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "LegalMonetaryTotal": [
-        {
-          "LineExtensionAmount": [
-            {
-              "_": 1323.48
-            }
-          ],
-          "TaxExclusiveAmount": [
-            {
-              "_": 1323.48
-            }
-          ],
-          "TaxInclusiveAmount": [
-            {
-              "_": 1323.48
-            }
-          ],
-          "PayableAmount": [
-            {
-              "_": 1323.48
-            }
-          ]
-        }
-      ],
-      "InvoiceLine": [
-        {
-          "ID": [
-            {
-              "_": "TN-0077"
-            }
-          ],
-          "LineExtensionAmount": [
-            {
-              "_": 1323.48
-            }
-          ],
-          "Price": [
-            {
-              "PriceAmount": [
-                {
-                  "_": 1323.48
-                }
-              ]
-            }
-          ],
-          "ItemPriceExtension": [
-            {
-              "Amount": [
-                {
-                  "_": 1323.48
-                }
-              ]
-            }
-          ],
-          "Item": [
-            {
-              "Description": [
-                {
-                  "_": "Catering services - B2C_Sales (TN-0077)"
+                  "_": "Catering services - B2B_Sales (TN-0176)"
                 }
               ]
             }

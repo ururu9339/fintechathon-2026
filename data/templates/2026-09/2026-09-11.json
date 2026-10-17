@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0042"
+          "_": "TN-0063"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2026-09-16"
+              "_": "2026-09-13"
             }
           ],
           "Description": [
             {
-              "_": "Supplier (Accepted)"
+              "_": "SST (Accepted)"
             }
           ]
         }
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "PD Yolanda Hassanah"
+                      "_": "PD Uyainah Winarno Tbk"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 1387.14
+              "_": 1022.33
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 1387.14
+              "_": 1022.33
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 1387.14
+              "_": 1022.33
             }
           ],
           "PayableAmount": [
             {
-              "_": 1387.14
+              "_": 1022.33
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0042"
+              "_": "TN-0063"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 1387.14
+              "_": 1022.33
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 1387.14
+                  "_": 1022.33
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 1387.14
+                  "_": 1022.33
                 }
               ]
             }
@@ -147,7 +147,463 @@
             {
               "Description": [
                 {
-                  "_": "Supplier payment - PD Yolanda Hassanah (TN-0042)"
+                  "_": "SST payment - PD Uyainah Winarno Tbk (TN-0063)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ID": [
+        {
+          "_": "TN-0171"
+        }
+      ],
+      "IssueDate": [
+        {
+          "_": "2026-09-11"
+        }
+      ],
+      "InvoicePeriod": [
+        {
+          "StartDate": [
+            {
+              "_": "2026-09-11"
+            }
+          ],
+          "EndDate": [
+            {
+              "_": "2026-09-14"
+            }
+          ],
+          "Description": [
+            {
+              "_": "EPF (Accepted)"
+            }
+          ]
+        }
+      ],
+      "AccountingSupplierParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "CV Jailani Namaga Tbk"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "AccountingCustomerParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Mak Cik Aminah Catering"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "PaymentTerms": [
+        {
+          "Note": [
+            {
+              "_": "Status: Accepted"
+            }
+          ]
+        }
+      ],
+      "PaymentMeans": [
+        {
+          "PayeeFinancialAccount": [
+            {
+              "ID": [
+                {
+                  "_": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "LegalMonetaryTotal": [
+        {
+          "LineExtensionAmount": [
+            {
+              "_": 398.93
+            }
+          ],
+          "TaxExclusiveAmount": [
+            {
+              "_": 398.93
+            }
+          ],
+          "TaxInclusiveAmount": [
+            {
+              "_": 398.93
+            }
+          ],
+          "PayableAmount": [
+            {
+              "_": 398.93
+            }
+          ]
+        }
+      ],
+      "InvoiceLine": [
+        {
+          "ID": [
+            {
+              "_": "TN-0171"
+            }
+          ],
+          "LineExtensionAmount": [
+            {
+              "_": 398.93
+            }
+          ],
+          "Price": [
+            {
+              "PriceAmount": [
+                {
+                  "_": 398.93
+                }
+              ]
+            }
+          ],
+          "ItemPriceExtension": [
+            {
+              "Amount": [
+                {
+                  "_": 398.93
+                }
+              ]
+            }
+          ],
+          "Item": [
+            {
+              "Description": [
+                {
+                  "_": "EPF payment - CV Jailani Namaga Tbk (TN-0171)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ID": [
+        {
+          "_": "TN-0287"
+        }
+      ],
+      "IssueDate": [
+        {
+          "_": "2026-09-11"
+        }
+      ],
+      "InvoicePeriod": [
+        {
+          "StartDate": [
+            {
+              "_": "2026-09-11"
+            }
+          ],
+          "EndDate": [
+            {
+              "_": "2026-09-11"
+            }
+          ],
+          "Description": [
+            {
+              "_": "B2C_Sales (Accepted)"
+            }
+          ]
+        }
+      ],
+      "AccountingSupplierParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Mak Cik Aminah Catering"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "AccountingCustomerParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Walk-in Customer"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "PaymentTerms": [
+        {
+          "Note": [
+            {
+              "_": "Status: Accepted"
+            }
+          ]
+        }
+      ],
+      "PaymentMeans": [
+        {
+          "PayeeFinancialAccount": [
+            {
+              "ID": [
+                {
+                  "_": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "LegalMonetaryTotal": [
+        {
+          "LineExtensionAmount": [
+            {
+              "_": 2580.99
+            }
+          ],
+          "TaxExclusiveAmount": [
+            {
+              "_": 2580.99
+            }
+          ],
+          "TaxInclusiveAmount": [
+            {
+              "_": 2580.99
+            }
+          ],
+          "PayableAmount": [
+            {
+              "_": 2580.99
+            }
+          ]
+        }
+      ],
+      "InvoiceLine": [
+        {
+          "ID": [
+            {
+              "_": "TN-0287"
+            }
+          ],
+          "LineExtensionAmount": [
+            {
+              "_": 2580.99
+            }
+          ],
+          "Price": [
+            {
+              "PriceAmount": [
+                {
+                  "_": 2580.99
+                }
+              ]
+            }
+          ],
+          "ItemPriceExtension": [
+            {
+              "Amount": [
+                {
+                  "_": 2580.99
+                }
+              ]
+            }
+          ],
+          "Item": [
+            {
+              "Description": [
+                {
+                  "_": "Catering services - B2C_Sales (TN-0287)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ID": [
+        {
+          "_": "TN-0114"
+        }
+      ],
+      "IssueDate": [
+        {
+          "_": "2026-09-11"
+        }
+      ],
+      "InvoicePeriod": [
+        {
+          "StartDate": [
+            {
+              "_": "2026-09-11"
+            }
+          ],
+          "EndDate": [
+            {
+              "_": "2026-09-14"
+            }
+          ],
+          "Description": [
+            {
+              "_": "Supplier (Accepted)"
+            }
+          ]
+        }
+      ],
+      "AccountingSupplierParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "PD Kuswoyo Tbk"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "AccountingCustomerParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Mak Cik Aminah Catering"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "PaymentTerms": [
+        {
+          "Note": [
+            {
+              "_": "Status: Accepted"
+            }
+          ]
+        }
+      ],
+      "PaymentMeans": [
+        {
+          "PayeeFinancialAccount": [
+            {
+              "ID": [
+                {
+                  "_": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "LegalMonetaryTotal": [
+        {
+          "LineExtensionAmount": [
+            {
+              "_": 1475.8
+            }
+          ],
+          "TaxExclusiveAmount": [
+            {
+              "_": 1475.8
+            }
+          ],
+          "TaxInclusiveAmount": [
+            {
+              "_": 1475.8
+            }
+          ],
+          "PayableAmount": [
+            {
+              "_": 1475.8
+            }
+          ]
+        }
+      ],
+      "InvoiceLine": [
+        {
+          "ID": [
+            {
+              "_": "TN-0114"
+            }
+          ],
+          "LineExtensionAmount": [
+            {
+              "_": 1475.8
+            }
+          ],
+          "Price": [
+            {
+              "PriceAmount": [
+                {
+                  "_": 1475.8
+                }
+              ]
+            }
+          ],
+          "ItemPriceExtension": [
+            {
+              "Amount": [
+                {
+                  "_": 1475.8
+                }
+              ]
+            }
+          ],
+          "Item": [
+            {
+              "Description": [
+                {
+                  "_": "Supplier payment - PD Kuswoyo Tbk (TN-0114)"
                 }
               ]
             }

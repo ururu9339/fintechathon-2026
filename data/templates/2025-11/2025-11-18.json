@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0080"
+          "_": "TN-0200"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2025-11-18"
+              "_": "2025-11-22"
             }
           ],
           "Description": [
             {
-              "_": "B2C_Sales (Accepted)"
+              "_": "SST (Accepted)"
             }
           ]
         }
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Mak Cik Aminah Catering"
+                      "_": "Perum Astuti Tbk"
                     }
                   ]
                 }
@@ -58,7 +58,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Walk-in Customer"
+                      "_": "Mak Cik Aminah Catering"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 4424.15
+              "_": 673.53
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 4424.15
+              "_": 673.53
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 4424.15
+              "_": 673.53
             }
           ],
           "PayableAmount": [
             {
-              "_": 4424.15
+              "_": 673.53
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0080"
+              "_": "TN-0200"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 4424.15
+              "_": 673.53
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 4424.15
+                  "_": 673.53
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 4424.15
+                  "_": 673.53
                 }
               ]
             }
@@ -147,7 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "Catering services - B2C_Sales (TN-0080)"
+                  "_": "SST payment - Perum Astuti Tbk (TN-0200)"
                 }
               ]
             }
@@ -158,7 +158,7 @@
     {
       "ID": [
         {
-          "_": "TN-0276"
+          "_": "TN-0182"
         }
       ],
       "IssueDate": [
@@ -245,22 +245,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 2324.81
+              "_": 1685.94
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 2324.81
+              "_": 1685.94
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 2324.81
+              "_": 1685.94
             }
           ],
           "PayableAmount": [
             {
-              "_": 2324.81
+              "_": 1685.94
             }
           ]
         }
@@ -269,19 +269,19 @@
         {
           "ID": [
             {
-              "_": "TN-0276"
+              "_": "TN-0182"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 2324.81
+              "_": 1685.94
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 2324.81
+                  "_": 1685.94
                 }
               ]
             }
@@ -290,7 +290,7 @@
             {
               "Amount": [
                 {
-                  "_": 2324.81
+                  "_": 1685.94
                 }
               ]
             }
@@ -299,7 +299,159 @@
             {
               "Description": [
                 {
-                  "_": "Catering services - B2C_Sales (TN-0276)"
+                  "_": "Catering services - B2C_Sales (TN-0182)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ID": [
+        {
+          "_": "TN-0219"
+        }
+      ],
+      "IssueDate": [
+        {
+          "_": "2025-11-18"
+        }
+      ],
+      "InvoicePeriod": [
+        {
+          "StartDate": [
+            {
+              "_": "2025-11-18"
+            }
+          ],
+          "EndDate": [
+            {
+              "_": "2025-11-21"
+            }
+          ],
+          "Description": [
+            {
+              "_": "SST (Accepted)"
+            }
+          ]
+        }
+      ],
+      "AccountingSupplierParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "CV Maryati"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "AccountingCustomerParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Mak Cik Aminah Catering"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "PaymentTerms": [
+        {
+          "Note": [
+            {
+              "_": "Status: Accepted"
+            }
+          ]
+        }
+      ],
+      "PaymentMeans": [
+        {
+          "PayeeFinancialAccount": [
+            {
+              "ID": [
+                {
+                  "_": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "LegalMonetaryTotal": [
+        {
+          "LineExtensionAmount": [
+            {
+              "_": 1054.51
+            }
+          ],
+          "TaxExclusiveAmount": [
+            {
+              "_": 1054.51
+            }
+          ],
+          "TaxInclusiveAmount": [
+            {
+              "_": 1054.51
+            }
+          ],
+          "PayableAmount": [
+            {
+              "_": 1054.51
+            }
+          ]
+        }
+      ],
+      "InvoiceLine": [
+        {
+          "ID": [
+            {
+              "_": "TN-0219"
+            }
+          ],
+          "LineExtensionAmount": [
+            {
+              "_": 1054.51
+            }
+          ],
+          "Price": [
+            {
+              "PriceAmount": [
+                {
+                  "_": 1054.51
+                }
+              ]
+            }
+          ],
+          "ItemPriceExtension": [
+            {
+              "Amount": [
+                {
+                  "_": 1054.51
+                }
+              ]
+            }
+          ],
+          "Item": [
+            {
+              "Description": [
+                {
+                  "_": "SST payment - CV Maryati (TN-0219)"
                 }
               ]
             }

@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0061"
+          "_": "TN-0073"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2026-07-29"
+              "_": "2026-07-26"
             }
           ],
           "Description": [
             {
-              "_": "Supplier (Accepted)"
+              "_": "B2C_Sales (Accepted)"
             }
           ]
         }
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "CV Hutagalung"
+                      "_": "Mak Cik Aminah Catering"
                     }
                   ]
                 }
@@ -58,7 +58,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Mak Cik Aminah Catering"
+                      "_": "Walk-in Customer"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 639.07
+              "_": 2741.7
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 639.07
+              "_": 2741.7
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 639.07
+              "_": 2741.7
             }
           ],
           "PayableAmount": [
             {
-              "_": 639.07
+              "_": 2741.7
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0061"
+              "_": "TN-0073"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 639.07
+              "_": 2741.7
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 639.07
+                  "_": 2741.7
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 639.07
+                  "_": 2741.7
                 }
               ]
             }
@@ -147,7 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "Supplier payment - CV Hutagalung (TN-0061)"
+                  "_": "Catering services - B2C_Sales (TN-0073)"
                 }
               ]
             }

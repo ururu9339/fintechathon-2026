@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0057"
+          "_": "TN-0211"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2025-11-10"
+              "_": "2025-11-15"
             }
           ],
           "Description": [
             {
-              "_": "B2C_Sales (Accepted)"
+              "_": "Supplier (Accepted)"
             }
           ]
         }
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Mak Cik Aminah Catering"
+                      "_": "CV Sitorus Laksmiwati (Persero) Tbk"
                     }
                   ]
                 }
@@ -58,7 +58,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Walk-in Customer"
+                      "_": "Mak Cik Aminah Catering"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 855.29
+              "_": 1385.24
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 855.29
+              "_": 1385.24
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 855.29
+              "_": 1385.24
             }
           ],
           "PayableAmount": [
             {
-              "_": 855.29
+              "_": 1385.24
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0057"
+              "_": "TN-0211"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 855.29
+              "_": 1385.24
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 855.29
+                  "_": 1385.24
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 855.29
+                  "_": 1385.24
                 }
               ]
             }
@@ -147,7 +147,159 @@
             {
               "Description": [
                 {
-                  "_": "Catering services - B2C_Sales (TN-0057)"
+                  "_": "Supplier payment - CV Sitorus Laksmiwati (Persero) Tbk (TN-0211)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ID": [
+        {
+          "_": "TN-0107"
+        }
+      ],
+      "IssueDate": [
+        {
+          "_": "2025-11-10"
+        }
+      ],
+      "InvoicePeriod": [
+        {
+          "StartDate": [
+            {
+              "_": "2025-11-10"
+            }
+          ],
+          "EndDate": [
+            {
+              "_": "2025-11-11"
+            }
+          ],
+          "Description": [
+            {
+              "_": "Supplier (Accepted)"
+            }
+          ]
+        }
+      ],
+      "AccountingSupplierParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "CV Yuliarti"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "AccountingCustomerParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Mak Cik Aminah Catering"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "PaymentTerms": [
+        {
+          "Note": [
+            {
+              "_": "Status: Accepted"
+            }
+          ]
+        }
+      ],
+      "PaymentMeans": [
+        {
+          "PayeeFinancialAccount": [
+            {
+              "ID": [
+                {
+                  "_": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "LegalMonetaryTotal": [
+        {
+          "LineExtensionAmount": [
+            {
+              "_": 607.21
+            }
+          ],
+          "TaxExclusiveAmount": [
+            {
+              "_": 607.21
+            }
+          ],
+          "TaxInclusiveAmount": [
+            {
+              "_": 607.21
+            }
+          ],
+          "PayableAmount": [
+            {
+              "_": 607.21
+            }
+          ]
+        }
+      ],
+      "InvoiceLine": [
+        {
+          "ID": [
+            {
+              "_": "TN-0107"
+            }
+          ],
+          "LineExtensionAmount": [
+            {
+              "_": 607.21
+            }
+          ],
+          "Price": [
+            {
+              "PriceAmount": [
+                {
+                  "_": 607.21
+                }
+              ]
+            }
+          ],
+          "ItemPriceExtension": [
+            {
+              "Amount": [
+                {
+                  "_": 607.21
+                }
+              ]
+            }
+          ],
+          "Item": [
+            {
+              "Description": [
+                {
+                  "_": "Supplier payment - CV Yuliarti (TN-0107)"
                 }
               ]
             }

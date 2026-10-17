@@ -6,159 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0265"
-        }
-      ],
-      "IssueDate": [
-        {
-          "_": "2025-11-21"
-        }
-      ],
-      "InvoicePeriod": [
-        {
-          "StartDate": [
-            {
-              "_": "2025-11-21"
-            }
-          ],
-          "EndDate": [
-            {
-              "_": "2025-11-24"
-            }
-          ],
-          "Description": [
-            {
-              "_": "EPF (Accepted)"
-            }
-          ]
-        }
-      ],
-      "AccountingSupplierParty": [
-        {
-          "Party": [
-            {
-              "PartyLegalEntity": [
-                {
-                  "RegistrationName": [
-                    {
-                      "_": "PT Hutagalung Halimah"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "AccountingCustomerParty": [
-        {
-          "Party": [
-            {
-              "PartyLegalEntity": [
-                {
-                  "RegistrationName": [
-                    {
-                      "_": "Mak Cik Aminah Catering"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "PaymentTerms": [
-        {
-          "Note": [
-            {
-              "_": "Status: Accepted"
-            }
-          ]
-        }
-      ],
-      "PaymentMeans": [
-        {
-          "PayeeFinancialAccount": [
-            {
-              "ID": [
-                {
-                  "_": ""
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "LegalMonetaryTotal": [
-        {
-          "LineExtensionAmount": [
-            {
-              "_": 761.87
-            }
-          ],
-          "TaxExclusiveAmount": [
-            {
-              "_": 761.87
-            }
-          ],
-          "TaxInclusiveAmount": [
-            {
-              "_": 761.87
-            }
-          ],
-          "PayableAmount": [
-            {
-              "_": 761.87
-            }
-          ]
-        }
-      ],
-      "InvoiceLine": [
-        {
-          "ID": [
-            {
-              "_": "TN-0265"
-            }
-          ],
-          "LineExtensionAmount": [
-            {
-              "_": 761.87
-            }
-          ],
-          "Price": [
-            {
-              "PriceAmount": [
-                {
-                  "_": 761.87
-                }
-              ]
-            }
-          ],
-          "ItemPriceExtension": [
-            {
-              "Amount": [
-                {
-                  "_": 761.87
-                }
-              ]
-            }
-          ],
-          "Item": [
-            {
-              "Description": [
-                {
-                  "_": "EPF payment - PT Hutagalung Halimah (TN-0265)"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "ID": [
-        {
-          "_": "TN-0040"
+          "_": "TN-0225"
         }
       ],
       "IssueDate": [
@@ -245,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 944.57
+              "_": 3595.03
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 944.57
+              "_": 3595.03
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 944.57
+              "_": 3595.03
             }
           ],
           "PayableAmount": [
             {
-              "_": 944.57
+              "_": 3595.03
             }
           ]
         }
@@ -269,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0040"
+              "_": "TN-0225"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 944.57
+              "_": 3595.03
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 944.57
+                  "_": 3595.03
                 }
               ]
             }
@@ -290,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 944.57
+                  "_": 3595.03
                 }
               ]
             }
@@ -299,7 +147,311 @@
             {
               "Description": [
                 {
-                  "_": "Catering services - B2C_Sales (TN-0040)"
+                  "_": "Catering services - B2C_Sales (TN-0225)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ID": [
+        {
+          "_": "TN-0267"
+        }
+      ],
+      "IssueDate": [
+        {
+          "_": "2025-11-21"
+        }
+      ],
+      "InvoicePeriod": [
+        {
+          "StartDate": [
+            {
+              "_": "2025-11-21"
+            }
+          ],
+          "EndDate": [
+            {
+              "_": "2026-01-25"
+            }
+          ],
+          "Description": [
+            {
+              "_": "B2B_Sales (Accepted)"
+            }
+          ]
+        }
+      ],
+      "AccountingSupplierParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Mak Cik Aminah Catering"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "AccountingCustomerParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "CV Prasetyo Rajasa (Persero) Tbk"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "PaymentTerms": [
+        {
+          "Note": [
+            {
+              "_": "Status: Accepted"
+            }
+          ]
+        }
+      ],
+      "PaymentMeans": [
+        {
+          "PayeeFinancialAccount": [
+            {
+              "ID": [
+                {
+                  "_": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "LegalMonetaryTotal": [
+        {
+          "LineExtensionAmount": [
+            {
+              "_": 1959.58
+            }
+          ],
+          "TaxExclusiveAmount": [
+            {
+              "_": 1959.58
+            }
+          ],
+          "TaxInclusiveAmount": [
+            {
+              "_": 1959.58
+            }
+          ],
+          "PayableAmount": [
+            {
+              "_": 1959.58
+            }
+          ]
+        }
+      ],
+      "InvoiceLine": [
+        {
+          "ID": [
+            {
+              "_": "TN-0267"
+            }
+          ],
+          "LineExtensionAmount": [
+            {
+              "_": 1959.58
+            }
+          ],
+          "Price": [
+            {
+              "PriceAmount": [
+                {
+                  "_": 1959.58
+                }
+              ]
+            }
+          ],
+          "ItemPriceExtension": [
+            {
+              "Amount": [
+                {
+                  "_": 1959.58
+                }
+              ]
+            }
+          ],
+          "Item": [
+            {
+              "Description": [
+                {
+                  "_": "Catering services - B2B_Sales (TN-0267)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ID": [
+        {
+          "_": "TN-0292"
+        }
+      ],
+      "IssueDate": [
+        {
+          "_": "2025-11-21"
+        }
+      ],
+      "InvoicePeriod": [
+        {
+          "StartDate": [
+            {
+              "_": "2025-11-21"
+            }
+          ],
+          "EndDate": [
+            {
+              "_": "2026-01-25"
+            }
+          ],
+          "Description": [
+            {
+              "_": "B2B_Sales (Accepted)"
+            }
+          ]
+        }
+      ],
+      "AccountingSupplierParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Mak Cik Aminah Catering"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "AccountingCustomerParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "PT Saefullah Tbk"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "PaymentTerms": [
+        {
+          "Note": [
+            {
+              "_": "Status: Accepted"
+            }
+          ]
+        }
+      ],
+      "PaymentMeans": [
+        {
+          "PayeeFinancialAccount": [
+            {
+              "ID": [
+                {
+                  "_": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "LegalMonetaryTotal": [
+        {
+          "LineExtensionAmount": [
+            {
+              "_": 2319.83
+            }
+          ],
+          "TaxExclusiveAmount": [
+            {
+              "_": 2319.83
+            }
+          ],
+          "TaxInclusiveAmount": [
+            {
+              "_": 2319.83
+            }
+          ],
+          "PayableAmount": [
+            {
+              "_": 2319.83
+            }
+          ]
+        }
+      ],
+      "InvoiceLine": [
+        {
+          "ID": [
+            {
+              "_": "TN-0292"
+            }
+          ],
+          "LineExtensionAmount": [
+            {
+              "_": 2319.83
+            }
+          ],
+          "Price": [
+            {
+              "PriceAmount": [
+                {
+                  "_": 2319.83
+                }
+              ]
+            }
+          ],
+          "ItemPriceExtension": [
+            {
+              "Amount": [
+                {
+                  "_": 2319.83
+                }
+              ]
+            }
+          ],
+          "Item": [
+            {
+              "Description": [
+                {
+                  "_": "Catering services - B2B_Sales (TN-0292)"
                 }
               ]
             }

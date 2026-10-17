@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2026-04-22"
+              "_": "2026-06-25"
             }
           ],
           "Description": [
             {
-              "_": "Supplier (Accepted)"
+              "_": "B2B_Sales (Accepted)"
             }
           ]
         }
@@ -41,7 +41,159 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "CV Hidayanto Maulana Tbk"
+                      "_": "Mak Cik Aminah Catering"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "AccountingCustomerParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "UD Rahmawati Napitupulu"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "PaymentTerms": [
+        {
+          "Note": [
+            {
+              "_": "Status: Accepted"
+            }
+          ]
+        }
+      ],
+      "PaymentMeans": [
+        {
+          "PayeeFinancialAccount": [
+            {
+              "ID": [
+                {
+                  "_": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "LegalMonetaryTotal": [
+        {
+          "LineExtensionAmount": [
+            {
+              "_": 4105.89
+            }
+          ],
+          "TaxExclusiveAmount": [
+            {
+              "_": 4105.89
+            }
+          ],
+          "TaxInclusiveAmount": [
+            {
+              "_": 4105.89
+            }
+          ],
+          "PayableAmount": [
+            {
+              "_": 4105.89
+            }
+          ]
+        }
+      ],
+      "InvoiceLine": [
+        {
+          "ID": [
+            {
+              "_": "TN-0247"
+            }
+          ],
+          "LineExtensionAmount": [
+            {
+              "_": 4105.89
+            }
+          ],
+          "Price": [
+            {
+              "PriceAmount": [
+                {
+                  "_": 4105.89
+                }
+              ]
+            }
+          ],
+          "ItemPriceExtension": [
+            {
+              "Amount": [
+                {
+                  "_": 4105.89
+                }
+              ]
+            }
+          ],
+          "Item": [
+            {
+              "Description": [
+                {
+                  "_": "Catering services - B2B_Sales (TN-0247)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ID": [
+        {
+          "_": "TN-0237"
+        }
+      ],
+      "IssueDate": [
+        {
+          "_": "2026-04-21"
+        }
+      ],
+      "InvoicePeriod": [
+        {
+          "StartDate": [
+            {
+              "_": "2026-04-21"
+            }
+          ],
+          "EndDate": [
+            {
+              "_": "2026-04-25"
+            }
+          ],
+          "Description": [
+            {
+              "_": "SST (Accepted)"
+            }
+          ]
+        }
+      ],
+      "AccountingSupplierParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "PD Uwais"
                     }
                   ]
                 }
@@ -93,22 +245,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 1204.78
+              "_": 619.12
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 1204.78
+              "_": 619.12
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 1204.78
+              "_": 619.12
             }
           ],
           "PayableAmount": [
             {
-              "_": 1204.78
+              "_": 619.12
             }
           ]
         }
@@ -117,19 +269,19 @@
         {
           "ID": [
             {
-              "_": "TN-0247"
+              "_": "TN-0237"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 1204.78
+              "_": 619.12
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 1204.78
+                  "_": 619.12
                 }
               ]
             }
@@ -138,7 +290,7 @@
             {
               "Amount": [
                 {
-                  "_": 1204.78
+                  "_": 619.12
                 }
               ]
             }
@@ -147,7 +299,311 @@
             {
               "Description": [
                 {
-                  "_": "Supplier payment - CV Hidayanto Maulana Tbk (TN-0247)"
+                  "_": "SST payment - PD Uwais (TN-0237)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ID": [
+        {
+          "_": "TN-0148"
+        }
+      ],
+      "IssueDate": [
+        {
+          "_": "2026-04-21"
+        }
+      ],
+      "InvoicePeriod": [
+        {
+          "StartDate": [
+            {
+              "_": "2026-04-21"
+            }
+          ],
+          "EndDate": [
+            {
+              "_": "2026-04-24"
+            }
+          ],
+          "Description": [
+            {
+              "_": "Supplier (Accepted)"
+            }
+          ]
+        }
+      ],
+      "AccountingSupplierParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "PD Mandasari (Persero) Tbk"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "AccountingCustomerParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Mak Cik Aminah Catering"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "PaymentTerms": [
+        {
+          "Note": [
+            {
+              "_": "Status: Accepted"
+            }
+          ]
+        }
+      ],
+      "PaymentMeans": [
+        {
+          "PayeeFinancialAccount": [
+            {
+              "ID": [
+                {
+                  "_": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "LegalMonetaryTotal": [
+        {
+          "LineExtensionAmount": [
+            {
+              "_": 618.5
+            }
+          ],
+          "TaxExclusiveAmount": [
+            {
+              "_": 618.5
+            }
+          ],
+          "TaxInclusiveAmount": [
+            {
+              "_": 618.5
+            }
+          ],
+          "PayableAmount": [
+            {
+              "_": 618.5
+            }
+          ]
+        }
+      ],
+      "InvoiceLine": [
+        {
+          "ID": [
+            {
+              "_": "TN-0148"
+            }
+          ],
+          "LineExtensionAmount": [
+            {
+              "_": 618.5
+            }
+          ],
+          "Price": [
+            {
+              "PriceAmount": [
+                {
+                  "_": 618.5
+                }
+              ]
+            }
+          ],
+          "ItemPriceExtension": [
+            {
+              "Amount": [
+                {
+                  "_": 618.5
+                }
+              ]
+            }
+          ],
+          "Item": [
+            {
+              "Description": [
+                {
+                  "_": "Supplier payment - PD Mandasari (Persero) Tbk (TN-0148)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ID": [
+        {
+          "_": "TN-0079"
+        }
+      ],
+      "IssueDate": [
+        {
+          "_": "2026-04-21"
+        }
+      ],
+      "InvoicePeriod": [
+        {
+          "StartDate": [
+            {
+              "_": "2026-04-21"
+            }
+          ],
+          "EndDate": [
+            {
+              "_": "2026-06-25"
+            }
+          ],
+          "Description": [
+            {
+              "_": "B2B_Sales (Accepted)"
+            }
+          ]
+        }
+      ],
+      "AccountingSupplierParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Mak Cik Aminah Catering"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "AccountingCustomerParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Perum Riyanti (Persero) Tbk"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "PaymentTerms": [
+        {
+          "Note": [
+            {
+              "_": "Status: Accepted"
+            }
+          ]
+        }
+      ],
+      "PaymentMeans": [
+        {
+          "PayeeFinancialAccount": [
+            {
+              "ID": [
+                {
+                  "_": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "LegalMonetaryTotal": [
+        {
+          "LineExtensionAmount": [
+            {
+              "_": 1336.61
+            }
+          ],
+          "TaxExclusiveAmount": [
+            {
+              "_": 1336.61
+            }
+          ],
+          "TaxInclusiveAmount": [
+            {
+              "_": 1336.61
+            }
+          ],
+          "PayableAmount": [
+            {
+              "_": 1336.61
+            }
+          ]
+        }
+      ],
+      "InvoiceLine": [
+        {
+          "ID": [
+            {
+              "_": "TN-0079"
+            }
+          ],
+          "LineExtensionAmount": [
+            {
+              "_": 1336.61
+            }
+          ],
+          "Price": [
+            {
+              "PriceAmount": [
+                {
+                  "_": 1336.61
+                }
+              ]
+            }
+          ],
+          "ItemPriceExtension": [
+            {
+              "Amount": [
+                {
+                  "_": 1336.61
+                }
+              ]
+            }
+          ],
+          "Item": [
+            {
+              "Description": [
+                {
+                  "_": "Catering services - B2B_Sales (TN-0079)"
                 }
               ]
             }

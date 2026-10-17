@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0164"
+          "_": "TN-0042"
         }
       ],
       "IssueDate": [
@@ -23,7 +23,7 @@
           ],
           "EndDate": [
             {
-              "_": "2026-05-10"
+              "_": "2026-05-11"
             }
           ],
           "Description": [
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "UD Dabukke (Persero) Tbk"
+                      "_": "UD Hastuti Tbk"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 1053.41
+              "_": 814.58
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 1053.41
+              "_": 814.58
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 1053.41
+              "_": 814.58
             }
           ],
           "PayableAmount": [
             {
-              "_": 1053.41
+              "_": 814.58
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0164"
+              "_": "TN-0042"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 1053.41
+              "_": 814.58
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 1053.41
+                  "_": 814.58
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 1053.41
+                  "_": 814.58
                 }
               ]
             }
@@ -147,7 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "Supplier payment - UD Dabukke (Persero) Tbk (TN-0164)"
+                  "_": "Supplier payment - UD Hastuti Tbk (TN-0042)"
                 }
               ]
             }

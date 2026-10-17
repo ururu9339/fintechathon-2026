@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0029"
+          "_": "TN-0172"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2026-08-14"
+              "_": "2026-08-16"
             }
           ],
           "Description": [
             {
-              "_": "Supplier (Accepted)"
+              "_": "SST (Accepted)"
             }
           ]
         }
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "CV Hariyah Latupono"
+                      "_": "CV Mulyani Widiastuti"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 540.76
+              "_": 486.99
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 540.76
+              "_": 486.99
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 540.76
+              "_": 486.99
             }
           ],
           "PayableAmount": [
             {
-              "_": 540.76
+              "_": 486.99
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0029"
+              "_": "TN-0172"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 540.76
+              "_": 486.99
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 540.76
+                  "_": 486.99
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 540.76
+                  "_": 486.99
                 }
               ]
             }
@@ -147,7 +147,159 @@
             {
               "Description": [
                 {
-                  "_": "Supplier payment - CV Hariyah Latupono (TN-0029)"
+                  "_": "SST payment - CV Mulyani Widiastuti (TN-0172)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ID": [
+        {
+          "_": "TN-0034"
+        }
+      ],
+      "IssueDate": [
+        {
+          "_": "2026-08-13"
+        }
+      ],
+      "InvoicePeriod": [
+        {
+          "StartDate": [
+            {
+              "_": "2026-08-13"
+            }
+          ],
+          "EndDate": [
+            {
+              "_": "2026-08-17"
+            }
+          ],
+          "Description": [
+            {
+              "_": "SST (Accepted)"
+            }
+          ]
+        }
+      ],
+      "AccountingSupplierParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "PD Mayasari"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "AccountingCustomerParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Mak Cik Aminah Catering"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "PaymentTerms": [
+        {
+          "Note": [
+            {
+              "_": "Status: Accepted"
+            }
+          ]
+        }
+      ],
+      "PaymentMeans": [
+        {
+          "PayeeFinancialAccount": [
+            {
+              "ID": [
+                {
+                  "_": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "LegalMonetaryTotal": [
+        {
+          "LineExtensionAmount": [
+            {
+              "_": 250.81
+            }
+          ],
+          "TaxExclusiveAmount": [
+            {
+              "_": 250.81
+            }
+          ],
+          "TaxInclusiveAmount": [
+            {
+              "_": 250.81
+            }
+          ],
+          "PayableAmount": [
+            {
+              "_": 250.81
+            }
+          ]
+        }
+      ],
+      "InvoiceLine": [
+        {
+          "ID": [
+            {
+              "_": "TN-0034"
+            }
+          ],
+          "LineExtensionAmount": [
+            {
+              "_": 250.81
+            }
+          ],
+          "Price": [
+            {
+              "PriceAmount": [
+                {
+                  "_": 250.81
+                }
+              ]
+            }
+          ],
+          "ItemPriceExtension": [
+            {
+              "Amount": [
+                {
+                  "_": 250.81
+                }
+              ]
+            }
+          ],
+          "Item": [
+            {
+              "Description": [
+                {
+                  "_": "SST payment - PD Mayasari (TN-0034)"
                 }
               ]
             }

@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0257"
+          "_": "TN-0222"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2026-02-09"
+              "_": "2026-02-10"
             }
           ],
           "Description": [
             {
-              "_": "EPF (Accepted)"
+              "_": "Supplier (Accepted)"
             }
           ]
         }
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "PT Lazuardi Handayani"
+                      "_": "UD Sinaga Handayani Tbk"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 965.73
+              "_": 1004.42
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 965.73
+              "_": 1004.42
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 965.73
+              "_": 1004.42
             }
           ],
           "PayableAmount": [
             {
-              "_": 965.73
+              "_": 1004.42
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0257"
+              "_": "TN-0222"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 965.73
+              "_": 1004.42
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 965.73
+                  "_": 1004.42
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 965.73
+                  "_": 1004.42
                 }
               ]
             }
@@ -147,7 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "EPF payment - PT Lazuardi Handayani (TN-0257)"
+                  "_": "Supplier payment - UD Sinaga Handayani Tbk (TN-0222)"
                 }
               ]
             }

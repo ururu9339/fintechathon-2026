@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0212"
+          "_": "TN-0136"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2026-12-14"
+              "_": "2026-10-15"
             }
           ],
           "Description": [
             {
-              "_": "B2B_Sales (Pending)"
+              "_": "Supplier (Accepted)"
             }
           ]
         }
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Mak Cik Aminah Catering"
+                      "_": "Perum Budiyanto"
                     }
                   ]
                 }
@@ -58,159 +58,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Perum Thamrin Tbk"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "PaymentTerms": [
-        {
-          "Note": [
-            {
-              "_": "Status: Pending"
-            }
-          ]
-        }
-      ],
-      "PaymentMeans": [
-        {
-          "PayeeFinancialAccount": [
-            {
-              "ID": [
-                {
-                  "_": ""
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "LegalMonetaryTotal": [
-        {
-          "LineExtensionAmount": [
-            {
-              "_": 748.61
-            }
-          ],
-          "TaxExclusiveAmount": [
-            {
-              "_": 748.61
-            }
-          ],
-          "TaxInclusiveAmount": [
-            {
-              "_": 748.61
-            }
-          ],
-          "PayableAmount": [
-            {
-              "_": 748.61
-            }
-          ]
-        }
-      ],
-      "InvoiceLine": [
-        {
-          "ID": [
-            {
-              "_": "TN-0212"
-            }
-          ],
-          "LineExtensionAmount": [
-            {
-              "_": 748.61
-            }
-          ],
-          "Price": [
-            {
-              "PriceAmount": [
-                {
-                  "_": 748.61
-                }
-              ]
-            }
-          ],
-          "ItemPriceExtension": [
-            {
-              "Amount": [
-                {
-                  "_": 748.61
-                }
-              ]
-            }
-          ],
-          "Item": [
-            {
-              "Description": [
-                {
-                  "_": "Catering services - B2B_Sales (TN-0212)"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "ID": [
-        {
-          "_": "TN-0246"
-        }
-      ],
-      "IssueDate": [
-        {
-          "_": "2026-10-10"
-        }
-      ],
-      "InvoicePeriod": [
-        {
-          "StartDate": [
-            {
-              "_": "2026-10-10"
-            }
-          ],
-          "EndDate": [
-            {
-              "_": "2026-10-10"
-            }
-          ],
-          "Description": [
-            {
-              "_": "B2C_Sales (Accepted)"
-            }
-          ]
-        }
-      ],
-      "AccountingSupplierParty": [
-        {
-          "Party": [
-            {
-              "PartyLegalEntity": [
-                {
-                  "RegistrationName": [
-                    {
                       "_": "Mak Cik Aminah Catering"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "AccountingCustomerParty": [
-        {
-          "Party": [
-            {
-              "PartyLegalEntity": [
-                {
-                  "RegistrationName": [
-                    {
-                      "_": "Walk-in Customer"
                     }
                   ]
                 }
@@ -245,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 3425.22
+              "_": 1210.05
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 3425.22
+              "_": 1210.05
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 3425.22
+              "_": 1210.05
             }
           ],
           "PayableAmount": [
             {
-              "_": 3425.22
+              "_": 1210.05
             }
           ]
         }
@@ -269,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0246"
+              "_": "TN-0136"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 3425.22
+              "_": 1210.05
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 3425.22
+                  "_": 1210.05
                 }
               ]
             }
@@ -290,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 3425.22
+                  "_": 1210.05
                 }
               ]
             }
@@ -299,7 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "Catering services - B2C_Sales (TN-0246)"
+                  "_": "Supplier payment - Perum Budiyanto (TN-0136)"
                 }
               ]
             }

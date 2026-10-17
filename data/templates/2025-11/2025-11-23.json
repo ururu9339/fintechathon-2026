@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0275"
+          "_": "TN-0040"
         }
       ],
       "IssueDate": [
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 2977.28
+              "_": 2593.64
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 2977.28
+              "_": 2593.64
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 2977.28
+              "_": 2593.64
             }
           ],
           "PayableAmount": [
             {
-              "_": 2977.28
+              "_": 2593.64
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0275"
+              "_": "TN-0040"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 2977.28
+              "_": 2593.64
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 2977.28
+                  "_": 2593.64
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 2977.28
+                  "_": 2593.64
                 }
               ]
             }
@@ -147,7 +147,159 @@
             {
               "Description": [
                 {
-                  "_": "Catering services - B2C_Sales (TN-0275)"
+                  "_": "Catering services - B2C_Sales (TN-0040)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ID": [
+        {
+          "_": "TN-0239"
+        }
+      ],
+      "IssueDate": [
+        {
+          "_": "2025-11-23"
+        }
+      ],
+      "InvoicePeriod": [
+        {
+          "StartDate": [
+            {
+              "_": "2025-11-23"
+            }
+          ],
+          "EndDate": [
+            {
+              "_": "2026-01-27"
+            }
+          ],
+          "Description": [
+            {
+              "_": "B2B_Sales (Accepted)"
+            }
+          ]
+        }
+      ],
+      "AccountingSupplierParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Mak Cik Aminah Catering"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "AccountingCustomerParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Perum Maheswara"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "PaymentTerms": [
+        {
+          "Note": [
+            {
+              "_": "Status: Accepted"
+            }
+          ]
+        }
+      ],
+      "PaymentMeans": [
+        {
+          "PayeeFinancialAccount": [
+            {
+              "ID": [
+                {
+                  "_": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "LegalMonetaryTotal": [
+        {
+          "LineExtensionAmount": [
+            {
+              "_": 3505.17
+            }
+          ],
+          "TaxExclusiveAmount": [
+            {
+              "_": 3505.17
+            }
+          ],
+          "TaxInclusiveAmount": [
+            {
+              "_": 3505.17
+            }
+          ],
+          "PayableAmount": [
+            {
+              "_": 3505.17
+            }
+          ]
+        }
+      ],
+      "InvoiceLine": [
+        {
+          "ID": [
+            {
+              "_": "TN-0239"
+            }
+          ],
+          "LineExtensionAmount": [
+            {
+              "_": 3505.17
+            }
+          ],
+          "Price": [
+            {
+              "PriceAmount": [
+                {
+                  "_": 3505.17
+                }
+              ]
+            }
+          ],
+          "ItemPriceExtension": [
+            {
+              "Amount": [
+                {
+                  "_": 3505.17
+                }
+              ]
+            }
+          ],
+          "Item": [
+            {
+              "Description": [
+                {
+                  "_": "Catering services - B2B_Sales (TN-0239)"
                 }
               ]
             }

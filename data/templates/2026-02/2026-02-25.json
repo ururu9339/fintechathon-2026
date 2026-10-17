@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0123"
+          "_": "TN-0029"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2026-02-27"
+              "_": "2026-02-28"
             }
           ],
           "Description": [
             {
-              "_": "EPF (Accepted)"
+              "_": "SST (Accepted)"
             }
           ]
         }
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "CV Siregar Tampubolon"
+                      "_": "Perum Namaga Mandala"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 657.1
+              "_": 366.16
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 657.1
+              "_": 366.16
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 657.1
+              "_": 366.16
             }
           ],
           "PayableAmount": [
             {
-              "_": 657.1
+              "_": 366.16
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0123"
+              "_": "TN-0029"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 657.1
+              "_": 366.16
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 657.1
+                  "_": 366.16
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 657.1
+                  "_": 366.16
                 }
               ]
             }
@@ -147,7 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "EPF payment - CV Siregar Tampubolon (TN-0123)"
+                  "_": "SST payment - Perum Namaga Mandala (TN-0029)"
                 }
               ]
             }

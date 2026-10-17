@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0045"
+          "_": "TN-0229"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2026-04-03"
+              "_": "2026-06-03"
             }
           ],
           "Description": [
             {
-              "_": "SST (Accepted)"
+              "_": "B2B_Sales (Accepted)"
             }
           ]
         }
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Perum Nainggolan Yulianti Tbk"
+                      "_": "Mak Cik Aminah Catering"
                     }
                   ]
                 }
@@ -58,7 +58,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Mak Cik Aminah Catering"
+                      "_": "Perum Kusmawati (Persero) Tbk"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 935.6
+              "_": 3845.05
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 935.6
+              "_": 3845.05
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 935.6
+              "_": 3845.05
             }
           ],
           "PayableAmount": [
             {
-              "_": 935.6
+              "_": 3845.05
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0045"
+              "_": "TN-0229"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 935.6
+              "_": 3845.05
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 935.6
+                  "_": 3845.05
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 935.6
+                  "_": 3845.05
                 }
               ]
             }
@@ -147,7 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "SST payment - Perum Nainggolan Yulianti Tbk (TN-0045)"
+                  "_": "Catering services - B2B_Sales (TN-0229)"
                 }
               ]
             }

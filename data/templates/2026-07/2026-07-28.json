@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0227"
+          "_": "TN-0241"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2026-07-28"
+              "_": "2026-07-30"
             }
           ],
           "Description": [
             {
-              "_": "B2C_Sales (Accepted)"
+              "_": "EPF (Accepted)"
             }
           ]
         }
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Mak Cik Aminah Catering"
+                      "_": "CV Permadi Firgantoro (Persero) Tbk"
                     }
                   ]
                 }
@@ -58,7 +58,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Walk-in Customer"
+                      "_": "Mak Cik Aminah Catering"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 4480.15
+              "_": 1241.01
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 4480.15
+              "_": 1241.01
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 4480.15
+              "_": 1241.01
             }
           ],
           "PayableAmount": [
             {
-              "_": 4480.15
+              "_": 1241.01
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0227"
+              "_": "TN-0241"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 4480.15
+              "_": 1241.01
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 4480.15
+                  "_": 1241.01
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 4480.15
+                  "_": 1241.01
                 }
               ]
             }
@@ -147,7 +147,311 @@
             {
               "Description": [
                 {
-                  "_": "Catering services - B2C_Sales (TN-0227)"
+                  "_": "EPF payment - CV Permadi Firgantoro (Persero) Tbk (TN-0241)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ID": [
+        {
+          "_": "TN-0126"
+        }
+      ],
+      "IssueDate": [
+        {
+          "_": "2026-07-28"
+        }
+      ],
+      "InvoicePeriod": [
+        {
+          "StartDate": [
+            {
+              "_": "2026-07-28"
+            }
+          ],
+          "EndDate": [
+            {
+              "_": "2026-07-30"
+            }
+          ],
+          "Description": [
+            {
+              "_": "SST (Accepted)"
+            }
+          ]
+        }
+      ],
+      "AccountingSupplierParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "UD Halim Waskita"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "AccountingCustomerParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Mak Cik Aminah Catering"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "PaymentTerms": [
+        {
+          "Note": [
+            {
+              "_": "Status: Accepted"
+            }
+          ]
+        }
+      ],
+      "PaymentMeans": [
+        {
+          "PayeeFinancialAccount": [
+            {
+              "ID": [
+                {
+                  "_": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "LegalMonetaryTotal": [
+        {
+          "LineExtensionAmount": [
+            {
+              "_": 1098.38
+            }
+          ],
+          "TaxExclusiveAmount": [
+            {
+              "_": 1098.38
+            }
+          ],
+          "TaxInclusiveAmount": [
+            {
+              "_": 1098.38
+            }
+          ],
+          "PayableAmount": [
+            {
+              "_": 1098.38
+            }
+          ]
+        }
+      ],
+      "InvoiceLine": [
+        {
+          "ID": [
+            {
+              "_": "TN-0126"
+            }
+          ],
+          "LineExtensionAmount": [
+            {
+              "_": 1098.38
+            }
+          ],
+          "Price": [
+            {
+              "PriceAmount": [
+                {
+                  "_": 1098.38
+                }
+              ]
+            }
+          ],
+          "ItemPriceExtension": [
+            {
+              "Amount": [
+                {
+                  "_": 1098.38
+                }
+              ]
+            }
+          ],
+          "Item": [
+            {
+              "Description": [
+                {
+                  "_": "SST payment - UD Halim Waskita (TN-0126)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ID": [
+        {
+          "_": "TN-0187"
+        }
+      ],
+      "IssueDate": [
+        {
+          "_": "2026-07-28"
+        }
+      ],
+      "InvoicePeriod": [
+        {
+          "StartDate": [
+            {
+              "_": "2026-07-28"
+            }
+          ],
+          "EndDate": [
+            {
+              "_": "2026-07-29"
+            }
+          ],
+          "Description": [
+            {
+              "_": "EPF (Accepted)"
+            }
+          ]
+        }
+      ],
+      "AccountingSupplierParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Perum Gunawan Tbk"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "AccountingCustomerParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Mak Cik Aminah Catering"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "PaymentTerms": [
+        {
+          "Note": [
+            {
+              "_": "Status: Accepted"
+            }
+          ]
+        }
+      ],
+      "PaymentMeans": [
+        {
+          "PayeeFinancialAccount": [
+            {
+              "ID": [
+                {
+                  "_": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "LegalMonetaryTotal": [
+        {
+          "LineExtensionAmount": [
+            {
+              "_": 1460.9
+            }
+          ],
+          "TaxExclusiveAmount": [
+            {
+              "_": 1460.9
+            }
+          ],
+          "TaxInclusiveAmount": [
+            {
+              "_": 1460.9
+            }
+          ],
+          "PayableAmount": [
+            {
+              "_": 1460.9
+            }
+          ]
+        }
+      ],
+      "InvoiceLine": [
+        {
+          "ID": [
+            {
+              "_": "TN-0187"
+            }
+          ],
+          "LineExtensionAmount": [
+            {
+              "_": 1460.9
+            }
+          ],
+          "Price": [
+            {
+              "PriceAmount": [
+                {
+                  "_": 1460.9
+                }
+              ]
+            }
+          ],
+          "ItemPriceExtension": [
+            {
+              "Amount": [
+                {
+                  "_": 1460.9
+                }
+              ]
+            }
+          ],
+          "Item": [
+            {
+              "Description": [
+                {
+                  "_": "EPF payment - Perum Gunawan Tbk (TN-0187)"
                 }
               ]
             }

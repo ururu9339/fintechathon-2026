@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0112"
+          "_": "TN-0235"
         }
       ],
       "IssueDate": [
@@ -58,7 +58,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Perum Nashiruddin Maulana"
+                      "_": "UD Lazuardi Nasyidah"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 2099.34
+              "_": 1268.7
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 2099.34
+              "_": 1268.7
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 2099.34
+              "_": 1268.7
             }
           ],
           "PayableAmount": [
             {
-              "_": 2099.34
+              "_": 1268.7
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0112"
+              "_": "TN-0235"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 2099.34
+              "_": 1268.7
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 2099.34
+                  "_": 1268.7
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 2099.34
+                  "_": 1268.7
                 }
               ]
             }
@@ -147,7 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "Catering services - B2B_Sales (TN-0112)"
+                  "_": "Catering services - B2B_Sales (TN-0235)"
                 }
               ]
             }

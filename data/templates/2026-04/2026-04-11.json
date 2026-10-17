@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0076"
+          "_": "TN-0205"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2026-04-11"
+              "_": "2026-04-12"
             }
           ],
           "Description": [
             {
-              "_": "B2C_Sales (Accepted)"
+              "_": "SST (Accepted)"
             }
           ]
         }
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Mak Cik Aminah Catering"
+                      "_": "UD Simbolon Samosir (Persero) Tbk"
                     }
                   ]
                 }
@@ -58,7 +58,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Walk-in Customer"
+                      "_": "Mak Cik Aminah Catering"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 1951.71
+              "_": 1428.07
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 1951.71
+              "_": 1428.07
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 1951.71
+              "_": 1428.07
             }
           ],
           "PayableAmount": [
             {
-              "_": 1951.71
+              "_": 1428.07
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0076"
+              "_": "TN-0205"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 1951.71
+              "_": 1428.07
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 1951.71
+                  "_": 1428.07
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 1951.71
+                  "_": 1428.07
                 }
               ]
             }
@@ -147,7 +147,311 @@
             {
               "Description": [
                 {
-                  "_": "Catering services - B2C_Sales (TN-0076)"
+                  "_": "SST payment - UD Simbolon Samosir (Persero) Tbk (TN-0205)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ID": [
+        {
+          "_": "TN-0111"
+        }
+      ],
+      "IssueDate": [
+        {
+          "_": "2026-04-11"
+        }
+      ],
+      "InvoicePeriod": [
+        {
+          "StartDate": [
+            {
+              "_": "2026-04-11"
+            }
+          ],
+          "EndDate": [
+            {
+              "_": "2026-04-13"
+            }
+          ],
+          "Description": [
+            {
+              "_": "EPF (Accepted)"
+            }
+          ]
+        }
+      ],
+      "AccountingSupplierParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Perum Rahayu Tbk"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "AccountingCustomerParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Mak Cik Aminah Catering"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "PaymentTerms": [
+        {
+          "Note": [
+            {
+              "_": "Status: Accepted"
+            }
+          ]
+        }
+      ],
+      "PaymentMeans": [
+        {
+          "PayeeFinancialAccount": [
+            {
+              "ID": [
+                {
+                  "_": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "LegalMonetaryTotal": [
+        {
+          "LineExtensionAmount": [
+            {
+              "_": 527.2
+            }
+          ],
+          "TaxExclusiveAmount": [
+            {
+              "_": 527.2
+            }
+          ],
+          "TaxInclusiveAmount": [
+            {
+              "_": 527.2
+            }
+          ],
+          "PayableAmount": [
+            {
+              "_": 527.2
+            }
+          ]
+        }
+      ],
+      "InvoiceLine": [
+        {
+          "ID": [
+            {
+              "_": "TN-0111"
+            }
+          ],
+          "LineExtensionAmount": [
+            {
+              "_": 527.2
+            }
+          ],
+          "Price": [
+            {
+              "PriceAmount": [
+                {
+                  "_": 527.2
+                }
+              ]
+            }
+          ],
+          "ItemPriceExtension": [
+            {
+              "Amount": [
+                {
+                  "_": 527.2
+                }
+              ]
+            }
+          ],
+          "Item": [
+            {
+              "Description": [
+                {
+                  "_": "EPF payment - Perum Rahayu Tbk (TN-0111)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ID": [
+        {
+          "_": "TN-0077"
+        }
+      ],
+      "IssueDate": [
+        {
+          "_": "2026-04-11"
+        }
+      ],
+      "InvoicePeriod": [
+        {
+          "StartDate": [
+            {
+              "_": "2026-04-11"
+            }
+          ],
+          "EndDate": [
+            {
+              "_": "2026-04-16"
+            }
+          ],
+          "Description": [
+            {
+              "_": "EPF (Accepted)"
+            }
+          ]
+        }
+      ],
+      "AccountingSupplierParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "UD Pratiwi Tbk"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "AccountingCustomerParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Mak Cik Aminah Catering"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "PaymentTerms": [
+        {
+          "Note": [
+            {
+              "_": "Status: Accepted"
+            }
+          ]
+        }
+      ],
+      "PaymentMeans": [
+        {
+          "PayeeFinancialAccount": [
+            {
+              "ID": [
+                {
+                  "_": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "LegalMonetaryTotal": [
+        {
+          "LineExtensionAmount": [
+            {
+              "_": 1378.24
+            }
+          ],
+          "TaxExclusiveAmount": [
+            {
+              "_": 1378.24
+            }
+          ],
+          "TaxInclusiveAmount": [
+            {
+              "_": 1378.24
+            }
+          ],
+          "PayableAmount": [
+            {
+              "_": 1378.24
+            }
+          ]
+        }
+      ],
+      "InvoiceLine": [
+        {
+          "ID": [
+            {
+              "_": "TN-0077"
+            }
+          ],
+          "LineExtensionAmount": [
+            {
+              "_": 1378.24
+            }
+          ],
+          "Price": [
+            {
+              "PriceAmount": [
+                {
+                  "_": 1378.24
+                }
+              ]
+            }
+          ],
+          "ItemPriceExtension": [
+            {
+              "Amount": [
+                {
+                  "_": 1378.24
+                }
+              ]
+            }
+          ],
+          "Item": [
+            {
+              "Description": [
+                {
+                  "_": "EPF payment - UD Pratiwi Tbk (TN-0077)"
                 }
               ]
             }

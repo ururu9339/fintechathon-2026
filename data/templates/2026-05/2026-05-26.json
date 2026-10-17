@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0154"
+          "_": "TN-0016"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2026-05-26"
+              "_": "2026-05-31"
             }
           ],
           "Description": [
             {
-              "_": "B2C_Sales (Accepted)"
+              "_": "SST (Accepted)"
             }
           ]
         }
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Mak Cik Aminah Catering"
+                      "_": "PT Habibi Nainggolan"
                     }
                   ]
                 }
@@ -58,7 +58,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Walk-in Customer"
+                      "_": "Mak Cik Aminah Catering"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 4271.08
+              "_": 932.26
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 4271.08
+              "_": 932.26
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 4271.08
+              "_": 932.26
             }
           ],
           "PayableAmount": [
             {
-              "_": 4271.08
+              "_": 932.26
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0154"
+              "_": "TN-0016"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 4271.08
+              "_": 932.26
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 4271.08
+                  "_": 932.26
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 4271.08
+                  "_": 932.26
                 }
               ]
             }
@@ -147,7 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "Catering services - B2C_Sales (TN-0154)"
+                  "_": "SST payment - PT Habibi Nainggolan (TN-0016)"
                 }
               ]
             }

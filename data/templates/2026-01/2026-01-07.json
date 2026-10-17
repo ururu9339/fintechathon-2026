@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0161"
+          "_": "TN-0169"
         }
       ],
       "IssueDate": [
@@ -23,7 +23,7 @@
           ],
           "EndDate": [
             {
-              "_": "2026-01-11"
+              "_": "2026-01-09"
             }
           ],
           "Description": [
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "CV Utama Widiastuti"
+                      "_": "PT Sitorus Nuraini (Persero) Tbk"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 483.72
+              "_": 1422.57
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 483.72
+              "_": 1422.57
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 483.72
+              "_": 1422.57
             }
           ],
           "PayableAmount": [
             {
-              "_": 483.72
+              "_": 1422.57
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0161"
+              "_": "TN-0169"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 483.72
+              "_": 1422.57
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 483.72
+                  "_": 1422.57
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 483.72
+                  "_": 1422.57
                 }
               ]
             }
@@ -147,7 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "Supplier payment - CV Utama Widiastuti (TN-0161)"
+                  "_": "Supplier payment - PT Sitorus Nuraini (Persero) Tbk (TN-0169)"
                 }
               ]
             }

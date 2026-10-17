@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0028"
+          "_": "TN-0046"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2026-03-30"
+              "_": "2026-03-26"
             }
           ],
           "Description": [
             {
-              "_": "SST (Accepted)"
+              "_": "EPF (Accepted)"
             }
           ]
         }
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Perum Haryanto"
+                      "_": "CV Wasita Mandasari Tbk"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 626.47
+              "_": 326.95
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 626.47
+              "_": 326.95
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 626.47
+              "_": 326.95
             }
           ],
           "PayableAmount": [
             {
-              "_": 626.47
+              "_": 326.95
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0028"
+              "_": "TN-0046"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 626.47
+              "_": 326.95
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 626.47
+                  "_": 326.95
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 626.47
+                  "_": 326.95
                 }
               ]
             }
@@ -147,7 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "SST payment - Perum Haryanto (TN-0028)"
+                  "_": "EPF payment - CV Wasita Mandasari Tbk (TN-0046)"
                 }
               ]
             }

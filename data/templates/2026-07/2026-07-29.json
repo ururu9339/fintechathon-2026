@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0194"
+          "_": "TN-0163"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2026-07-29"
+              "_": "2026-10-02"
             }
           ],
           "Description": [
             {
-              "_": "B2C_Sales (Accepted)"
+              "_": "B2B_Sales (Accepted)"
             }
           ]
         }
@@ -58,7 +58,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Walk-in Customer"
+                      "_": "Perum Wahyuni"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 1824.85
+              "_": 3050.68
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 1824.85
+              "_": 3050.68
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 1824.85
+              "_": 3050.68
             }
           ],
           "PayableAmount": [
             {
-              "_": 1824.85
+              "_": 3050.68
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0194"
+              "_": "TN-0163"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 1824.85
+              "_": 3050.68
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 1824.85
+                  "_": 3050.68
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 1824.85
+                  "_": 3050.68
                 }
               ]
             }
@@ -147,311 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "Catering services - B2C_Sales (TN-0194)"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "ID": [
-        {
-          "_": "TN-0211"
-        }
-      ],
-      "IssueDate": [
-        {
-          "_": "2026-07-29"
-        }
-      ],
-      "InvoicePeriod": [
-        {
-          "StartDate": [
-            {
-              "_": "2026-07-29"
-            }
-          ],
-          "EndDate": [
-            {
-              "_": "2026-08-01"
-            }
-          ],
-          "Description": [
-            {
-              "_": "SST (Accepted)"
-            }
-          ]
-        }
-      ],
-      "AccountingSupplierParty": [
-        {
-          "Party": [
-            {
-              "PartyLegalEntity": [
-                {
-                  "RegistrationName": [
-                    {
-                      "_": "CV Santoso (Persero) Tbk"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "AccountingCustomerParty": [
-        {
-          "Party": [
-            {
-              "PartyLegalEntity": [
-                {
-                  "RegistrationName": [
-                    {
-                      "_": "Mak Cik Aminah Catering"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "PaymentTerms": [
-        {
-          "Note": [
-            {
-              "_": "Status: Accepted"
-            }
-          ]
-        }
-      ],
-      "PaymentMeans": [
-        {
-          "PayeeFinancialAccount": [
-            {
-              "ID": [
-                {
-                  "_": ""
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "LegalMonetaryTotal": [
-        {
-          "LineExtensionAmount": [
-            {
-              "_": 637.65
-            }
-          ],
-          "TaxExclusiveAmount": [
-            {
-              "_": 637.65
-            }
-          ],
-          "TaxInclusiveAmount": [
-            {
-              "_": 637.65
-            }
-          ],
-          "PayableAmount": [
-            {
-              "_": 637.65
-            }
-          ]
-        }
-      ],
-      "InvoiceLine": [
-        {
-          "ID": [
-            {
-              "_": "TN-0211"
-            }
-          ],
-          "LineExtensionAmount": [
-            {
-              "_": 637.65
-            }
-          ],
-          "Price": [
-            {
-              "PriceAmount": [
-                {
-                  "_": 637.65
-                }
-              ]
-            }
-          ],
-          "ItemPriceExtension": [
-            {
-              "Amount": [
-                {
-                  "_": 637.65
-                }
-              ]
-            }
-          ],
-          "Item": [
-            {
-              "Description": [
-                {
-                  "_": "SST payment - CV Santoso (Persero) Tbk (TN-0211)"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "ID": [
-        {
-          "_": "TN-0021"
-        }
-      ],
-      "IssueDate": [
-        {
-          "_": "2026-07-29"
-        }
-      ],
-      "InvoicePeriod": [
-        {
-          "StartDate": [
-            {
-              "_": "2026-07-29"
-            }
-          ],
-          "EndDate": [
-            {
-              "_": "2026-08-03"
-            }
-          ],
-          "Description": [
-            {
-              "_": "SST (Accepted)"
-            }
-          ]
-        }
-      ],
-      "AccountingSupplierParty": [
-        {
-          "Party": [
-            {
-              "PartyLegalEntity": [
-                {
-                  "RegistrationName": [
-                    {
-                      "_": "PT Thamrin Susanti"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "AccountingCustomerParty": [
-        {
-          "Party": [
-            {
-              "PartyLegalEntity": [
-                {
-                  "RegistrationName": [
-                    {
-                      "_": "Mak Cik Aminah Catering"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "PaymentTerms": [
-        {
-          "Note": [
-            {
-              "_": "Status: Accepted"
-            }
-          ]
-        }
-      ],
-      "PaymentMeans": [
-        {
-          "PayeeFinancialAccount": [
-            {
-              "ID": [
-                {
-                  "_": ""
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "LegalMonetaryTotal": [
-        {
-          "LineExtensionAmount": [
-            {
-              "_": 518.34
-            }
-          ],
-          "TaxExclusiveAmount": [
-            {
-              "_": 518.34
-            }
-          ],
-          "TaxInclusiveAmount": [
-            {
-              "_": 518.34
-            }
-          ],
-          "PayableAmount": [
-            {
-              "_": 518.34
-            }
-          ]
-        }
-      ],
-      "InvoiceLine": [
-        {
-          "ID": [
-            {
-              "_": "TN-0021"
-            }
-          ],
-          "LineExtensionAmount": [
-            {
-              "_": 518.34
-            }
-          ],
-          "Price": [
-            {
-              "PriceAmount": [
-                {
-                  "_": 518.34
-                }
-              ]
-            }
-          ],
-          "ItemPriceExtension": [
-            {
-              "Amount": [
-                {
-                  "_": 518.34
-                }
-              ]
-            }
-          ],
-          "Item": [
-            {
-              "Description": [
-                {
-                  "_": "SST payment - PT Thamrin Susanti (TN-0021)"
+                  "_": "Catering services - B2B_Sales (TN-0163)"
                 }
               ]
             }

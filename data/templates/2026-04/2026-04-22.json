@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0184"
+          "_": "TN-0071"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2026-06-26"
+              "_": "2026-04-24"
             }
           ],
           "Description": [
             {
-              "_": "B2B_Sales (Accepted)"
+              "_": "EPF (Accepted)"
             }
           ]
         }
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Mak Cik Aminah Catering"
+                      "_": "UD Hutagalung Pudjiastuti (Persero) Tbk"
                     }
                   ]
                 }
@@ -58,7 +58,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "CV Gunarto Tbk"
+                      "_": "Mak Cik Aminah Catering"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 1390.53
+              "_": 224.77
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 1390.53
+              "_": 224.77
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 1390.53
+              "_": 224.77
             }
           ],
           "PayableAmount": [
             {
-              "_": 1390.53
+              "_": 224.77
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0184"
+              "_": "TN-0071"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 1390.53
+              "_": 224.77
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 1390.53
+                  "_": 224.77
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 1390.53
+                  "_": 224.77
                 }
               ]
             }
@@ -147,7 +147,311 @@
             {
               "Description": [
                 {
-                  "_": "Catering services - B2B_Sales (TN-0184)"
+                  "_": "EPF payment - UD Hutagalung Pudjiastuti (Persero) Tbk (TN-0071)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ID": [
+        {
+          "_": "TN-0242"
+        }
+      ],
+      "IssueDate": [
+        {
+          "_": "2026-04-22"
+        }
+      ],
+      "InvoicePeriod": [
+        {
+          "StartDate": [
+            {
+              "_": "2026-04-22"
+            }
+          ],
+          "EndDate": [
+            {
+              "_": "2026-04-22"
+            }
+          ],
+          "Description": [
+            {
+              "_": "B2C_Sales (Accepted)"
+            }
+          ]
+        }
+      ],
+      "AccountingSupplierParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Mak Cik Aminah Catering"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "AccountingCustomerParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Walk-in Customer"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "PaymentTerms": [
+        {
+          "Note": [
+            {
+              "_": "Status: Accepted"
+            }
+          ]
+        }
+      ],
+      "PaymentMeans": [
+        {
+          "PayeeFinancialAccount": [
+            {
+              "ID": [
+                {
+                  "_": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "LegalMonetaryTotal": [
+        {
+          "LineExtensionAmount": [
+            {
+              "_": 2617.03
+            }
+          ],
+          "TaxExclusiveAmount": [
+            {
+              "_": 2617.03
+            }
+          ],
+          "TaxInclusiveAmount": [
+            {
+              "_": 2617.03
+            }
+          ],
+          "PayableAmount": [
+            {
+              "_": 2617.03
+            }
+          ]
+        }
+      ],
+      "InvoiceLine": [
+        {
+          "ID": [
+            {
+              "_": "TN-0242"
+            }
+          ],
+          "LineExtensionAmount": [
+            {
+              "_": 2617.03
+            }
+          ],
+          "Price": [
+            {
+              "PriceAmount": [
+                {
+                  "_": 2617.03
+                }
+              ]
+            }
+          ],
+          "ItemPriceExtension": [
+            {
+              "Amount": [
+                {
+                  "_": 2617.03
+                }
+              ]
+            }
+          ],
+          "Item": [
+            {
+              "Description": [
+                {
+                  "_": "Catering services - B2C_Sales (TN-0242)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ID": [
+        {
+          "_": "TN-0139"
+        }
+      ],
+      "IssueDate": [
+        {
+          "_": "2026-04-22"
+        }
+      ],
+      "InvoicePeriod": [
+        {
+          "StartDate": [
+            {
+              "_": "2026-04-22"
+            }
+          ],
+          "EndDate": [
+            {
+              "_": "2026-04-23"
+            }
+          ],
+          "Description": [
+            {
+              "_": "SST (Accepted)"
+            }
+          ]
+        }
+      ],
+      "AccountingSupplierParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "CV Salahudin Tbk"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "AccountingCustomerParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Mak Cik Aminah Catering"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "PaymentTerms": [
+        {
+          "Note": [
+            {
+              "_": "Status: Accepted"
+            }
+          ]
+        }
+      ],
+      "PaymentMeans": [
+        {
+          "PayeeFinancialAccount": [
+            {
+              "ID": [
+                {
+                  "_": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "LegalMonetaryTotal": [
+        {
+          "LineExtensionAmount": [
+            {
+              "_": 1489.9
+            }
+          ],
+          "TaxExclusiveAmount": [
+            {
+              "_": 1489.9
+            }
+          ],
+          "TaxInclusiveAmount": [
+            {
+              "_": 1489.9
+            }
+          ],
+          "PayableAmount": [
+            {
+              "_": 1489.9
+            }
+          ]
+        }
+      ],
+      "InvoiceLine": [
+        {
+          "ID": [
+            {
+              "_": "TN-0139"
+            }
+          ],
+          "LineExtensionAmount": [
+            {
+              "_": 1489.9
+            }
+          ],
+          "Price": [
+            {
+              "PriceAmount": [
+                {
+                  "_": 1489.9
+                }
+              ]
+            }
+          ],
+          "ItemPriceExtension": [
+            {
+              "Amount": [
+                {
+                  "_": 1489.9
+                }
+              ]
+            }
+          ],
+          "Item": [
+            {
+              "Description": [
+                {
+                  "_": "SST payment - CV Salahudin Tbk (TN-0139)"
                 }
               ]
             }

@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0210"
+          "_": "TN-0039"
         }
       ],
       "IssueDate": [
@@ -58,7 +58,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Perum Lestari Mayasari (Persero) Tbk"
+                      "_": "UD Wijayanti (Persero) Tbk"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 2490.87
+              "_": 3390.86
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 2490.87
+              "_": 3390.86
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 2490.87
+              "_": 3390.86
             }
           ],
           "PayableAmount": [
             {
-              "_": 2490.87
+              "_": 3390.86
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0210"
+              "_": "TN-0039"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 2490.87
+              "_": 3390.86
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 2490.87
+                  "_": 3390.86
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 2490.87
+                  "_": 3390.86
                 }
               ]
             }
@@ -147,7 +147,159 @@
             {
               "Description": [
                 {
-                  "_": "Catering services - B2B_Sales (TN-0210)"
+                  "_": "Catering services - B2B_Sales (TN-0039)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ID": [
+        {
+          "_": "TN-0080"
+        }
+      ],
+      "IssueDate": [
+        {
+          "_": "2026-05-06"
+        }
+      ],
+      "InvoicePeriod": [
+        {
+          "StartDate": [
+            {
+              "_": "2026-05-06"
+            }
+          ],
+          "EndDate": [
+            {
+              "_": "2026-07-10"
+            }
+          ],
+          "Description": [
+            {
+              "_": "B2B_Sales (Accepted)"
+            }
+          ]
+        }
+      ],
+      "AccountingSupplierParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Mak Cik Aminah Catering"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "AccountingCustomerParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "UD Samosir"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "PaymentTerms": [
+        {
+          "Note": [
+            {
+              "_": "Status: Accepted"
+            }
+          ]
+        }
+      ],
+      "PaymentMeans": [
+        {
+          "PayeeFinancialAccount": [
+            {
+              "ID": [
+                {
+                  "_": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "LegalMonetaryTotal": [
+        {
+          "LineExtensionAmount": [
+            {
+              "_": 4287.24
+            }
+          ],
+          "TaxExclusiveAmount": [
+            {
+              "_": 4287.24
+            }
+          ],
+          "TaxInclusiveAmount": [
+            {
+              "_": 4287.24
+            }
+          ],
+          "PayableAmount": [
+            {
+              "_": 4287.24
+            }
+          ]
+        }
+      ],
+      "InvoiceLine": [
+        {
+          "ID": [
+            {
+              "_": "TN-0080"
+            }
+          ],
+          "LineExtensionAmount": [
+            {
+              "_": 4287.24
+            }
+          ],
+          "Price": [
+            {
+              "PriceAmount": [
+                {
+                  "_": 4287.24
+                }
+              ]
+            }
+          ],
+          "ItemPriceExtension": [
+            {
+              "Amount": [
+                {
+                  "_": 4287.24
+                }
+              ]
+            }
+          ],
+          "Item": [
+            {
+              "Description": [
+                {
+                  "_": "Catering services - B2B_Sales (TN-0080)"
                 }
               ]
             }

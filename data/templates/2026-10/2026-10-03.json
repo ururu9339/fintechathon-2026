@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0036"
+          "_": "TN-0147"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2026-10-04"
+              "_": "2026-10-03"
             }
           ],
           "Description": [
             {
-              "_": "SST (Accepted)"
+              "_": "B2C_Sales (Accepted)"
             }
           ]
         }
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "CV Nugroho Suryono"
+                      "_": "Mak Cik Aminah Catering"
                     }
                   ]
                 }
@@ -58,7 +58,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Mak Cik Aminah Catering"
+                      "_": "Walk-in Customer"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 750.65
+              "_": 1571.24
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 750.65
+              "_": 1571.24
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 750.65
+              "_": 1571.24
             }
           ],
           "PayableAmount": [
             {
-              "_": 750.65
+              "_": 1571.24
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0036"
+              "_": "TN-0147"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 750.65
+              "_": 1571.24
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 750.65
+                  "_": 1571.24
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 750.65
+                  "_": 1571.24
                 }
               ]
             }
@@ -147,7 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "SST payment - CV Nugroho Suryono (TN-0036)"
+                  "_": "Catering services - B2C_Sales (TN-0147)"
                 }
               ]
             }

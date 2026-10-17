@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0244"
+          "_": "TN-0141"
         }
       ],
       "IssueDate": [
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "CV Tampubolon"
+                      "_": "PT Oktaviani Laksita Tbk"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 1285.74
+              "_": 561.31
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 1285.74
+              "_": 561.31
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 1285.74
+              "_": 561.31
             }
           ],
           "PayableAmount": [
             {
-              "_": 1285.74
+              "_": 561.31
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0244"
+              "_": "TN-0141"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 1285.74
+              "_": 561.31
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 1285.74
+                  "_": 561.31
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 1285.74
+                  "_": 561.31
                 }
               ]
             }
@@ -147,7 +147,159 @@
             {
               "Description": [
                 {
-                  "_": "EPF payment - CV Tampubolon (TN-0244)"
+                  "_": "EPF payment - PT Oktaviani Laksita Tbk (TN-0141)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ID": [
+        {
+          "_": "TN-0273"
+        }
+      ],
+      "IssueDate": [
+        {
+          "_": "2026-04-09"
+        }
+      ],
+      "InvoicePeriod": [
+        {
+          "StartDate": [
+            {
+              "_": "2026-04-09"
+            }
+          ],
+          "EndDate": [
+            {
+              "_": "2026-04-09"
+            }
+          ],
+          "Description": [
+            {
+              "_": "B2C_Sales (Accepted)"
+            }
+          ]
+        }
+      ],
+      "AccountingSupplierParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Mak Cik Aminah Catering"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "AccountingCustomerParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Walk-in Customer"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "PaymentTerms": [
+        {
+          "Note": [
+            {
+              "_": "Status: Accepted"
+            }
+          ]
+        }
+      ],
+      "PaymentMeans": [
+        {
+          "PayeeFinancialAccount": [
+            {
+              "ID": [
+                {
+                  "_": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "LegalMonetaryTotal": [
+        {
+          "LineExtensionAmount": [
+            {
+              "_": 2467.34
+            }
+          ],
+          "TaxExclusiveAmount": [
+            {
+              "_": 2467.34
+            }
+          ],
+          "TaxInclusiveAmount": [
+            {
+              "_": 2467.34
+            }
+          ],
+          "PayableAmount": [
+            {
+              "_": 2467.34
+            }
+          ]
+        }
+      ],
+      "InvoiceLine": [
+        {
+          "ID": [
+            {
+              "_": "TN-0273"
+            }
+          ],
+          "LineExtensionAmount": [
+            {
+              "_": 2467.34
+            }
+          ],
+          "Price": [
+            {
+              "PriceAmount": [
+                {
+                  "_": 2467.34
+                }
+              ]
+            }
+          ],
+          "ItemPriceExtension": [
+            {
+              "Amount": [
+                {
+                  "_": 2467.34
+                }
+              ]
+            }
+          ],
+          "Item": [
+            {
+              "Description": [
+                {
+                  "_": "Catering services - B2C_Sales (TN-0273)"
                 }
               ]
             }

@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0149"
+          "_": "TN-0155"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2026-03-17"
+              "_": "2026-03-16"
             }
           ],
           "Description": [
             {
-              "_": "SST (Accepted)"
+              "_": "B2C_Sales (Accepted)"
             }
           ]
         }
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Perum Najmudin Lailasari (Persero) Tbk"
+                      "_": "Mak Cik Aminah Catering"
                     }
                   ]
                 }
@@ -58,7 +58,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Mak Cik Aminah Catering"
+                      "_": "Walk-in Customer"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 1292.53
+              "_": 894.34
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 1292.53
+              "_": 894.34
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 1292.53
+              "_": 894.34
             }
           ],
           "PayableAmount": [
             {
-              "_": 1292.53
+              "_": 894.34
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0149"
+              "_": "TN-0155"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 1292.53
+              "_": 894.34
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 1292.53
+                  "_": 894.34
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 1292.53
+                  "_": 894.34
                 }
               ]
             }
@@ -147,7 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "SST payment - Perum Najmudin Lailasari (Persero) Tbk (TN-0149)"
+                  "_": "Catering services - B2C_Sales (TN-0155)"
                 }
               ]
             }

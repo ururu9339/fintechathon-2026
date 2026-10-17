@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0079"
+          "_": "TN-0109"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2026-09-13"
+              "_": "2026-09-12"
             }
           ],
           "Description": [
             {
-              "_": "Supplier (Accepted)"
+              "_": "EPF (Accepted)"
             }
           ]
         }
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "UD Maheswara"
+                      "_": "Perum Nashiruddin Tbk"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 343.37
+              "_": 225.27
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 343.37
+              "_": 225.27
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 343.37
+              "_": 225.27
             }
           ],
           "PayableAmount": [
             {
-              "_": 343.37
+              "_": 225.27
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0079"
+              "_": "TN-0109"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 343.37
+              "_": 225.27
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 343.37
+                  "_": 225.27
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 343.37
+                  "_": 225.27
                 }
               ]
             }
@@ -147,159 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "Supplier payment - UD Maheswara (TN-0079)"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "ID": [
-        {
-          "_": "TN-0158"
-        }
-      ],
-      "IssueDate": [
-        {
-          "_": "2026-09-10"
-        }
-      ],
-      "InvoicePeriod": [
-        {
-          "StartDate": [
-            {
-              "_": "2026-09-10"
-            }
-          ],
-          "EndDate": [
-            {
-              "_": "2026-09-14"
-            }
-          ],
-          "Description": [
-            {
-              "_": "Supplier (Accepted)"
-            }
-          ]
-        }
-      ],
-      "AccountingSupplierParty": [
-        {
-          "Party": [
-            {
-              "PartyLegalEntity": [
-                {
-                  "RegistrationName": [
-                    {
-                      "_": "Perum Rajata"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "AccountingCustomerParty": [
-        {
-          "Party": [
-            {
-              "PartyLegalEntity": [
-                {
-                  "RegistrationName": [
-                    {
-                      "_": "Mak Cik Aminah Catering"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "PaymentTerms": [
-        {
-          "Note": [
-            {
-              "_": "Status: Accepted"
-            }
-          ]
-        }
-      ],
-      "PaymentMeans": [
-        {
-          "PayeeFinancialAccount": [
-            {
-              "ID": [
-                {
-                  "_": ""
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "LegalMonetaryTotal": [
-        {
-          "LineExtensionAmount": [
-            {
-              "_": 379.04
-            }
-          ],
-          "TaxExclusiveAmount": [
-            {
-              "_": 379.04
-            }
-          ],
-          "TaxInclusiveAmount": [
-            {
-              "_": 379.04
-            }
-          ],
-          "PayableAmount": [
-            {
-              "_": 379.04
-            }
-          ]
-        }
-      ],
-      "InvoiceLine": [
-        {
-          "ID": [
-            {
-              "_": "TN-0158"
-            }
-          ],
-          "LineExtensionAmount": [
-            {
-              "_": 379.04
-            }
-          ],
-          "Price": [
-            {
-              "PriceAmount": [
-                {
-                  "_": 379.04
-                }
-              ]
-            }
-          ],
-          "ItemPriceExtension": [
-            {
-              "Amount": [
-                {
-                  "_": 379.04
-                }
-              ]
-            }
-          ],
-          "Item": [
-            {
-              "Description": [
-                {
-                  "_": "Supplier payment - Perum Rajata (TN-0158)"
+                  "_": "EPF payment - Perum Nashiruddin Tbk (TN-0109)"
                 }
               ]
             }

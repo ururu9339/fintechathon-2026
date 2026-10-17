@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0182"
+          "_": "TN-0223"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2026-06-23"
+              "_": "2026-06-18"
             }
           ],
           "Description": [
             {
-              "_": "EPF (Accepted)"
+              "_": "B2C_Sales (Accepted)"
             }
           ]
         }
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "CV Marpaung Mahendra"
+                      "_": "Mak Cik Aminah Catering"
                     }
                   ]
                 }
@@ -58,7 +58,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Mak Cik Aminah Catering"
+                      "_": "Walk-in Customer"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 803.77
+              "_": 1586.19
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 803.77
+              "_": 1586.19
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 803.77
+              "_": 1586.19
             }
           ],
           "PayableAmount": [
             {
-              "_": 803.77
+              "_": 1586.19
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0182"
+              "_": "TN-0223"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 803.77
+              "_": 1586.19
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 803.77
+                  "_": 1586.19
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 803.77
+                  "_": 1586.19
                 }
               ]
             }
@@ -147,7 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "EPF payment - CV Marpaung Mahendra (TN-0182)"
+                  "_": "Catering services - B2C_Sales (TN-0223)"
                 }
               ]
             }

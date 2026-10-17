@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0190"
+          "_": "TN-0030"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2026-03-27"
+              "_": "2026-03-28"
             }
           ],
           "Description": [
             {
-              "_": "B2C_Sales (Accepted)"
+              "_": "EPF (Accepted)"
             }
           ]
         }
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Mak Cik Aminah Catering"
+                      "_": "PD Firgantoro Tbk"
                     }
                   ]
                 }
@@ -58,7 +58,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Walk-in Customer"
+                      "_": "Mak Cik Aminah Catering"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 1368.82
+              "_": 662.54
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 1368.82
+              "_": 662.54
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 1368.82
+              "_": 662.54
             }
           ],
           "PayableAmount": [
             {
-              "_": 1368.82
+              "_": 662.54
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0190"
+              "_": "TN-0030"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 1368.82
+              "_": 662.54
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 1368.82
+                  "_": 662.54
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 1368.82
+                  "_": 662.54
                 }
               ]
             }
@@ -147,7 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "Catering services - B2C_Sales (TN-0190)"
+                  "_": "EPF payment - PD Firgantoro Tbk (TN-0030)"
                 }
               ]
             }

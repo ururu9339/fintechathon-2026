@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0254"
+          "_": "TN-0134"
         }
       ],
       "IssueDate": [
@@ -23,7 +23,7 @@
           ],
           "EndDate": [
             {
-              "_": "2026-07-24"
+              "_": "2026-07-21"
             }
           ],
           "Description": [
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "PD Lailasari"
+                      "_": "Perum Thamrin Anggriawan (Persero) Tbk"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 560.61
+              "_": 446.45
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 560.61
+              "_": 446.45
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 560.61
+              "_": 446.45
             }
           ],
           "PayableAmount": [
             {
-              "_": 560.61
+              "_": 446.45
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0254"
+              "_": "TN-0134"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 560.61
+              "_": 446.45
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 560.61
+                  "_": 446.45
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 560.61
+                  "_": 446.45
                 }
               ]
             }
@@ -147,7 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "Supplier payment - PD Lailasari (TN-0254)"
+                  "_": "Supplier payment - Perum Thamrin Anggriawan (Persero) Tbk (TN-0134)"
                 }
               ]
             }
@@ -158,7 +158,7 @@
     {
       "ID": [
         {
-          "_": "TN-0109"
+          "_": "TN-0033"
         }
       ],
       "IssueDate": [
@@ -175,12 +175,12 @@
           ],
           "EndDate": [
             {
-              "_": "2026-07-20"
+              "_": "2026-07-19"
             }
           ],
           "Description": [
             {
-              "_": "SST (Accepted)"
+              "_": "B2C_Sales (Accepted)"
             }
           ]
         }
@@ -193,7 +193,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "PT Gunarto"
+                      "_": "Mak Cik Aminah Catering"
                     }
                   ]
                 }
@@ -210,7 +210,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Mak Cik Aminah Catering"
+                      "_": "Walk-in Customer"
                     }
                   ]
                 }
@@ -245,22 +245,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 372.76
+              "_": 4466.95
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 372.76
+              "_": 4466.95
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 372.76
+              "_": 4466.95
             }
           ],
           "PayableAmount": [
             {
-              "_": 372.76
+              "_": 4466.95
             }
           ]
         }
@@ -269,19 +269,19 @@
         {
           "ID": [
             {
-              "_": "TN-0109"
+              "_": "TN-0033"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 372.76
+              "_": 4466.95
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 372.76
+                  "_": 4466.95
                 }
               ]
             }
@@ -290,7 +290,7 @@
             {
               "Amount": [
                 {
-                  "_": 372.76
+                  "_": 4466.95
                 }
               ]
             }
@@ -299,7 +299,159 @@
             {
               "Description": [
                 {
-                  "_": "SST payment - PT Gunarto (TN-0109)"
+                  "_": "Catering services - B2C_Sales (TN-0033)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ID": [
+        {
+          "_": "TN-0291"
+        }
+      ],
+      "IssueDate": [
+        {
+          "_": "2026-07-19"
+        }
+      ],
+      "InvoicePeriod": [
+        {
+          "StartDate": [
+            {
+              "_": "2026-07-19"
+            }
+          ],
+          "EndDate": [
+            {
+              "_": "2026-07-19"
+            }
+          ],
+          "Description": [
+            {
+              "_": "B2C_Sales (Accepted)"
+            }
+          ]
+        }
+      ],
+      "AccountingSupplierParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Mak Cik Aminah Catering"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "AccountingCustomerParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Walk-in Customer"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "PaymentTerms": [
+        {
+          "Note": [
+            {
+              "_": "Status: Accepted"
+            }
+          ]
+        }
+      ],
+      "PaymentMeans": [
+        {
+          "PayeeFinancialAccount": [
+            {
+              "ID": [
+                {
+                  "_": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "LegalMonetaryTotal": [
+        {
+          "LineExtensionAmount": [
+            {
+              "_": 4253.69
+            }
+          ],
+          "TaxExclusiveAmount": [
+            {
+              "_": 4253.69
+            }
+          ],
+          "TaxInclusiveAmount": [
+            {
+              "_": 4253.69
+            }
+          ],
+          "PayableAmount": [
+            {
+              "_": 4253.69
+            }
+          ]
+        }
+      ],
+      "InvoiceLine": [
+        {
+          "ID": [
+            {
+              "_": "TN-0291"
+            }
+          ],
+          "LineExtensionAmount": [
+            {
+              "_": 4253.69
+            }
+          ],
+          "Price": [
+            {
+              "PriceAmount": [
+                {
+                  "_": 4253.69
+                }
+              ]
+            }
+          ],
+          "ItemPriceExtension": [
+            {
+              "Amount": [
+                {
+                  "_": 4253.69
+                }
+              ]
+            }
+          ],
+          "Item": [
+            {
+              "Description": [
+                {
+                  "_": "Catering services - B2C_Sales (TN-0291)"
                 }
               ]
             }

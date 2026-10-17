@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0206"
+          "_": "TN-0208"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2026-06-03"
+              "_": "2026-05-30"
             }
           ],
           "Description": [
             {
-              "_": "EPF (Accepted)"
+              "_": "B2C_Sales (Accepted)"
             }
           ]
         }
@@ -41,7 +41,159 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "PD Mayasari"
+                      "_": "Mak Cik Aminah Catering"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "AccountingCustomerParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Walk-in Customer"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "PaymentTerms": [
+        {
+          "Note": [
+            {
+              "_": "Status: Accepted"
+            }
+          ]
+        }
+      ],
+      "PaymentMeans": [
+        {
+          "PayeeFinancialAccount": [
+            {
+              "ID": [
+                {
+                  "_": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "LegalMonetaryTotal": [
+        {
+          "LineExtensionAmount": [
+            {
+              "_": 1735.89
+            }
+          ],
+          "TaxExclusiveAmount": [
+            {
+              "_": 1735.89
+            }
+          ],
+          "TaxInclusiveAmount": [
+            {
+              "_": 1735.89
+            }
+          ],
+          "PayableAmount": [
+            {
+              "_": 1735.89
+            }
+          ]
+        }
+      ],
+      "InvoiceLine": [
+        {
+          "ID": [
+            {
+              "_": "TN-0208"
+            }
+          ],
+          "LineExtensionAmount": [
+            {
+              "_": 1735.89
+            }
+          ],
+          "Price": [
+            {
+              "PriceAmount": [
+                {
+                  "_": 1735.89
+                }
+              ]
+            }
+          ],
+          "ItemPriceExtension": [
+            {
+              "Amount": [
+                {
+                  "_": 1735.89
+                }
+              ]
+            }
+          ],
+          "Item": [
+            {
+              "Description": [
+                {
+                  "_": "Catering services - B2C_Sales (TN-0208)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ID": [
+        {
+          "_": "TN-0041"
+        }
+      ],
+      "IssueDate": [
+        {
+          "_": "2026-05-30"
+        }
+      ],
+      "InvoicePeriod": [
+        {
+          "StartDate": [
+            {
+              "_": "2026-05-30"
+            }
+          ],
+          "EndDate": [
+            {
+              "_": "2026-06-02"
+            }
+          ],
+          "Description": [
+            {
+              "_": "SST (Accepted)"
+            }
+          ]
+        }
+      ],
+      "AccountingSupplierParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Perum Siregar"
                     }
                   ]
                 }
@@ -93,22 +245,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 329.68
+              "_": 1236.33
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 329.68
+              "_": 1236.33
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 329.68
+              "_": 1236.33
             }
           ],
           "PayableAmount": [
             {
-              "_": 329.68
+              "_": 1236.33
             }
           ]
         }
@@ -117,19 +269,19 @@
         {
           "ID": [
             {
-              "_": "TN-0206"
+              "_": "TN-0041"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 329.68
+              "_": 1236.33
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 329.68
+                  "_": 1236.33
                 }
               ]
             }
@@ -138,7 +290,7 @@
             {
               "Amount": [
                 {
-                  "_": 329.68
+                  "_": 1236.33
                 }
               ]
             }
@@ -147,7 +299,7 @@
             {
               "Description": [
                 {
-                  "_": "EPF payment - PD Mayasari (TN-0206)"
+                  "_": "SST payment - Perum Siregar (TN-0041)"
                 }
               ]
             }

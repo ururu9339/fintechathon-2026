@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0082"
+          "_": "TN-0015"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2026-03-18"
+              "_": "2026-03-20"
             }
           ],
           "Description": [
             {
-              "_": "B2C_Sales (Accepted)"
+              "_": "Supplier (Accepted)"
             }
           ]
         }
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Mak Cik Aminah Catering"
+                      "_": "Perum Marpaung (Persero) Tbk"
                     }
                   ]
                 }
@@ -58,7 +58,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Walk-in Customer"
+                      "_": "Mak Cik Aminah Catering"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 1327.66
+              "_": 1366.21
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 1327.66
+              "_": 1366.21
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 1327.66
+              "_": 1366.21
             }
           ],
           "PayableAmount": [
             {
-              "_": 1327.66
+              "_": 1366.21
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0082"
+              "_": "TN-0015"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 1327.66
+              "_": 1366.21
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 1327.66
+                  "_": 1366.21
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 1327.66
+                  "_": 1366.21
                 }
               ]
             }
@@ -147,7 +147,159 @@
             {
               "Description": [
                 {
-                  "_": "Catering services - B2C_Sales (TN-0082)"
+                  "_": "Supplier payment - Perum Marpaung (Persero) Tbk (TN-0015)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ID": [
+        {
+          "_": "TN-0298"
+        }
+      ],
+      "IssueDate": [
+        {
+          "_": "2026-03-18"
+        }
+      ],
+      "InvoicePeriod": [
+        {
+          "StartDate": [
+            {
+              "_": "2026-03-18"
+            }
+          ],
+          "EndDate": [
+            {
+              "_": "2026-03-20"
+            }
+          ],
+          "Description": [
+            {
+              "_": "Supplier (Accepted)"
+            }
+          ]
+        }
+      ],
+      "AccountingSupplierParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Perum Agustina"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "AccountingCustomerParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Mak Cik Aminah Catering"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "PaymentTerms": [
+        {
+          "Note": [
+            {
+              "_": "Status: Accepted"
+            }
+          ]
+        }
+      ],
+      "PaymentMeans": [
+        {
+          "PayeeFinancialAccount": [
+            {
+              "ID": [
+                {
+                  "_": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "LegalMonetaryTotal": [
+        {
+          "LineExtensionAmount": [
+            {
+              "_": 1354.22
+            }
+          ],
+          "TaxExclusiveAmount": [
+            {
+              "_": 1354.22
+            }
+          ],
+          "TaxInclusiveAmount": [
+            {
+              "_": 1354.22
+            }
+          ],
+          "PayableAmount": [
+            {
+              "_": 1354.22
+            }
+          ]
+        }
+      ],
+      "InvoiceLine": [
+        {
+          "ID": [
+            {
+              "_": "TN-0298"
+            }
+          ],
+          "LineExtensionAmount": [
+            {
+              "_": 1354.22
+            }
+          ],
+          "Price": [
+            {
+              "PriceAmount": [
+                {
+                  "_": 1354.22
+                }
+              ]
+            }
+          ],
+          "ItemPriceExtension": [
+            {
+              "Amount": [
+                {
+                  "_": 1354.22
+                }
+              ]
+            }
+          ],
+          "Item": [
+            {
+              "Description": [
+                {
+                  "_": "Supplier payment - Perum Agustina (TN-0298)"
                 }
               ]
             }

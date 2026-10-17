@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0035"
+          "_": "TN-0159"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2026-03-10"
+              "_": "2026-05-11"
             }
           ],
           "Description": [
             {
-              "_": "SST (Accepted)"
+              "_": "B2B_Sales (Accepted)"
             }
           ]
         }
@@ -41,7 +41,159 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Perum Widodo Hidayat"
+                      "_": "Mak Cik Aminah Catering"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "AccountingCustomerParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "PT Thamrin"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "PaymentTerms": [
+        {
+          "Note": [
+            {
+              "_": "Status: Accepted"
+            }
+          ]
+        }
+      ],
+      "PaymentMeans": [
+        {
+          "PayeeFinancialAccount": [
+            {
+              "ID": [
+                {
+                  "_": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "LegalMonetaryTotal": [
+        {
+          "LineExtensionAmount": [
+            {
+              "_": 4076.82
+            }
+          ],
+          "TaxExclusiveAmount": [
+            {
+              "_": 4076.82
+            }
+          ],
+          "TaxInclusiveAmount": [
+            {
+              "_": 4076.82
+            }
+          ],
+          "PayableAmount": [
+            {
+              "_": 4076.82
+            }
+          ]
+        }
+      ],
+      "InvoiceLine": [
+        {
+          "ID": [
+            {
+              "_": "TN-0159"
+            }
+          ],
+          "LineExtensionAmount": [
+            {
+              "_": 4076.82
+            }
+          ],
+          "Price": [
+            {
+              "PriceAmount": [
+                {
+                  "_": 4076.82
+                }
+              ]
+            }
+          ],
+          "ItemPriceExtension": [
+            {
+              "Amount": [
+                {
+                  "_": 4076.82
+                }
+              ]
+            }
+          ],
+          "Item": [
+            {
+              "Description": [
+                {
+                  "_": "Catering services - B2B_Sales (TN-0159)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ID": [
+        {
+          "_": "TN-0194"
+        }
+      ],
+      "IssueDate": [
+        {
+          "_": "2026-03-07"
+        }
+      ],
+      "InvoicePeriod": [
+        {
+          "StartDate": [
+            {
+              "_": "2026-03-07"
+            }
+          ],
+          "EndDate": [
+            {
+              "_": "2026-03-09"
+            }
+          ],
+          "Description": [
+            {
+              "_": "EPF (Accepted)"
+            }
+          ]
+        }
+      ],
+      "AccountingSupplierParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "PD Haryanti Purnawati Tbk"
                     }
                   ]
                 }
@@ -93,22 +245,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 1365.87
+              "_": 735.39
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 1365.87
+              "_": 735.39
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 1365.87
+              "_": 735.39
             }
           ],
           "PayableAmount": [
             {
-              "_": 1365.87
+              "_": 735.39
             }
           ]
         }
@@ -117,19 +269,19 @@
         {
           "ID": [
             {
-              "_": "TN-0035"
+              "_": "TN-0194"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 1365.87
+              "_": 735.39
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 1365.87
+                  "_": 735.39
                 }
               ]
             }
@@ -138,7 +290,7 @@
             {
               "Amount": [
                 {
-                  "_": 1365.87
+                  "_": 735.39
                 }
               ]
             }
@@ -147,7 +299,7 @@
             {
               "Description": [
                 {
-                  "_": "SST payment - Perum Widodo Hidayat (TN-0035)"
+                  "_": "EPF payment - PD Haryanti Purnawati Tbk (TN-0194)"
                 }
               ]
             }

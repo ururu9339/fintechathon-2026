@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0177"
+          "_": "TN-0210"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2025-12-04"
+              "_": "2025-12-01"
             }
           ],
           "Description": [
             {
-              "_": "EPF (Accepted)"
+              "_": "SST (Accepted)"
             }
           ]
         }
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "PT Prayoga Mangunsong"
+                      "_": "CV Namaga Tbk"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 1095.09
+              "_": 770.59
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 1095.09
+              "_": 770.59
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 1095.09
+              "_": 770.59
             }
           ],
           "PayableAmount": [
             {
-              "_": 1095.09
+              "_": 770.59
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0177"
+              "_": "TN-0210"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 1095.09
+              "_": 770.59
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 1095.09
+                  "_": 770.59
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 1095.09
+                  "_": 770.59
                 }
               ]
             }
@@ -147,7 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "EPF payment - PT Prayoga Mangunsong (TN-0177)"
+                  "_": "SST payment - CV Namaga Tbk (TN-0210)"
                 }
               ]
             }

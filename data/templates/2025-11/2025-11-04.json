@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0203"
+          "_": "TN-0006"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2026-01-08"
+              "_": "2025-11-07"
             }
           ],
           "Description": [
             {
-              "_": "B2B_Sales (Accepted)"
+              "_": "SST (Accepted)"
             }
           ]
         }
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Mak Cik Aminah Catering"
+                      "_": "PD Kuswoyo"
                     }
                   ]
                 }
@@ -58,7 +58,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "PT Lestari Saefullah"
+                      "_": "Mak Cik Aminah Catering"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 3630.95
+              "_": 563.21
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 3630.95
+              "_": 563.21
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 3630.95
+              "_": 563.21
             }
           ],
           "PayableAmount": [
             {
-              "_": 3630.95
+              "_": 563.21
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0203"
+              "_": "TN-0006"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 3630.95
+              "_": 563.21
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 3630.95
+                  "_": 563.21
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 3630.95
+                  "_": 563.21
                 }
               ]
             }
@@ -147,159 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "Catering services - B2B_Sales (TN-0203)"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "ID": [
-        {
-          "_": "TN-0157"
-        }
-      ],
-      "IssueDate": [
-        {
-          "_": "2025-11-04"
-        }
-      ],
-      "InvoicePeriod": [
-        {
-          "StartDate": [
-            {
-              "_": "2025-11-04"
-            }
-          ],
-          "EndDate": [
-            {
-              "_": "2026-01-08"
-            }
-          ],
-          "Description": [
-            {
-              "_": "B2B_Sales (Accepted)"
-            }
-          ]
-        }
-      ],
-      "AccountingSupplierParty": [
-        {
-          "Party": [
-            {
-              "PartyLegalEntity": [
-                {
-                  "RegistrationName": [
-                    {
-                      "_": "Mak Cik Aminah Catering"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "AccountingCustomerParty": [
-        {
-          "Party": [
-            {
-              "PartyLegalEntity": [
-                {
-                  "RegistrationName": [
-                    {
-                      "_": "CV Purnawati Wijaya"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "PaymentTerms": [
-        {
-          "Note": [
-            {
-              "_": "Status: Accepted"
-            }
-          ]
-        }
-      ],
-      "PaymentMeans": [
-        {
-          "PayeeFinancialAccount": [
-            {
-              "ID": [
-                {
-                  "_": ""
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "LegalMonetaryTotal": [
-        {
-          "LineExtensionAmount": [
-            {
-              "_": 4325.59
-            }
-          ],
-          "TaxExclusiveAmount": [
-            {
-              "_": 4325.59
-            }
-          ],
-          "TaxInclusiveAmount": [
-            {
-              "_": 4325.59
-            }
-          ],
-          "PayableAmount": [
-            {
-              "_": 4325.59
-            }
-          ]
-        }
-      ],
-      "InvoiceLine": [
-        {
-          "ID": [
-            {
-              "_": "TN-0157"
-            }
-          ],
-          "LineExtensionAmount": [
-            {
-              "_": 4325.59
-            }
-          ],
-          "Price": [
-            {
-              "PriceAmount": [
-                {
-                  "_": 4325.59
-                }
-              ]
-            }
-          ],
-          "ItemPriceExtension": [
-            {
-              "Amount": [
-                {
-                  "_": 4325.59
-                }
-              ]
-            }
-          ],
-          "Item": [
-            {
-              "Description": [
-                {
-                  "_": "Catering services - B2B_Sales (TN-0157)"
+                  "_": "SST payment - PD Kuswoyo (TN-0006)"
                 }
               ]
             }

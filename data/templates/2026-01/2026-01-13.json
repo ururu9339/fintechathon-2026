@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0139"
+          "_": "TN-0270"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2026-01-13"
+              "_": "2026-01-15"
             }
           ],
           "Description": [
             {
-              "_": "B2C_Sales (Accepted)"
+              "_": "EPF (Accepted)"
             }
           ]
         }
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Mak Cik Aminah Catering"
+                      "_": "CV Wacana Purnawati Tbk"
                     }
                   ]
                 }
@@ -58,7 +58,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Walk-in Customer"
+                      "_": "Mak Cik Aminah Catering"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 1926.91
+              "_": 953.65
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 1926.91
+              "_": 953.65
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 1926.91
+              "_": 953.65
             }
           ],
           "PayableAmount": [
             {
-              "_": 1926.91
+              "_": 953.65
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0139"
+              "_": "TN-0270"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 1926.91
+              "_": 953.65
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 1926.91
+                  "_": 953.65
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 1926.91
+                  "_": 953.65
                 }
               ]
             }
@@ -147,7 +147,159 @@
             {
               "Description": [
                 {
-                  "_": "Catering services - B2C_Sales (TN-0139)"
+                  "_": "EPF payment - CV Wacana Purnawati Tbk (TN-0270)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ID": [
+        {
+          "_": "TN-0272"
+        }
+      ],
+      "IssueDate": [
+        {
+          "_": "2026-01-13"
+        }
+      ],
+      "InvoicePeriod": [
+        {
+          "StartDate": [
+            {
+              "_": "2026-01-13"
+            }
+          ],
+          "EndDate": [
+            {
+              "_": "2026-01-15"
+            }
+          ],
+          "Description": [
+            {
+              "_": "EPF (Accepted)"
+            }
+          ]
+        }
+      ],
+      "AccountingSupplierParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "UD Simanjuntak"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "AccountingCustomerParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Mak Cik Aminah Catering"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "PaymentTerms": [
+        {
+          "Note": [
+            {
+              "_": "Status: Accepted"
+            }
+          ]
+        }
+      ],
+      "PaymentMeans": [
+        {
+          "PayeeFinancialAccount": [
+            {
+              "ID": [
+                {
+                  "_": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "LegalMonetaryTotal": [
+        {
+          "LineExtensionAmount": [
+            {
+              "_": 401.7
+            }
+          ],
+          "TaxExclusiveAmount": [
+            {
+              "_": 401.7
+            }
+          ],
+          "TaxInclusiveAmount": [
+            {
+              "_": 401.7
+            }
+          ],
+          "PayableAmount": [
+            {
+              "_": 401.7
+            }
+          ]
+        }
+      ],
+      "InvoiceLine": [
+        {
+          "ID": [
+            {
+              "_": "TN-0272"
+            }
+          ],
+          "LineExtensionAmount": [
+            {
+              "_": 401.7
+            }
+          ],
+          "Price": [
+            {
+              "PriceAmount": [
+                {
+                  "_": 401.7
+                }
+              ]
+            }
+          ],
+          "ItemPriceExtension": [
+            {
+              "Amount": [
+                {
+                  "_": 401.7
+                }
+              ]
+            }
+          ],
+          "Item": [
+            {
+              "Description": [
+                {
+                  "_": "EPF payment - UD Simanjuntak (TN-0272)"
                 }
               ]
             }

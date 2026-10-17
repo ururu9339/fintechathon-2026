@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0083"
+          "_": "TN-0054"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2026-09-25"
+              "_": "2026-07-22"
             }
           ],
           "Description": [
             {
-              "_": "B2B_Sales (Accepted)"
+              "_": "B2C_Sales (Accepted)"
             }
           ]
         }
@@ -58,7 +58,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "PD Nugroho Rajasa (Persero) Tbk"
+                      "_": "Walk-in Customer"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 2724.1
+              "_": 4272.83
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 2724.1
+              "_": 4272.83
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 2724.1
+              "_": 4272.83
             }
           ],
           "PayableAmount": [
             {
-              "_": 2724.1
+              "_": 4272.83
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0083"
+              "_": "TN-0054"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 2724.1
+              "_": 4272.83
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 2724.1
+                  "_": 4272.83
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 2724.1
+                  "_": 4272.83
                 }
               ]
             }
@@ -147,159 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "Catering services - B2B_Sales (TN-0083)"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "ID": [
-        {
-          "_": "TN-0231"
-        }
-      ],
-      "IssueDate": [
-        {
-          "_": "2026-07-22"
-        }
-      ],
-      "InvoicePeriod": [
-        {
-          "StartDate": [
-            {
-              "_": "2026-07-22"
-            }
-          ],
-          "EndDate": [
-            {
-              "_": "2026-07-27"
-            }
-          ],
-          "Description": [
-            {
-              "_": "SST (Accepted)"
-            }
-          ]
-        }
-      ],
-      "AccountingSupplierParty": [
-        {
-          "Party": [
-            {
-              "PartyLegalEntity": [
-                {
-                  "RegistrationName": [
-                    {
-                      "_": "PT Mangunsong Mangunsong (Persero) Tbk"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "AccountingCustomerParty": [
-        {
-          "Party": [
-            {
-              "PartyLegalEntity": [
-                {
-                  "RegistrationName": [
-                    {
-                      "_": "Mak Cik Aminah Catering"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "PaymentTerms": [
-        {
-          "Note": [
-            {
-              "_": "Status: Accepted"
-            }
-          ]
-        }
-      ],
-      "PaymentMeans": [
-        {
-          "PayeeFinancialAccount": [
-            {
-              "ID": [
-                {
-                  "_": ""
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "LegalMonetaryTotal": [
-        {
-          "LineExtensionAmount": [
-            {
-              "_": 624.58
-            }
-          ],
-          "TaxExclusiveAmount": [
-            {
-              "_": 624.58
-            }
-          ],
-          "TaxInclusiveAmount": [
-            {
-              "_": 624.58
-            }
-          ],
-          "PayableAmount": [
-            {
-              "_": 624.58
-            }
-          ]
-        }
-      ],
-      "InvoiceLine": [
-        {
-          "ID": [
-            {
-              "_": "TN-0231"
-            }
-          ],
-          "LineExtensionAmount": [
-            {
-              "_": 624.58
-            }
-          ],
-          "Price": [
-            {
-              "PriceAmount": [
-                {
-                  "_": 624.58
-                }
-              ]
-            }
-          ],
-          "ItemPriceExtension": [
-            {
-              "Amount": [
-                {
-                  "_": 624.58
-                }
-              ]
-            }
-          ],
-          "Item": [
-            {
-              "Description": [
-                {
-                  "_": "SST payment - PT Mangunsong Mangunsong (Persero) Tbk (TN-0231)"
+                  "_": "Catering services - B2C_Sales (TN-0054)"
                 }
               ]
             }

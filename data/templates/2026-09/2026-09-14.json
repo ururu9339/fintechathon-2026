@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0006"
+          "_": "TN-0240"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2026-09-14"
+              "_": "2026-11-18"
             }
           ],
           "Description": [
             {
-              "_": "B2C_Sales (Accepted)"
+              "_": "B2B_Sales (Pending)"
             }
           ]
         }
@@ -58,7 +58,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Walk-in Customer"
+                      "_": "PD Hakim Tbk"
                     }
                   ]
                 }
@@ -71,7 +71,7 @@
         {
           "Note": [
             {
-              "_": "Status: Accepted"
+              "_": "Status: Pending"
             }
           ]
         }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 4246.64
+              "_": 515.5
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 4246.64
+              "_": 515.5
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 4246.64
+              "_": 515.5
             }
           ],
           "PayableAmount": [
             {
-              "_": 4246.64
+              "_": 515.5
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0006"
+              "_": "TN-0240"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 4246.64
+              "_": 515.5
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 4246.64
+                  "_": 515.5
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 4246.64
+                  "_": 515.5
                 }
               ]
             }
@@ -147,7 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "Catering services - B2C_Sales (TN-0006)"
+                  "_": "Catering services - B2B_Sales (TN-0240)"
                 }
               ]
             }

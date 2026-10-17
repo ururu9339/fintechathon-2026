@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0237"
+          "_": "TN-0115"
         }
       ],
       "IssueDate": [
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "PD Winarno (Persero) Tbk"
+                      "_": "PT Manullang"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 888.26
+              "_": 1116.63
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 888.26
+              "_": 1116.63
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 888.26
+              "_": 1116.63
             }
           ],
           "PayableAmount": [
             {
-              "_": 888.26
+              "_": 1116.63
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0237"
+              "_": "TN-0115"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 888.26
+              "_": 1116.63
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 888.26
+                  "_": 1116.63
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 888.26
+                  "_": 1116.63
                 }
               ]
             }
@@ -147,7 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "Supplier payment - PD Winarno (Persero) Tbk (TN-0237)"
+                  "_": "Supplier payment - PT Manullang (TN-0115)"
                 }
               ]
             }

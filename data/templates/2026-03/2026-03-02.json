@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0162"
+          "_": "TN-0246"
         }
       ],
       "IssueDate": [
@@ -23,7 +23,7 @@
           ],
           "EndDate": [
             {
-              "_": "2026-03-05"
+              "_": "2026-03-03"
             }
           ],
           "Description": [
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "PT Purnawati"
+                      "_": "PT Zulaika Tbk"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 1116.64
+              "_": 829.82
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 1116.64
+              "_": 829.82
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 1116.64
+              "_": 829.82
             }
           ],
           "PayableAmount": [
             {
-              "_": 1116.64
+              "_": 829.82
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0162"
+              "_": "TN-0246"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 1116.64
+              "_": 829.82
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 1116.64
+                  "_": 829.82
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 1116.64
+                  "_": 829.82
                 }
               ]
             }
@@ -147,7 +147,159 @@
             {
               "Description": [
                 {
-                  "_": "EPF payment - PT Purnawati (TN-0162)"
+                  "_": "EPF payment - PT Zulaika Tbk (TN-0246)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ID": [
+        {
+          "_": "TN-0004"
+        }
+      ],
+      "IssueDate": [
+        {
+          "_": "2026-03-02"
+        }
+      ],
+      "InvoicePeriod": [
+        {
+          "StartDate": [
+            {
+              "_": "2026-03-02"
+            }
+          ],
+          "EndDate": [
+            {
+              "_": "2026-03-07"
+            }
+          ],
+          "Description": [
+            {
+              "_": "EPF (Accepted)"
+            }
+          ]
+        }
+      ],
+      "AccountingSupplierParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "UD Suartini Wacana Tbk"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "AccountingCustomerParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Mak Cik Aminah Catering"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "PaymentTerms": [
+        {
+          "Note": [
+            {
+              "_": "Status: Accepted"
+            }
+          ]
+        }
+      ],
+      "PaymentMeans": [
+        {
+          "PayeeFinancialAccount": [
+            {
+              "ID": [
+                {
+                  "_": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "LegalMonetaryTotal": [
+        {
+          "LineExtensionAmount": [
+            {
+              "_": 699.72
+            }
+          ],
+          "TaxExclusiveAmount": [
+            {
+              "_": 699.72
+            }
+          ],
+          "TaxInclusiveAmount": [
+            {
+              "_": 699.72
+            }
+          ],
+          "PayableAmount": [
+            {
+              "_": 699.72
+            }
+          ]
+        }
+      ],
+      "InvoiceLine": [
+        {
+          "ID": [
+            {
+              "_": "TN-0004"
+            }
+          ],
+          "LineExtensionAmount": [
+            {
+              "_": 699.72
+            }
+          ],
+          "Price": [
+            {
+              "PriceAmount": [
+                {
+                  "_": 699.72
+                }
+              ]
+            }
+          ],
+          "ItemPriceExtension": [
+            {
+              "Amount": [
+                {
+                  "_": 699.72
+                }
+              ]
+            }
+          ],
+          "Item": [
+            {
+              "Description": [
+                {
+                  "_": "EPF payment - UD Suartini Wacana Tbk (TN-0004)"
                 }
               ]
             }

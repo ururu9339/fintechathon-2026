@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0268"
+          "_": "TN-0091"
         }
       ],
       "IssueDate": [
@@ -58,7 +58,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "PD Santoso Tbk"
+                      "_": "Perum Hutapea (Persero) Tbk"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 1416.38
+              "_": 1264.32
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 1416.38
+              "_": 1264.32
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 1416.38
+              "_": 1264.32
             }
           ],
           "PayableAmount": [
             {
-              "_": 1416.38
+              "_": 1264.32
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0268"
+              "_": "TN-0091"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 1416.38
+              "_": 1264.32
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 1416.38
+                  "_": 1264.32
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 1416.38
+                  "_": 1264.32
                 }
               ]
             }
@@ -147,159 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "Catering services - B2B_Sales (TN-0268)"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "ID": [
-        {
-          "_": "TN-0128"
-        }
-      ],
-      "IssueDate": [
-        {
-          "_": "2026-03-17"
-        }
-      ],
-      "InvoicePeriod": [
-        {
-          "StartDate": [
-            {
-              "_": "2026-03-17"
-            }
-          ],
-          "EndDate": [
-            {
-              "_": "2026-03-21"
-            }
-          ],
-          "Description": [
-            {
-              "_": "Supplier (Accepted)"
-            }
-          ]
-        }
-      ],
-      "AccountingSupplierParty": [
-        {
-          "Party": [
-            {
-              "PartyLegalEntity": [
-                {
-                  "RegistrationName": [
-                    {
-                      "_": "CV Pradipta Padmasari"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "AccountingCustomerParty": [
-        {
-          "Party": [
-            {
-              "PartyLegalEntity": [
-                {
-                  "RegistrationName": [
-                    {
-                      "_": "Mak Cik Aminah Catering"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "PaymentTerms": [
-        {
-          "Note": [
-            {
-              "_": "Status: Accepted"
-            }
-          ]
-        }
-      ],
-      "PaymentMeans": [
-        {
-          "PayeeFinancialAccount": [
-            {
-              "ID": [
-                {
-                  "_": ""
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "LegalMonetaryTotal": [
-        {
-          "LineExtensionAmount": [
-            {
-              "_": 272.15
-            }
-          ],
-          "TaxExclusiveAmount": [
-            {
-              "_": 272.15
-            }
-          ],
-          "TaxInclusiveAmount": [
-            {
-              "_": 272.15
-            }
-          ],
-          "PayableAmount": [
-            {
-              "_": 272.15
-            }
-          ]
-        }
-      ],
-      "InvoiceLine": [
-        {
-          "ID": [
-            {
-              "_": "TN-0128"
-            }
-          ],
-          "LineExtensionAmount": [
-            {
-              "_": 272.15
-            }
-          ],
-          "Price": [
-            {
-              "PriceAmount": [
-                {
-                  "_": 272.15
-                }
-              ]
-            }
-          ],
-          "ItemPriceExtension": [
-            {
-              "Amount": [
-                {
-                  "_": 272.15
-                }
-              ]
-            }
-          ],
-          "Item": [
-            {
-              "Description": [
-                {
-                  "_": "Supplier payment - CV Pradipta Padmasari (TN-0128)"
+                  "_": "Catering services - B2B_Sales (TN-0091)"
                 }
               ]
             }

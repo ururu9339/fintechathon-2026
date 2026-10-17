@@ -6,7 +6,159 @@
     {
       "ID": [
         {
-          "_": "TN-0024"
+          "_": "TN-0044"
+        }
+      ],
+      "IssueDate": [
+        {
+          "_": "2026-04-07"
+        }
+      ],
+      "InvoicePeriod": [
+        {
+          "StartDate": [
+            {
+              "_": "2026-04-07"
+            }
+          ],
+          "EndDate": [
+            {
+              "_": "2026-04-07"
+            }
+          ],
+          "Description": [
+            {
+              "_": "B2C_Sales (Accepted)"
+            }
+          ]
+        }
+      ],
+      "AccountingSupplierParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Mak Cik Aminah Catering"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "AccountingCustomerParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Walk-in Customer"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "PaymentTerms": [
+        {
+          "Note": [
+            {
+              "_": "Status: Accepted"
+            }
+          ]
+        }
+      ],
+      "PaymentMeans": [
+        {
+          "PayeeFinancialAccount": [
+            {
+              "ID": [
+                {
+                  "_": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "LegalMonetaryTotal": [
+        {
+          "LineExtensionAmount": [
+            {
+              "_": 1109.37
+            }
+          ],
+          "TaxExclusiveAmount": [
+            {
+              "_": 1109.37
+            }
+          ],
+          "TaxInclusiveAmount": [
+            {
+              "_": 1109.37
+            }
+          ],
+          "PayableAmount": [
+            {
+              "_": 1109.37
+            }
+          ]
+        }
+      ],
+      "InvoiceLine": [
+        {
+          "ID": [
+            {
+              "_": "TN-0044"
+            }
+          ],
+          "LineExtensionAmount": [
+            {
+              "_": 1109.37
+            }
+          ],
+          "Price": [
+            {
+              "PriceAmount": [
+                {
+                  "_": 1109.37
+                }
+              ]
+            }
+          ],
+          "ItemPriceExtension": [
+            {
+              "Amount": [
+                {
+                  "_": 1109.37
+                }
+              ]
+            }
+          ],
+          "Item": [
+            {
+              "Description": [
+                {
+                  "_": "Catering services - B2C_Sales (TN-0044)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ID": [
+        {
+          "_": "TN-0135"
         }
       ],
       "IssueDate": [
@@ -41,7 +193,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "PT Puspita Firmansyah"
+                      "_": "UD Novitasari"
                     }
                   ]
                 }
@@ -93,22 +245,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 752.41
+              "_": 901.08
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 752.41
+              "_": 901.08
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 752.41
+              "_": 901.08
             }
           ],
           "PayableAmount": [
             {
-              "_": 752.41
+              "_": 901.08
             }
           ]
         }
@@ -117,19 +269,19 @@
         {
           "ID": [
             {
-              "_": "TN-0024"
+              "_": "TN-0135"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 752.41
+              "_": 901.08
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 752.41
+                  "_": 901.08
                 }
               ]
             }
@@ -138,7 +290,7 @@
             {
               "Amount": [
                 {
-                  "_": 752.41
+                  "_": 901.08
                 }
               ]
             }
@@ -147,7 +299,7 @@
             {
               "Description": [
                 {
-                  "_": "SST payment - PT Puspita Firmansyah (TN-0024)"
+                  "_": "SST payment - UD Novitasari (TN-0135)"
                 }
               ]
             }

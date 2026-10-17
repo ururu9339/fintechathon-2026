@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0259"
+          "_": "TN-0103"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2026-02-14"
+              "_": "2026-02-11"
             }
           ],
           "Description": [
             {
-              "_": "Supplier (Accepted)"
+              "_": "EPF (Accepted)"
             }
           ]
         }
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "PT Simbolon"
+                      "_": "UD Safitri Pradana"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 863.09
+              "_": 708.66
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 863.09
+              "_": 708.66
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 863.09
+              "_": 708.66
             }
           ],
           "PayableAmount": [
             {
-              "_": 863.09
+              "_": 708.66
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0259"
+              "_": "TN-0103"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 863.09
+              "_": 708.66
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 863.09
+                  "_": 708.66
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 863.09
+                  "_": 708.66
                 }
               ]
             }
@@ -147,7 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "Supplier payment - PT Simbolon (TN-0259)"
+                  "_": "EPF payment - UD Safitri Pradana (TN-0103)"
                 }
               ]
             }

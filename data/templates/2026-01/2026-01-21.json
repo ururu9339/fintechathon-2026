@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0130"
+          "_": "TN-0202"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2026-01-22"
+              "_": "2026-01-21"
             }
           ],
           "Description": [
             {
-              "_": "EPF (Accepted)"
+              "_": "B2C_Sales (Accepted)"
             }
           ]
         }
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "CV Kusmawati Pudjiastuti Tbk"
+                      "_": "Mak Cik Aminah Catering"
                     }
                   ]
                 }
@@ -58,7 +58,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Mak Cik Aminah Catering"
+                      "_": "Walk-in Customer"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 429.44
+              "_": 4409.99
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 429.44
+              "_": 4409.99
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 429.44
+              "_": 4409.99
             }
           ],
           "PayableAmount": [
             {
-              "_": 429.44
+              "_": 4409.99
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0130"
+              "_": "TN-0202"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 429.44
+              "_": 4409.99
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 429.44
+                  "_": 4409.99
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 429.44
+                  "_": 4409.99
                 }
               ]
             }
@@ -147,7 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "EPF payment - CV Kusmawati Pudjiastuti Tbk (TN-0130)"
+                  "_": "Catering services - B2C_Sales (TN-0202)"
                 }
               ]
             }
@@ -158,7 +158,7 @@
     {
       "ID": [
         {
-          "_": "TN-0099"
+          "_": "TN-0133"
         }
       ],
       "IssueDate": [
@@ -180,7 +180,7 @@
           ],
           "Description": [
             {
-              "_": "SST (Accepted)"
+              "_": "Supplier (Accepted)"
             }
           ]
         }
@@ -193,7 +193,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "PD Pratama Tbk"
+                      "_": "PT Adriansyah"
                     }
                   ]
                 }
@@ -245,22 +245,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 526.76
+              "_": 697.42
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 526.76
+              "_": 697.42
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 526.76
+              "_": 697.42
             }
           ],
           "PayableAmount": [
             {
-              "_": 526.76
+              "_": 697.42
             }
           ]
         }
@@ -269,19 +269,19 @@
         {
           "ID": [
             {
-              "_": "TN-0099"
+              "_": "TN-0133"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 526.76
+              "_": 697.42
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 526.76
+                  "_": 697.42
                 }
               ]
             }
@@ -290,7 +290,7 @@
             {
               "Amount": [
                 {
-                  "_": 526.76
+                  "_": 697.42
                 }
               ]
             }
@@ -299,7 +299,7 @@
             {
               "Description": [
                 {
-                  "_": "SST payment - PD Pratama Tbk (TN-0099)"
+                  "_": "Supplier payment - PT Adriansyah (TN-0133)"
                 }
               ]
             }

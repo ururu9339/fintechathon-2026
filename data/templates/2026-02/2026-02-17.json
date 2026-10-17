@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0141"
+          "_": "TN-0094"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2026-02-22"
+              "_": "2026-02-20"
             }
           ],
           "Description": [
             {
-              "_": "Supplier (Accepted)"
+              "_": "EPF (Accepted)"
             }
           ]
         }
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "PD Suwarno Mangunsong"
+                      "_": "PD Yuliarti Tbk"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 1171.46
+              "_": 714.59
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 1171.46
+              "_": 714.59
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 1171.46
+              "_": 714.59
             }
           ],
           "PayableAmount": [
             {
-              "_": 1171.46
+              "_": 714.59
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0141"
+              "_": "TN-0094"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 1171.46
+              "_": 714.59
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 1171.46
+                  "_": 714.59
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 1171.46
+                  "_": 714.59
                 }
               ]
             }
@@ -147,7 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "Supplier payment - PD Suwarno Mangunsong (TN-0141)"
+                  "_": "EPF payment - PD Yuliarti Tbk (TN-0094)"
                 }
               ]
             }

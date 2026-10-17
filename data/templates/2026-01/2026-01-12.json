@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0293"
+          "_": "TN-0036"
         }
       ],
       "IssueDate": [
@@ -58,7 +58,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "CV Mardhiyah Waluyo Tbk"
+                      "_": "UD Anggraini"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 1578.43
+              "_": 1079.51
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 1578.43
+              "_": 1079.51
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 1578.43
+              "_": 1079.51
             }
           ],
           "PayableAmount": [
             {
-              "_": 1578.43
+              "_": 1079.51
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0293"
+              "_": "TN-0036"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 1578.43
+              "_": 1079.51
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 1578.43
+                  "_": 1079.51
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 1578.43
+                  "_": 1079.51
                 }
               ]
             }
@@ -147,7 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "Catering services - B2B_Sales (TN-0293)"
+                  "_": "Catering services - B2B_Sales (TN-0036)"
                 }
               ]
             }
@@ -158,7 +158,7 @@
     {
       "ID": [
         {
-          "_": "TN-0248"
+          "_": "TN-0290"
         }
       ],
       "IssueDate": [
@@ -175,12 +175,12 @@
           ],
           "EndDate": [
             {
-              "_": "2026-03-18"
+              "_": "2026-01-15"
             }
           ],
           "Description": [
             {
-              "_": "B2B_Sales (Accepted)"
+              "_": "Supplier (Accepted)"
             }
           ]
         }
@@ -193,7 +193,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Mak Cik Aminah Catering"
+                      "_": "PT Maryati Simbolon"
                     }
                   ]
                 }
@@ -210,7 +210,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "UD Hasanah (Persero) Tbk"
+                      "_": "Mak Cik Aminah Catering"
                     }
                   ]
                 }
@@ -245,22 +245,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 1668.44
+              "_": 1486.16
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 1668.44
+              "_": 1486.16
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 1668.44
+              "_": 1486.16
             }
           ],
           "PayableAmount": [
             {
-              "_": 1668.44
+              "_": 1486.16
             }
           ]
         }
@@ -269,19 +269,19 @@
         {
           "ID": [
             {
-              "_": "TN-0248"
+              "_": "TN-0290"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 1668.44
+              "_": 1486.16
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 1668.44
+                  "_": 1486.16
                 }
               ]
             }
@@ -290,7 +290,7 @@
             {
               "Amount": [
                 {
-                  "_": 1668.44
+                  "_": 1486.16
                 }
               ]
             }
@@ -299,7 +299,159 @@
             {
               "Description": [
                 {
-                  "_": "Catering services - B2B_Sales (TN-0248)"
+                  "_": "Supplier payment - PT Maryati Simbolon (TN-0290)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ID": [
+        {
+          "_": "TN-0144"
+        }
+      ],
+      "IssueDate": [
+        {
+          "_": "2026-01-12"
+        }
+      ],
+      "InvoicePeriod": [
+        {
+          "StartDate": [
+            {
+              "_": "2026-01-12"
+            }
+          ],
+          "EndDate": [
+            {
+              "_": "2026-01-14"
+            }
+          ],
+          "Description": [
+            {
+              "_": "EPF (Accepted)"
+            }
+          ]
+        }
+      ],
+      "AccountingSupplierParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Perum Padmasari"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "AccountingCustomerParty": [
+        {
+          "Party": [
+            {
+              "PartyLegalEntity": [
+                {
+                  "RegistrationName": [
+                    {
+                      "_": "Mak Cik Aminah Catering"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "PaymentTerms": [
+        {
+          "Note": [
+            {
+              "_": "Status: Accepted"
+            }
+          ]
+        }
+      ],
+      "PaymentMeans": [
+        {
+          "PayeeFinancialAccount": [
+            {
+              "ID": [
+                {
+                  "_": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "LegalMonetaryTotal": [
+        {
+          "LineExtensionAmount": [
+            {
+              "_": 577.07
+            }
+          ],
+          "TaxExclusiveAmount": [
+            {
+              "_": 577.07
+            }
+          ],
+          "TaxInclusiveAmount": [
+            {
+              "_": 577.07
+            }
+          ],
+          "PayableAmount": [
+            {
+              "_": 577.07
+            }
+          ]
+        }
+      ],
+      "InvoiceLine": [
+        {
+          "ID": [
+            {
+              "_": "TN-0144"
+            }
+          ],
+          "LineExtensionAmount": [
+            {
+              "_": 577.07
+            }
+          ],
+          "Price": [
+            {
+              "PriceAmount": [
+                {
+                  "_": 577.07
+                }
+              ]
+            }
+          ],
+          "ItemPriceExtension": [
+            {
+              "Amount": [
+                {
+                  "_": 577.07
+                }
+              ]
+            }
+          ],
+          "Item": [
+            {
+              "Description": [
+                {
+                  "_": "EPF payment - Perum Padmasari (TN-0144)"
                 }
               ]
             }

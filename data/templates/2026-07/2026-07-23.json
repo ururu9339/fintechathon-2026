@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0017"
+          "_": "TN-0146"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2026-07-27"
+              "_": "2026-07-25"
             }
           ],
           "Description": [
             {
-              "_": "EPF (Accepted)"
+              "_": "SST (Accepted)"
             }
           ]
         }
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "PT Wasita Uyainah"
+                      "_": "PD Utama Gunarto"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 1113.3
+              "_": 1129.86
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 1113.3
+              "_": 1129.86
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 1113.3
+              "_": 1129.86
             }
           ],
           "PayableAmount": [
             {
-              "_": 1113.3
+              "_": 1129.86
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0017"
+              "_": "TN-0146"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 1113.3
+              "_": 1129.86
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 1113.3
+                  "_": 1129.86
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 1113.3
+                  "_": 1129.86
                 }
               ]
             }
@@ -147,7 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "EPF payment - PT Wasita Uyainah (TN-0017)"
+                  "_": "SST payment - PD Utama Gunarto (TN-0146)"
                 }
               ]
             }

@@ -6,159 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0188"
-        }
-      ],
-      "IssueDate": [
-        {
-          "_": "2026-06-16"
-        }
-      ],
-      "InvoicePeriod": [
-        {
-          "StartDate": [
-            {
-              "_": "2026-06-16"
-            }
-          ],
-          "EndDate": [
-            {
-              "_": "2026-06-21"
-            }
-          ],
-          "Description": [
-            {
-              "_": "EPF (Accepted)"
-            }
-          ]
-        }
-      ],
-      "AccountingSupplierParty": [
-        {
-          "Party": [
-            {
-              "PartyLegalEntity": [
-                {
-                  "RegistrationName": [
-                    {
-                      "_": "CV Astuti"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "AccountingCustomerParty": [
-        {
-          "Party": [
-            {
-              "PartyLegalEntity": [
-                {
-                  "RegistrationName": [
-                    {
-                      "_": "Mak Cik Aminah Catering"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "PaymentTerms": [
-        {
-          "Note": [
-            {
-              "_": "Status: Accepted"
-            }
-          ]
-        }
-      ],
-      "PaymentMeans": [
-        {
-          "PayeeFinancialAccount": [
-            {
-              "ID": [
-                {
-                  "_": ""
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "LegalMonetaryTotal": [
-        {
-          "LineExtensionAmount": [
-            {
-              "_": 1164.59
-            }
-          ],
-          "TaxExclusiveAmount": [
-            {
-              "_": 1164.59
-            }
-          ],
-          "TaxInclusiveAmount": [
-            {
-              "_": 1164.59
-            }
-          ],
-          "PayableAmount": [
-            {
-              "_": 1164.59
-            }
-          ]
-        }
-      ],
-      "InvoiceLine": [
-        {
-          "ID": [
-            {
-              "_": "TN-0188"
-            }
-          ],
-          "LineExtensionAmount": [
-            {
-              "_": 1164.59
-            }
-          ],
-          "Price": [
-            {
-              "PriceAmount": [
-                {
-                  "_": 1164.59
-                }
-              ]
-            }
-          ],
-          "ItemPriceExtension": [
-            {
-              "Amount": [
-                {
-                  "_": 1164.59
-                }
-              ]
-            }
-          ],
-          "Item": [
-            {
-              "Description": [
-                {
-                  "_": "EPF payment - CV Astuti (TN-0188)"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "ID": [
-        {
-          "_": "TN-0214"
+          "_": "TN-0106"
         }
       ],
       "IssueDate": [
@@ -245,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 1713.03
+              "_": 3280.45
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 1713.03
+              "_": 3280.45
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 1713.03
+              "_": 3280.45
             }
           ],
           "PayableAmount": [
             {
-              "_": 1713.03
+              "_": 3280.45
             }
           ]
         }
@@ -269,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0214"
+              "_": "TN-0106"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 1713.03
+              "_": 3280.45
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 1713.03
+                  "_": 3280.45
                 }
               ]
             }
@@ -290,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 1713.03
+                  "_": 3280.45
                 }
               ]
             }
@@ -299,7 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "Catering services - B2C_Sales (TN-0214)"
+                  "_": "Catering services - B2C_Sales (TN-0106)"
                 }
               ]
             }

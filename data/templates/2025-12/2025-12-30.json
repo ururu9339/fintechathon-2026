@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0153"
+          "_": "TN-0053"
         }
       ],
       "IssueDate": [
@@ -23,159 +23,7 @@
           ],
           "EndDate": [
             {
-              "_": "2025-12-30"
-            }
-          ],
-          "Description": [
-            {
-              "_": "B2C_Sales (Accepted)"
-            }
-          ]
-        }
-      ],
-      "AccountingSupplierParty": [
-        {
-          "Party": [
-            {
-              "PartyLegalEntity": [
-                {
-                  "RegistrationName": [
-                    {
-                      "_": "Mak Cik Aminah Catering"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "AccountingCustomerParty": [
-        {
-          "Party": [
-            {
-              "PartyLegalEntity": [
-                {
-                  "RegistrationName": [
-                    {
-                      "_": "Walk-in Customer"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "PaymentTerms": [
-        {
-          "Note": [
-            {
-              "_": "Status: Accepted"
-            }
-          ]
-        }
-      ],
-      "PaymentMeans": [
-        {
-          "PayeeFinancialAccount": [
-            {
-              "ID": [
-                {
-                  "_": ""
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "LegalMonetaryTotal": [
-        {
-          "LineExtensionAmount": [
-            {
-              "_": 729.09
-            }
-          ],
-          "TaxExclusiveAmount": [
-            {
-              "_": 729.09
-            }
-          ],
-          "TaxInclusiveAmount": [
-            {
-              "_": 729.09
-            }
-          ],
-          "PayableAmount": [
-            {
-              "_": 729.09
-            }
-          ]
-        }
-      ],
-      "InvoiceLine": [
-        {
-          "ID": [
-            {
-              "_": "TN-0153"
-            }
-          ],
-          "LineExtensionAmount": [
-            {
-              "_": 729.09
-            }
-          ],
-          "Price": [
-            {
-              "PriceAmount": [
-                {
-                  "_": 729.09
-                }
-              ]
-            }
-          ],
-          "ItemPriceExtension": [
-            {
-              "Amount": [
-                {
-                  "_": 729.09
-                }
-              ]
-            }
-          ],
-          "Item": [
-            {
-              "Description": [
-                {
-                  "_": "Catering services - B2C_Sales (TN-0153)"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "ID": [
-        {
-          "_": "TN-0171"
-        }
-      ],
-      "IssueDate": [
-        {
-          "_": "2025-12-30"
-        }
-      ],
-      "InvoicePeriod": [
-        {
-          "StartDate": [
-            {
-              "_": "2025-12-30"
-            }
-          ],
-          "EndDate": [
-            {
-              "_": "2026-01-03"
+              "_": "2026-01-01"
             }
           ],
           "Description": [
@@ -193,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "CV Sihombing Tbk"
+                      "_": "PT Halimah Tbk"
                     }
                   ]
                 }
@@ -245,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 263.09
+              "_": 1121.95
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 263.09
+              "_": 1121.95
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 263.09
+              "_": 1121.95
             }
           ],
           "PayableAmount": [
             {
-              "_": 263.09
+              "_": 1121.95
             }
           ]
         }
@@ -269,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0171"
+              "_": "TN-0053"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 263.09
+              "_": 1121.95
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 263.09
+                  "_": 1121.95
                 }
               ]
             }
@@ -290,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 263.09
+                  "_": 1121.95
                 }
               ]
             }
@@ -299,7 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "EPF payment - CV Sihombing Tbk (TN-0171)"
+                  "_": "EPF payment - PT Halimah Tbk (TN-0053)"
                 }
               ]
             }

@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0278"
+          "_": "TN-0213"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2026-10-25"
+              "_": "2026-08-21"
             }
           ],
           "Description": [
             {
-              "_": "B2B_Sales (Pending)"
+              "_": "B2C_Sales (Accepted)"
             }
           ]
         }
@@ -58,159 +58,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "CV Purwanti Tbk"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "PaymentTerms": [
-        {
-          "Note": [
-            {
-              "_": "Status: Pending"
-            }
-          ]
-        }
-      ],
-      "PaymentMeans": [
-        {
-          "PayeeFinancialAccount": [
-            {
-              "ID": [
-                {
-                  "_": ""
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "LegalMonetaryTotal": [
-        {
-          "LineExtensionAmount": [
-            {
-              "_": 2664.19
-            }
-          ],
-          "TaxExclusiveAmount": [
-            {
-              "_": 2664.19
-            }
-          ],
-          "TaxInclusiveAmount": [
-            {
-              "_": 2664.19
-            }
-          ],
-          "PayableAmount": [
-            {
-              "_": 2664.19
-            }
-          ]
-        }
-      ],
-      "InvoiceLine": [
-        {
-          "ID": [
-            {
-              "_": "TN-0278"
-            }
-          ],
-          "LineExtensionAmount": [
-            {
-              "_": 2664.19
-            }
-          ],
-          "Price": [
-            {
-              "PriceAmount": [
-                {
-                  "_": 2664.19
-                }
-              ]
-            }
-          ],
-          "ItemPriceExtension": [
-            {
-              "Amount": [
-                {
-                  "_": 2664.19
-                }
-              ]
-            }
-          ],
-          "Item": [
-            {
-              "Description": [
-                {
-                  "_": "Catering services - B2B_Sales (TN-0278)"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "ID": [
-        {
-          "_": "TN-0148"
-        }
-      ],
-      "IssueDate": [
-        {
-          "_": "2026-08-21"
-        }
-      ],
-      "InvoicePeriod": [
-        {
-          "StartDate": [
-            {
-              "_": "2026-08-21"
-            }
-          ],
-          "EndDate": [
-            {
-              "_": "2026-08-22"
-            }
-          ],
-          "Description": [
-            {
-              "_": "EPF (Accepted)"
-            }
-          ]
-        }
-      ],
-      "AccountingSupplierParty": [
-        {
-          "Party": [
-            {
-              "PartyLegalEntity": [
-                {
-                  "RegistrationName": [
-                    {
-                      "_": "UD Lazuardi"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "AccountingCustomerParty": [
-        {
-          "Party": [
-            {
-              "PartyLegalEntity": [
-                {
-                  "RegistrationName": [
-                    {
-                      "_": "Mak Cik Aminah Catering"
+                      "_": "Walk-in Customer"
                     }
                   ]
                 }
@@ -245,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 1422.45
+              "_": 2158.75
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 1422.45
+              "_": 2158.75
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 1422.45
+              "_": 2158.75
             }
           ],
           "PayableAmount": [
             {
-              "_": 1422.45
+              "_": 2158.75
             }
           ]
         }
@@ -269,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0148"
+              "_": "TN-0213"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 1422.45
+              "_": 2158.75
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 1422.45
+                  "_": 2158.75
                 }
               ]
             }
@@ -290,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 1422.45
+                  "_": 2158.75
                 }
               ]
             }
@@ -299,7 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "EPF payment - UD Lazuardi (TN-0148)"
+                  "_": "Catering services - B2C_Sales (TN-0213)"
                 }
               ]
             }

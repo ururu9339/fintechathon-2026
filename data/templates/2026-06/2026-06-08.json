@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0271"
+          "_": "TN-0065"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2026-06-08"
+              "_": "2026-06-09"
             }
           ],
           "Description": [
             {
-              "_": "B2C_Sales (Accepted)"
+              "_": "Supplier (Accepted)"
             }
           ]
         }
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Mak Cik Aminah Catering"
+                      "_": "UD Ramadan Simbolon"
                     }
                   ]
                 }
@@ -58,7 +58,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Walk-in Customer"
+                      "_": "Mak Cik Aminah Catering"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 3343.19
+              "_": 1066.42
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 3343.19
+              "_": 1066.42
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 3343.19
+              "_": 1066.42
             }
           ],
           "PayableAmount": [
             {
-              "_": 3343.19
+              "_": 1066.42
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0271"
+              "_": "TN-0065"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 3343.19
+              "_": 1066.42
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 3343.19
+                  "_": 1066.42
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 3343.19
+                  "_": 1066.42
                 }
               ]
             }
@@ -147,159 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "Catering services - B2C_Sales (TN-0271)"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "ID": [
-        {
-          "_": "TN-0084"
-        }
-      ],
-      "IssueDate": [
-        {
-          "_": "2026-06-08"
-        }
-      ],
-      "InvoicePeriod": [
-        {
-          "StartDate": [
-            {
-              "_": "2026-06-08"
-            }
-          ],
-          "EndDate": [
-            {
-              "_": "2026-06-08"
-            }
-          ],
-          "Description": [
-            {
-              "_": "B2C_Sales (Accepted)"
-            }
-          ]
-        }
-      ],
-      "AccountingSupplierParty": [
-        {
-          "Party": [
-            {
-              "PartyLegalEntity": [
-                {
-                  "RegistrationName": [
-                    {
-                      "_": "Mak Cik Aminah Catering"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "AccountingCustomerParty": [
-        {
-          "Party": [
-            {
-              "PartyLegalEntity": [
-                {
-                  "RegistrationName": [
-                    {
-                      "_": "Walk-in Customer"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "PaymentTerms": [
-        {
-          "Note": [
-            {
-              "_": "Status: Accepted"
-            }
-          ]
-        }
-      ],
-      "PaymentMeans": [
-        {
-          "PayeeFinancialAccount": [
-            {
-              "ID": [
-                {
-                  "_": ""
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "LegalMonetaryTotal": [
-        {
-          "LineExtensionAmount": [
-            {
-              "_": 1249.25
-            }
-          ],
-          "TaxExclusiveAmount": [
-            {
-              "_": 1249.25
-            }
-          ],
-          "TaxInclusiveAmount": [
-            {
-              "_": 1249.25
-            }
-          ],
-          "PayableAmount": [
-            {
-              "_": 1249.25
-            }
-          ]
-        }
-      ],
-      "InvoiceLine": [
-        {
-          "ID": [
-            {
-              "_": "TN-0084"
-            }
-          ],
-          "LineExtensionAmount": [
-            {
-              "_": 1249.25
-            }
-          ],
-          "Price": [
-            {
-              "PriceAmount": [
-                {
-                  "_": 1249.25
-                }
-              ]
-            }
-          ],
-          "ItemPriceExtension": [
-            {
-              "Amount": [
-                {
-                  "_": 1249.25
-                }
-              ]
-            }
-          ],
-          "Item": [
-            {
-              "Description": [
-                {
-                  "_": "Catering services - B2C_Sales (TN-0084)"
+                  "_": "Supplier payment - UD Ramadan Simbolon (TN-0065)"
                 }
               ]
             }

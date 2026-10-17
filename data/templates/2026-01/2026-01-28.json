@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0196"
+          "_": "TN-0217"
         }
       ],
       "IssueDate": [
@@ -23,7 +23,7 @@
           ],
           "EndDate": [
             {
-              "_": "2026-01-30"
+              "_": "2026-02-02"
             }
           ],
           "Description": [
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "UD Winarno (Persero) Tbk"
+                      "_": "UD Safitri (Persero) Tbk"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 1420.71
+              "_": 473.5
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 1420.71
+              "_": 473.5
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 1420.71
+              "_": 473.5
             }
           ],
           "PayableAmount": [
             {
-              "_": 1420.71
+              "_": 473.5
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0196"
+              "_": "TN-0217"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 1420.71
+              "_": 473.5
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 1420.71
+                  "_": 473.5
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 1420.71
+                  "_": 473.5
                 }
               ]
             }
@@ -147,7 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "EPF payment - UD Winarno (Persero) Tbk (TN-0196)"
+                  "_": "EPF payment - UD Safitri (Persero) Tbk (TN-0217)"
                 }
               ]
             }

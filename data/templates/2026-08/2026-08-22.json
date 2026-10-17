@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0197"
+          "_": "TN-0037"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2026-10-26"
+              "_": "2026-08-27"
             }
           ],
           "Description": [
             {
-              "_": "B2B_Sales (Pending)"
+              "_": "SST (Accepted)"
             }
           ]
         }
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Mak Cik Aminah Catering"
+                      "_": "PT Budiyanto Tbk"
                     }
                   ]
                 }
@@ -58,7 +58,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "Perum Purwanti Nurdiyanti"
+                      "_": "Mak Cik Aminah Catering"
                     }
                   ]
                 }
@@ -71,7 +71,7 @@
         {
           "Note": [
             {
-              "_": "Status: Pending"
+              "_": "Status: Accepted"
             }
           ]
         }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 1957.97
+              "_": 1151.48
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 1957.97
+              "_": 1151.48
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 1957.97
+              "_": 1151.48
             }
           ],
           "PayableAmount": [
             {
-              "_": 1957.97
+              "_": 1151.48
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0197"
+              "_": "TN-0037"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 1957.97
+              "_": 1151.48
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 1957.97
+                  "_": 1151.48
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 1957.97
+                  "_": 1151.48
                 }
               ]
             }
@@ -147,7 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "Catering services - B2B_Sales (TN-0197)"
+                  "_": "SST payment - PT Budiyanto Tbk (TN-0037)"
                 }
               ]
             }

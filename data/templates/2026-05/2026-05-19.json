@@ -6,7 +6,7 @@
     {
       "ID": [
         {
-          "_": "TN-0288"
+          "_": "TN-0203"
         }
       ],
       "IssueDate": [
@@ -23,12 +23,12 @@
           ],
           "EndDate": [
             {
-              "_": "2026-05-24"
+              "_": "2026-05-20"
             }
           ],
           "Description": [
             {
-              "_": "SST (Accepted)"
+              "_": "Supplier (Accepted)"
             }
           ]
         }
@@ -41,7 +41,7 @@
                 {
                   "RegistrationName": [
                     {
-                      "_": "PD Laksita Laksita"
+                      "_": "PD Safitri Napitupulu Tbk"
                     }
                   ]
                 }
@@ -93,22 +93,22 @@
         {
           "LineExtensionAmount": [
             {
-              "_": 559.52
+              "_": 1472.86
             }
           ],
           "TaxExclusiveAmount": [
             {
-              "_": 559.52
+              "_": 1472.86
             }
           ],
           "TaxInclusiveAmount": [
             {
-              "_": 559.52
+              "_": 1472.86
             }
           ],
           "PayableAmount": [
             {
-              "_": 559.52
+              "_": 1472.86
             }
           ]
         }
@@ -117,19 +117,19 @@
         {
           "ID": [
             {
-              "_": "TN-0288"
+              "_": "TN-0203"
             }
           ],
           "LineExtensionAmount": [
             {
-              "_": 559.52
+              "_": 1472.86
             }
           ],
           "Price": [
             {
               "PriceAmount": [
                 {
-                  "_": 559.52
+                  "_": 1472.86
                 }
               ]
             }
@@ -138,7 +138,7 @@
             {
               "Amount": [
                 {
-                  "_": 559.52
+                  "_": 1472.86
                 }
               ]
             }
@@ -147,159 +147,7 @@
             {
               "Description": [
                 {
-                  "_": "SST payment - PD Laksita Laksita (TN-0288)"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "ID": [
-        {
-          "_": "TN-0264"
-        }
-      ],
-      "IssueDate": [
-        {
-          "_": "2026-05-19"
-        }
-      ],
-      "InvoicePeriod": [
-        {
-          "StartDate": [
-            {
-              "_": "2026-05-19"
-            }
-          ],
-          "EndDate": [
-            {
-              "_": "2026-07-23"
-            }
-          ],
-          "Description": [
-            {
-              "_": "B2B_Sales (Accepted)"
-            }
-          ]
-        }
-      ],
-      "AccountingSupplierParty": [
-        {
-          "Party": [
-            {
-              "PartyLegalEntity": [
-                {
-                  "RegistrationName": [
-                    {
-                      "_": "Mak Cik Aminah Catering"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "AccountingCustomerParty": [
-        {
-          "Party": [
-            {
-              "PartyLegalEntity": [
-                {
-                  "RegistrationName": [
-                    {
-                      "_": "CV Susanti Nashiruddin Tbk"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "PaymentTerms": [
-        {
-          "Note": [
-            {
-              "_": "Status: Accepted"
-            }
-          ]
-        }
-      ],
-      "PaymentMeans": [
-        {
-          "PayeeFinancialAccount": [
-            {
-              "ID": [
-                {
-                  "_": ""
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "LegalMonetaryTotal": [
-        {
-          "LineExtensionAmount": [
-            {
-              "_": 4081.09
-            }
-          ],
-          "TaxExclusiveAmount": [
-            {
-              "_": 4081.09
-            }
-          ],
-          "TaxInclusiveAmount": [
-            {
-              "_": 4081.09
-            }
-          ],
-          "PayableAmount": [
-            {
-              "_": 4081.09
-            }
-          ]
-        }
-      ],
-      "InvoiceLine": [
-        {
-          "ID": [
-            {
-              "_": "TN-0264"
-            }
-          ],
-          "LineExtensionAmount": [
-            {
-              "_": 4081.09
-            }
-          ],
-          "Price": [
-            {
-              "PriceAmount": [
-                {
-                  "_": 4081.09
-                }
-              ]
-            }
-          ],
-          "ItemPriceExtension": [
-            {
-              "Amount": [
-                {
-                  "_": 4081.09
-                }
-              ]
-            }
-          ],
-          "Item": [
-            {
-              "Description": [
-                {
-                  "_": "Catering services - B2B_Sales (TN-0264)"
+                  "_": "Supplier payment - PD Safitri Napitupulu Tbk (TN-0203)"
                 }
               ]
             }
