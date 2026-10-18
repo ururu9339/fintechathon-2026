@@ -23,7 +23,17 @@ from backend.app.api.business import (
     create_business,
     record_remittance,
 )
-from backend.app.models import APInvoice, BusinessProfile, CreditFacility, Employee, PaymentRequest
+from backend.app.models import (
+    APInvoice,
+    BusinessProfile,
+    Counterparty,
+    CreditFacility,
+    Employee,
+    Mandate,
+    PaymentRequest,
+    SalesInvoice,
+)
+from backend.app.dossier_service import build_dossier_snapshot, proposed_installment
 from backend.app.services import Treasurer
 from agent.extract import normalize_extracted_invoice, reconcile_totals
 from backend.app.models import ExtractedInvoiceSchema, ExtractedLineItemSchema
@@ -33,15 +43,68 @@ def test_forecast_has_thirteen_weeks():
     assert len(Treasurer().forecast()) == 13
 
 
+def test_dossier_installment_and_zero_rate():
+    assert proposed_installment(Decimal("50000"), Decimal("8"), 36).quantize(Decimal("0.01")) == Decimal("1566.82")
+    assert proposed_installment(Decimal("1200"), Decimal("0"), 12) == Decimal("100")
+
+
+def test_dossier_uses_approved_records_and_stable_hash():
+    engine = create_engine("sqlite://")
+    SQLModel.metadata.create_all(engine)
+    with Session(engine) as session:
+        business = BusinessProfile(
+            legal_name="Dossier Business",
+            registration_type="company",
+            registration_number="DOS-1",
+            registration_status="active",
+            msic_code="62010",
+            sector_category="services",
+        )
+        session.add(business)
+        session.commit()
+        session.add_all([
+            SalesInvoice(
+                business_id=business.id, invoice_number="S-1", customer_name="Customer",
+                subtotal=Decimal("1000"), total_amount=Decimal("1000"),
+                issue_date=date(2026, 1, 10), status="issued",
+            ),
+            SalesInvoice(
+                business_id=business.id, invoice_number="S-DRAFT", customer_name="Customer",
+                subtotal=Decimal("9000"), total_amount=Decimal("9000"),
+                issue_date=date(2026, 1, 10), status="draft",
+            ),
+        ])
+        session.commit()
+        snapshot, first_hash = build_dossier_snapshot(
+            business.id, date(2026, 1, 1), date(2026, 1, 31), session
+        )
+        _, second_hash = build_dossier_snapshot(
+            business.id, date(2026, 1, 1), date(2026, 1, 31), session
+        )
+        assert snapshot["metrics"]["revenue_excluding_tax"] == "1000.00"
+        assert "S-DRAFT" not in snapshot["traceability"]["sales_invoice_ids"]
+        assert first_hash == second_hash
+        assert snapshot["data_gaps"]
+
+
 def test_mandate_blocks_unknown_supplier():
-    result = Treasurer().pay(
+    mandate = Mandate(
+        id="mandate-test",
+        daily_limit=Decimal("1000"),
+        transaction_limit=Decimal("500"),
+        allowed_suppliers=["Known Supplier"],
+        purpose="supplier invoice",
+        expires_at=date(2026, 12, 31),
+    )
+    result = Treasurer(mandates={mandate.id: mandate}).pay(
         PaymentRequest(
             supplier="Unknown Supplier",
             amount=Decimal("100"),
             purpose="supplier invoice",
             invoice_id="INV-1",
-            mandate_id="mandate-demo",
-        )
+            mandate_id="mandate-test",
+        ),
+        session=None,
     )
     assert result.status == "blocked"
 
@@ -59,9 +122,29 @@ def test_approved_invoice_can_be_paid_and_is_linked():
         supplier_name="Acme Supplies",
         subtotal=Decimal("100"),
         total_amount=Decimal("100"),
+        mandate_id="mandate-test",
+        counterparty_id="counterparty-test",
+        business_id="business-test",
+    )
+    mandate = Mandate(
+        id="mandate-test",
+        daily_limit=Decimal("1000"),
+        transaction_limit=Decimal("500"),
+        allowed_suppliers=["Acme Supplies"],
+        purpose="supplier invoice",
+        expires_at=date(2026, 12, 31),
+    )
+    counterparty = Counterparty(
+        id="counterparty-test",
+        business_id="business-test",
+        name="Acme Supplies",
+        party_type="supplier",
+        is_verified=True,
     )
 
     with Session(engine) as session:
+        session.add(counterparty)
+        session.add(mandate)
         session.add(invoice)
         session.commit()
         session.refresh(invoice)
@@ -99,6 +182,26 @@ def test_invoice_approval_rejects_inconsistent_totals():
             assert "subtotal plus tax" in str(exc).lower()
         else:
             raise AssertionError("Inconsistent invoice was approved")
+
+
+def test_invoice_without_mandate_cannot_be_paid():
+    engine = create_engine("sqlite://")
+    SQLModel.metadata.create_all(engine)
+    invoice = APInvoice(
+        invoice_number="INV-NO-MANDATE",
+        supplier_name="Acme Supplies",
+        subtotal=Decimal("100"),
+        total_amount=Decimal("100"),
+    )
+
+    with Session(engine) as session:
+        session.add(invoice)
+        session.commit()
+        treasurer = Treasurer()
+        treasurer.approve_invoice(invoice, session)
+        result = treasurer.pay_invoice(invoice, session)
+        assert result.status == "blocked"
+        assert "mandate" in result.reason.lower()
 
 
 def test_audit_chain_survives_expired_detached_events():

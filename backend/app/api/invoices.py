@@ -2,7 +2,8 @@ from datetime import date
 from decimal import Decimal, InvalidOperation
 
 from fastapi import APIRouter, Depends, File, HTTPException, UploadFile
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
+from sqlalchemy import or_
 from sqlmodel import Session, select
 
 from agent.extract import llm_multimodal_extractor
@@ -14,6 +15,7 @@ from ..models import (
     BusinessProfile,
     Counterparty,
     ExtractionResult,
+    Mandate,
     PaymentRequest,
     PaymentResult,
 )
@@ -32,6 +34,7 @@ class InvoiceLineInput(BaseModel):
 
 class ExpenseInvoiceForm(BaseModel):
     business_id: str
+    mandate_id: str | None = None
     invoice_number: str
     supplier_name: str
     subtotal: Decimal
@@ -40,6 +43,20 @@ class ExpenseInvoiceForm(BaseModel):
     issue_date: date
     due_date: date | None = None
     line_items: list[InvoiceLineInput] = []
+
+
+class ProviderInvoiceWebhook(BaseModel):
+    provider_event_id: str = Field(min_length=1)
+    source_invoice_id: str = Field(min_length=1)
+    supplier_name: str = Field(min_length=1)
+    supplier_tin: str | None = None
+    invoice_number: str = Field(min_length=1)
+    subtotal: Decimal = Field(ge=0)
+    tax_amount: Decimal = Field(ge=0)
+    total_amount: Decimal = Field(gt=0)
+    issue_date: date
+    due_date: date | None = None
+    currency: str = Field(default="MYR", min_length=3, max_length=3)
 
 
 def _validate_invoice_amounts(subtotal: Decimal, tax: Decimal, total: Decimal) -> None:
@@ -92,6 +109,7 @@ def _save_expense_invoice(
     if counterparty is None:
         counterparty = Counterparty(
             business_id=data.business_id,
+            mandate_id=data.mandate_id,
             name=data.supplier_name,
             party_type="supplier",
         )
@@ -151,6 +169,7 @@ async def upload_invoice(
     if result.status == "failed" or result.invoice is None:
         return result
 
+
     data = result.invoice
     reasons = list(result.review_reasons)
     subtotal = _decimal(data.subtotal, "Subtotal", reasons)
@@ -174,10 +193,25 @@ async def upload_invoice(
     if not reasons:
         _validate_invoice_amounts(subtotal, tax, total)
         _validate_line_items(line_items, total)
+    counterparty = session.exec(
+        select(Counterparty).where(
+            Counterparty.business_id == business_id,
+            Counterparty.name == (data.supplier_name or "UNKNOWN SUPPLIER"),
+            Counterparty.party_type == "supplier",
+        )
+    ).first()
+    if counterparty is None:
+        counterparty = Counterparty(
+            business_id=business_id,
+            name=data.supplier_name or "UNKNOWN SUPPLIER",
+            party_type="supplier",
+        )
+        session.add(counterparty)
+        session.flush()
     draft = APInvoice(
         invoice_number=data.invoice_number or "UNNUMBERED",
         business_id=business_id,
-        counterparty_id=None,
+        counterparty_id=counterparty.id,
         supplier_name=data.supplier_name or "UNKNOWN SUPPLIER",
         supplier_tin=data.supplier_tin or None,
         supplier_brn=data.supplier_brn or None,
@@ -216,6 +250,104 @@ async def upload_invoice(
     session.commit()
     result.invoice_id = draft.id
     return result
+
+
+@router.post(
+    "/businesses/{business_id}/invoice-intake/webhook",
+    response_model=APInvoice,
+)
+def receive_provider_invoice(
+    business_id: str,
+    request: ProviderInvoiceWebhook,
+    session: Session = Depends(get_session),
+):
+    if session.get(BusinessProfile, business_id) is None:
+        raise HTTPException(status_code=404, detail="Business profile not found.")
+    if request.due_date and request.due_date < request.issue_date:
+        raise HTTPException(status_code=422, detail="Due date is before issue date.")
+    _validate_invoice_amounts(request.subtotal, request.tax_amount, request.total_amount)
+    existing = session.exec(
+        select(APInvoice).where(
+            APInvoice.business_id == business_id,
+            APInvoice.source_system == "provider_webhook",
+            or_(
+                APInvoice.source_event_id == request.provider_event_id,
+                APInvoice.source_invoice_id == request.source_invoice_id,
+            ),
+        )
+    ).first()
+    if existing:
+        return existing
+    counterparty = session.exec(
+        select(Counterparty).where(
+            Counterparty.business_id == business_id,
+            Counterparty.name == request.supplier_name,
+            Counterparty.party_type == "supplier",
+        )
+    ).first()
+    if counterparty is None:
+        counterparty = Counterparty(
+            business_id=business_id,
+            name=request.supplier_name,
+            party_type="supplier",
+            tax_id=request.supplier_tin,
+        )
+        session.add(counterparty)
+        session.flush()
+    mandates = session.exec(
+        select(Mandate).where(
+            Mandate.business_id == business_id,
+            Mandate.status == "active",
+            Mandate.auto_pay == True,
+        )
+    ).all()
+    selected = next(
+        (
+            item for item in mandates
+            if (
+                counterparty.id in item.allowed_counterparty_ids
+                or request.supplier_name in item.allowed_suppliers
+            )
+            and (not item.require_verified_supplier or counterparty.is_verified)
+            and request.total_amount <= item.transaction_limit
+        ),
+        None,
+    )
+    invoice = APInvoice(
+        business_id=business_id,
+        counterparty_id=counterparty.id,
+        mandate_id=selected.id if selected else None,
+        source_system="provider_webhook",
+        source_event_id=request.provider_event_id,
+        source_invoice_id=request.source_invoice_id,
+        invoice_number=request.invoice_number,
+        supplier_name=request.supplier_name,
+        supplier_tin=request.supplier_tin,
+        subtotal=request.subtotal,
+        tax_amount=request.tax_amount,
+        total_amount=request.total_amount,
+        currency=request.currency,
+        issue_date=request.issue_date,
+        due_date=request.due_date,
+        status="draft" if selected else "needs_review",
+        review_notes=None if selected else "No matching auto-payment mandate.",
+    )
+    session.add(invoice)
+    session.commit()
+    session.refresh(invoice)
+    if selected:
+        from ..db import get_treasurer
+
+        treasurer = get_treasurer()
+        treasurer.approve_invoice(invoice, session)
+        payment = treasurer.pay_invoice(invoice, session)
+        if payment.status != "approved":
+            invoice.review_notes = payment.reason
+            invoice.status = "needs_review"
+            session.add(invoice)
+            session.commit()
+        session.refresh(invoice)
+    return invoice
 
 
 @router.post("/invoices", response_model=APInvoice)

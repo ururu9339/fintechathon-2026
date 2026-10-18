@@ -61,14 +61,39 @@ class AuditEvent(SQLModel, tablename = "audit_events", table = True):
     event_hash: str
 
 
+class User(SQLModel, table=True):
+    __tablename__ = "users"
+
+    id: str | None = Field(default_factory=new_id, primary_key=True)
+    email: str = Field(unique=True, index=True)
+    hashed_password: str
+    is_active: bool = True
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+
+class BusinessMembership(SQLModel, table=True):
+    __tablename__ = "business_memberships"
+
+    id: str | None = Field(default_factory=new_id, primary_key=True)
+    business_id: str = Field(foreign_key="business_profiles.id", index=True)
+    user_id: str = Field(foreign_key="users.id", index=True)
+    role: str = "owner"
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+
 class Mandate(SQLModel, tablename="mandates", table = True):
     __tablename__ = "mandates"
     id: str = Field(primary_key=True)
-    daily_limit: Decimal
-    transaction_limit: Decimal
+    business_id: str | None = Field(default=None, foreign_key="business_profiles.id", index=True)
+    daily_limit: Decimal = Field(gt=0)
+    transaction_limit: Decimal = Field(gt=0)
     allowed_suppliers: list[str] = Field(default_factory=list, sa_type=JSON)
+    allowed_counterparty_ids: list[str] = Field(default_factory=list, sa_type=JSON)
     purpose: str
     expires_at: date
+    status: str = "active"
+    auto_pay: bool = False
+    require_verified_supplier: bool = True
 
 
 class BusinessProfile(SQLModel, table=True):
@@ -112,6 +137,25 @@ class LoanRequest(SQLModel, table=True):
     created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
 
 
+class CreditDossier(SQLModel, table=True):
+    __tablename__ = "credit_dossiers"
+
+    id: str | None = Field(default_factory=new_id, primary_key=True)
+    business_id: str = Field(foreign_key="business_profiles.id", index=True)
+    period_start: date
+    period_end: date
+    loan_request_id: str | None = Field(default=None, foreign_key="loan_requests.id")
+    status: str = "draft"
+    snapshot: dict = Field(default_factory=dict, sa_type=JSON)
+    input_hash: str
+    narrative_status: str = "not_generated"
+    narrative_text: str | None = None
+    narrative_model: str | None = None
+    narrative_prompt_version: str | None = None
+    pdf_generated_at: datetime | None = None
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+
 class CashBalance(SQLModel, table=True):
     __tablename__ = "cash_balances"
 
@@ -144,6 +188,8 @@ class Counterparty(SQLModel, table=True):
     party_type: str
     tax_id: str | None = None
     registration_number: str | None = None
+    is_verified: bool = False
+    provider_reference: str | None = None
     created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
 
 
@@ -172,8 +218,10 @@ class PaymentRequest(SQLModel, tablename="payment_requests", table = True):
     amount: Decimal = Field(gt=0)
     purpose: str
     invoice_id: str = ""
-    mandate_id: str = "mandate-demo"
+    mandate_id: str
     ap_invoice_id: str | None = Field(default=None, foreign_key="ap_invoices.id")
+    counterparty_id: str | None = Field(default=None, foreign_key="counterparties.id")
+    supplier_verified: bool = False
     supplier_name: str | None = None
     invoice_number: str | None = None
     status: str = "pending"
@@ -225,7 +273,10 @@ class APInvoice(SQLModel, table=True):
     id: str | None = Field(default_factory=new_id, primary_key=True)
     business_id: str | None = Field(default=None, foreign_key="business_profiles.id", index=True)
     counterparty_id: str | None = Field(default=None, foreign_key="counterparties.id", index=True)
-    mandate_id: str = Field(default="mandate-demo", index=True)
+    mandate_id: str | None = Field(default=None, index=True)
+    source_system: str | None = None
+    source_event_id: str | None = Field(default=None, index=True)
+    source_invoice_id: str | None = Field(default=None, index=True)
     invoice_number: str = Field(index=True)
     myinvois_uuid: str | None = None
     myinvois_validation_status: str = "missing"

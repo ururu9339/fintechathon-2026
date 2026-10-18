@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from .api import accounting, agent, business, forecast, invoices, mandates
+from .api import accounting, agent, auth, business, dossier, forecast, invoices, mandates
 from .core.llm import get_openai_client
 from .db import init_db
 
@@ -21,6 +21,8 @@ app.include_router(mandates.router)
 app.include_router(agent.router)
 app.include_router(accounting.router)
 app.include_router(business.router)
+app.include_router(dossier.router)
+app.include_router(auth.router)
 
 
 @app.on_event("startup")

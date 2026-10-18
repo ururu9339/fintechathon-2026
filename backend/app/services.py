@@ -34,6 +34,7 @@ from .models import (
     Mandate,
     PaymentRequest,
     PaymentResult,
+    Counterparty,
 )
 
 
@@ -80,18 +81,6 @@ DEFAULT_INJECTION_PATTERNS: list[str] = [
 ]
 
 
-def make_demo_mandate(valid_days: int = 30) -> Mandate:
-    """Create the demo owner mandate. valid_days sets how long it stays active."""
-    return Mandate(
-        id="mandate-demo",
-        daily_limit=Decimal("5000000"),
-        transaction_limit=Decimal("2500000"),
-        allowed_suppliers=["Acme Supplies", "MyInvois Demo Supplier", "MegaBuild Engineering Sdn Bhd"],
-        purpose="supplier invoice",
-        expires_at=date.today() + timedelta(days=valid_days),
-    )
-
-
 # ============================================================================
 # 2. PAYMENT RULES
 # Each rule is one check. Rules run in order, and the first one that fails
@@ -130,7 +119,19 @@ def default_payment_rules() -> list[PaymentRule]:
         ),
         PaymentRule(
             reason="Supplier is not on the mandate allowlist",
-            check=lambda mandate, request, spent: request.supplier in mandate.allowed_suppliers,
+            check=lambda mandate, request, spent: (
+                request.supplier in mandate.allowed_suppliers
+                or (
+                    request.counterparty_id is not None
+                    and request.counterparty_id in mandate.allowed_counterparty_ids
+                )
+            ),
+        ),
+        PaymentRule(
+            reason="Supplier is not verified",
+            check=lambda mandate, request, spent: (
+                not mandate.require_verified_supplier or request.supplier_verified
+            ),
         ),
         PaymentRule(
             reason="Invoice reference is missing",
@@ -266,16 +267,13 @@ class Treasurer:
         payment_extractor: Callable[[str], ExtractedPayment] = extract_payment,
         injection_patterns: list[str] | None = None,
         payment_keywords: tuple[str, ...] = DEFAULT_PAYMENT_KEYWORDS,
-        default_mandate_id: str = "mandate-demo",
+        default_mandate_id: str | None = None,
         start_date: date | None = None,
     ) -> None:
         """Every argument is optional. None means "use the default described above"."""
         self.audit = AuditChain()
 
-        # Owner mandates. Default: one demo mandate.
-        if mandates is None:
-            mandates = {"mandate-demo": make_demo_mandate()}
-        self.mandates: dict[str, Mandate] = mandates
+        self.mandates: dict[str, Mandate] = mandates or {}
 
         # Money already paid today, per mandate. Starts empty.
         self.daily_spend: dict[str, Decimal] = {}
@@ -354,8 +352,14 @@ class Treasurer:
         request.supplier = request.supplier or request.supplier_name or ""
         request.invoice_id = request.invoice_id or request.invoice_number or ""
         mandate = self.mandates.get(request.mandate_id)
+        if mandate is None and session is not None:
+            mandate = session.get(Mandate, request.mandate_id)
+            if mandate is not None:
+                self.mandates[mandate.id] = mandate
         if mandate is None:
             return self._blocked(request, session, "Mandate not found")
+        if mandate.status != "active":
+            return self._blocked(request, session, "Mandate is not active")
 
         spent_today = self.daily_spend.get(mandate.id, Decimal("0"))
 
@@ -365,6 +369,9 @@ class Treasurer:
                 return self._blocked(request, session, rule.reason)
 
         self.daily_spend[mandate.id] = spent_today + request.amount
+        from rail.mock_rail import submit_payment
+
+        rail_payment = submit_payment(request.supplier, request.amount)
         event = self.audit.append("payment.approved", request.model_dump(mode="json"))
         if session is not None:
             session.add(event)
@@ -372,7 +379,7 @@ class Treasurer:
         return PaymentResult(
             status="approved",
             reason="Payment approved by owner mandate",
-            payment_id=f"pay_{uuid4().hex[:10]}",
+            payment_id=rail_payment.payment_id,
             audit_hash=event.event_hash,
         )
 
@@ -433,6 +440,22 @@ class Treasurer:
             invoice_id=invoice.invoice_number,
             invoice_number=invoice.invoice_number,
         )
+        if invoice.counterparty_id:
+            request.counterparty_id = invoice.counterparty_id
+            counterparty = session.get(Counterparty, invoice.counterparty_id)
+            request.supplier_verified = bool(counterparty and counterparty.is_verified)
+        if not request.mandate_id:
+            event = self.audit.append(
+                "invoice.payment_blocked",
+                {"invoice_id": invoice.id, "reason": "No payment mandate selected."},
+            )
+            session.add(event)
+            session.commit()
+            return PaymentResult(
+                status="blocked",
+                reason="A payment mandate must be selected before payment.",
+                audit_hash=event.event_hash,
+            )
         result = self.pay(request, session)
         request.status = result.status
         session.add(request)

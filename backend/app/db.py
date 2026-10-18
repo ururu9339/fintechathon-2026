@@ -48,6 +48,10 @@ def init_db() -> None:
             "credit_facilities",
             "journal_entries",
             "ledger_accounts",
+            "mandates",
+            "counterparties",
+            "payment_requests",
+            "credit_dossiers",
         )
         if table in inspector.get_table_names()
     }
@@ -55,8 +59,51 @@ def init_db() -> None:
         for table, columns in columns_by_table.items():
             if "business_id" not in columns:
                 connection.execute(text(f"ALTER TABLE {table} ADD COLUMN business_id VARCHAR"))
+            if (
+                table == "ap_invoices"
+                and "mandate_id" in columns
+                and engine.dialect.name == "postgresql"
+            ):
+                connection.execute(text("ALTER TABLE ap_invoices ALTER COLUMN mandate_id DROP NOT NULL"))
+            if table == "mandates" and "status" not in columns:
+                connection.execute(text("ALTER TABLE mandates ADD COLUMN status VARCHAR DEFAULT 'active'"))
+            if table == "mandates":
+                if "allowed_counterparty_ids" not in columns:
+                    connection.execute(text("ALTER TABLE mandates ADD COLUMN allowed_counterparty_ids JSON"))
+                if "auto_pay" not in columns:
+                    connection.execute(text("ALTER TABLE mandates ADD COLUMN auto_pay BOOLEAN DEFAULT FALSE"))
+                if "require_verified_supplier" not in columns:
+                    connection.execute(text("ALTER TABLE mandates ADD COLUMN require_verified_supplier BOOLEAN DEFAULT TRUE"))
+            if table == "counterparties":
+                if "is_verified" not in columns:
+                    connection.execute(text("ALTER TABLE counterparties ADD COLUMN is_verified BOOLEAN DEFAULT FALSE"))
+                if "provider_reference" not in columns:
+                    connection.execute(text("ALTER TABLE counterparties ADD COLUMN provider_reference VARCHAR"))
+            if table == "ap_invoices":
+                if "source_system" not in columns:
+                    connection.execute(text("ALTER TABLE ap_invoices ADD COLUMN source_system VARCHAR"))
+                if "source_event_id" not in columns:
+                    connection.execute(text("ALTER TABLE ap_invoices ADD COLUMN source_event_id VARCHAR"))
+                if "source_invoice_id" not in columns:
+                    connection.execute(text("ALTER TABLE ap_invoices ADD COLUMN source_invoice_id VARCHAR"))
+            if table == "payment_requests":
+                if "counterparty_id" not in columns:
+                    connection.execute(text("ALTER TABLE payment_requests ADD COLUMN counterparty_id VARCHAR"))
+                if "supplier_verified" not in columns:
+                    connection.execute(text("ALTER TABLE payment_requests ADD COLUMN supplier_verified BOOLEAN DEFAULT FALSE"))
             if table == "sales_invoices" and "review_notes" not in columns:
                 connection.execute(text("ALTER TABLE sales_invoices ADD COLUMN review_notes VARCHAR"))
+            if table == "credit_dossiers":
+                if "narrative_status" not in columns:
+                    connection.execute(text("ALTER TABLE credit_dossiers ADD COLUMN narrative_status VARCHAR DEFAULT 'not_generated'"))
+                if "narrative_text" not in columns:
+                    connection.execute(text("ALTER TABLE credit_dossiers ADD COLUMN narrative_text TEXT"))
+                if "narrative_model" not in columns:
+                    connection.execute(text("ALTER TABLE credit_dossiers ADD COLUMN narrative_model VARCHAR"))
+                if "narrative_prompt_version" not in columns:
+                    connection.execute(text("ALTER TABLE credit_dossiers ADD COLUMN narrative_prompt_version VARCHAR"))
+                if "pdf_generated_at" not in columns:
+                    connection.execute(text("ALTER TABLE credit_dossiers ADD COLUMN pdf_generated_at TIMESTAMP WITH TIME ZONE"))
             if table in {"ap_invoices", "sales_invoices"}:
                 if "counterparty_id" not in columns:
                     connection.execute(text(f"ALTER TABLE {table} ADD COLUMN counterparty_id VARCHAR"))

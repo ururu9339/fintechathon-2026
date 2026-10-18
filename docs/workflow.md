@@ -5,6 +5,7 @@
 - `backend/app/api/invoices.py` exposes payment endpoints and the draft-only invoice upload endpoint.
 - `backend/app/api/accounting.py` exposes sales, receipts, ledger, and focused payroll endpoints.
 - `backend/app/api/business.py` owns business profiles and the source records required for future metrics.
+- `backend/app/api/mandates.py` manages explicit payment authorization policies; mandates are not business metrics.
 - `agent/document_parser.py` validates file signatures, size, DOCX archive expansion, and PDF text layers.
 - `agent/extract.py` calls the configured LLM for structured extraction, then reconciles monetary totals locally.
 - `backend/app/models.py` contains invoice drafts, line items, payment records, payroll storage, and response schemas.
@@ -49,7 +50,7 @@ SalesInvoice ──< SalesInvoiceLineItem
 
 APInvoice ──< APInvoiceLineItem
      │
-     └── approved ──> PaymentRequest ──> Treasurer mandate checks
+     └── approved + selected mandate ──> PaymentRequest ──> Treasurer mandate checks
 
 JournalEntry ──< JournalLine ──> LedgerAccount
      │
@@ -82,9 +83,45 @@ Credit facilities are created with `POST /api/accounting/credit/facilities` and 
 
 Credit status values currently include `pending`, `active`, `denied`, and `paid_off`; future delinquency handling can add `overdue`, `defaulted`, or `suspended` with scheduled-payment and arrears rules.
 
+### Payment mandates
+
+A mandate is an owner-defined authorization policy for money movement. It answers:
+
+- which business the policy belongs to;
+- which suppliers may be paid;
+- the maximum amount per transaction;
+- the maximum amount per day;
+- the permitted payment purpose; and
+- when the authorization expires;
+- whether automatic payment is enabled; and
+- whether the supplier must already be verified.
+
+Mandates do not validate extracted data or create accounting metrics. They are reusable payment permissions, not a new mandate per invoice. The normal manual sequence is:
+
+1. An invoice is collected as `draft` or `needs_review`.
+2. The owner corrects review issues and approves the invoice.
+3. The owner selects an existing active mandate on the expense invoice; the same mandate can authorize many matching supplier payments until it expires or is revoked.
+4. Payment runs the mandate checks and writes an audit event.
+
+Provider systems can submit structured bills to `POST /api/businesses/{business_id}/invoice-intake/webhook`. The payload includes a provider event ID and source invoice ID. The endpoint validates amounts and dates, links the bill to an existing supplier counterparty by business, and stores a provider-originated invoice. Repeated delivery of either identifier returns the existing invoice instead of creating a duplicate.
+
+An active mandate with `auto_pay=true` can match a provider invoice by allowed supplier name or counterparty ID, transaction limit, and optional verified-supplier requirement. A matching invoice is approved and submitted through the mock payment rail; unmatched, unverified, expired, revoked, or over-limit invoices remain `needs_review` with an explanation. Automatic provider intake currently has no external signature verification and should be protected by authenticated provider credentials before production use.
+
+Mandates are created under `POST /api/businesses/{business_id}/mandates`, listed with `GET` on the same path, and revoked with `POST /api/businesses/{business_id}/mandates/{mandate_id}/revoke`. There is no automatic `mandate-demo`; a payment without a selected real mandate is blocked. Revoked and expired mandates cannot authorize payments.
+
 ### Analyst/reporting boundary
 
 `GET /api/accounting/reports/summary?business_id=...` provides a deterministic MVP summary of revenue, receipts, receivables, paid purchases, payables, payroll cost, and operating result. It filters by business and excludes unrelated rows. The source records and journal lines are the basis for future period-filtered cash-flow, profit-and-loss, payroll-liability, tax, and exception reports. Reports should read posted source records and balanced journals; they should not infer financial facts from LLM text.
+
+### Credit dossier MVP
+
+`POST /api/businesses/{business_id}/dossiers` creates a persisted draft dossier for an explicit reporting period. The snapshot is deterministic and contains the business profile, ownership references, revenue from issued/paid sales invoices, costs from approved/paid AP invoices, approved payroll runs, active credit facilities, cash balance, statutory-remittance counts, data gaps, limitations, and source record IDs. `GET /api/businesses/{business_id}/dossiers` lists drafts and the item route reads one draft.
+
+Draft, cancelled, and `needs_review` financial records are excluded. A selected loan request is included only when its status is `approved`; otherwise it is excluded and recorded as a data gap. The dossier currently provides a transparent accounting analysis only. It does not determine scheme eligibility, recommend lenders, certify records, or submit anything externally. The route is not production-ready until authentication and per-owner access control are fully operational.
+
+The dossier MVP now also supports `GET /api/businesses/{business_id}/dossiers/{dossier_id}/pdf`. This generates a professional PDF containing the applicant overview, LLM-generated neutral narrative, calculated metrics, ownership, statutory remittance summary, data gaps, limitations, declaration placeholder, traceability record IDs, and the input snapshot SHA-256 hash. If `OPENAI_API_KEY` is unavailable, the PDF remains available with an explicit narrative `needs_review` status instead of pretending that an LLM processed it.
+
+Account endpoints are available at `/api/auth/register`, `/api/auth/login`, and `/api/auth/me`. Authenticated business creation creates an owner membership; dossier creation, reading, and PDF download require a membership for that business. `BusinessMembership` stores `owner`, `accountant`, or `viewer` roles. Existing legacy businesses without memberships must be explicitly linked before their dossiers can be accessed through the authenticated API. Authentication is still an MVP boundary: production deployment needs secure secret management, email verification, password reset, rate limiting, and a complete owner/admin membership-management UI.
 
 ## Failure paths and open risks
 
