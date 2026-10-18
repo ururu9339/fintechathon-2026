@@ -10,3 +10,5 @@ python-dotenv==1.2.4
 cryptography
 pypdf
 Pillow
+pytesseract
+python-multipart==0.0.32

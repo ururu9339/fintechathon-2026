@@ -84,9 +84,9 @@ def make_demo_mandate(valid_days: int = 30) -> Mandate:
     """Create the demo owner mandate. valid_days sets how long it stays active."""
     return Mandate(
         id="mandate-demo",
-        daily_limit=Decimal("5000"),
-        transaction_limit=Decimal("2500"),
-        allowed_suppliers=["Acme Supplies", "MyInvois Demo Supplier"],
+        daily_limit=Decimal("5000000"),
+        transaction_limit=Decimal("2500000"),
+        allowed_suppliers=["Acme Supplies", "MyInvois Demo Supplier", "MegaBuild Engineering Sdn Bhd"],
         purpose="supplier invoice",
         expires_at=date.today() + timedelta(days=valid_days),
     )
@@ -224,9 +224,10 @@ def _hash_event(previous_hash: str, body: dict) -> str:
 class AuditChain:
     def __init__(self) -> None:
         self.events: list[AuditEvent] = []
+        self._last_hash = "GENESIS"
 
     def append(self, event_type: str, payload: dict) -> AuditEvent:
-        previous_hash = self.events[-1].event_hash if self.events else "GENESIS"
+        previous_hash = self._last_hash
         created_at = datetime.now(timezone.utc)
         body = {
             "event_type": event_type,
@@ -242,6 +243,7 @@ class AuditChain:
             event_hash=_hash_event(previous_hash, body),
         )
         self.events.append(event)
+        self._last_hash = event.event_hash
         return event
 
 
@@ -388,6 +390,57 @@ class Treasurer:
             session.add(event)
             session.commit()
         return PaymentResult(status="blocked", reason=reason, audit_hash=event.event_hash)
+
+    def approve_invoice(self, invoice: "APInvoice", session: Session) -> None:
+        if invoice.status != "draft":
+            raise ValueError(f"Invoice cannot be approved from status '{invoice.status}'.")
+        if invoice.subtotal < 0 or invoice.tax_amount < 0 or invoice.total_amount <= 0:
+            raise ValueError("Invoice amounts must be valid before approval.")
+        if abs(invoice.subtotal + invoice.tax_amount - invoice.total_amount) > Decimal("0.01"):
+            raise ValueError("Invoice subtotal plus tax must equal total before approval.")
+        if invoice.due_date and invoice.due_date < invoice.issue_date:
+            raise ValueError("Invoice due date cannot be before issue date.")
+        invoice.status = "approved"
+        event = self.audit.append(
+            "invoice.approved",
+            {"invoice_id": invoice.id, "invoice_number": invoice.invoice_number},
+        )
+        session.add(invoice)
+        session.add(event)
+        session.commit()
+
+    def pay_invoice(self, invoice: "APInvoice", session: Session) -> PaymentResult:
+        if invoice.status != "approved":
+            event = self.audit.append(
+                "invoice.payment_blocked",
+                {"invoice_id": invoice.id, "reason": "Invoice is not approved."},
+            )
+            session.add(event)
+            session.commit()
+            return PaymentResult(
+                status="blocked",
+                reason="Invoice must be approved before payment.",
+                audit_hash=event.event_hash,
+            )
+
+        request = PaymentRequest(
+            ap_invoice_id=invoice.id,
+            mandate_id=invoice.mandate_id,
+            supplier=invoice.supplier_name,
+            supplier_name=invoice.supplier_name,
+            amount=invoice.total_amount,
+            purpose="supplier invoice",
+            invoice_id=invoice.invoice_number,
+            invoice_number=invoice.invoice_number,
+        )
+        result = self.pay(request, session)
+        request.status = result.status
+        session.add(request)
+        if result.status == "approved":
+            invoice.status = "paid"
+            session.add(invoice)
+        session.commit()
+        return result
 
     # ------------------------------------------------------------------
     # Financing

@@ -71,6 +71,82 @@ class Mandate(SQLModel, tablename="mandates", table = True):
     expires_at: date
 
 
+class BusinessProfile(SQLModel, table=True):
+    __tablename__ = "business_profiles"
+
+    id: str | None = Field(default_factory=new_id, primary_key=True)
+    legal_name: str
+    registration_type: str
+    registration_number: str
+    registration_status: str
+    incorporation_date: date | None = None
+    msic_code: str
+    sector_category: str
+    currency: str = "MYR"
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+
+class OwnershipRecord(SQLModel, table=True):
+    __tablename__ = "ownership_records"
+
+    id: str | None = Field(default_factory=new_id, primary_key=True)
+    business_id: str = Field(foreign_key="business_profiles.id", index=True)
+    owner_reference: str
+    share_percentage: Decimal = Field(ge=0, le=100)
+    is_malaysian_citizen: bool
+    evidence_reference: str
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+
+class LoanRequest(SQLModel, table=True):
+    __tablename__ = "loan_requests"
+
+    id: str | None = Field(default_factory=new_id, primary_key=True)
+    business_id: str = Field(foreign_key="business_profiles.id", index=True)
+    requested_amount: Decimal = Field(gt=0)
+    tenor_months: int = Field(gt=0)
+    annual_rate: Decimal = Field(ge=0)
+    purpose: str
+    scheme_code: str | None = None
+    status: str = "draft"
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+
+class CashBalance(SQLModel, table=True):
+    __tablename__ = "cash_balances"
+
+    id: str | None = Field(default_factory=new_id, primary_key=True)
+    business_id: str = Field(foreign_key="business_profiles.id", index=True)
+    as_of_date: date
+    amount: Decimal = Field(ge=0)
+    currency: str = "MYR"
+
+
+class StatutoryRemittance(SQLModel, table=True):
+    __tablename__ = "statutory_remittances"
+
+    id: str | None = Field(default_factory=new_id, primary_key=True)
+    business_id: str = Field(foreign_key="business_profiles.id", index=True)
+    payroll_month: date
+    statutory_type: str
+    amount: Decimal = Field(ge=0)
+    due_date: date
+    paid_date: date | None = None
+    status: str = "missing"
+
+
+class Counterparty(SQLModel, table=True):
+    __tablename__ = "counterparties"
+
+    id: str | None = Field(default_factory=new_id, primary_key=True)
+    business_id: str = Field(foreign_key="business_profiles.id", index=True)
+    name: str
+    party_type: str
+    tax_id: str | None = None
+    registration_number: str | None = None
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+
 class CashFlowPoint(BaseModel):
     week: int
     date: date
@@ -100,6 +176,7 @@ class PaymentRequest(SQLModel, tablename="payment_requests", table = True):
     ap_invoice_id: str | None = Field(default=None, foreign_key="ap_invoices.id")
     supplier_name: str | None = None
     invoice_number: str | None = None
+    status: str = "pending"
 
 
 class PaymentResult(BaseModel):
@@ -146,9 +223,12 @@ class APInvoice(SQLModel, table=True):
     __tablename__ = "ap_invoices"
 
     id: str | None = Field(default_factory=new_id, primary_key=True)
+    business_id: str | None = Field(default=None, foreign_key="business_profiles.id", index=True)
+    counterparty_id: str | None = Field(default=None, foreign_key="counterparties.id", index=True)
     mandate_id: str = Field(default="mandate-demo", index=True)
     invoice_number: str = Field(index=True)
     myinvois_uuid: str | None = None
+    myinvois_validation_status: str = "missing"
     supplier_name: str = Field(index=True)
     supplier_tin: str | None = None
     supplier_brn: str | None = None
@@ -170,6 +250,7 @@ class PayrollRecord(SQLModel, table=True):
     __tablename__ = "payroll_records"
 
     id: str | None = Field(default_factory=new_id, primary_key=True)
+    business_id: str | None = Field(default=None, foreign_key="business_profiles.id", index=True)
     payroll_month: date
     employee_name: str
     encrypted_mykad: str
@@ -184,6 +265,127 @@ class PayrollRecord(SQLModel, table=True):
     hrdf_employer_levy: Decimal = Decimal("0.00")
     net_pay: Decimal
     status: str = "calculated"
+
+
+class SalesInvoiceLineItem(SQLModel, table=True):
+    __tablename__ = "sales_invoice_line_items"
+
+    id: str | None = Field(default_factory=new_id, primary_key=True)
+    invoice_id: str = Field(foreign_key="sales_invoices.id", index=True)
+    description: str
+    quantity: Decimal = Decimal("1.00")
+    unit_price: Decimal = Decimal("0.00")
+    tax_amount: Decimal = Decimal("0.00")
+    total_amount: Decimal = Decimal("0.00")
+
+
+class SalesInvoice(SQLModel, table=True):
+    __tablename__ = "sales_invoices"
+
+    id: str | None = Field(default_factory=new_id, primary_key=True)
+    business_id: str | None = Field(default=None, foreign_key="business_profiles.id", index=True)
+    counterparty_id: str | None = Field(default=None, foreign_key="counterparties.id", index=True)
+    invoice_number: str = Field(index=True)
+    customer_name: str = Field(index=True)
+    customer_tin: str | None = None
+    myinvois_uuid: str | None = None
+    myinvois_validation_status: str = "missing"
+    subtotal: Decimal = Decimal("0.00")
+    tax_amount: Decimal = Decimal("0.00")
+    total_amount: Decimal
+    currency: str = "MYR"
+    issue_date: date = Field(default_factory=date.today)
+    due_date: date | None = None
+    status: str = "draft"
+    review_notes: str | None = None
+    amount_received: Decimal = Decimal("0.00")
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+
+class LedgerAccount(SQLModel, table=True):
+    __tablename__ = "ledger_accounts"
+
+    id: str | None = Field(default_factory=new_id, primary_key=True)
+    business_id: str | None = Field(default=None, foreign_key="business_profiles.id", index=True)
+    code: str = Field(index=True, unique=True)
+    name: str
+    account_type: str
+    is_active: bool = True
+
+
+class JournalEntry(SQLModel, table=True):
+    __tablename__ = "journal_entries"
+
+    id: str | None = Field(default_factory=new_id, primary_key=True)
+    business_id: str | None = Field(default=None, foreign_key="business_profiles.id", index=True)
+    source_type: str
+    source_id: str
+    description: str
+    entry_date: date = Field(default_factory=date.today)
+    status: str = "posted"
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+
+class JournalLine(SQLModel, table=True):
+    __tablename__ = "journal_lines"
+
+    id: str | None = Field(default_factory=new_id, primary_key=True)
+    journal_entry_id: str = Field(foreign_key="journal_entries.id", index=True)
+    account_code: str = Field(index=True)
+    debit: Decimal = Decimal("0.00")
+    credit: Decimal = Decimal("0.00")
+    description: str | None = None
+
+
+class Employee(SQLModel, table=True):
+    __tablename__ = "employees"
+
+    id: str | None = Field(default_factory=new_id, primary_key=True)
+    business_id: str | None = Field(default=None, foreign_key="business_profiles.id", index=True)
+    employee_name: str
+    encrypted_mykad: str
+    gross_salary: Decimal
+    status: str = "active"
+
+
+class PayrollRun(SQLModel, table=True):
+    __tablename__ = "payroll_runs"
+
+    id: str | None = Field(default_factory=new_id, primary_key=True)
+    business_id: str | None = Field(default=None, foreign_key="business_profiles.id", index=True)
+    payroll_month: date
+    status: str = "draft"
+    total_gross: Decimal = Decimal("0.00")
+    total_net: Decimal = Decimal("0.00")
+    total_employer_cost: Decimal = Decimal("0.00")
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+
+class CreditFacility(SQLModel, table=True):
+    __tablename__ = "credit_facilities"
+
+    id: str | None = Field(default_factory=new_id, primary_key=True)
+    business_id: str | None = Field(default=None, foreign_key="business_profiles.id", index=True)
+    lender_name: str
+    facility_type: str
+    requested_amount: Decimal = Field(gt=0)
+    approved_amount: Decimal = Decimal("0.00")
+    outstanding_amount: Decimal = Decimal("0.00")
+    monthly_payment: Decimal = Decimal("0.00")
+    term_months: int = 0
+    status: str = "pending"
+    next_payment_date: date | None = None
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+
+class CreditPayment(SQLModel, table=True):
+    __tablename__ = "credit_payments"
+
+    id: str | None = Field(default_factory=new_id, primary_key=True)
+    facility_id: str = Field(foreign_key="credit_facilities.id", index=True)
+    amount: Decimal = Field(gt=0)
+    payment_date: date = Field(default_factory=date.today)
+    status: str = "posted"
 
 
 class ExtractedLineItemSchema(BaseModel):
@@ -218,6 +420,7 @@ class ExtractedInvoiceSchema(BaseModel):
 class ExtractionResult(BaseModel):
     status: Literal["ok", "needs_review", "failed"]
     invoice: ExtractedInvoiceSchema | None = None
+    invoice_id: str | None = None
     error_message: str | None = None
     reconciliation_ok: bool = False
     review_reasons: list[str] = []

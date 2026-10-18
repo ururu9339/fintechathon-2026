@@ -1,17 +1,23 @@
 import base64
 import io
 import re
+from datetime import date, datetime
 from decimal import Decimal, InvalidOperation
 
 from PIL import Image
+import pytesseract
 
-from backend.app.core.llm import get_openai_client
-from backend.app.models import ExtractedInvoiceSchema, ExtractionResult
+try:
+    from backend.app.core.llm import get_openai_client
+    from backend.app.models import ExtractedInvoiceSchema, ExtractionResult
+except ModuleNotFoundError:
+    from app.core.llm import get_openai_client
+    from app.models import ExtractedInvoiceSchema, ExtractionResult
 
 from .document_parser import extract_text_from_docx, parse_pdf, validate_upload_file
 
 MAX_DOCUMENT_CHARS = 12_000
-
+MIN_OCR_CHARS = 30
 
 def reduce_document_text(text: str) -> str:
     lines = []
@@ -33,6 +39,12 @@ def reduce_document_text(text: str) -> str:
     tail_size = MAX_DOCUMENT_CHARS - head_size
     return text[:head_size] + "\n[document text truncated]\n" + text[-tail_size:]
 
+def extract_ocr_text(file_bytes: bytes) -> str:
+    with Image.open(io.BytesIO(file_bytes)) as image:
+        image = image.convert("L")
+        image.thumbnail((1600, 1600), Image.Resampling.LANCZOS)
+        image = image.point(lambda pixel: 0 if pixel < 180 else 255)
+        return pytesseract.image_to_string(image, config="--oem 3 --psm 6")
 
 def downscale_image(file_bytes: bytes) -> tuple[bytes, str]:
     with Image.open(io.BytesIO(file_bytes)) as image:
@@ -43,14 +55,66 @@ def downscale_image(file_bytes: bytes) -> tuple[bytes, str]:
         image.save(output, format="JPEG", quality=80, optimize=True)
         return output.getvalue(), "image/jpeg"
 
-
 def extract_invoice(text: str) -> dict[str, str | Decimal | None]:
     amount = re.search(r"(?:MYR|RM)\s*([\d,]+(?:\.\d{1,2})?)", text, re.IGNORECASE)
     invoice = re.search(r"\b(?:INV|INVOICE)[-\s#]?([A-Z0-9-]+)", text, re.IGNORECASE)
     return {
         "invoice_id": invoice.group(1) if invoice else None,
-        "amount": Decimal(amount.group(1).replace(",", "")) if amount else None,
+        "amount": clean_money(amount.group(1)) if amount else None,
     }
+
+def clean_money(value: str) -> Decimal:
+    """Strips currency symbols and commas, leaving only numbers and decimals."""
+    clean_val = re.sub(r'[^\d.-]', '', value)
+    return Decimal(clean_val) if clean_val else Decimal("0")
+
+
+def normalize_money(value: str) -> str:
+    """Convert common invoice money formats to a Decimal-compatible string."""
+    text = value.strip()
+    if not text:
+        return text
+    negative = text.startswith("(") and text.endswith(")")
+    text = text.replace(",", "")
+    match = re.search(r"-?\d+(?:\.\d+)?", text)
+    if not match:
+        return value
+    normalized = match.group(0)
+    if negative and not normalized.startswith("-"):
+        normalized = f"-{normalized}"
+    try:
+        return str(Decimal(normalized))
+    except InvalidOperation:
+        return value
+
+
+def normalize_date(value: str) -> str:
+    """Convert common written invoice dates to ISO format without guessing."""
+    text = value.strip()
+    if not text:
+        return text
+    try:
+        return date.fromisoformat(text).isoformat()
+    except ValueError:
+        pass
+    for pattern in ("%d %B %Y", "%d %b %Y", "%B %d, %Y", "%b %d, %Y"):
+        try:
+            return datetime.strptime(text, pattern).date().isoformat()
+        except ValueError:
+            continue
+    return value
+
+
+def normalize_extracted_invoice(inv: ExtractedInvoiceSchema) -> ExtractedInvoiceSchema:
+    """Normalize formatting only; do not invent missing invoice facts."""
+    for field in ("subtotal", "tax_amount", "total_amount"):
+        setattr(inv, field, normalize_money(getattr(inv, field)))
+    inv.issue_date = normalize_date(inv.issue_date)
+    inv.due_date = normalize_date(inv.due_date)
+    for item in inv.line_items:
+        for field in ("quantity", "unit_price", "subtotal", "tax_amount", "total_amount"):
+            setattr(item, field, normalize_money(getattr(item, field)))
+    return inv
 
 
 def reconcile_totals(inv: ExtractedInvoiceSchema) -> tuple[bool, list[str]]:
@@ -75,7 +139,11 @@ def reconcile_totals(inv: ExtractedInvoiceSchema) -> tuple[bool, list[str]]:
     return not reasons, reasons
 
 
-def llm_multimodal_extractor(filename: str, file_bytes: bytes) -> ExtractionResult:
+def llm_multimodal_extractor(
+    filename: str,
+    file_bytes: bytes,
+    counterparty_label: str = "supplier",
+) -> ExtractionResult:
     error = validate_upload_file(file_bytes, filename)
     if error:
         return ExtractionResult(status="failed", error_message=error)
@@ -100,28 +168,52 @@ def llm_multimodal_extractor(filename: str, file_bytes: bytes) -> ExtractionResu
         raw_text = reduce_document_text(raw_text)
         content.append({"type": "text", "text": raw_text})
     else:
-        model = "gpt-4o"
-        resized_bytes, mime = downscale_image(file_bytes)
-        encoded = base64.b64encode(resized_bytes).decode()
-        content.append(
-            {
-                "type": "image_url",
-                "image_url": {
-                    "url": f"data:{mime};base64,{encoded}",
-                    "detail": "low",
-                },
-            }
-        )
+        ocr_error = ""
+        try:
+            raw_text = reduce_document_text(extract_ocr_text(file_bytes))
+        except (OSError, RuntimeError) as exc:
+            raw_text = ""
+            ocr_error = str(exc)
+        else:
+            raw_text = reduce_document_text(raw_text)
+
+        if len(raw_text) >= MIN_OCR_CHARS:
+            content.append(
+                {
+                    "type": "text",
+                    "text": f"Extract invoice fields from this OCR text:\n\n{raw_text}",
+                }
+            )
+        else:
+            model = "gpt-4o-mini"
+            scaled_bytes, mime = downscale_image(file_bytes)
+            encoded = base64.b64encode(scaled_bytes).decode()
+            content.append(
+                {
+                    "type": "image_url",
+                    "image_url": {
+                        "url": f"data:{mime};base64,{encoded}",
+                        "detail": "low",
+                    },
+                }
+            )
 
     try:
         response = client.beta.chat.completions.parse(
             model=model,
             messages=[
-                {"role": "system", "content": "Extract invoice fields without guessing missing values."},
+                {
+                    "role": "system",
+                    "content": (
+                        f"Extract invoice fields without guessing missing values. "
+                        f"The invoice counterparty is the {counterparty_label}; "
+                        "place its name in supplier_name."
+                    ),
+                },
                 {"role": "user", "content": content},
             ],
             response_format=ExtractedInvoiceSchema,
-            max_tokens=1500,
+            max_tokens=700,
         )
         invoice = response.choices[0].message.parsed
     except Exception as exc:
@@ -129,7 +221,9 @@ def llm_multimodal_extractor(filename: str, file_bytes: bytes) -> ExtractionResu
     if invoice is None:
         return ExtractionResult(status="failed", error_message="OpenAI returned no invoice.")
 
+    invoice = normalize_extracted_invoice(invoice)
     reconciled, reasons = reconcile_totals(invoice)
+
     if not invoice.source_snippet:
         reasons.append("Source snippet is missing.")
     elif raw_text and invoice.source_snippet.lower() not in raw_text.lower():
