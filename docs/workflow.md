@@ -123,6 +123,50 @@ The dossier MVP now also supports `GET /api/businesses/{business_id}/dossiers/{d
 
 Account endpoints are available at `/api/auth/register`, `/api/auth/login`, and `/api/auth/me`. Authenticated business creation creates an owner membership; dossier creation, reading, and PDF download require a membership for that business. `BusinessMembership` stores `owner`, `accountant`, or `viewer` roles. Existing legacy businesses without memberships must be explicitly linked before their dossiers can be accessed through the authenticated API. Authentication is still an MVP boundary: production deployment needs secure secret management, email verification, password reset, rate limiting, and a complete owner/admin membership-management UI.
 
+For local development, copy `.env.example` to `.env` and set `AMANAH_JWT_SECRET` to a stable private value. The API loads `.env` before issuing or validating tokens; changing this value invalidates previously issued tokens, but does not delete user accounts or passwords. Docker receives the same value through the Compose `env_file`.
+
+### Account security implementation
+
+- **Registration and login:** passwords are bcrypt-hashed; email addresses are normalized; access tokens expire after 30 minutes; refresh sessions last 30 days.
+- **Email verification:** registration creates a single-use, expiring hashed token and attempts delivery through SMTP. The response reports `verification_email_sent`; production must configure SMTP and `APP_PUBLIC_URL`.
+- **Password reset:** reset requests always return the same generic response, then create a single-use token for an existing account. Confirmation changes the password and revokes all existing refresh sessions.
+- **Refresh tokens:** refresh tokens are opaque, stored only as SHA-256 hashes, rotated on every use, and invalidated on logout. Access tokens reference the refresh session, so revoking the session invalidates the access token.
+- **Account deletion:** `DELETE /api/auth/me` requires the current password, anonymizes the email, disables the account, and revokes sessions while preserving financial records and audit history.
+- **Rate limiting:** login, registration, and reset requests use persistent database buckets. Rate limiting means restricting repeated requests per client within a time window; it reduces password guessing, reset-email abuse, and denial-of-service pressure. A shared Redis limiter should replace the database buckets when deploying multiple API replicas.
+
+Account endpoints are now `/api/auth/register`, `/api/auth/login`, `/api/auth/verify-email`, `/api/auth/password-reset/request`, `/api/auth/password-reset/confirm`, `/api/auth/refresh`, `/api/auth/logout`, `/api/auth/me`, and `DELETE /api/auth/me`. Owner-level access remains separate from authentication: every business-scoped route must check `BusinessMembership`.
+
+Before production deployment, configure a stable 32-character-or-longer `AMANAH_JWT_SECRET`, `APP_PUBLIC_URL`, SMTP credentials, HTTPS, a shared rate-limit store, and a versioned database migration process. Add email provider monitoring, password-reset UI, refresh-token storage in the frontend, and owner/member administration before opening account creation publicly.
+
+SMTP configuration uses the mailbox/provider account that sends transactional messages, not the application's users:
+
+- `SMTP_HOST`: provider hostname, such as the SMTP server supplied by the email provider.
+- `SMTP_PORT`: normally `587` for STARTTLS, which is what the current sender uses.
+- `SMTP_USERNAME`: the SMTP login, commonly the full sending mailbox address or provider-issued username.
+- `SMTP_PASSWORD`: the SMTP password or provider app-specific password/API-generated SMTP credential; never commit it.
+- `SMTP_FROM`: the verified sender address shown to recipients, for example `no-reply@your-domain.example`.
+- `APP_PUBLIC_URL`: the public frontend URL where verification and password-reset pages exist, not the API URL.
+
+All financial, accounting, invoice, mandate, business, forecast, agent, and dossier API routers now require a valid bearer token. Business-path routes additionally require a matching `BusinessMembership`; owner-only actions remain role-restricted. The remaining deployment step is to add membership filtering to legacy unscoped records and complete per-route role policies for the frontend.
+
+### Predictions, alerts, and assistant
+
+Business-scoped prediction endpoints are:
+
+- `POST /api/businesses/{business_id}/predictions/forecast?horizon_days=30|60|90`
+- `GET /api/businesses/{business_id}/predictions/forecasts`
+- `GET /api/businesses/{business_id}/predictions/alerts`
+- `GET /api/businesses/{business_id}/predictions/notifications`
+
+Forecasts use the latest recorded cash balance, issued/partially-paid/paid sales invoices, approved/paid purchase invoices, approved payroll runs, and active credit facilities. They project a simple recent daily average and explicitly expose limitations. A negative projected balance creates a high-severity cash-shortfall alert; a small projected buffer creates a medium alert. Notifications are stored for all business members. These are indicators, not guaranteed predictions.
+
+The in-app assistant is available at:
+
+- `POST /api/businesses/{business_id}/assistant/text`
+- `POST /api/businesses/{business_id}/assistant/voice`
+
+Text requests are answered from a generated business context containing the forecast and open alerts. Voice uploads are transcribed first, then passed through the same text assistant path. The assistant must not approve payments, invent figures, promise financing, or provide legal advice. Without `OPENAI_API_KEY`, text returns an explicit `needs_review` response and voice returns configuration failure; raw audio is not stored.
+
 ## Failure paths and open risks
 
 - Invalid files, unavailable OpenAI configuration, parser failures, and extraction failures return `failed`.

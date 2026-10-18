@@ -52,6 +52,11 @@ def init_db() -> None:
             "counterparties",
             "payment_requests",
             "credit_dossiers",
+            "users",
+            "forecast_snapshots",
+            "financial_alerts",
+            "user_notifications",
+            "assistant_messages",
         )
         if table in inspector.get_table_names()
     }
@@ -104,6 +109,13 @@ def init_db() -> None:
                     connection.execute(text("ALTER TABLE credit_dossiers ADD COLUMN narrative_prompt_version VARCHAR"))
                 if "pdf_generated_at" not in columns:
                     connection.execute(text("ALTER TABLE credit_dossiers ADD COLUMN pdf_generated_at TIMESTAMP WITH TIME ZONE"))
+            if table == "users":
+                if "email_verified_at" not in columns:
+                    connection.execute(text("ALTER TABLE users ADD COLUMN email_verified_at TIMESTAMP WITH TIME ZONE"))
+                if "deleted_at" not in columns:
+                    connection.execute(text("ALTER TABLE users ADD COLUMN deleted_at TIMESTAMP WITH TIME ZONE"))
+                if "password_changed_at" not in columns:
+                    connection.execute(text("ALTER TABLE users ADD COLUMN password_changed_at TIMESTAMP WITH TIME ZONE"))
             if table in {"ap_invoices", "sales_invoices"}:
                 if "counterparty_id" not in columns:
                     connection.execute(text(f"ALTER TABLE {table} ADD COLUMN counterparty_id VARCHAR"))

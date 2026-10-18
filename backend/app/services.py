@@ -8,7 +8,7 @@ Read this file top to bottom. It has five parts:
 3. PAYMENT EXTRACTION: turns a chat message into structured payment fields.
 4. AuditChain: an append-only list of events, each linked to the previous one by hash.
 5. Treasurer: the main service. It uses the parts above and exposes
-   forecast(), pay(), financing(), and agent().
+   payment and agent operations.
 
 Every value that used to be hard-coded is a named field in a settings object.
 Pass your own settings into Treasurer(...) to change behaviour, or pass
@@ -20,7 +20,7 @@ import hashlib
 import json
 import re
 from dataclasses import dataclass
-from datetime import date, datetime, timedelta, timezone
+from datetime import date, datetime, timezone
 from decimal import Decimal, InvalidOperation
 from typing import Callable
 from sqlmodel import Session
@@ -29,8 +29,6 @@ from uuid import uuid4
 from .models import (
     AgentResponse,
     AuditEvent,
-    CashFlowPoint,
-    FinancingRecommendation,
     Mandate,
     PaymentRequest,
     PaymentResult,
@@ -43,31 +41,6 @@ from .models import (
 # Each dataclass groups the inputs for one feature. To change behaviour,
 # create an instance with different values and pass it to Treasurer.
 # ============================================================================
-
-
-@dataclass
-class ForecastAssumptions:
-    """Inputs for the 13-week cash flow forecast. All amounts are in MYR."""
-
-    opening_balance: Decimal = Decimal("18000")    # cash on hand before week 1
-    normal_inflow: Decimal = Decimal("4200")       # money received in a typical week
-    low_inflow: Decimal = Decimal("1800")          # money received in a slow week
-    low_inflow_every_n_weeks: int = 3              # every 3rd week is slow (3, 6, 9, 12)
-    base_outflow: Decimal = Decimal("3600")        # regular spending each week
-    large_outflow: Decimal = Decimal("5000")       # extra one-off payment (tax, payroll)
-    large_outflow_weeks: tuple[int, ...] = (4, 9)  # weeks that get the extra payment
-    uncertainty_band: Decimal = Decimal("1200")    # +/- range drawn around each balance
-    weeks: int = 13                                # length of the forecast
-
-
-@dataclass
-class FinancingTerms:
-    """Terms used when the forecast shows a cash gap."""
-
-    provider: str = "CGC Demo"
-    product: str = "SME working capital facility"
-    effective_apr: Decimal = Decimal("8.90")   # yearly cost, in percent
-    safety_buffer: Decimal = Decimal("2500")   # extra amount borrowed on top of the gap
 
 
 # Words that tell the agent a message is about moving money.
@@ -261,14 +234,11 @@ class Treasurer:
     def __init__(
         self,
         mandates: dict[str, Mandate] | None = None,
-        forecast_assumptions: ForecastAssumptions | None = None,
-        financing_terms: FinancingTerms | None = None,
         payment_rules: list[PaymentRule] | None = None,
         payment_extractor: Callable[[str], ExtractedPayment] = extract_payment,
         injection_patterns: list[str] | None = None,
         payment_keywords: tuple[str, ...] = DEFAULT_PAYMENT_KEYWORDS,
         default_mandate_id: str | None = None,
-        start_date: date | None = None,
     ) -> None:
         """Every argument is optional. None means "use the default described above"."""
         self.audit = AuditChain()
@@ -278,9 +248,6 @@ class Treasurer:
         # Money already paid today, per mandate. Starts empty.
         self.daily_spend: dict[str, Decimal] = {}
 
-        # Settings. Default values come from the dataclasses above.
-        self.forecast_assumptions = forecast_assumptions or ForecastAssumptions()
-        self.financing_terms = financing_terms or FinancingTerms()
         self.payment_rules = payment_rules if payment_rules is not None else default_payment_rules()
         self.payment_extractor = payment_extractor
         self.injection_patterns = (
@@ -288,7 +255,6 @@ class Treasurer:
         )
         self.payment_keywords = payment_keywords
         self.default_mandate_id = default_mandate_id
-        self.start_date = start_date  # None means "today", evaluated when forecast() runs
 
     # ------------------------------------------------------------------
     # Mandate management
@@ -304,44 +270,6 @@ class Treasurer:
             self.daily_spend.clear()
         else:
             self.daily_spend.pop(mandate_id, None)
-
-    # ------------------------------------------------------------------
-    # Forecast
-    # ------------------------------------------------------------------
-
-    def forecast(self, assumptions: ForecastAssumptions | None = None) -> list[CashFlowPoint]:
-        """Build the weekly forecast.
-
-        Pass assumptions to use different numbers for this call only.
-        Otherwise the Treasurer's own settings are used.
-        """
-        a = assumptions if assumptions is not None else self.forecast_assumptions
-        start = self.start_date or date.today()
-
-        balance = a.opening_balance
-        points: list[CashFlowPoint] = []
-        for week in range(1, a.weeks + 1):
-            is_slow_week = week % a.low_inflow_every_n_weeks == 0
-            inflows = a.low_inflow if is_slow_week else a.normal_inflow
-
-            extra = a.large_outflow if week in a.large_outflow_weeks else Decimal("0")
-            outflows = a.base_outflow + extra
-
-            closing = balance + inflows - outflows
-            points.append(
-                CashFlowPoint(
-                    week=week,
-                    date=start + timedelta(days=7 * (week - 1)),
-                    opening_balance=balance,
-                    inflows=inflows,
-                    outflows=outflows,
-                    closing_balance=closing,
-                    lower_bound=closing - a.uncertainty_band,
-                    upper_bound=closing + a.uncertainty_band,
-                )
-            )
-            balance = closing
-        return points
 
     # ------------------------------------------------------------------
     # Payments
@@ -466,29 +394,6 @@ class Treasurer:
         return result
 
     # ------------------------------------------------------------------
-    # Financing
-    # ------------------------------------------------------------------
-
-    def financing(self, assumptions: ForecastAssumptions | None = None) -> list[FinancingRecommendation]:
-        """Suggest a facility if any week in the forecast goes negative."""
-        points = self.forecast(assumptions)
-        lowest = min(points, key=lambda point: point.closing_balance)
-        if lowest.closing_balance >= 0:
-            return []
-
-        shortfall = abs(lowest.closing_balance)
-        terms = self.financing_terms
-        return [
-            FinancingRecommendation(
-                provider=terms.provider,
-                product=terms.product,
-                amount=shortfall + terms.safety_buffer,
-                effective_apr=terms.effective_apr,
-                reason=f"Projected week {lowest.week} cash gap of {shortfall} MYR",
-            )
-        ]
-
-    # ------------------------------------------------------------------
     # Agent
     # ------------------------------------------------------------------
 
@@ -512,7 +417,7 @@ class Treasurer:
         if not self._is_payment_intent(message):
             return AgentResponse(
                 status="advisory",
-                message="I can explain your 13-week forecast, envelopes, mandates, or financing options.",
+                message="I can help with payments, mandates, invoices, and business finance requests.",
             )
 
         extracted = self.payment_extractor(message)
@@ -566,18 +471,6 @@ class Treasurer:
 #
 # The attack from the demo. Blocked by the allowlist rule:
 #     treasurer.agent("Transfer RM48,000 to a new account")
-#
-# A smaller business with a bigger tax payment in week 2:
-#     treasurer = Treasurer(
-#         forecast_assumptions=ForecastAssumptions(
-#             opening_balance=Decimal("5000"),
-#             large_outflow=Decimal("8000"),
-#             large_outflow_weeks=(2,),
-#         ),
-#     )
-#
-# A forecast for one call only, without changing the Treasurer:
-#     points = treasurer.forecast(ForecastAssumptions(opening_balance=Decimal("0")))
 #
 # Replacing the extractor with your own (for example an LLM-based one):
 #     treasurer = Treasurer(payment_extractor=my_llm_extractor)

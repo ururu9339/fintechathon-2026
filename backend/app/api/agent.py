@@ -1,10 +1,16 @@
 from fastapi import APIRouter, Depends
+
+from ..auth import get_current_user
 from sqlmodel import Session
 
 from ..db import get_session
 from ..models import AgentRequest, AgentResponse
 
-router = APIRouter(prefix="/api", tags=["agent"])
+router = APIRouter(
+    prefix="/api",
+    tags=["agent"],
+    dependencies=[Depends(get_current_user)],
+)
 
 @router.post("/agent", response_model=AgentResponse)
 def run_agent(request: AgentRequest, session: Session = Depends(get_session)):

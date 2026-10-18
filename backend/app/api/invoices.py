@@ -9,6 +9,7 @@ from sqlmodel import Session, select
 from agent.extract import llm_multimodal_extractor
 
 from ..db import get_session
+from ..auth import get_current_user, require_business_access
 from ..models import (
     APInvoice,
     APInvoiceLineItem,
@@ -18,9 +19,14 @@ from ..models import (
     Mandate,
     PaymentRequest,
     PaymentResult,
+    User,
 )
 
-router = APIRouter(prefix="/api", tags=["invoices"])
+router = APIRouter(
+    prefix="/api",
+    tags=["invoices"],
+    dependencies=[Depends(get_current_user)],
+)
 
 
 class InvoiceLineInput(BaseModel):
@@ -162,9 +168,11 @@ async def upload_invoice(
     business_id: str,
     file: UploadFile = File(...),
     session: Session = Depends(get_session),
+    user: User = Depends(get_current_user),
 ):
     if session.get(BusinessProfile, business_id) is None:
         raise HTTPException(status_code=404, detail="Business profile not found.")
+    require_business_access(business_id, user, session, minimum_role="accountant")
     result = llm_multimodal_extractor(file.filename or "upload.pdf", await file.read())
     if result.status == "failed" or result.invoice is None:
         return result
@@ -260,9 +268,11 @@ def receive_provider_invoice(
     business_id: str,
     request: ProviderInvoiceWebhook,
     session: Session = Depends(get_session),
+    user: User = Depends(get_current_user),
 ):
     if session.get(BusinessProfile, business_id) is None:
         raise HTTPException(status_code=404, detail="Business profile not found.")
+    require_business_access(business_id, user, session, minimum_role="accountant")
     if request.due_date and request.due_date < request.issue_date:
         raise HTTPException(status_code=422, detail="Due date is before issue date.")
     _validate_invoice_amounts(request.subtotal, request.tax_amount, request.total_amount)
@@ -354,7 +364,9 @@ def receive_provider_invoice(
 def create_expense_invoice(
     request: ExpenseInvoiceForm,
     session: Session = Depends(get_session),
+    user: User = Depends(get_current_user),
 ):
+    require_business_access(request.business_id, user, session, minimum_role="accountant")
     return _save_expense_invoice(request, session)
 
 

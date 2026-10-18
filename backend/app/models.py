@@ -68,6 +68,91 @@ class User(SQLModel, table=True):
     email: str = Field(unique=True, index=True)
     hashed_password: str
     is_active: bool = True
+    email_verified_at: datetime | None = None
+    deleted_at: datetime | None = None
+    password_changed_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+
+class RefreshSession(SQLModel, table=True):
+    __tablename__ = "refresh_sessions"
+
+    id: str | None = Field(default_factory=new_id, primary_key=True)
+    user_id: str = Field(foreign_key="users.id", index=True)
+    token_hash: str = Field(index=True, unique=True)
+    expires_at: datetime
+    revoked_at: datetime | None = None
+    replaced_by_id: str | None = None
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+
+class EmailActionToken(SQLModel, table=True):
+    __tablename__ = "email_action_tokens"
+
+    id: str | None = Field(default_factory=new_id, primary_key=True)
+    user_id: str = Field(foreign_key="users.id", index=True)
+    token_hash: str = Field(index=True, unique=True)
+    purpose: str = Field(index=True)
+    expires_at: datetime
+    used_at: datetime | None = None
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+
+class RateLimitBucket(SQLModel, table=True):
+    __tablename__ = "rate_limit_buckets"
+
+    id: str | None = Field(default_factory=new_id, primary_key=True)
+    bucket_key: str = Field(index=True, unique=True)
+    window_start: datetime
+    request_count: int = 0
+
+
+class ForecastSnapshot(SQLModel, table=True):
+    __tablename__ = "forecast_snapshots"
+
+    id: str | None = Field(default_factory=new_id, primary_key=True)
+    business_id: str = Field(foreign_key="business_profiles.id", index=True)
+    horizon_days: int
+    snapshot: dict = Field(default_factory=dict, sa_type=JSON)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+
+class FinancialAlert(SQLModel, table=True):
+    __tablename__ = "financial_alerts"
+
+    id: str | None = Field(default_factory=new_id, primary_key=True)
+    business_id: str = Field(foreign_key="business_profiles.id", index=True)
+    severity: str
+    alert_type: str
+    title: str
+    message: str
+    suggested_action: str | None = None
+    status: str = "open"
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+
+class UserNotification(SQLModel, table=True):
+    __tablename__ = "user_notifications"
+
+    id: str | None = Field(default_factory=new_id, primary_key=True)
+    user_id: str = Field(foreign_key="users.id", index=True)
+    business_id: str = Field(foreign_key="business_profiles.id", index=True)
+    alert_id: str | None = Field(default=None, foreign_key="financial_alerts.id")
+    title: str
+    message: str
+    is_read: bool = False
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+
+class AssistantMessage(SQLModel, table=True):
+    __tablename__ = "assistant_messages"
+
+    id: str | None = Field(default_factory=new_id, primary_key=True)
+    user_id: str = Field(foreign_key="users.id", index=True)
+    business_id: str = Field(foreign_key="business_profiles.id", index=True)
+    direction: str
+    input_kind: str
+    content: str
     created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
 
 
@@ -193,24 +278,6 @@ class Counterparty(SQLModel, table=True):
     created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
 
 
-class CashFlowPoint(BaseModel):
-    week: int
-    date: date
-    opening_balance: Decimal
-    inflows: Decimal
-    outflows: Decimal
-    closing_balance: Decimal
-    lower_bound: Decimal
-    upper_bound: Decimal
-
-
-class Envelope(BaseModel):
-    name: str
-    target: Decimal
-    allocated: Decimal
-    currency: str = "MYR"
-
-
 class PaymentRequest(SQLModel, tablename="payment_requests", table = True):
     __tablename__ = "payment_requests"
     id: str | None = Field(default_factory=new_id, primary_key=True)
@@ -232,14 +299,6 @@ class PaymentResult(BaseModel):
     reason: str
     payment_id: str | None = None
     audit_hash: str
-
-
-class FinancingRecommendation(BaseModel):
-    provider: str
-    product: str
-    amount: Decimal
-    effective_apr: Decimal
-    reason: str
 
 
 class AgentRequest(BaseModel):

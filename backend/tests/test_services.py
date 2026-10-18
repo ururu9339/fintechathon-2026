@@ -23,6 +23,14 @@ from backend.app.api.business import (
     create_business,
     record_remittance,
 )
+from backend.app.api.auth import UserResponse
+from backend.app.auth import (
+    create_access_token,
+    hash_password,
+    issue_action_token,
+    issue_refresh_session,
+    verify_password,
+)
 from backend.app.models import (
     APInvoice,
     BusinessProfile,
@@ -34,18 +42,77 @@ from backend.app.models import (
     SalesInvoice,
 )
 from backend.app.dossier_service import build_dossier_snapshot, proposed_installment
+from backend.app.prediction_service import build_forecast, create_alerts
 from backend.app.services import Treasurer
 from agent.extract import normalize_extracted_invoice, reconcile_totals
 from backend.app.models import ExtractedInvoiceSchema, ExtractedLineItemSchema
 
 
-def test_forecast_has_thirteen_weeks():
-    assert len(Treasurer().forecast()) == 13
+def test_user_response_serializes_sqlmodel_user():
+    from backend.app.models import User
+
+    response = UserResponse.model_validate(
+        User(id="user-1", email="owner@example.com", hashed_password="hidden")
+    )
+    assert response.id == "user-1"
+    assert response.email == "owner@example.com"
+
+
+def test_account_security_tokens_and_password_hashes():
+    from backend.app.models import EmailActionToken, RefreshSession, User
+
+    engine = create_engine("sqlite://")
+    SQLModel.metadata.create_all(engine)
+    with Session(engine) as session:
+        password_hash = hash_password("correct horse battery staple")
+        user = User(email="security@example.com", hashed_password=password_hash)
+        session.add(user)
+        session.commit()
+        session.refresh(user)
+        assert verify_password("correct horse battery staple", user.hashed_password)
+        assert not verify_password("wrong password", user.hashed_password)
+        refresh_token, refresh_session = issue_refresh_session(user.id, session)
+        action_token = issue_action_token(user.id, "verify_email", session)
+        assert len(refresh_token) > 20
+        assert len(action_token) > 20
+        assert session.get(RefreshSession, refresh_session.id)
+        assert session.exec(
+            select(EmailActionToken).where(EmailActionToken.user_id == user.id)
+        ).one()
+        assert create_access_token(user.id, refresh_session.id)
 
 
 def test_dossier_installment_and_zero_rate():
     assert proposed_installment(Decimal("50000"), Decimal("8"), 36).quantize(Decimal("0.01")) == Decimal("1566.82")
     assert proposed_installment(Decimal("1200"), Decimal("0"), 12) == Decimal("100")
+
+
+def test_business_forecast_is_data_driven_and_creates_cash_alert():
+    from backend.app.models import CashBalance, ForecastSnapshot
+
+    engine = create_engine("sqlite://")
+    SQLModel.metadata.create_all(engine)
+    with Session(engine) as session:
+        business = BusinessProfile(
+            legal_name="Forecast Business",
+            registration_type="company",
+            registration_number="FORE-1",
+            registration_status="active",
+            msic_code="62010",
+            sector_category="services",
+        )
+        session.add(business)
+        session.commit()
+        session.add(CashBalance(
+            business_id=business.id, as_of_date=date.today(), amount=Decimal("0")
+        ))
+        session.commit()
+        snapshot = build_forecast(business.id, session, 30)
+        alerts = create_alerts(snapshot, session)
+        assert isinstance(snapshot, ForecastSnapshot)
+        assert len(snapshot.snapshot["points"]) == 30
+        assert alerts
+        assert alerts[0].alert_type == "low_cash_buffer"
 
 
 def test_dossier_uses_approved_records_and_stable_hash():

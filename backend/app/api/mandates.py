@@ -6,7 +6,8 @@ from pydantic import BaseModel, Field
 from sqlmodel import Session, select
 
 from ..db import get_session
-from ..models import BusinessProfile, Mandate
+from ..auth import get_current_user, require_business_access
+from ..models import BusinessProfile, Mandate, User
 
 router = APIRouter(prefix="/api/businesses/{business_id}/mandates", tags=["mandates"])
 
@@ -33,8 +34,10 @@ def create_mandate(
     business_id: str,
     request: MandateCreate,
     session: Session = Depends(get_session),
+    user: User = Depends(get_current_user),
 ):
     _business(business_id, session)
+    require_business_access(business_id, user, session)
     if request.transaction_limit > request.daily_limit:
         raise HTTPException(
             status_code=422,
@@ -60,8 +63,10 @@ def create_mandate(
 def list_mandates(
     business_id: str,
     session: Session = Depends(get_session),
+    user: User = Depends(get_current_user),
 ):
     _business(business_id, session)
+    require_business_access(business_id, user, session)
     return session.exec(
         select(Mandate).where(Mandate.business_id == business_id)
     ).all()
@@ -72,8 +77,10 @@ def revoke_mandate(
     business_id: str,
     mandate_id: str,
     session: Session = Depends(get_session),
+    user: User = Depends(get_current_user),
 ):
     _business(business_id, session)
+    require_business_access(business_id, user, session, minimum_role="accountant")
     mandate = session.get(Mandate, mandate_id)
     if mandate is None or mandate.business_id != business_id:
         raise HTTPException(status_code=404, detail="Mandate not found.")
