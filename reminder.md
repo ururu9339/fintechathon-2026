@@ -1,5 +1,5 @@
 Then rebuild the Docker image:
-    docker compose build --no-cache 
+    docker compose build --no-cache
     docker compose up
 
 Change the requirements.txt when adding new modules
@@ -41,4 +41,4 @@ Run your usual command:
 ./.venv/bin/python -m uvicorn backend.app.main:app --reload
 
 Code normally!
-Every time you save a file, uvicorn will instantly reload your app. Your app will talk to localhost:5432, which Docker automatically routes directly into your Postgres   
+Every time you save a file, uvicorn will instantly reload your app. Your app will talk to localhost:5432, which Docker automatically routes directly into your Postgres

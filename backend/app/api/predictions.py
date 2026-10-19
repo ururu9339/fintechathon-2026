@@ -45,4 +45,3 @@ def list_forecasts(
     return session.exec(select(ForecastSnapshot).where(
         ForecastSnapshot.business_id == business_id
     ).order_by(ForecastSnapshot.created_at.desc())).all()
-
