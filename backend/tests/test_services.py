@@ -42,7 +42,7 @@ from backend.app.models import (
     SalesInvoice,
 )
 from backend.app.dossier_service import build_dossier_snapshot, proposed_installment
-from backend.app.prediction_service import build_forecast, create_alerts
+from backend.app.prediction_service import build_forecast
 from backend.app.services import Treasurer
 from agent.extract import normalize_extracted_invoice, reconcile_totals
 from backend.app.models import ExtractedInvoiceSchema, ExtractedLineItemSchema
@@ -58,9 +58,10 @@ def test_user_response_serializes_sqlmodel_user():
     assert response.email == "owner@example.com"
 
 
-def test_account_security_tokens_and_password_hashes():
+def test_account_security_tokens_and_password_hashes(monkeypatch):
     from backend.app.models import EmailActionToken, RefreshSession, User
 
+    monkeypatch.setenv("QYZEAI_JWT_SECRET", "test-secret-that-is-at-least-32-characters")
     engine = create_engine("sqlite://")
     SQLModel.metadata.create_all(engine)
     with Session(engine) as session:
@@ -108,11 +109,10 @@ def test_business_forecast_is_data_driven_and_creates_cash_alert():
         ))
         session.commit()
         snapshot = build_forecast(business.id, session, 30)
-        alerts = create_alerts(snapshot, session)
         assert isinstance(snapshot, ForecastSnapshot)
         assert len(snapshot.snapshot["points"]) == 30
-        assert alerts
-        assert alerts[0].alert_type == "low_cash_buffer"
+        assert snapshot.snapshot["alerts"]
+        assert snapshot.snapshot["alerts"][0]["alert_type"] == "low_cash_buffer"
 
 
 def test_dossier_uses_approved_records_and_stable_hash():

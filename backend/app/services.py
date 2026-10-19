@@ -1,5 +1,5 @@
 """
-services.py: the business logic of the AmanahPay treasurer.
+services.py: the business logic of the Qyze Ai treasurer.
 
 Read this file top to bottom. It has five parts:
 
@@ -200,7 +200,7 @@ class AuditChain:
         self.events: list[AuditEvent] = []
         self._last_hash = "GENESIS"
 
-    def append(self, event_type: str, payload: dict) -> AuditEvent:
+    def append(self, event_type: str, payload: dict, business_id: str | None = None) -> AuditEvent:
         previous_hash = self._last_hash
         created_at = datetime.now(timezone.utc)
         body = {
@@ -212,6 +212,7 @@ class AuditChain:
         event = AuditEvent(
             event_type=event_type,
             payload=payload,
+            business_id=business_id,
             created_at=created_at,
             previous_hash=previous_hash,
             event_hash=_hash_event(previous_hash, body),
@@ -300,7 +301,9 @@ class Treasurer:
         from rail.mock_rail import submit_payment
 
         rail_payment = submit_payment(request.supplier, request.amount)
-        event = self.audit.append("payment.approved", request.model_dump(mode="json"))
+        event = self.audit.append(
+            "payment.approved", request.model_dump(mode="json"), mandate.business_id
+        )
         if session is not None:
             session.add(event)
             session.commit()
@@ -317,9 +320,14 @@ class Treasurer:
         session: Session | None,
         reason: str,
     ) -> PaymentResult:
+        business_id = None
+        if session is not None and request.mandate_id:
+            mandate = session.get(Mandate, request.mandate_id)
+            business_id = mandate.business_id if mandate else None
         event = self.audit.append(
             "payment.blocked",
             {"request": request.model_dump(mode="json"), "reason": reason},
+            business_id,
         )                                                           
         if session is not None:
             session.add(event)
@@ -339,6 +347,7 @@ class Treasurer:
         event = self.audit.append(
             "invoice.approved",
             {"invoice_id": invoice.id, "invoice_number": invoice.invoice_number},
+            invoice.business_id,
         )
         session.add(invoice)
         session.add(event)
@@ -349,6 +358,7 @@ class Treasurer:
             event = self.audit.append(
                 "invoice.payment_blocked",
                 {"invoice_id": invoice.id, "reason": "Invoice is not approved."},
+                invoice.business_id,
             )
             session.add(event)
             session.commit()
@@ -376,6 +386,7 @@ class Treasurer:
             event = self.audit.append(
                 "invoice.payment_blocked",
                 {"invoice_id": invoice.id, "reason": "No payment mandate selected."},
+                invoice.business_id,
             )
             session.add(event)
             session.commit()

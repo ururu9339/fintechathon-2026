@@ -12,10 +12,10 @@ if TYPE_CHECKING:
 
 _configured_database_url = os.getenv(
     "DATABASE_URL",
-    "postgresql+psycopg://amanah:amanah@localhost:5432/amanahpay",
+    "postgresql+psycopg://qyzeai:qyzeai@localhost:5432/qyzeai",
 )
 
-if os.getenv("AMANAHPAY_DOCKER") != "1":
+if os.getenv("QYZEAI_DOCKER") != "1":
     _database_parts = urlsplit(_configured_database_url)
     if _database_parts.hostname == "db":
         _configured_database_url = urlunsplit(
@@ -54,9 +54,8 @@ def init_db() -> None:
             "credit_dossiers",
             "users",
             "forecast_snapshots",
-            "financial_alerts",
-            "user_notifications",
             "assistant_messages",
+            "audit_events",
         )
         if table in inspector.get_table_names()
     }

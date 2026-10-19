@@ -9,7 +9,7 @@ from sqlmodel import Session, select
 from agent.extract import llm_multimodal_extractor
 
 from ..db import get_session
-from ..auth import get_current_user, require_business_access
+from ..auth import get_current_business_id, get_current_user, require_business_access
 from ..models import (
     APInvoice,
     APInvoiceLineItem,
@@ -39,7 +39,7 @@ class InvoiceLineInput(BaseModel):
 
 
 class ExpenseInvoiceForm(BaseModel):
-    business_id: str
+    business_id: str | None = None
     mandate_id: str | None = None
     invoice_number: str
     supplier_name: str
@@ -165,11 +165,15 @@ def _date(value: str, label: str, reasons: list[str]) -> date | None:
 
 @router.post("/invoices/upload", response_model=ExtractionResult)
 async def upload_invoice(
-    business_id: str,
+    business_id: str | None = None,
     file: UploadFile = File(...),
     session: Session = Depends(get_session),
     user: User = Depends(get_current_user),
 ):
+    current_business_id = get_current_business_id(user, session)
+    if business_id is not None and business_id != current_business_id:
+        raise HTTPException(status_code=403, detail="Business must match the current business.")
+    business_id = current_business_id
     if session.get(BusinessProfile, business_id) is None:
         raise HTTPException(status_code=404, detail="Business profile not found.")
     require_business_access(business_id, user, session, minimum_role="accountant")
@@ -366,30 +370,53 @@ def create_expense_invoice(
     session: Session = Depends(get_session),
     user: User = Depends(get_current_user),
 ):
+    request.business_id = request.business_id or get_current_business_id(user, session)
+    if request.business_id != get_current_business_id(user, session):
+        raise HTTPException(status_code=403, detail="Invoice business must match the current business.")
     require_business_access(request.business_id, user, session, minimum_role="accountant")
     return _save_expense_invoice(request, session)
 
 
 @router.get("/invoices", response_model=list[APInvoice])
-def list_invoices(session: Session = Depends(get_session)):
-    return session.exec(select(APInvoice)).all()
+def list_invoices(
+    business_id: str | None = None,
+    session: Session = Depends(get_session),
+    user: User = Depends(get_current_user),
+):
+    business_id = business_id or get_current_business_id(user, session)
+    require_business_access(business_id, user, session)
+    return session.exec(select(APInvoice).where(APInvoice.business_id == business_id)).all()
 
 
 @router.get("/invoices/{invoice_id}", response_model=APInvoice)
-def get_invoice(invoice_id: str, session: Session = Depends(get_session)):
+def get_invoice(
+    invoice_id: str,
+    session: Session = Depends(get_session),
+    user: User = Depends(get_current_user),
+):
     invoice = session.get(APInvoice, invoice_id)
     if invoice is None:
+        raise HTTPException(status_code=404, detail="Invoice not found.")
+    if isinstance(user, User) and invoice.business_id != get_current_business_id(user, session):
         raise HTTPException(status_code=404, detail="Invoice not found.")
     return invoice
 
 
 @router.post("/invoices/{invoice_id}/approve", response_model=APInvoice)
-def approve_invoice(invoice_id: str, session: Session = Depends(get_session)):
+def approve_invoice(
+    invoice_id: str,
+    session: Session = Depends(get_session),
+    user: User = Depends(get_current_user),
+):
     from ..db import get_treasurer
 
     invoice = session.get(APInvoice, invoice_id)
     if invoice is None:
         raise HTTPException(status_code=404, detail="Invoice not found.")
+    if isinstance(user, User):
+        if invoice.business_id != get_current_business_id(user, session):
+            raise HTTPException(status_code=404, detail="Invoice not found.")
+        require_business_access(invoice.business_id, user, session, minimum_role="accountant")
     try:
         get_treasurer().approve_invoice(invoice, session)
     except ValueError as exc:
@@ -402,12 +429,13 @@ def correct_invoice(
     invoice_id: str,
     request: ExpenseInvoiceForm,
     session: Session = Depends(get_session),
+    user: User = Depends(get_current_user),
 ):
     invoice = session.get(APInvoice, invoice_id)
-    if invoice is None:
+    if invoice is None or invoice.business_id != get_current_business_id(user, session):
         raise HTTPException(status_code=404, detail="Invoice not found.")
-    if invoice.business_id != request.business_id:
-        raise HTTPException(status_code=409, detail="Business ownership cannot be changed.")
+    require_business_access(invoice.business_id, user, session, minimum_role="accountant")
+    request.business_id = invoice.business_id
     _validate_invoice_amounts(request.subtotal, request.tax_amount, request.total_amount)
     _validate_line_items(request.line_items, request.total_amount)
     if request.due_date and request.due_date < request.issue_date:
@@ -454,12 +482,14 @@ def correct_invoice(
 def pay_invoice(
     invoice_id: str,
     session: Session = Depends(get_session),
+    user: User = Depends(get_current_user),
 ):
     from ..db import get_treasurer
 
     invoice = session.get(APInvoice, invoice_id)
-    if invoice is None:
+    if invoice is None or invoice.business_id != get_current_business_id(user, session):
         raise HTTPException(status_code=404, detail="Invoice not found.")
+    require_business_access(invoice.business_id, user, session, minimum_role="accountant")
     return get_treasurer().pay_invoice(invoice, session)
 
 
@@ -478,5 +508,17 @@ def create_payment(
 
 
 @router.get("/payments", response_model=list[PaymentRequest])
-def list_payments(session: Session = Depends(get_session)):
-    return session.exec(select(PaymentRequest)).all()
+def list_payments(
+    session: Session = Depends(get_session),
+    user: User = Depends(get_current_user),
+):
+    business_id = get_current_business_id(user, session)
+    return session.exec(
+        select(PaymentRequest)
+        .outerjoin(Mandate, PaymentRequest.mandate_id == Mandate.id)
+        .outerjoin(APInvoice, PaymentRequest.ap_invoice_id == APInvoice.id)
+        .where(
+            (Mandate.business_id == business_id)
+            | (APInvoice.business_id == business_id)
+        )
+    ).all()

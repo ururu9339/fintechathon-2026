@@ -54,6 +54,7 @@ def new_id() -> str:
 class AuditEvent(SQLModel, tablename = "audit_events", table = True):
     __tablename__ = "audit_events"
     id: str | None = Field(default_factory=new_id, primary_key=True)
+    business_id: str | None = Field(default=None, foreign_key="business_profiles.id", index=True)
     event_type: str
     payload: dict[str, str] = Field(default_factory=dict, sa_type=JSON)
     created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
@@ -114,33 +115,6 @@ class ForecastSnapshot(SQLModel, table=True):
     business_id: str = Field(foreign_key="business_profiles.id", index=True)
     horizon_days: int
     snapshot: dict = Field(default_factory=dict, sa_type=JSON)
-    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
-
-
-class FinancialAlert(SQLModel, table=True):
-    __tablename__ = "financial_alerts"
-
-    id: str | None = Field(default_factory=new_id, primary_key=True)
-    business_id: str = Field(foreign_key="business_profiles.id", index=True)
-    severity: str
-    alert_type: str
-    title: str
-    message: str
-    suggested_action: str | None = None
-    status: str = "open"
-    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
-
-
-class UserNotification(SQLModel, table=True):
-    __tablename__ = "user_notifications"
-
-    id: str | None = Field(default_factory=new_id, primary_key=True)
-    user_id: str = Field(foreign_key="users.id", index=True)
-    business_id: str = Field(foreign_key="business_profiles.id", index=True)
-    alert_id: str | None = Field(default=None, foreign_key="financial_alerts.id")
-    title: str
-    message: str
-    is_read: bool = False
     created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
 
 

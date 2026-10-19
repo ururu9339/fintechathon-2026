@@ -1,11 +1,11 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from .api import accounting, agent, assistant, auth, business, dossier, invoices, mandates, predictions
+from .api import accounting, assistant, audit, auth, business, dossier, invoices, mandates, predictions
 from .core.llm import get_openai_client
 from .db import init_db
 
-app = FastAPI(title="AmanahPay Treasurer API", version="0.1.0")
+app = FastAPI(title="Qyze Ai API", version="0.1.0")
 
 app.add_middleware(
     CORSMiddleware,
@@ -17,13 +17,13 @@ app.add_middleware(
 
 app.include_router(invoices.router)
 app.include_router(mandates.router)
-app.include_router(agent.router)
 app.include_router(accounting.router)
 app.include_router(business.router)
 app.include_router(dossier.router)
 app.include_router(auth.router)
 app.include_router(predictions.router)
 app.include_router(assistant.router)
+app.include_router(audit.router)
 
 
 @app.on_event("startup")
