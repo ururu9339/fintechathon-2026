@@ -20,6 +20,10 @@ AI output is advisory or extraction-only. The backend validates data and keeps a
 
 <video src="https://github.com/user-attachments/assets/c678cdf7-0bba-454d-9015-856a0ee6b7a2" controls="controls" style="max-width: 100%;"></video>
 
+
+https://github.com/user-attachments/assets/dd416b47-d9f5-4419-aa2a-ff649fbf3526
+
+
 ## System architecture
 
 ```mermaid
