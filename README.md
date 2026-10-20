@@ -18,7 +18,7 @@ AI output is advisory or extraction-only. The backend validates data and keeps a
 
 ## Demo video
 
-<!-- TODO: Add a link or embedded recording of the current backend/API demonstration. -->
+<video src="https://github.com/user-attachments/assets/c678cdf7-0bba-454d-9015-856a0ee6b7a2" controls="controls" style="max-width: 100%;"></video>
 
 ## System architecture
 
