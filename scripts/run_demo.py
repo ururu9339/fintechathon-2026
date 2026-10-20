@@ -1,6 +1,6 @@
-"""Backward-compatible entry point for the local fictional-business seed."""
+"""Seed the local demo business and account used by the frontend."""
 
-from seed_demo_business import main
+from scripts.seed_demo_business import main
 
 
 if __name__ == "__main__":

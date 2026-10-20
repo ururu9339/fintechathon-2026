@@ -6,4 +6,7 @@ __pycache__/
 .next/
 node_modules/
 coverage.xml
-
+*.DS_Store
+frontend/.expo/
+frontend/dist/
+backend/data/

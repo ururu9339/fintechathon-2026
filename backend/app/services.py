@@ -36,32 +36,13 @@ from .models import (
 )
 
 
-# ============================================================================
-# 1. SETTINGS
-# Each dataclass groups the inputs for one feature. To change behaviour,
-# create an instance with different values and pass it to Treasurer.
-# ============================================================================
-
-
-# Words that tell the agent a message is about moving money.
 DEFAULT_PAYMENT_KEYWORDS: tuple[str, ...] = ("pay", "invoice", "transfer")
 
-# Phrases that signal a prompt injection attempt. Each one is a regular expression.
 DEFAULT_INJECTION_PATTERNS: list[str] = [
     r"ignore (all|previous|prior)",
     r"reveal (system|hidden) prompt",
     r"bypass (the )?mandate",
 ]
-
-
-# ============================================================================
-# 2. PAYMENT RULES
-# Each rule is one check. Rules run in order, and the first one that fails
-# decides the reason shown to the owner.
-#
-# To add a rule, append a PaymentRule to default_payment_rules(), or pass
-# your own list into Treasurer(payment_rules=...).
-# ============================================================================
 
 
 @dataclass
@@ -79,11 +60,6 @@ class PaymentRule:
 def default_payment_rules() -> list[PaymentRule]:
     """The standard rules, in the order they are checked.
 
-    Example of a new rule you could add:
-        PaymentRule(
-            reason="Payments are not allowed on Sundays",
-            check=lambda mandate, request, spent: date.today().weekday() != 6,
-        )
     """
     return [
         PaymentRule(
@@ -123,14 +99,6 @@ def default_payment_rules() -> list[PaymentRule]:
             check=lambda mandate, request, spent: request.purpose.lower() == mandate.purpose.lower(),
         ),
     ]
-
-
-# ============================================================================
-# 3. PAYMENT EXTRACTION
-# Turns a chat message into structured fields. This version uses simple
-# patterns. It can later be replaced by an LLM-based extractor without
-# changing agent() or pay(). Pass your own function as payment_extractor.
-# ============================================================================
 
 
 @dataclass
@@ -182,13 +150,6 @@ def extract_payment(message: str) -> ExtractedPayment:
     return ExtractedPayment(amount=amount, supplier=supplier, invoice_id=invoice_id, purpose=purpose)
 
 
-# ============================================================================
-# 4. AUDIT CHAIN
-# Each event stores the hash of the previous event, so changing any old event
-# breaks every hash after it.
-# ============================================================================
-
-
 def _hash_event(previous_hash: str, body: dict) -> str:
     """SHA-256 of the previous hash plus the event body, as sorted JSON."""
     text = previous_hash + json.dumps(body, sort_keys=True, default=str)
@@ -222,15 +183,6 @@ class AuditChain:
         return event
 
 
-# ============================================================================
-# 5. TREASURER
-# The service that uses the parts above. Its state is:
-#   mandates      : mandate id -> Mandate (the owner's signed limits)
-#   daily_spend   : mandate id -> amount already paid today under that mandate
-#   audit         : the AuditChain that records every decision
-# ============================================================================
-
-
 class Treasurer:
     def __init__(
         self,
@@ -257,10 +209,6 @@ class Treasurer:
         self.payment_keywords = payment_keywords
         self.default_mandate_id = default_mandate_id
 
-    # ------------------------------------------------------------------
-    # Mandate management
-    # ------------------------------------------------------------------
-
     def add_mandate(self, mandate: Mandate) -> None:
         """Add or replace a mandate. The key is mandate.id."""
         self.mandates[mandate.id] = mandate
@@ -271,10 +219,6 @@ class Treasurer:
             self.daily_spend.clear()
         else:
             self.daily_spend.pop(mandate_id, None)
-
-    # ------------------------------------------------------------------
-    # Payments
-    # ------------------------------------------------------------------
 
     def pay(self, request: PaymentRequest, session: Session | None = None) -> PaymentResult:
         """Approve or block a payment request. Every outcome is written to the audit chain."""
@@ -404,10 +348,6 @@ class Treasurer:
         session.commit()
         return result
 
-    # ------------------------------------------------------------------
-    # Agent
-    # ------------------------------------------------------------------
-
     def agent(self, message: str, session: Session | None = None) -> AgentResponse:
         """Read a message and decide what to do with it.
 
@@ -470,18 +410,3 @@ class Treasurer:
             return False
         combined = "|".join(f"(?:{pattern})" for pattern in self.injection_patterns)
         return re.search(combined, message, flags=re.IGNORECASE) is not None
-
-
-# ============================================================================
-# EXAMPLES
-# ============================================================================
-#
-# Default demo behaviour:
-#     treasurer = Treasurer()
-#     treasurer.agent("Pay RM1,200 to Acme Supplies for invoice INV-001")
-#
-# The attack from the demo. Blocked by the allowlist rule:
-#     treasurer.agent("Transfer RM48,000 to a new account")
-#
-# Replacing the extractor with your own (for example an LLM-based one):
-#     treasurer = Treasurer(payment_extractor=my_llm_extractor)

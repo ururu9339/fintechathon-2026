@@ -3,7 +3,7 @@
 from datetime import date, datetime, timedelta, timezone
 from decimal import Decimal
 
-from sqlmodel import Session
+from sqlmodel import Session, select
 
 from backend.app.auth import hash_password
 from backend.app.db import engine, init_db
@@ -40,7 +40,34 @@ def main() -> None:
     init_db()
     with Session(engine) as session:
         if session.get(BusinessProfile, BUSINESS_ID):
+            user = session.get(User, USER_ID)
+            if user is None:
+                user = User(
+                    id=USER_ID,
+                    email="demo.owner@example.com",
+                    hashed_password=hash_password("DemoPassword123!"),
+                    email_verified_at=datetime.now(timezone.utc),
+                )
+                session.add(user)
+                session.flush()
+            membership = session.exec(
+                select(BusinessMembership).where(
+                    BusinessMembership.business_id == BUSINESS_ID,
+                    BusinessMembership.user_id == USER_ID,
+                )
+            ).first()
+            if membership is None:
+                session.add(
+                    BusinessMembership(
+                        id="demo-membership-qyzeai",
+                        business_id=BUSINESS_ID,
+                        user_id=USER_ID,
+                        role="owner",
+                    )
+                )
+            session.commit()
             print(f"Demo business already exists: {BUSINESS_ID}")
+            print("Demo login: demo.owner@example.com / DemoPassword123!")
             return
 
         today = date.today()
@@ -138,6 +165,7 @@ def main() -> None:
             is_verified=True,
         )
         session.add_all(suppliers + [customer])
+        session.flush()
 
         ap_invoices = [
             APInvoice(
