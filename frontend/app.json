@@ -1,15 +1,16 @@
 {
   "expo": {
-    "name": "Qyze Ai",
-    "slug": "qyzeai",
+    "name": "AmanahPay Treasurer",
+    "slug": "amanahpay-treasurer",
     "version": "1.0.0",
     "orientation": "portrait",
-    "userInterfaceStyle": "dark",
+    "userInterfaceStyle": "automatic",
     "assetBundlePatterns": [
       "**/*"
     ],
     "plugins": [
-      "expo-asset"
+      "expo-asset",
+      "expo-font"
     ]
   }
 }
