@@ -32,8 +32,8 @@ from backend.app.models import (
 )
 
 
-BUSINESS_ID = "demo-business-qyzeai"
-USER_ID = "demo-owner-qyzeai"
+BUSINESS_ID = "demo-business-amanahpay"
+USER_ID = "demo-owner-amanahpay"
 
 
 def main() -> None:
@@ -59,7 +59,7 @@ def main() -> None:
             if membership is None:
                 session.add(
                     BusinessMembership(
-                        id="demo-membership-qyzeai",
+                        id="demo-membership-amanahpay",
                         business_id=BUSINESS_ID,
                         user_id=USER_ID,
                         role="owner",
@@ -91,13 +91,13 @@ def main() -> None:
         session.flush()
         session.add_all([
             BusinessMembership(
-                id="demo-membership-qyzeai",
+                id="demo-membership-amanahpay",
                 business_id=BUSINESS_ID,
                 user_id=USER_ID,
                 role="owner",
             ),
             OwnershipRecord(
-                id="demo-ownership-qyzeai",
+                id="demo-ownership-amanahpay",
                 business_id=BUSINESS_ID,
                 owner_reference="demo-owner-001",
                 share_percentage=Decimal("100"),
@@ -105,13 +105,13 @@ def main() -> None:
                 evidence_reference="demo-ownership-document",
             ),
             CashBalance(
-                id="demo-cash-qyzeai",
+                id="demo-cash-amanahpay",
                 business_id=BUSINESS_ID,
                 as_of_date=today,
                 amount=Decimal("42000.00"),
             ),
             LoanRequest(
-                id="demo-loan-qyzeai",
+                id="demo-loan-amanahpay",
                 business_id=BUSINESS_ID,
                 requested_amount=Decimal("120000.00"),
                 tenor_months=36,
@@ -121,7 +121,7 @@ def main() -> None:
                 status="approved",
             ),
             CreditFacility(
-                id="demo-credit-qyzeai",
+                id="demo-credit-amanahpay",
                 business_id=BUSINESS_ID,
                 lender_name="Demo Commercial Bank",
                 facility_type="working_capital",
@@ -332,7 +332,7 @@ def main() -> None:
             today.replace(month=1, day=1),
             today,
             session,
-            "demo-loan-qyzeai",
+            "demo-loan-amanahpay",
         )
         print(f"Created demo business: {BUSINESS_ID}")
         print("Demo login: demo.owner@example.com / DemoPassword123!")

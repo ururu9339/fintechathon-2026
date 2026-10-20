@@ -74,7 +74,7 @@ def render_dossier_pdf(dossier) -> bytes:
         topMargin=16 * mm,
         bottomMargin=16 * mm,
         title="Credit Passport",
-        author="Qyze Ai",
+        author="AmanahPay",
     )
     styles = getSampleStyleSheet()
     styles.add(ParagraphStyle(name="TitleCenter", parent=styles["Title"], alignment=TA_CENTER, textColor=colors.HexColor("#17324D")))

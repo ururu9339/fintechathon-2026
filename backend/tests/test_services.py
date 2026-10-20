@@ -61,7 +61,7 @@ def test_user_response_serializes_sqlmodel_user():
 def test_account_security_tokens_and_password_hashes(monkeypatch):
     from backend.app.models import EmailActionToken, RefreshSession, User
 
-    monkeypatch.setenv("QYZEAI_JWT_SECRET", "test-secret-that-is-at-least-32-characters")
+    monkeypatch.setenv("AMANAH_PAY_JWT_SECRET", "test-secret-that-is-at-least-32-characters")
     engine = create_engine("sqlite://")
     SQLModel.metadata.create_all(engine)
     with Session(engine) as session:

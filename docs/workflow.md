@@ -1,4 +1,4 @@
-# Qyze Ai workflow
+# AmanahPay workflow
 
 This document describes the current backend, not planned features. The frontend is being rebuilt separately and should integrate with the authenticated API described here.
 
@@ -18,8 +18,8 @@ Use `http://localhost:8000/docs` for Swagger. The frontend can call the API at `
 Required local configuration:
 
 ```env
-QYZEAI_JWT_SECRET=<stable random value with at least 32 characters>
-DATABASE_URL=postgresql+psycopg://qyzeai:qyzeai@localhost:5432/qyzeai
+AMANAH_PAY_JWT_SECRET=<stable random value with at least 32 characters>
+DATABASE_URL=postgresql+psycopg://amanahpay:amanahpay@localhost:5432/amanahpay
 ```
 
 Optional configuration:
@@ -139,12 +139,12 @@ The script is idempotent and creates a fictional business with an owner membersh
 
 ## Database and handoff
 
-Compose starts PostgreSQL with the default Qyze Ai database:
+Compose starts PostgreSQL with the default AmanahPay database:
 
 ```text
-database: qyzeai
-user: qyzeai
-password: qyzeai
+database: amanahpay
+user: amanahpay
+password: amanahpay
 ```
 
 Existing PostgreSQL volumes created with the previous database name are not automatically renamed. Preserve them and migrate or clone the data before switching `DATABASE_URL`.

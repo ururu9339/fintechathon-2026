@@ -1,5 +1,5 @@
 """
-services.py: the business logic of the Qyze Ai treasurer.
+services.py: the business logic of the AmanahPay treasurer.
 
 Read this file top to bottom. It has five parts:
 

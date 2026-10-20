@@ -5,7 +5,7 @@ from .api import accounting, assistant, audit, auth, business, dossier, invoices
 from .core.llm import get_openai_client
 from .db import init_db
 
-app = FastAPI(title="Qyze Ai API", version="0.1.0")
+app = FastAPI(title="AmanahPay API", version="0.1.0")
 
 app.add_middleware(
     CORSMiddleware,

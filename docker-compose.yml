@@ -6,8 +6,8 @@ services:
     env_file:
       - .env
     environment:
-      DATABASE_URL: postgresql+psycopg://qyzeai:qyzeai@db:5432/qyzeai
-      QYZEAI_DOCKER: "1"
+      DATABASE_URL: postgresql+psycopg://amanahpay:amanahpay@db:5432/amanahpay
+      AMANAH_PAY_DOCKER: "1"
     ports:
       - "8000:8000"
     volumes:
@@ -28,15 +28,15 @@ services:
   db:
     image: postgres:16-alpine
     environment:
-      POSTGRES_USER: qyzeai
-      POSTGRES_PASSWORD: qyzeai
-      POSTGRES_DB: qyzeai
+      POSTGRES_USER: amanahpay
+      POSTGRES_PASSWORD: amanahpay
+      POSTGRES_DB: amanahpay
     ports:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U qyzeai -d qyzeai"]
+      test: ["CMD-SHELL", "pg_isready -U amanahpay -d amanahpay"]
       interval: 5s
       timeout: 5s
       retries: 10

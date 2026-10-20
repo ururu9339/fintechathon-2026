@@ -1,6 +1,6 @@
-# Qyze Ai
+# AmanahPay
 
-Qyze Ai is an authenticated FastAPI business-finance backend for SME accounting, invoice review, payment mandates, credit dossiers, forecasting, and an AI finance assistant. The frontend is being rebuilt separately; the current repository contains its Expo configuration, but no finished frontend screens.
+AmanahPay is an authenticated FastAPI business-finance backend for SME accounting, invoice review, payment mandates, credit dossiers, forecasting, and an AI finance assistant. The frontend is being rebuilt separately; the current repository contains its Expo configuration, but no finished frontend screens.
 
 ## Current capabilities
 
@@ -77,7 +77,7 @@ The dossier service builds a deterministic reporting-period snapshot from approv
 ## Security design
 
 - Passwords are hashed with bcrypt.
-- Access tokens are JWTs signed with `QYZEAI_JWT_SECRET`, expire after 30 minutes, and may reference a refresh session.
+- Access tokens are JWTs signed with `AMANAH_PAY_JWT_SECRET`, expire after 30 minutes, and may reference a refresh session.
 - Refresh tokens and email action tokens are stored only as SHA-256 hashes.
 - Refresh tokens rotate on use; logout and password reset revoke refresh sessions.
 - Email verification and password reset tokens expire and are single-use.
@@ -116,7 +116,7 @@ The dossier service builds a deterministic reporting-period snapshot from approv
 
 ```bash
 cp .env.example .env
-# Set QYZEAI_JWT_SECRET to a stable random value of at least 32 characters.
+# Set AMANAH_PAY_JWT_SECRET to a stable random value of at least 32 characters.
 docker compose up -d --build db api
 ```
 
@@ -124,7 +124,7 @@ The API is exposed at `http://localhost:8000`. Swagger is available at `/docs`, 
 
 ### Existing database volume
 
-Do not delete an existing PostgreSQL volume solely because the product was renamed. If it was initialized with the previous database/user names, create or migrate the `qyzeai` role and database while preserving the existing data, then set `DATABASE_URL` accordingly.
+Do not delete an existing PostgreSQL volume solely because the product was renamed. If it was initialized with the previous database/user names, create or migrate the `amanahpay` role and database while preserving the existing data, then set `DATABASE_URL` accordingly.
 
 ### Local API
 
@@ -141,7 +141,9 @@ The backend Dockerfile installs Tesseract and the packages declared in `backend/
 
 ## Test cases
 
-The current regression suite is `backend/tests/test_services.py`. It covers:
+The pytest suite covers the backend, payment safety guardrails, and document-agent helpers:
+
+### `backend/tests/test_services.py`
 
 - SQLModel user serialization into the public response schema.
 - Password hashing, password verification, refresh sessions, action tokens, and JWT creation.
@@ -158,6 +160,24 @@ The current regression suite is `backend/tests/test_services.py`. It covers:
 - Credit facility approval and repayment to `paid_off`.
 - Business ownership and statutory-remittance creation.
 - Invoice money/date normalization and local reconciliation behavior.
+
+### `backend/tests/test_finance.py`
+
+- Weekly cash-forecast transaction bucketing and rolling balances.
+- Rejection of transactions with conflicting inflow and outflow values.
+- Effective annual rate calculations and financing-offer selection.
+
+### `backend/tests/test_injection_guardrails.py`
+
+- Prompt-injection detection in both the agent and policy layers.
+- Blocking prompt-injected and unallowlisted payment requests before the mock payment rail is called.
+
+### `agent/tests/test_agent.py`
+
+- Invoice amount extraction from document text.
+- Prompt-injection detection.
+- Document-text compaction and size limits.
+- Image downscaling while preserving aspect ratio and returning the expected MIME type.
 
 ## Repository layout
 
@@ -191,8 +211,8 @@ cp .env.example .env
 Set a stable secret in `.env`:
 
 ```env
-QYZEAI_JWT_SECRET=replace-with-at-least-32-random-characters
-DATABASE_URL=postgresql+psycopg://qyzeai:qyzeai@localhost:5432/qyzeai
+AMANAH_PAY_JWT_SECRET=replace-with-at-least-32-random-characters
+DATABASE_URL=postgresql+psycopg://amanahpay:amanahpay@localhost:5432/amanahpay
 ```
 
 `OPENAI_API_KEY` is optional. It enables LLM invoice extraction fallback, dossier narrative generation, and the assistant. SMTP variables are required only for real verification and password-reset email delivery. `PII_ENCRYPTION_KEY` is required only by code paths that encrypt PII.
@@ -208,15 +228,15 @@ The API is available at `http://localhost:8000`; interactive documentation is at
 
 ## Docker
 
-The Compose database uses the Qyze Ai defaults:
+The Compose database uses the AmanahPay defaults:
 
 ```text
-database: qyzeai
-user: qyzeai
-password: qyzeai
+database: amanahpay
+user: amanahpay
+password: amanahpay
 ```
 
-For an existing PostgreSQL volume created with the previous database name, do not delete the volume. Create or migrate the `qyzeai` role/database while preserving the existing data, as described in `docs/workflow.md`.
+For an existing PostgreSQL volume created with the previous database name, do not delete the volume. Create or migrate the `amanahpay` role/database while preserving the existing data, as described in `docs/workflow.md`.
 
 The API image installs backend dependencies and Tesseract. The frontend service is not a finished product yet and will not build until the frontend rebuild adds its application entrypoint.
 
@@ -243,7 +263,7 @@ GET /api/invoices?business_id=<selected-business-id>
 ## Validation
 
 ```bash
-PYTHONPATH=. .venv/bin/pytest -q backend/tests
+PYTHONPATH=. .venv/bin/pytest -q backend/tests agent/tests
 PYTHONPATH=. .venv/bin/python -m compileall -q backend/app agent
 git diff --check
 docker compose config --quiet

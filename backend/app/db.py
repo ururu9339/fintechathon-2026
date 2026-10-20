@@ -12,10 +12,10 @@ if TYPE_CHECKING:
 
 _configured_database_url = os.getenv(
     "DATABASE_URL",
-    "postgresql+psycopg://qyzeai:qyzeai@localhost:5432/qyzeai",
+    "postgresql+psycopg://amanahpay:amanahpay@localhost:5432/amanahpay",
 )
 
-if os.getenv("QYZEAI_DOCKER") != "1":
+if os.getenv("AMANAH_PAY_DOCKER") != "1":
     _database_parts = urlsplit(_configured_database_url)
     if _database_parts.hostname == "db":
         _configured_database_url = urlunsplit(

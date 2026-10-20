@@ -28,9 +28,9 @@ REFRESH_TOKEN_DAYS = 30
 
 
 def _secret() -> str:
-    secret = os.getenv("QYZEAI_JWT_SECRET")
+    secret = os.getenv("AMANAH_PAY_JWT_SECRET")
     if not secret or len(secret) < 32:
-        raise RuntimeError("QYZEAI_JWT_SECRET must contain at least 32 characters.")
+        raise RuntimeError("AMANAH_PAY_JWT_SECRET must contain at least 32 characters.")
     return secret
 
 

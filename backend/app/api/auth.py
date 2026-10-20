@@ -93,7 +93,7 @@ def _send_verification(user: User, token: str) -> bool:
     base_url = os.getenv("APP_PUBLIC_URL", "http://localhost:3000").rstrip("/")
     return send_email(
         user.email,
-        "Verify your Qyze Ai account",
+        "Verify your AmanahPay account",
         f"Open {base_url}/verify-email?token={token} to verify your email address.",
     )
 
@@ -171,7 +171,7 @@ def request_password_reset(
         token = issue_action_token(user.id, "password_reset", session)
         send_email(
             user.email,
-            "Reset your Qyze Ai password",
+            "Reset your AmanahPay password",
             f"Open {os.getenv('APP_PUBLIC_URL', 'http://localhost:3000').rstrip('/')}/reset-password?token={token} to set a new password.",
         )
     return {"message": "If the account exists, password reset instructions have been sent."}

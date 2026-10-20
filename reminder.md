@@ -24,7 +24,7 @@ The Quick One-Liner (Kill whatever is on port 8000)
 
 *DB
 simple table from payment_request:
-sqlite3 -header -column backend/data/qyzeai.db \
+sqlite3 -header -column backend/data/amanahpay.db \
   'SELECT * FROM payment_requests;'
 
 to run webpage:

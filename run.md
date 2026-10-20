@@ -50,7 +50,7 @@ Open `.env` and fill in the values:
 
 ```env
 # Required — use any long random string (e.g. generate with: openssl rand -hex 32)
-QYZEAI_JWT_SECRET=replace-with-a-long-random-secret
+AMANAH_PAY_JWT_SECRET=replace-with-a-long-random-secret
 
 # Optional — enables AI-powered dossier narrative generation
 OPENAI_API_KEY=
@@ -159,8 +159,8 @@ psql -U postgres
 Inside the `psql` shell:
 
 ```sql
-CREATE USER qyzeai WITH PASSWORD 'qyzeai';
-CREATE DATABASE qyzeai OWNER qyzeai;
+CREATE USER amanahpay WITH PASSWORD 'amanahpay';
+CREATE DATABASE amanahpay OWNER amanahpay;
 \q
 ```
 
@@ -174,7 +174,7 @@ Open `.env` and set:
 
 ```env
 # Required
-QYZEAI_JWT_SECRET=replace-with-a-long-random-secret
+AMANAH_PAY_JWT_SECRET=replace-with-a-long-random-secret
 
 # Optional
 OPENAI_API_KEY=
@@ -182,7 +182,7 @@ OPENAI_API_KEY=
 APP_PUBLIC_URL=http://localhost:3000
 
 # Use this exact URL when running locally (not inside Docker)
-DATABASE_URL=postgresql+psycopg://qyzeai:qyzeai@localhost:5432/qyzeai
+DATABASE_URL=postgresql+psycopg://amanahpay:amanahpay@localhost:5432/amanahpay
 ```
 
 ### Step 5 — Install and start the backend
@@ -249,10 +249,10 @@ python scripts/seed_demo_business.py
 
 | Variable | Required | Default | Description |
 |---|---|---|---|
-| `QYZEAI_JWT_SECRET` | **Yes** | — | Secret key used to sign JWT tokens. Use a long random value. |
+| `AMANAH_PAY_JWT_SECRET` | **Yes** | — | Secret key used to sign JWT tokens. Use a long random value. |
 | `OPENAI_API_KEY` | No | — | Enables AI-powered dossier narrative generation. |
 | `APP_PUBLIC_URL` | No | `http://localhost:3000` | Public URL of the frontend (used in emails). |
-| `DATABASE_URL` | No | `postgresql+psycopg://qyzeai:qyzeai@localhost:5432/qyzeai` | PostgreSQL connection string. |
+| `DATABASE_URL` | No | `postgresql+psycopg://amanahpay:amanahpay@localhost:5432/amanahpay` | PostgreSQL connection string. |
 | `SMTP_HOST` | No | — | SMTP server hostname for sending emails. |
 | `SMTP_PORT` | No | `587` | SMTP server port. |
 | `SMTP_USERNAME` | No | — | SMTP login username. |
@@ -268,7 +268,7 @@ python scripts/seed_demo_business.py
 |---|---|---|
 | Frontend | 3000 | http://localhost:3000 |
 | Backend API | 8000 | http://localhost:8000 |
-| PostgreSQL | 5432 | `postgresql://localhost:5432/qyzeai` |
+| PostgreSQL | 5432 | `postgresql://localhost:5432/amanahpay` |
 | Expo dev server (manual) | 8081 | http://localhost:8081 |
 
 ---
